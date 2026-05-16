@@ -1,0 +1,13 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Virtual Environment
+tf_metal_env/
+data/
+# macOS
+.DS_Store
