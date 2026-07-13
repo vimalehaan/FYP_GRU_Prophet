@@ -8,6 +8,8 @@ __pycache__/
 
 # Virtual Environment
 tf_metal_env/
-data/
+data/*
+!data/preprocessing_summary.json
+!data/container_metadata.parquet
 # macOS
 .DS_Store

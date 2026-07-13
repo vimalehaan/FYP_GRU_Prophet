@@ -1,0 +1,14 @@
+{
+  "containers_before_filtering": 486,
+  "containers_retained": 484,
+  "containers_removed": 2,
+  "removed_container_ids": [
+    "c_14674",
+    "c_39761"
+  ],
+  "train_samples": 296576,
+  "val_samples": 74428,
+  "resampling_frequency": "15min",
+  "train_split_ratio": 0.8,
+  "normalization_method": "MinMaxScaler(feature_range=(0, 1))"
+}
