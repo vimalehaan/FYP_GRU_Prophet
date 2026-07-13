@@ -11,6 +11,10 @@ from sklearn.preprocessing import MinMaxScaler
 
 from utils.hybrid_inference import HybridInferenceResult, run_hybrid_inference
 
+# Minimum denominator for MAPE (percentage points on the real CPU % scale).
+# Prevents division-by-near-zero when actual CPU utilization is 0 or very small.
+MAPE_EPSILON = 0.01
+
 
 def compute_day1_metrics(
     actual_day1_real: np.ndarray,
@@ -26,6 +30,31 @@ def compute_day1_metrics(
         )
     )
     return day1_mae, day1_rmse
+
+
+def compute_day1_mape(
+    actual_day1_real: np.ndarray,
+    day1_final_real: np.ndarray,
+    epsilon: float = MAPE_EPSILON,
+) -> float:
+    """
+    Return Day 1 MAPE in real CPU percent.
+
+    Uses an epsilon floor on the denominator:
+
+        MAPE = mean(|actual - predicted| / max(|actual|, epsilon)) * 100
+
+    Near-zero actual CPU values are common after inverse MinMax transform.
+    A raw MAPE denominator of 0 produces undefined or extreme percentages.
+    Flooring the denominator at ``epsilon`` percentage points keeps MAPE
+    finite and comparable across containers without excluding timesteps.
+    """
+    actual = np.ravel(actual_day1_real)
+    predicted = np.ravel(day1_final_real)
+    denominator = np.maximum(np.abs(actual), epsilon)
+    return float(
+        np.mean(np.abs(actual - predicted) / denominator) * 100.0
+    )
 
 
 def _evaluable_container_ids(
@@ -122,11 +151,16 @@ def evaluate_selected_containers(
                 result.actual_day1_real,
                 result.day1_final_real,
             )
+            day1_mape = compute_day1_mape(
+                result.actual_day1_real,
+                result.day1_final_real,
+            )
             inference_results[container_id] = result
             rows.append({
                 "container_id": container_id,
                 "day1_mae": day1_mae,
                 "day1_rmse": day1_rmse,
+                "day1_mape": day1_mape,
                 "train_steps": result.n_train_steps,
                 "validation_steps": result.n_val_steps,
             })
@@ -146,6 +180,6 @@ def summarize_evaluation_metrics(
     evaluation_df: pd.DataFrame,
 ) -> pd.DataFrame:
     """Compute aggregate mean, std, min, and max for Day 1 metrics."""
-    metric_columns = ["day1_mae", "day1_rmse"]
+    metric_columns = ["day1_mae", "day1_rmse", "day1_mape"]
     summary = evaluation_df[metric_columns].agg(["mean", "std", "min", "max"])
     return summary

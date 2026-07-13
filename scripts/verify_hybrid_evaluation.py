@@ -15,6 +15,7 @@ sys.path.insert(0, REPO_ROOT)
 
 from utils.hybrid_evaluation import (  # noqa: E402
     _evaluable_container_ids,
+    compute_day1_mape,
     compute_day1_metrics,
     evaluate_selected_containers,
     summarize_evaluation_metrics,
@@ -69,7 +70,7 @@ def main() -> None:
     )
     summary = summarize_evaluation_metrics(evaluation_df)
 
-    print("=== H1.1 Verification ===")
+    print("=== H1.1 + H1.4 Verification ===")
     print(f"Selected containers : {len(selected_containers)}")
     print(f"Evaluable containers: {len(evaluable_ids)}")
     print(f"Evaluated containers: {len(evaluation_df)}")
@@ -90,13 +91,22 @@ def main() -> None:
         demo_result.actual_day1_real,
         demo_result.day1_final_real,
     )
+    recomputed_mape = compute_day1_mape(
+        demo_result.actual_day1_real,
+        demo_result.day1_final_real,
+    )
     assert np.isclose(recomputed_mae, demo_row["day1_mae"], atol=1e-12)
     assert np.isclose(recomputed_rmse, demo_row["day1_rmse"], atol=1e-12)
+    assert np.isclose(recomputed_mape, demo_row["day1_mape"], atol=1e-12)
+    assert "day1_mape" in evaluation_df.columns
 
     manual_mean_mae = evaluation_df["day1_mae"].mean()
     manual_std_mae = evaluation_df["day1_mae"].std()
     assert np.isclose(summary.loc["mean", "day1_mae"], manual_mean_mae)
     assert np.isclose(summary.loc["std", "day1_mae"], manual_std_mae)
+
+    manual_mean_mape = evaluation_df["day1_mape"].mean()
+    assert np.isclose(summary.loc["mean", "day1_mape"], manual_mean_mape)
 
     print("\nSkipped detail:")
     for container_id, reason in skipped:
@@ -107,9 +117,10 @@ def main() -> None:
     print(f"\nDemo container {DEMO_CID}:")
     print(f"  Day 1 MAE  : {demo_row['day1_mae']:.4f}")
     print(f"  Day 1 RMSE : {demo_row['day1_rmse']:.4f}")
+    print(f"  Day 1 MAPE : {demo_row['day1_mape']:.4f}")
     print("\nEvaluation DataFrame sample:")
     print(evaluation_df.head(5).to_string(index=False))
-    print("\nAll H1.1 verification checks passed.")
+    print("\nAll H1.1 + H1.4 verification checks passed.")
 
 
 if __name__ == "__main__":
