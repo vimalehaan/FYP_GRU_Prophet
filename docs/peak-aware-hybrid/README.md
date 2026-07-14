@@ -18,7 +18,7 @@
 | 1 | [Freeze the Baseline](phase-01-baseline-freeze.md) | **Complete** |
 | 2 | [Peak Exploration](phase-02-peak-exploration.md) | **Complete** |
 | 3 | [Peak-Aware Learning Design](phase-03-learning-design.md) | **Complete** |
-| 4 | [Implementation](phase-04-implementation.md) | Pending |
+| 4 | [Implementation](phase-04-implementation.md) | **Complete** |
 | 5 | [Evaluation](phase-05-evaluation.md) | Pending |
 | 6 | [Discussion and Comparison](phase-06-discussion.md) | Pending |
 
@@ -41,7 +41,7 @@ Introduce **one controlled experimental variable**: a Peak-Aware learning mechan
 | 1 | Freeze the Baseline | **Complete** |
 | 2 | Peak Exploration | **Complete** |
 | 3 | Peak-Aware Learning Design | **Complete** |
-| 4 | Implementation | Pending |
+| 4 | Implementation | **Complete** |
 | 5 | Evaluation | Pending |
 | 6 | Discussion and Comparison | Pending |
 
@@ -67,4 +67,4 @@ The baseline Hybrid Prophet + GRU implementation is permanent and must not be mo
 
 ---
 
-*Last updated: 2026-07-14 — Phase 3 complete (design locked)*
+*Last updated: 2026-07-14 — Phase 4 complete; ready for Phase 5 evaluation*

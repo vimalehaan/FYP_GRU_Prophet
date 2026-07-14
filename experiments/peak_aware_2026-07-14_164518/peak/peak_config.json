@@ -1,0 +1,12 @@
+{
+  "peak_percentile": 90,
+  "peak_weight": 5.0,
+  "non_peak_weight": 1.0,
+  "peak_rule": "cpu_real >= P90(container_train)",
+  "value_space": "real_cpu_percent",
+  "threshold_fit_period": "train_only",
+  "weighting_granularity": "timestep",
+  "weight_scope": "forecast_horizon_targets_only",
+  "phase_2_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14"
+}

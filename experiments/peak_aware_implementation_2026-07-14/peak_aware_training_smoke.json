@@ -1,0 +1,47 @@
+{
+  "smoke_test": true,
+  "epochs_requested": 1,
+  "epochs_run": 1,
+  "final_train_loss": 1.6075636148452759,
+  "final_val_loss": 1.8559887409210205,
+  "final_train_mae": 0.7563676834106445,
+  "final_val_mae": 0.9037365913391113,
+  "res_mean": 1.5362158578354976e-05,
+  "res_std": 0.11123930781933586,
+  "n_thresholds": 99,
+  "W_all_shape": [
+    41650,
+    96
+  ],
+  "expected_n_sequences": 41650,
+  "binary_weights": {
+    "only_expected_values": true,
+    "allowed_values": [
+      1.0,
+      5.0
+    ],
+    "unique_values_found": [
+      1.0,
+      5.0
+    ],
+    "unexpected_values": [],
+    "peak_weight_count": 677184,
+    "non_peak_weight_count": 3321216,
+    "total_entries": 3998400,
+    "counts_sum_to_total": true
+  },
+  "weight_summary": {
+    "n_sequences": 41650,
+    "forecast_horizon": 96,
+    "total_weighted_timesteps": 3998400,
+    "peak_weighted_timesteps": 677184,
+    "non_peak_weighted_timesteps": 3321216,
+    "peak_weight_fraction": 0.16936374549819927,
+    "peak_weight": 5.0,
+    "non_peak_weight": 1.0
+  },
+  "loss_implementation": "custom_train_step_timestep_weighted_mse",
+  "sample_weight_shape": "(n_train, 96)",
+  "validation_unweighted": true,
+  "pipeline_status": "PASS"
+}
