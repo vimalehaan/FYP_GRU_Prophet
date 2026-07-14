@@ -1,0 +1,94 @@
+{
+  "task": 3,
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "near_idle_excluded_reference": [
+    "c_13308",
+    "c_14106",
+    "c_15035",
+    "c_15446",
+    "c_15794"
+  ],
+  "official": [
+    {
+      "cohort": "official_all_containers",
+      "percentile": 85,
+      "total_sequences": 41650,
+      "peak_sequences": 40247,
+      "peak_sequence_pct": 96.63145258103242,
+      "mean_peak_timesteps_per_sequence": 20.318031212484993,
+      "median_peak_timesteps_per_sequence": 17.0,
+      "std_peak_timesteps_per_sequence": 19.21022471755356,
+      "max_peak_timesteps_per_sequence": 96,
+      "zero_peak_sequences": 1403,
+      "full_peak_sequences": 2097
+    },
+    {
+      "cohort": "official_all_containers",
+      "percentile": 90,
+      "total_sequences": 41650,
+      "peak_sequences": 40065,
+      "peak_sequence_pct": 96.19447779111646,
+      "mean_peak_timesteps_per_sequence": 16.25891956782713,
+      "median_peak_timesteps_per_sequence": 12.0,
+      "std_peak_timesteps_per_sequence": 19.67960523531965,
+      "max_peak_timesteps_per_sequence": 96,
+      "zero_peak_sequences": 1585,
+      "full_peak_sequences": 2097
+    },
+    {
+      "cohort": "official_all_containers",
+      "percentile": 95,
+      "total_sequences": 41650,
+      "peak_sequences": 38429,
+      "peak_sequence_pct": 92.26650660264106,
+      "mean_peak_timesteps_per_sequence": 10.546242496998799,
+      "median_peak_timesteps_per_sequence": 6.0,
+      "std_peak_timesteps_per_sequence": 18.284811845477343,
+      "max_peak_timesteps_per_sequence": 96,
+      "zero_peak_sequences": 3221,
+      "full_peak_sequences": 1675
+    }
+  ],
+  "reference_excl_near_idle": [
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 85,
+      "total_sequences": 39553,
+      "peak_sequences": 38150,
+      "peak_sequence_pct": 96.45286071852956,
+      "mean_peak_timesteps_per_sequence": 16.305564685358885,
+      "median_peak_timesteps_per_sequence": 16.0,
+      "std_peak_timesteps_per_sequence": 8.296183554707644,
+      "max_peak_timesteps_per_sequence": 74,
+      "zero_peak_sequences": 1403,
+      "full_peak_sequences": 0
+    },
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 90,
+      "total_sequences": 39553,
+      "peak_sequences": 37968,
+      "peak_sequence_pct": 95.99271863069805,
+      "mean_peak_timesteps_per_sequence": 12.031249209920865,
+      "median_peak_timesteps_per_sequence": 11.0,
+      "std_peak_timesteps_per_sequence": 7.268262048139722,
+      "max_peak_timesteps_per_sequence": 62,
+      "zero_peak_sequences": 1585,
+      "full_peak_sequences": 0
+    },
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 95,
+      "total_sequences": 39553,
+      "peak_sequences": 36332,
+      "peak_sequence_pct": 91.85649634667409,
+      "mean_peak_timesteps_per_sequence": 6.975829899122696,
+      "median_peak_timesteps_per_sequence": 6.0,
+      "std_peak_timesteps_per_sequence": 5.457597812937944,
+      "max_peak_timesteps_per_sequence": 33,
+      "zero_peak_sequences": 3221,
+      "full_peak_sequences": 0
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+cohort,percentile,total_sequences,peak_sequences,peak_sequence_pct,mean_peak_timesteps_per_sequence,median_peak_timesteps_per_sequence,std_peak_timesteps_per_sequence,max_peak_timesteps_per_sequence,zero_peak_sequences,full_peak_sequences
+official_all_containers,85,41650,40247,96.63145258103242,20.318031212484993,17.0,19.21022471755356,96,1403,2097
+official_all_containers,90,41650,40065,96.19447779111646,16.25891956782713,12.0,19.67960523531965,96,1585,2097
+official_all_containers,95,41650,38429,92.26650660264106,10.546242496998799,6.0,18.284811845477343,96,3221,1675

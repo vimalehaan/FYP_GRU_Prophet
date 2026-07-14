@@ -1,6 +1,8 @@
 # Jupyter
 .ipynb_checkpoints/
 
+.vscode/
+
 # Python
 __pycache__/
 *.pyc
@@ -19,3 +21,10 @@ data/*
 
 experiments/**/hybrid_gru.keras
 experiments/**/residual_stats.pkl
+
+experiments/**/*.pdf
+
+experiments/**/.ipynb_checkpoints/
+
+build/
+dist/

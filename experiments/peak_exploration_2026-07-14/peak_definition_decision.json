@@ -1,0 +1,71 @@
+{
+  "phase": 2,
+  "task": 7,
+  "status": "complete",
+  "decision_date": "2026-07-14",
+  "phase_2_status": "complete",
+  "chosen_percentile": 90,
+  "peak_definition": {
+    "rule": "A timestep is a peak if cpu_real >= P90(container_train)",
+    "value_space": "real_cpu_percent",
+    "value_derivation": "per_container_inverse_minmax_of_cpu_scaled",
+    "threshold_scope": "per_container",
+    "threshold_fit_period": "train_only",
+    "threshold_application": "Same train-fitted thresholds applied at training weighting and evaluation labelling",
+    "absolute_cpu_floor": null,
+    "absolute_cpu_floor_applied": false
+  },
+  "sequence_definitions": {
+    "peak_sequence": "A 96-step forecast horizon contains >= 1 peak timestep",
+    "evaluation_horizon": "Day-1 validation horizon (first 96 val timesteps per container)"
+  },
+  "rejected_alternatives": [
+    {
+      "percentile": 85,
+      "reason": "Too permissive (~22% train peak timesteps); weak spike semantics; minimal improvement in zero-peak sequence discrimination over P90"
+    },
+    {
+      "percentile": 95,
+      "reason": "Conservative (~11% train peaks); may under-emphasize moderate surges; highest near-idle label distortion (37%) though better zero-peak sequence discrimination"
+    },
+    {
+      "method": "absolute_cpu_floor",
+      "reason": "Not adopted; Phase 2 exploration showed near-idle artefact affects 5/99 containers (5%); documented as limitation rather than modifying the percentile-based definition"
+    },
+    {
+      "method": "global_threshold",
+      "reason": "Rejected; per-container MinMax scaling makes global thresholds misleading across heterogeneous workloads"
+    },
+    {
+      "method": "sequence_level_weighting",
+      "reason": "Rejected for Phase 3; >92% of sequences are peak sequences under all percentiles (Task 3)"
+    }
+  ],
+  "expected_train_characteristics": {
+    "train_peak_timestep_pct": 17.36,
+    "train_peak_sequence_pct": 96.19,
+    "train_zero_peak_sequence_pct": 3.81,
+    "train_mean_peak_steps_per_sequence": 16.26
+  },
+  "expected_validation_characteristics": {
+    "val_peak_timestep_pct": 28.29,
+    "val_day1_peak_timestep_pct": 25.65,
+    "val_day1_containers_with_peak_pct": 98.99,
+    "val_peak_evaluation_feasible": true
+  },
+  "phase_3_recommendations": {
+    "weighting_granularity": "timestep_weighted_mse",
+    "early_stopping": "unweighted_val_loss_unchanged_from_baseline",
+    "lambda": "to_be_justified_in_phase_3_design_simple_fixed_or_small_set",
+    "suggested_starting_lambda": 5
+  },
+  "known_limitations": [
+    "Five near-idle containers have zero thresholds, inflating peak labels (~29% of train peak timesteps at P90)",
+    "Spiky workload label partially reflects near-idle CV artefact",
+    "Validation peak rates exceed train rates under fixed thresholds (distribution shift)",
+    "Short train history (~614 steps/container) makes percentile estimates coarse for low-activity containers"
+  ],
+  "locked_for_remainder_of_research": true,
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "experiment_dir": "experiments/peak_exploration_2026-07-14"
+}
