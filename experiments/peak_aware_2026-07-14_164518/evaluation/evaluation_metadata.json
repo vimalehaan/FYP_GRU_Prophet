@@ -1,0 +1,51 @@
+{
+  "evaluation_type": "peak_aware_hybrid_treatment_primary",
+  "phase": 5,
+  "task": 2,
+  "model_variant": "hybrid_prophet_gru_peak_aware_v1",
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "model_path": "experiments/peak_aware_2026-07-14_164518/models/hybrid_gru_peak_aware.keras",
+  "residual_stats_path": "experiments/peak_aware_2026-07-14_164518/models/residual_stats.pkl",
+  "res_mean": 1.5362158578354976e-05,
+  "res_std": 0.11123930781933586,
+  "input_window": 96,
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "evaluation_module": "utils.hybrid_evaluation.evaluate_selected_containers",
+  "inference_module": "utils.hybrid_inference.run_hybrid_inference",
+  "started_at": "2026-07-14T11:38:47Z",
+  "completed_at": "2026-07-14T11:39:13Z",
+  "runtime_seconds": 25.13,
+  "outputs": {
+    "evaluation_df": "evaluation/evaluation_df.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.csv",
+    "treatment_inference_cache": "evaluation/treatment_inference_cache.pkl"
+  },
+  "aggregate_summary": {
+    "day1_mae": {
+      "mean": 1.740819,
+      "std": 2.467712,
+      "min": 0.002814,
+      "max": 17.752636
+    },
+    "day1_rmse": {
+      "mean": 2.384394,
+      "std": 3.196719,
+      "min": 0.003114,
+      "max": 22.750772
+    },
+    "day1_mape": {
+      "mean": 110.174351,
+      "std": 611.240139,
+      "min": 4.578953,
+      "max": 5902.158498
+    }
+  }
+}

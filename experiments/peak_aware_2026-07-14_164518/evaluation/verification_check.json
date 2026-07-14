@@ -1,0 +1,119 @@
+{
+  "verified_at": "2026-07-14T11:54:13Z",
+  "phase": 5,
+  "task": 5,
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "overall_status": "PASS",
+  "checks_passed": 8,
+  "checks_total": 8,
+  "checks": [
+    {
+      "check_id": 1,
+      "name": "frozen_eval_modules",
+      "status": "PASS",
+      "details": {
+        "missing_files": [],
+        "import_errors": [],
+        "uncommitted_changes": []
+      }
+    },
+    {
+      "check_id": 2,
+      "name": "treatment_artifacts",
+      "status": "PASS",
+      "details": {
+        "model_path": "experiments/peak_aware_2026-07-14_164518/models/hybrid_gru_peak_aware.keras",
+        "model_exists": true,
+        "stats_path": "experiments/peak_aware_2026-07-14_164518/models/residual_stats.pkl",
+        "stats_exists": true,
+        "metadata_model_path": "experiments/peak_aware_2026-07-14_164518/models/hybrid_gru_peak_aware.keras",
+        "metadata_stats_path": "experiments/peak_aware_2026-07-14_164518/models/residual_stats.pkl",
+        "res_mean_match": true,
+        "res_std_match": true
+      }
+    },
+    {
+      "check_id": 3,
+      "name": "control_baseline_model",
+      "status": "PASS",
+      "details": {
+        "baseline_model_path": "experiments/baseline_reference_2026-07-14/models/hybrid_gru.keras",
+        "treatment_model_path": "experiments/peak_aware_2026-07-14_164518/models/hybrid_gru_peak_aware.keras",
+        "models_differ": true,
+        "baseline_rerun_containers": 99,
+        "frozen_baseline_containers": 99,
+        "paired_mae_matches_frozen_reference": true
+      }
+    },
+    {
+      "check_id": 4,
+      "name": "shared_cohort",
+      "status": "PASS",
+      "details": {
+        "containers_evaluated": 99,
+        "expected_containers": 99,
+        "cohort_matches_baseline_rerun": true,
+        "cohort_matches_frozen_reference": true,
+        "skipped_containers": [
+          {
+            "container_id": "c_14674",
+            "reason": "missing from frozen train/val data"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": 5,
+      "name": "metrics_reproducible",
+      "status": "PASS",
+      "details": {
+        "treatment_mae_match": true,
+        "treatment_rmse_match": true,
+        "baseline_mae_match": true,
+        "baseline_rmse_match": true,
+        "metric_tolerance": 1e-05
+      }
+    },
+    {
+      "check_id": 6,
+      "name": "peak_thresholds_stable",
+      "status": "PASS",
+      "details": {
+        "thresholds_path": "experiments/peak_aware_2026-07-14_164518/peak/peak_thresholds.pkl",
+        "containers_checked": 99,
+        "mismatch_count": 0,
+        "mismatches_sample": [],
+        "saved_thresholds_used_in_peak_subset_csv": true,
+        "threshold_tolerance": 1e-06
+      }
+    },
+    {
+      "check_id": 7,
+      "name": "peak_subset_feasibility",
+      "status": "PASS",
+      "details": {
+        "peak_steps": 2438,
+        "total_day1_steps": 9504,
+        "peak_step_fraction": 0.256523569023569,
+        "feasibility_range": [
+          0.17,
+          0.31
+        ],
+        "within_phase2_range": true
+      }
+    },
+    {
+      "check_id": 8,
+      "name": "protected_paths_unmodified",
+      "status": "PASS",
+      "details": {
+        "baseline_reference_git_changes": [],
+        "treatment_not_in_production_models": true,
+        "evaluation_outputs_under_experiment": true,
+        "baseline_model_exists": true,
+        "treatment_model_under_experiment_dir": true
+      }
+    }
+  ]
+}

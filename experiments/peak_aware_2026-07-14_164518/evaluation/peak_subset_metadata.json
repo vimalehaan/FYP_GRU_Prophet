@@ -1,0 +1,23 @@
+{
+  "computed_at": "2026-07-14T11:47:50Z",
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "containers_treatment": 99,
+  "containers_baseline": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "baseline_runtime_seconds": 24.12,
+  "outputs": {
+    "baseline_evaluation_df": "evaluation/baseline_evaluation_df.csv",
+    "baseline_evaluation_summary": "evaluation/baseline_evaluation_summary.csv",
+    "peak_subset_metrics": "evaluation/peak_subset_metrics.csv",
+    "treatment_peak_subset_per_container": "evaluation/treatment_peak_subset_per_container.csv",
+    "baseline_peak_subset_per_container": "evaluation/baseline_peak_subset_per_container.csv",
+    "peak_subset_per_container_comparison": "evaluation/peak_subset_per_container_comparison.csv",
+    "peak_subset_summary": "evaluation/peak_subset_summary.csv"
+  },
+  "pooled_peak_step_fraction": 0.25652356902356904
+}

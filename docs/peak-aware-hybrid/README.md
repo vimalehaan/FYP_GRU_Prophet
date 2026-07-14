@@ -19,8 +19,8 @@
 | 2 | [Peak Exploration](phase-02-peak-exploration.md) | **Complete** |
 | 3 | [Peak-Aware Learning Design](phase-03-learning-design.md) | **Complete** |
 | 4 | [Implementation](phase-04-implementation.md) | **Complete** |
-| 5 | [Evaluation](phase-05-evaluation.md) | Pending |
-| 6 | [Discussion and Comparison](phase-06-discussion.md) | Pending |
+| 5 | [Evaluation](phase-05-evaluation.md) | **Complete** |
+| 6 | [Discussion and Comparison](phase-06-discussion.md) | **Planned** (Task 1 pending) |
 
 ---
 
@@ -42,8 +42,8 @@ Introduce **one controlled experimental variable**: a Peak-Aware learning mechan
 | 2 | Peak Exploration | **Complete** |
 | 3 | Peak-Aware Learning Design | **Complete** |
 | 4 | Implementation | **Complete** |
-| 5 | Evaluation | Pending |
-| 6 | Discussion and Comparison | Pending |
+| 5 | Evaluation | **Complete** |
+| 6 | Discussion and Comparison | **Planned** (interpretation only) |
 
 ### 1.4 Fair Comparison Principle
 
@@ -67,4 +67,4 @@ The baseline Hybrid Prophet + GRU implementation is permanent and must not be mo
 
 ---
 
-*Last updated: 2026-07-14 — Phase 4 complete; ready for Phase 5 evaluation*
+*Last updated: 2026-07-14 — Phase 6 plan refined; primary workflow is interpretation of locked Phase 5 results*

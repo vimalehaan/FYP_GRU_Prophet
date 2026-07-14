@@ -1,0 +1,55 @@
+{
+  "sanity_test": true,
+  "demo_container": "c_11461",
+  "threshold": 19.0,
+  "day1_steps": 96,
+  "peak_steps": 14,
+  "non_peak_steps": 82,
+  "peak_fraction": 0.14583333333333334,
+  "manual_metrics": {
+    "peak_mae": 3.639614127503205,
+    "peak_rmse": 4.267465872561249,
+    "non_peak_mae": 1.1387193932518451,
+    "non_peak_rmse": 1.440486050433233,
+    "overall_mae": 1.5034332086635012,
+    "overall_rmse": 2.1043301454754686
+  },
+  "module_metrics": {
+    "container_id": "c_11461",
+    "threshold": 19.0,
+    "day1_steps": 96,
+    "peak_steps": 14,
+    "non_peak_steps": 82,
+    "peak_fraction": 0.14583333333333334,
+    "peak_mae": 3.639614127503205,
+    "peak_rmse": 4.267465872561249,
+    "non_peak_mae": 1.1387193932518451,
+    "non_peak_rmse": 1.440486050433233,
+    "overall_mae": 1.5034332086635012,
+    "overall_rmse": 2.1043301454754686
+  },
+  "pooled_summary": {
+    "containers_evaluated": 1,
+    "total_day1_steps": 96,
+    "peak_steps": 14,
+    "non_peak_steps": 82,
+    "peak_step_fraction": 0.14583333333333334,
+    "peak_mae": 3.639614127503205,
+    "peak_rmse": 4.267465872561249,
+    "non_peak_mae": 1.1387193932518451,
+    "non_peak_rmse": 1.440486050433233
+  },
+  "checks": {
+    "peak_mae_match": true,
+    "peak_rmse_match": true,
+    "non_peak_mae_match": true,
+    "non_peak_rmse_match": true,
+    "overall_mae_match": true,
+    "overall_rmse_match": true,
+    "peak_steps_match": true,
+    "label_rule_match": true,
+    "pooled_peak_mae_match": true,
+    "pooled_non_peak_mae_match": true
+  },
+  "pipeline_status": "PASS"
+}
