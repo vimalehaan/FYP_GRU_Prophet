@@ -15,14 +15,16 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
+from utils.hybrid_config import DEFAULT_INPUT_WINDOW, DAY1_HORIZON, FORECAST_HORIZON  # noqa: E402
 from utils.hybrid_artifacts import load_hybrid_artifacts, save_hybrid_artifacts  # noqa: E402
 from utils.hybrid_evaluation import evaluate_selected_containers  # noqa: E402
 from utils.hybrid_inference import run_hybrid_inference  # noqa: E402
-from utils.hybrid_training import generate_prophet_residuals  # noqa: E402
+from utils.hybrid_training import build_hybrid_gru_model, generate_prophet_residuals  # noqa: E402
 from utils.sequence_utils import create_residual_sequences  # noqa: E402
 
 
 DEMO_CID = "c_11461"
+INPUT_WINDOW = DEFAULT_INPUT_WINDOW
 
 
 def _train_model(global_train: pd.DataFrame):
@@ -43,8 +45,8 @@ def _train_model(global_train: pd.DataFrame):
         train_residual_df,
         features=features,
         target="residual_scaled",
-        input_window=288,
-        forecast_horizon=96,
+        input_window=INPUT_WINDOW,
+        forecast_horizon=DAY1_HORIZON,
     )
     split_idx = int(len(X_all) * 0.8)
     X_train = X_all[:split_idx]
@@ -52,15 +54,11 @@ def _train_model(global_train: pd.DataFrame):
     X_val = X_all[split_idx:]
     y_val = y_all[split_idx:]
 
-    model = Sequential([
-        GRU(256, return_sequences=True, input_shape=(288, len(features))),
-        Dropout(0.2),
-        GRU(128, return_sequences=True),
-        Dropout(0.2),
-        GRU(64),
-        Dense(128, activation="relu"),
-        Dense(96),
-    ])
+    model = build_hybrid_gru_model(
+        input_window=INPUT_WINDOW,
+        n_features=len(features),
+        forecast_horizon=DAY1_HORIZON,
+    )
     model.compile(optimizer="adam", loss="mse", metrics=["mae"])
     early_stop = EarlyStopping(
         monitor="val_loss",
@@ -122,14 +120,18 @@ def main() -> None:
             res_std,
             model_path=model_path,
             residual_stats_path=stats_path,
+            input_window=INPUT_WINDOW,
         )
-        loaded_model, loaded_res_mean, loaded_res_std = load_hybrid_artifacts(
-            model_path=model_path,
-            residual_stats_path=stats_path,
+        loaded_model, loaded_res_mean, loaded_res_std, loaded_input_window = (
+            load_hybrid_artifacts(
+                model_path=model_path,
+                residual_stats_path=stats_path,
+            )
         )
 
     assert np.isclose(res_mean, loaded_res_mean)
     assert np.isclose(res_std, loaded_res_std)
+    assert loaded_input_window == INPUT_WINDOW
 
     print("Comparing demo container inference (in-memory vs loaded)...")
     mem_result = run_hybrid_inference(
@@ -140,6 +142,7 @@ def main() -> None:
         scalers,
         res_mean,
         res_std,
+        input_window=INPUT_WINDOW,
     )
     loaded_result = run_hybrid_inference(
         DEMO_CID,
@@ -149,6 +152,7 @@ def main() -> None:
         scalers,
         loaded_res_mean,
         loaded_res_std,
+        input_window=INPUT_WINDOW,
     )
     _compare_inference(mem_result, loaded_result, DEMO_CID)
 
@@ -161,6 +165,7 @@ def main() -> None:
         scalers,
         res_mean,
         res_std,
+        input_window=INPUT_WINDOW,
     )
     loaded_eval, _, loaded_failures, loaded_skipped = evaluate_selected_containers(
         selected,
@@ -170,6 +175,7 @@ def main() -> None:
         scalers,
         loaded_res_mean,
         loaded_res_std,
+        input_window=INPUT_WINDOW,
     )
 
     assert len(mem_failures) == 0 == len(loaded_failures)

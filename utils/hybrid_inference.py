@@ -8,10 +8,11 @@ import pandas as pd
 from prophet import Prophet
 from sklearn.preprocessing import MinMaxScaler
 
-
-INPUT_WINDOW = 288
-DAY1_HORIZON = 96
-FORECAST_HORIZON = 192
+from utils.hybrid_config import (
+    DAY1_HORIZON,
+    DEFAULT_INPUT_WINDOW,
+    FORECAST_HORIZON,
+)
 
 
 @dataclass
@@ -61,7 +62,7 @@ def run_hybrid_inference(
     scalers: dict[str, MinMaxScaler],
     res_mean: float,
     res_std: float,
-    input_window: int = INPUT_WINDOW,
+    input_window: int = DEFAULT_INPUT_WINDOW,
     day1_horizon: int = DAY1_HORIZON,
     forecast_horizon: int = FORECAST_HORIZON,
 ) -> HybridInferenceResult:

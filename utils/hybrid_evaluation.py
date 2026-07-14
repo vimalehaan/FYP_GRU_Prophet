@@ -9,6 +9,7 @@ import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 
+from utils.hybrid_config import DEFAULT_INPUT_WINDOW
 from utils.hybrid_inference import HybridInferenceResult, run_hybrid_inference
 
 # Minimum denominator for MAPE (percentage points on the real CPU % scale).
@@ -105,6 +106,7 @@ def evaluate_selected_containers(
     scalers: dict[str, MinMaxScaler],
     res_mean: float,
     res_std: float,
+    input_window: int = DEFAULT_INPUT_WINDOW,
 ) -> tuple[
     pd.DataFrame,
     dict[str, HybridInferenceResult],
@@ -117,9 +119,10 @@ def evaluate_selected_containers(
     Returns
     -------
     evaluation_df:
-        Per-container Day 1 metrics and step counts.
+        Per-container **Day 1 primary** metrics (MAE, RMSE, MAPE) and step counts.
+        Day 2 recursive metrics are intentionally excluded.
     inference_results:
-        Mapping of container_id to full inference outputs.
+        Mapping of container_id to full inference outputs (Day 1 and Day 2 arrays).
     failures:
         List of (container_id, error_message) for containers that failed.
     skipped:
@@ -146,6 +149,7 @@ def evaluate_selected_containers(
                 scalers=scalers,
                 res_mean=res_mean,
                 res_std=res_std,
+                input_window=input_window,
             )
             day1_mae, day1_rmse = compute_day1_metrics(
                 result.actual_day1_real,

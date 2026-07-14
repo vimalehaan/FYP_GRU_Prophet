@@ -10,6 +10,7 @@ These documents record a read-only audit of the repository (July 2026) and compa
 
 | Document | Description |
 |----------|-------------|
+| [Hybrid Prophet + GRU](hybrid-prophet-gru.md) | **Final implementation** — training, evaluation, utilities, artifacts, model-loading workflow, and reproducibility |
 | [Implementation Roadmap](implementation-roadmap.md) | **Start here** — prioritized plan: fix current code → complete research → future work |
 | [Project Audit](project-audit.md) | Repository structure, file inventory, end-to-end workflow, and artifact status |
 | [Methodology Gap Analysis](methodology-gap-analysis.md) | Implementation vs. research design — compliance, leakage, deviations, and issues |
@@ -23,7 +24,7 @@ These documents record a read-only audit of the repository (July 2026) and compa
 | Area | Status |
 |------|--------|
 | Preprocessing pipeline | Mostly aligned with research design |
-| Hybrid Prophet + GRU | Conceptually correct; minor deviations |
+| Hybrid Prophet + GRU | Refactored; modular utils; Day 1 primary eval; input window locked to 96 |
 | Global GRU | Implemented; train/validation split needs correction |
 | Cross-architecture comparison | Not yet valid — different protocols |
 | Unseen container evaluation | Not implemented |

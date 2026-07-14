@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-07-13_155559",
+  "selected_containers": 100,
+  "day1_horizon": 96,
+  "input_windows": [
+    96,
+    288
+  ],
+  "runs": {
+    "96": {
+      "model_path": "experiments/hybrid_input_window_ablation_2026-07-13_155559/w96/hybrid_gru.keras",
+      "residual_stats_path": "experiments/hybrid_input_window_ablation_2026-07-13_155559/w96/residual_stats.pkl",
+      "res_mean": 1.5362158578354976e-05,
+      "res_std": 0.11123930781933586,
+      "evaluated_containers": 99,
+      "skipped_containers": [
+        {
+          "container_id": "c_14674",
+          "reason": "missing from frozen train/val data"
+        }
+      ],
+      "aggregate_summary": {
+        "day1_mae": {
+          "mean": 1.740159,
+          "std": 2.473294,
+          "min": 0.003562,
+          "max": 17.566731
+        },
+        "day1_rmse": {
+          "mean": 2.37919,
+          "std": 3.201259,
+          "min": 0.003757,
+          "max": 22.652396
+        },
+        "day1_mape": {
+          "mean": 112.074294,
+          "std": 615.753184,
+          "min": 4.605916,
+          "max": 5937.271724
+        }
+      }
+    },
+    "288": {
+      "model_path": "experiments/hybrid_input_window_ablation_2026-07-13_155559/w288/hybrid_gru.keras",
+      "residual_stats_path": "experiments/hybrid_input_window_ablation_2026-07-13_155559/w288/residual_stats.pkl",
+      "res_mean": 1.5362158578354976e-05,
+      "res_std": 0.11123930781933586,
+      "evaluated_containers": 99,
+      "skipped_containers": [
+        {
+          "container_id": "c_14674",
+          "reason": "missing from frozen train/val data"
+        }
+      ],
+      "aggregate_summary": {
+        "day1_mae": {
+          "mean": 1.752317,
+          "std": 2.493537,
+          "min": 0.003428,
+          "max": 17.678132
+        },
+        "day1_rmse": {
+          "mean": 2.392023,
+          "std": 3.216031,
+          "min": 0.003651,
+          "max": 22.700967
+        },
+        "day1_mape": {
+          "mean": 112.198507,
+          "std": 614.175906,
+          "min": 4.600099,
+          "max": 5918.977518
+        }
+      }
+    }
+  },
+  "comparison_table": [
+    {
+      "input_window": 96,
+      "evaluated_containers": 99,
+      "skipped_containers": 1,
+      "mean_mae": 1.7401594596767764,
+      "std_mae": 2.473294386227263,
+      "mean_rmse": 2.379190321847057,
+      "std_rmse": 3.2012589612747995,
+      "mean_mape": 112.07429351328325,
+      "std_mape": 615.7531841691199
+    },
+    {
+      "input_window": 288,
+      "evaluated_containers": 99,
+      "skipped_containers": 1,
+      "mean_mae": 1.7523173227501991,
+      "std_mae": 2.4935365538958663,
+      "mean_rmse": 2.3920227731013717,
+      "std_rmse": 3.2160309313299518,
+      "mean_mape": 112.198507223361,
+      "std_mape": 614.1759062740376
+    }
+  ],
+  "recommended_input_window": 96,
+  "recommendation_rationale": "96-step input window achieves lower mean Day 1 MAE and RMSE, aligns with the research specification (24-hour input context), and uses a simpler model input shape."
+}

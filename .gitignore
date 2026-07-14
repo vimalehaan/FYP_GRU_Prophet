@@ -16,3 +16,6 @@ data/*
 !data/container_metadata.parquet
 # macOS
 .DS_Store
+
+experiments/**/hybrid_gru.keras
+experiments/**/residual_stats.pkl

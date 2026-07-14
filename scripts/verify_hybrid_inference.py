@@ -14,13 +14,12 @@ from prophet import Prophet
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, REPO_ROOT)
 
+from utils.hybrid_config import DEFAULT_INPUT_WINDOW, DAY1_HORIZON, FORECAST_HORIZON  # noqa: E402
 from utils.hybrid_inference import run_hybrid_inference  # noqa: E402
 
 
 TARGET_CID = "c_11461"
-INPUT_WINDOW = 288
-DAY1_HORIZON = 96
-FORECAST_HORIZON = 192
+INPUT_WINDOW = DEFAULT_INPUT_WINDOW
 
 
 def _load_inputs():
@@ -181,6 +180,7 @@ def main() -> None:
         scalers=scalers,
         res_mean=res_mean,
         res_std=res_std,
+        input_window=INPUT_WINDOW,
     )
 
     print("Comparing outputs...")

@@ -66,6 +66,7 @@ def main() -> None:
             scalers=scalers,
             res_mean=residual_stats["res_mean"],
             res_std=residual_stats["res_std"],
+            input_window=residual_stats.get("input_window", 288),
         )
     )
     summary = summarize_evaluation_metrics(evaluation_df)
