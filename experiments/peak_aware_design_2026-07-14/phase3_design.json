@@ -1,0 +1,164 @@
+{
+  "phase": 3,
+  "phase_name": "Peak-Aware Learning Design",
+  "status": "complete",
+  "locked_date": "2026-07-14",
+  "design_only": true,
+  "implementation_phase": 4,
+  "documentation": "docs/peak-aware-hybrid/phase-03-learning-design.md",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "experimental_variable": "gru_training_loss_only",
+  "locked_design": {
+    "mechanism": "timestep_weighted_mse",
+    "peak_definition": {
+      "rule": "cpu_real >= P90(container_train)",
+      "percentile": 90,
+      "value_space": "real_cpu_percent",
+      "threshold_scope": "per_container",
+      "threshold_fit_period": "train_only",
+      "absolute_cpu_floor_applied": false
+    },
+    "peak_weight_lambda": 5,
+    "non_peak_weight": 1,
+    "weighting_granularity": "timestep",
+    "weight_scope": "forecast_horizon_targets_only",
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "early_stopping": {
+      "monitor": "val_loss",
+      "weighted": false,
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "training_hyperparameters": {
+      "optimizer": "adam",
+      "base_loss": "mse",
+      "metrics": ["mae"],
+      "epochs_max": 100,
+      "batch_size": 64,
+      "shuffle": false,
+      "random_seed": 42,
+      "sequence_val_split": 0.8
+    },
+    "inference": "unchanged_hybrid_inference",
+    "evaluation": "unchanged_hybrid_evaluation"
+  },
+  "rejected_mechanisms": [
+    "sequence_weighted_mse",
+    "oversampling_peak_sequences",
+    "focal_loss",
+    "weighted_huber_loss",
+    "quantile_loss",
+    "prophet_side_peak_awareness",
+    "architecture_changes",
+    "class_balanced_sampling"
+  ],
+  "lambda_selection": {
+    "locked_value": 5,
+    "candidates_considered": [3, 5, 10],
+    "selection_method": "analytical_fixed_choice",
+    "rejected_approaches": [
+      "temporal_validation_tuning",
+      "large_hyperparameter_grid",
+      "per_container_lambda",
+      "adaptive_lambda"
+    ],
+    "analytical_peak_loss_share_at_lambda_5": 0.513
+  },
+  "fairness_contract": {
+    "control_model": "hybrid_prophet_gru_v1",
+    "control_reference_dir": "experiments/baseline_reference_2026-07-14",
+    "identical_components": [
+      "preprocessing",
+      "train_val_split",
+      "prophet_config",
+      "residual_computation",
+      "res_mean_res_std",
+      "sequence_construction",
+      "gru_architecture",
+      "optimizer_epochs_batch_shuffle",
+      "early_stopping_criterion",
+      "inference_pipeline",
+      "primary_evaluation_protocol"
+    ],
+    "intentional_difference": "timestep_weighted_mse_on_y_train"
+  },
+  "training_protocol_summary": {
+    "weight_tensor_shape": "(n_samples, 96)",
+    "weights_on": "y_train_only",
+    "validation_unweighted": true,
+    "threshold_artifact": "peak/peak_thresholds.pkl",
+    "residual_stats_artifact": "models/residual_stats.pkl"
+  },
+  "phase_4_modules": {
+    "new_files": [
+      "utils/peak_config.py",
+      "utils/peak_detection.py",
+      "utils/hybrid_training_peak_aware.py",
+      "scripts/run_peak_aware_hybrid_experiment.py",
+      "scripts/verify_peak_aware_fairness.py"
+    ],
+    "frozen_read_only_imports": [
+      "utils.hybrid_training.generate_prophet_residuals",
+      "utils.hybrid_training.build_hybrid_gru_model",
+      "utils.sequence_utils.create_residual_sequences"
+    ],
+    "frozen_do_not_modify": [
+      "utils/hybrid_config.py",
+      "utils/hybrid_training.py",
+      "utils/hybrid_inference.py",
+      "utils/hybrid_evaluation.py",
+      "utils/hybrid_artifacts.py",
+      "utils/sequence_utils.py",
+      "notebooks/hybrid_model.ipynb",
+      "notebooks/preprocessing.ipynb",
+      "models/hybrid_gru.keras",
+      "models/residual_stats.pkl",
+      "experiments/baseline_reference_2026-07-14"
+    ],
+    "experiment_output_pattern": "experiments/peak_aware_<timestamp>/",
+    "implementation_order": [
+      "utils/peak_config.py",
+      "utils/peak_detection.py",
+      "utils/hybrid_training_peak_aware.py",
+      "scripts/run_peak_aware_hybrid_experiment.py",
+      "scripts/verify_peak_aware_fairness.py"
+    ]
+  },
+  "fairness_verification_checks": [
+    "frozen_file_integrity",
+    "identical_residual_statistics",
+    "identical_sequences",
+    "identical_architecture",
+    "early_stopping_config",
+    "unweighted_validation",
+    "shared_inference_evaluation_path",
+    "valid_peak_threshold_artifact"
+  ],
+  "phase_5_evaluation_preview": {
+    "overall_metrics": ["day1_mae", "day1_rmse", "day1_mape"],
+    "peak_subset_metrics": ["peak_mae", "peak_rmse"],
+    "non_peak_subset_metrics": ["non_peak_mae", "non_peak_rmse"],
+    "optional_stratification": ["stable", "medium", "spiky"],
+    "evaluation_horizon": "day1_96_steps_per_container",
+    "peak_label_rule": "same_p90_train_fitted_thresholds"
+  },
+  "tasks": {
+    "task_1_fairness_contract": "complete",
+    "task_2_learning_mechanism": "complete",
+    "task_3_peak_weight_lambda": "complete",
+    "task_4_training_protocol": "complete",
+    "task_5_module_plan": "complete",
+    "task_6_design_lock": "complete"
+  },
+  "known_limitations": [
+    "Five near-idle containers have P90 threshold 0.0, inflating peak labels (~29% of train peak timesteps)",
+    "Validation peak rates exceed train rates under fixed thresholds",
+    "Spiky workload label partially reflects near-idle CV artefact",
+    "Lambda 5 chosen analytically, not empirically swept",
+    "Stochastic GRU training may vary slightly across hardware despite seed 42"
+  ],
+  "locked_for_remainder_of_research": true,
+  "next_phase": "Phase 4 — Implementation"
+}
