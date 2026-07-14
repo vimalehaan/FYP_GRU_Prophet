@@ -53,4 +53,4 @@ Where:
 
 ---
 
-*This decision is recorded in `peak_definition_decision.json` and `docs/peak_aware_hybrid_research.md`.*
+*This decision is recorded in `peak_definition_decision.json` and `docs/peak-aware-hybrid/phase-02-peak-exploration.md`.*

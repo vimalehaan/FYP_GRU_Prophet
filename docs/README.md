@@ -10,6 +10,7 @@ These documents record a read-only audit of the repository (July 2026) and compa
 
 | Document | Description |
 |----------|-------------|
+| [Peak-Aware Hybrid Research](peak-aware-hybrid/README.md) | **Peak-Aware study** — research log by phase (baseline freeze, peak exploration, learning design, implementation, evaluation) |
 | [Hybrid Prophet + GRU](hybrid-prophet-gru.md) | **Final implementation** — training, evaluation, utilities, artifacts, model-loading workflow, and reproducibility |
 | [Implementation Roadmap](implementation-roadmap.md) | **Start here** — prioritized plan: fix current code → complete research → future work |
 | [Project Audit](project-audit.md) | Repository structure, file inventory, end-to-end workflow, and artifact status |
