@@ -8,8 +8,14 @@ __pycache__/
 
 # Virtual Environment
 tf_metal_env/
+
+models/
+
 data/*
 !data/preprocessing_summary.json
 !data/container_metadata.parquet
 # macOS
 .DS_Store
+
+experiments/**/hybrid_gru.keras
+experiments/**/residual_stats.pkl
