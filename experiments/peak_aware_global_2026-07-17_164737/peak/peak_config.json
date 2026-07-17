@@ -1,0 +1,15 @@
+{
+  "peak_percentile": 90,
+  "peak_weight": 5.0,
+  "non_peak_weight": 1.0,
+  "peak_rule": "cpu_real >= P90(container_train)",
+  "value_space": "real_cpu_percent",
+  "threshold_scope": "per_container",
+  "threshold_fit_period": "train_only",
+  "weighting_granularity": "timestep",
+  "weight_scope": "forecast_horizon_targets_only",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "model_variant": "global_gru_peak_aware_v1"
+}

@@ -1,0 +1,36 @@
+{
+  "experiment_type": "peak_aware_global",
+  "stage": 2,
+  "timestamp": "2026-07-17_164737",
+  "smoke_run": false,
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "implementation_workspace": "experiments/peak_aware_global_implementation_2026-07-17",
+  "data_artifacts": [
+    "data/train_df.parquet",
+    "data/scalers.pkl",
+    "data/selected_containers.npy"
+  ],
+  "outputs": {
+    "model": "models/global_gru_peak_aware.keras",
+    "model_metadata": "models/global_gru_peak_aware_metadata.json",
+    "peak_thresholds": "peak/peak_thresholds.pkl",
+    "peak_config": "peak/peak_config.json",
+    "training_metadata": "training/training_metadata.json",
+    "reference_metadata": "reference/reference_metadata.json"
+  },
+  "status": {
+    "training": "complete",
+    "fairness_verification": "complete",
+    "stage2_lock": "complete",
+    "evaluation": "pending"
+  },
+  "training_summary": {
+    "epochs_run": 4,
+    "final_val_loss": 0.04058956727385521,
+    "peak_weight_fraction": 0.16936374549819927
+  },
+  "fairness_check": "verification/fairness_check.json",
+  "phase2_implementation": "phase2_implementation.json"
+}

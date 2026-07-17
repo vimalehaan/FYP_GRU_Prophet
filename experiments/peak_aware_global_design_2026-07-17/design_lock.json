@@ -1,0 +1,287 @@
+{
+  "stage": 1,
+  "stage_name": "Design Lock",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "design_only": true,
+  "next_stage": 2,
+  "next_stage_name": "Implementation + Fairness Verification",
+  "documentation": "docs/peak-aware-global/01-design-lock.md",
+  "study_readme": "docs/peak-aware-global/README.md",
+  "thesis_framing": "one_peak_aware_methodology_two_architectures",
+  "methodology_authority": {
+    "peak_aware_hybrid_docs": "docs/peak-aware-hybrid/",
+    "peak_aware_hybrid_experiment": "experiments/peak_aware_2026-07-14_164518/",
+    "hybrid_design_lock": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+    "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json"
+  },
+  "control_reference": {
+    "model_variant": "global_gru_v1",
+    "reference_dir": "experiments/global_gru_reference_2026-07-17/",
+    "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+    "baseline_metadata": "experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json",
+    "control_day1_mae_mean": 2.062666
+  },
+  "experimental_variable": "gru_training_loss_only",
+  "inherited_methodology": {
+    "peak_definition": {
+      "rule": "cpu_real >= P90(container_train)",
+      "percentile": 90,
+      "value_space": "real_cpu_percent",
+      "threshold_scope": "per_container",
+      "threshold_fit_period": "train_only",
+      "absolute_cpu_floor_applied": false
+    },
+    "peak_weight_lambda": 5,
+    "non_peak_weight": 1,
+    "weighting_granularity": "timestep",
+    "weight_scope": "forecast_horizon_targets_only",
+    "early_stopping_weighted": false,
+    "evaluation_protocol": "identical_to_hybrid_phase_5",
+    "not_repeated": [
+      "peak_percentile_exploration",
+      "lambda_selection",
+      "mechanism_selection"
+    ]
+  },
+  "locked_design": {
+    "mechanism": "timestep_weighted_mse",
+    "model_variant": "global_gru_peak_aware_v1",
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "features": ["cpu_scaled", "cpu_mean", "cpu_std"],
+    "target": "cpu_scaled",
+    "sequence_builder": "create_longterm_sequences",
+    "sequence_source": "global_train_only",
+    "architecture": "GRU(128, return_sequences=True) -> Dropout(0.2) -> GRU(64) -> Dense(64, relu) -> Dense(96)",
+    "early_stopping": {
+      "monitor": "val_loss",
+      "weighted": false,
+      "patience": 3,
+      "restore_best_weights": true
+    },
+    "training_hyperparameters": {
+      "optimizer": "adam",
+      "base_loss": "mse",
+      "metrics": ["mae"],
+      "epochs_max": 50,
+      "batch_size": 256,
+      "shuffle": false,
+      "random_seed": 42,
+      "sequence_val_split": 0.8
+    },
+    "expected_sequence_counts": {
+      "n_sequences": 41650,
+      "n_train": 33320,
+      "n_val": 8330
+    },
+    "inference": "unchanged_global_inference",
+    "evaluation": "unchanged_global_evaluation_protocol"
+  },
+  "configuration_module_decision": {
+    "chosen_option": "B",
+    "module": "utils/global_peak_aware_config.py",
+    "rejected_option": "A_extend_global_config",
+    "rationale": [
+      "utils/global_config.py is listed in frozen_code_files in baseline_metadata.json",
+      "Hybrid precedent uses separate peak_config.py without modifying hybrid_config.py",
+      "Clear naming avoids confusion with frozen baseline configuration"
+    ],
+    "import_policy": "read_only_imports_from_global_config_and_peak_config"
+  },
+  "fairness_contract": {
+    "control_model": "global_gru_v1",
+    "control_reference_dir": "experiments/global_gru_reference_2026-07-17/",
+    "identical_components": [
+      "preprocessing",
+      "train_val_split",
+      "sequence_construction_create_longterm_sequences",
+      "global_train_sequence_source",
+      "features_and_target",
+      "gru_architecture",
+      "optimizer_epochs_batch_shuffle_seed",
+      "sequence_level_80_20_split_index",
+      "early_stopping_criterion_unweighted",
+      "inference_pipeline",
+      "primary_evaluation_protocol"
+    ],
+    "intentional_difference": "timestep_weighted_mse_on_y_train",
+    "mandatory_sequence_identity": {
+      "description": "Peak-Aware Global must generate exactly the same training sequences as frozen Global baseline",
+      "X_all": "byte_identical_to_baseline_create_longterm_sequences",
+      "y_all": "byte_identical_to_baseline",
+      "sample_ordering": "identical_sample_cids_row_order",
+      "sequence_count": 41650,
+      "only_allowed_difference": "W_all_weight_matrix",
+      "W_all_shape": [41650, 96],
+      "W_all_allowed_values": [1.0, 5.0],
+      "gate_rule": "evaluation_must_not_start_until_assertion_passes"
+    }
+  },
+  "training_protocol_summary": {
+    "weight_tensor_shape": "(n_samples, 96)",
+    "weights_on": "y_train_only",
+    "validation_unweighted": true,
+    "threshold_artifact": "peak/peak_thresholds.pkl",
+    "residual_stats_artifact": null,
+    "prophet_required": false
+  },
+  "shared_peak_utilities": {
+    "module": "utils/peak_detection.py",
+    "reuse_functions": [
+      "compute_peak_thresholds",
+      "build_sequence_weight_matrix",
+      "label_peak_timesteps",
+      "save_peak_thresholds",
+      "load_peak_thresholds"
+    ],
+    "planned_extension": "align_with_longterm_sequences",
+    "separate_global_peak_module": false
+  },
+  "rejected_mechanisms": [
+    "sequence_weighted_mse",
+    "oversampling_peak_sequences",
+    "focal_loss",
+    "weighted_huber_loss",
+    "quantile_loss",
+    "prophet_side_peak_awareness",
+    "architecture_changes",
+    "class_balanced_sampling"
+  ],
+  "rejected_mechanisms_authority": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "stage_2_modules": {
+    "new_files": [
+      "utils/global_peak_aware_config.py",
+      "utils/global_training_peak_aware.py",
+      "scripts/run_peak_aware_global_experiment.py",
+      "scripts/verify_peak_aware_global_fairness.py"
+    ],
+    "shared_extensions": [
+      "utils/peak_detection.py"
+    ],
+    "frozen_do_not_modify": [
+      "utils/global_config.py",
+      "utils/global_training.py",
+      "utils/global_inference.py",
+      "utils/global_evaluation.py",
+      "utils/global_artifacts.py",
+      "utils/global_plotting.py",
+      "utils/sequence_utils.py",
+      "notebooks/global_gru_model.ipynb",
+      "models/global_gru.keras",
+      "models/global_gru_metadata.json",
+      "experiments/global_gru_reference_2026-07-17/"
+    ],
+    "experiment_output_pattern": "experiments/peak_aware_global_<timestamp>/",
+    "implementation_order": [
+      "utils/global_peak_aware_config.py",
+      "utils/peak_detection.py (align_with_longterm_sequences if needed)",
+      "utils/global_training_peak_aware.py",
+      "scripts/run_peak_aware_global_experiment.py",
+      "scripts/verify_peak_aware_global_fairness.py"
+    ]
+  },
+  "stage_3_modules_planned": {
+    "scripts/run_peak_aware_global_evaluation.py": "pending",
+    "scripts/run_peak_aware_global_peak_subset_evaluation.py": "pending",
+    "scripts/build_peak_aware_global_comparison.py": "pending",
+    "scripts/verify_peak_aware_global_evaluation.py": "pending",
+    "notebooks/peak_aware_global_container_comparison.ipynb": "pending"
+  },
+  "architecture_builder_policy": {
+    "mandatory_reuse": "utils.global_training.build_global_gru_model",
+    "read_only_import": true,
+    "duplicate_architecture_only_if_technically_blocked": true,
+    "document_reason_if_duplicated": true
+  },
+  "threshold_validation_policy": {
+    "required": [
+      "threshold_generation_succeeds",
+      "threshold_count_correct",
+      "alignment_succeeds",
+      "peak_rate_reasonable"
+    ],
+    "explicitly_not_required": "comparison_to_hybrid_experiment_thresholds"
+  },
+  "reference_metadata_snapshot": {
+    "path": "reference/reference_metadata.json",
+    "fields": [
+      "global_baseline_reference",
+      "baseline_version",
+      "design_lock_reference",
+      "implementation_version",
+      "timestamp",
+      "frozen_control_path"
+    ]
+  },
+  "fairness_verification_checks": [
+    "frozen_file_integrity",
+    "identical_X_all_y_all_and_sample_ordering",
+    "identical_sequence_count_41650",
+    "W_all_only_allowed_difference",
+    "identical_architecture_via_build_global_gru_model",
+    "global_hyperparams_match_baseline_metadata",
+    "early_stopping_config_unweighted",
+    "shared_global_inference_evaluation_path",
+    "valid_peak_threshold_artifact",
+    "weight_matrix_aligns_with_longterm_sequences",
+    "single_behavioural_difference_weighted_train_step_only"
+  ],
+  "fairness_check_count": 10,
+  "stage_5_evaluation_preview": {
+    "overall_metrics": ["day1_mae", "day1_rmse", "day1_mape"],
+    "peak_subset_metrics": ["peak_mae", "peak_rmse", "non_peak_mae", "non_peak_rmse"],
+    "optional_stratification": ["pattern_type", "peak_quartiles"],
+    "evaluation_horizon": "day1_96_steps_per_container",
+    "peak_label_rule": "same_p90_train_fitted_thresholds",
+    "delta_convention": "treatment_minus_control",
+    "prediction_field": "day1_pred_real"
+  },
+  "stage_4_secondary_synthesis": {
+    "section": "4.7_architecture_sensitivity",
+    "role": "secondary_only_not_primary_evaluation",
+    "hybrid_reference_results": {
+      "baseline_overall_mae": 1.745882,
+      "peak_aware_overall_mae": 1.740819,
+      "delta_overall_mae": -0.005063,
+      "baseline_peak_mae": 2.50122,
+      "peak_aware_peak_mae": 2.525614,
+      "delta_peak_mae": 0.024393,
+      "baseline_non_peak_mae": 1.485266,
+      "peak_aware_non_peak_mae": 1.47004,
+      "delta_non_peak_mae": -0.015227
+    }
+  },
+  "out_of_scope": [
+    "peak_percentile_exploration",
+    "lambda_selection_or_sweep",
+    "mechanism_selection",
+    "modifying_frozen_baselines",
+    "hyperparameter_tuning",
+    "architecture_changes",
+    "preprocessing_changes",
+    "evaluation_protocol_changes",
+    "hybrid_vs_global_methodology_comparison_rerun",
+    "cross_architecture_synthesis_as_primary_eval"
+  ],
+  "known_limitations_inherited": [
+    "Five near-idle containers have P90 threshold 0.0, inflating peak labels",
+    "Validation peak rates exceed train rates under fixed thresholds",
+    "Lambda 5 chosen analytically in Hybrid Phase 3, not empirically swept on Global",
+    "Stochastic GRU training may vary slightly across hardware despite seed 42",
+    "Global baseline MAE higher than Hybrid — interpret within-architecture only"
+  ],
+  "stage_1_exit_criteria": {
+    "inherited_methodology_documented": true,
+    "global_control_identified": true,
+    "configuration_decision_recorded": true,
+    "fairness_contract_including_sequence_identity": true,
+    "component_parity_table_complete": true,
+    "experiment_layout_defined": true,
+    "implementation_scope_bounded": true,
+    "design_lock_json_written": true,
+    "stage_2_not_started": true
+  },
+  "locked_for_implementation": true,
+  "awaiting_approval_before_stage_2": true
+}

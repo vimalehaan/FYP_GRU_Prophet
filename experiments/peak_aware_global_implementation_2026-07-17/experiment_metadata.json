@@ -1,0 +1,92 @@
+{
+  "experiment_id": "peak_aware_global_implementation_2026-07-17",
+  "experiment_type": "peak_aware_global_implementation",
+  "stage": 2,
+  "stage_name": "Implementation + Fairness Verification",
+  "status": "complete",
+  "completed_at": "2026-07-17",
+  "started_at": "2026-07-17",
+  "objective": "Implement locked Stage 1 design, train Peak-Aware Global GRU, pass 10 fairness checks",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "control_reference": "experiments/global_gru_reference_2026-07-17/",
+  "control_baseline_metadata": "experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "methodology_authority": "docs/peak-aware-hybrid/",
+  "documentation": {
+    "design_lock": "docs/peak-aware-global/01-design-lock.md",
+    "stage2_plan": "docs/peak-aware-global/stage-02-implementation-plan.md",
+    "implementation_record": "docs/peak-aware-global/02-implementation-record.md"
+  },
+  "constraints": [
+    "No modification to frozen Global baseline code or artifacts",
+    "No Stage 3 evaluation in this stage",
+    "Single experimental variable: GRU training loss weighting",
+    "Reuse build_global_gru_model() read-only from utils.global_training",
+    "Identical X_all, y_all, sample ordering; only W_all may differ",
+    "Outputs saved under experiments/peak_aware_global_<timestamp>/ only",
+    "10 fairness checks must PASS before Stage 3"
+  ],
+  "locked_design": {
+    "mechanism": "timestep_weighted_mse",
+    "model_variant": "global_gru_peak_aware_v1",
+    "peak_percentile": 90,
+    "peak_weight": 5,
+    "non_peak_weight": 1,
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
+    "target": "cpu_scaled",
+    "sequence_builder": "create_longterm_sequences",
+    "optimizer": "adam",
+    "epochs_max": 50,
+    "batch_size": 256,
+    "early_stopping_patience": 3,
+    "shuffle": false,
+    "random_seed": 42,
+    "sequence_val_split": 0.8,
+    "expected_n_sequences": 41650,
+    "expected_n_train": 33320,
+    "expected_n_val": 8330
+  },
+  "data_sources": {
+    "train": "data/train_df.parquet",
+    "val": "data/val_df.parquet",
+    "scalers": "data/scalers.pkl",
+    "selected_containers": "data/selected_containers.npy"
+  },
+  "configuration_module": {
+    "path": "utils/global_peak_aware_config.py",
+    "policy": "Option B \u2014 separate treatment config; read-only imports from global_config and peak_config"
+  },
+  "new_modules_planned": {
+    "global_peak_aware_config": "utils/global_peak_aware_config.py",
+    "peak_detection_extension": "utils/peak_detection.py",
+    "global_training_peak_aware": "utils/global_training_peak_aware.py",
+    "run_experiment": "scripts/run_peak_aware_global_experiment.py",
+    "verify_fairness": "scripts/verify_peak_aware_global_fairness.py",
+    "peak_detection_sanity": "scripts/run_peak_aware_global_peak_detection_sanity.py"
+  },
+  "peak_detection_sanity": "experiments/peak_aware_global_implementation_2026-07-17/peak_detection_sanity.json",
+  "peak_aware_training_smoke": "experiments/peak_aware_global_implementation_2026-07-17/peak_aware_training_smoke.json",
+  "training_run_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "fairness_verification": "experiments/peak_aware_global_2026-07-17_164737/verification/fairness_check.json",
+  "reference_metadata_snapshot": "experiments/peak_aware_global_2026-07-17_164737/reference/reference_metadata.json",
+  "next_stage": {
+    "stage": 3,
+    "name": "Evaluation + Verification"
+  },
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete",
+    "task_7": "complete"
+  },
+  "phase2_lock": "experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json"
+}

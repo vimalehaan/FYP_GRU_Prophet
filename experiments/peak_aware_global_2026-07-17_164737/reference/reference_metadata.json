@@ -1,0 +1,10 @@
+{
+  "global_baseline_reference": "experiments/global_gru_reference_2026-07-17",
+  "baseline_version": "global_gru_v1",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "implementation_version": "global_gru_peak_aware_v1",
+  "frozen_control_path": "experiments/global_gru_reference_2026-07-17/models/global_gru.keras",
+  "timestamp": "2026-07-17T11:17:38Z",
+  "stage": 2,
+  "fairness_checks_required": 10
+}

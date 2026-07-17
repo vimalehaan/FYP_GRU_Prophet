@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "epochs_run": 2,
+  "n_sequences_total": 41650,
+  "n_peak_thresholds": 99,
+  "W_all_shape": [
+    41650,
+    96
+  ],
+  "peak_weight_fraction": 0.16936374549819927,
+  "architecture_builder": "utils.global_training.build_global_gru_model",
+  "layer_count_match": true
+}

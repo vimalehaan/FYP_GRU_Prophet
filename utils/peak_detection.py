@@ -76,9 +76,10 @@ def build_sequence_weight_matrix(
     non_peak_weight: float = NON_PEAK_WEIGHT,
 ) -> tuple[np.ndarray, np.ndarray]:
     """
-    Build per-timestep loss weights aligned with ``create_residual_sequences``.
+    Build per-timestep loss weights aligned with baseline sequence builders.
 
-    Window iteration mirrors ``utils.sequence_utils.create_residual_sequences``:
+    Window iteration mirrors ``utils.sequence_utils`` sliding-window logic
+    (``create_residual_sequences`` and ``create_longterm_sequences``):
     for each container (``groupby`` order), chronologically sorted, generate
     one weight row per valid sliding window. Only forecast-horizon timesteps
     are weighted; peaks are labelled on real CPU percent.
@@ -274,4 +275,49 @@ def align_with_residual_sequences(
         "n_baseline": int(len(baseline_cids)),
         "n_peak_weights": int(len(peak_cids)),
         "cid_arrays_equal": bool(np.array_equal(baseline_cids, peak_cids)),
+    }
+
+
+def align_with_longterm_sequences(
+    global_train: pd.DataFrame,
+    scalers: dict[str, MinMaxScaler],
+    thresholds: dict[str, float],
+    features: list[str] | tuple[str, ...] | None = None,
+    target: str | None = None,
+    input_window: int = INPUT_WINDOW,
+    forecast_horizon: int = FORECAST_HORIZON,
+) -> dict[str, Any]:
+    """
+    Verify weight-matrix rows align with baseline ``create_longterm_sequences``.
+
+    Compares container-ID order row-by-row against the Global GRU sequence
+    builder used by the frozen baseline training pipeline.
+    """
+    from utils.global_config import GLOBAL_FEATURES, GLOBAL_TARGET
+    from utils.sequence_utils import create_longterm_sequences
+
+    feature_list = list(features if features is not None else GLOBAL_FEATURES)
+    target_col = target if target is not None else GLOBAL_TARGET
+
+    _, _, baseline_cids = create_longterm_sequences(
+        global_train,
+        features=feature_list,
+        target=target_col,
+        input_window=input_window,
+        forecast_horizon=forecast_horizon,
+    )
+    _, peak_cids = build_sequence_weight_matrix(
+        global_train=global_train,
+        scalers=scalers,
+        thresholds=thresholds,
+        input_window=input_window,
+        forecast_horizon=forecast_horizon,
+    )
+
+    return {
+        "n_baseline": int(len(baseline_cids)),
+        "n_peak_weights": int(len(peak_cids)),
+        "cid_arrays_equal": bool(np.array_equal(baseline_cids, peak_cids)),
+        "features": feature_list,
+        "target": target_col,
     }

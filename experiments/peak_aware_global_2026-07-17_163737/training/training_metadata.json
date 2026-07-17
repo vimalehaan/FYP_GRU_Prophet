@@ -1,0 +1,61 @@
+{
+  "model_variant": "global_gru_peak_aware_v1",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "features": [
+    "cpu_scaled",
+    "cpu_mean",
+    "cpu_std"
+  ],
+  "target": "cpu_scaled",
+  "optimizer": "adam",
+  "loss": "timestep_weighted_mse",
+  "loss_implementation": "custom_train_step_timestep_weighted_mse",
+  "base_loss": "mse",
+  "peak_percentile": 90,
+  "peak_weight": 5.0,
+  "non_peak_weight": 1.0,
+  "early_stopping_monitor": "val_loss",
+  "early_stopping_patience": 3,
+  "early_stopping_restore_best_weights": true,
+  "epochs_max": 2,
+  "epochs_run": 2,
+  "batch_size": 256,
+  "shuffle": false,
+  "random_seed": 42,
+  "sequence_val_split": 0.8,
+  "n_sequences_total": 41650,
+  "n_sequences_train": 33320,
+  "n_sequences_val": 8330,
+  "n_unique_containers": 99,
+  "n_peak_thresholds": 99,
+  "weight_summary": {
+    "n_sequences": 41650,
+    "forecast_horizon": 96,
+    "total_weighted_timesteps": 3998400,
+    "peak_weighted_timesteps": 677184,
+    "non_peak_weighted_timesteps": 3321216,
+    "peak_weight_fraction": 0.16936374549819927,
+    "peak_weight": 5.0,
+    "non_peak_weight": 1.0
+  },
+  "gru_units": [
+    128,
+    64
+  ],
+  "dense_units": 64,
+  "dropout": 0.2,
+  "final_train_loss": 0.03623608127236366,
+  "final_val_loss": 0.04244605451822281,
+  "final_train_mae": 0.12786957621574402,
+  "final_val_mae": 0.1477489322423935,
+  "validation_unweighted": true,
+  "trained_at": "2026-07-17T11:07:52.499538+00:00",
+  "frozen_modules_used": [
+    "utils.global_training.build_global_gru_model",
+    "utils.global_training.set_random_seeds",
+    "utils.sequence_utils.create_longterm_sequences"
+  ],
+  "experiment_dir": "experiments/peak_aware_global_2026-07-17_163737",
+  "smoke_run": true
+}
