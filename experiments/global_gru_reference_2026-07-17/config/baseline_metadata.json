@@ -1,0 +1,89 @@
+{
+  "baseline_version": "global_gru_v1",
+  "frozen_date": "2026-07-17",
+  "freeze_phase": "Phase 4 — Implementation",
+  "description": "Immutable Global GRU v1 control reference for Peak-Aware Global GRU and future studies",
+  "experiment_identifier": "global_gru_baseline_2026-07-17_074743",
+  "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "architecture": "GRU(128, return_sequences=True) -> Dropout(0.2) -> GRU(64) -> Dense(64, relu) -> Dense(96)",
+  "features": [
+    "cpu_scaled",
+    "cpu_mean",
+    "cpu_std"
+  ],
+  "target": "cpu_scaled",
+  "training": {
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "epochs_max": 50,
+    "epochs_run": 9,
+    "batch_size": 256,
+    "early_stopping_patience": 3,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_restore_best_weights": true,
+    "shuffle": false,
+    "random_seed": 42,
+    "sequence_val_split": 0.8,
+    "sequence_source": "global_train only",
+    "n_sequences": 41650,
+    "n_train_sequences": 33320,
+    "n_val_sequences": 8330,
+    "final_train_loss": 0.017497213557362556,
+    "final_val_loss": 0.029272664338350296,
+    "final_train_mae": 0.09124241024255753,
+    "final_val_mae": 0.11396081000566483
+  },
+  "selected_containers": 100,
+  "evaluable_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "evaluation_status": "pending_phase_5",
+  "evaluation_note": "Cohort Day 1 metrics (MAE, RMSE, MAPE) will be recorded after Phase 5 multi-container evaluation. No methodology comparison at Phase 4 freeze.",
+  "data_artifacts": [
+    "data/train_df.parquet",
+    "data/val_df.parquet",
+    "data/scalers.pkl",
+    "data/selected_containers.npy",
+    "data/preprocessing_summary.json"
+  ],
+  "frozen_code_files": [
+    "utils/global_config.py",
+    "utils/global_training.py",
+    "utils/global_inference.py",
+    "utils/global_artifacts.py",
+    "utils/sequence_utils.py",
+    "notebooks/global_gru_model.ipynb",
+    "scripts/run_global_gru_baseline_training.py",
+    "scripts/verify_global_gru_data_split.py"
+  ],
+  "source_model_path": "models/global_gru.keras",
+  "source_metadata_path": "models/global_gru_metadata.json",
+  "reference_model_path": "experiments/global_gru_reference_2026-07-17/models/global_gru.keras",
+  "reference_metadata_path": "experiments/global_gru_reference_2026-07-17/models/global_gru_metadata.json",
+  "documentation": "docs/global-gru-baseline/phase-04-implementation.md",
+  "environment": {
+    "python_version": "3.11.15",
+    "tensorflow_version": "2.16.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "trained_at": "2026-07-17T07:47:43.692613+00:00",
+    "frozen_at": "2026-07-17"
+  },
+  "verification": {
+    "verified_at": "2026-07-17",
+    "phase_4_scripts_passed": true,
+    "results": {
+      "verify_global_gru_data_split": "PASS",
+      "verify_hybrid_train_eval_split": "PASS"
+    },
+    "log": "verification/verification_notes.md"
+  }
+}
