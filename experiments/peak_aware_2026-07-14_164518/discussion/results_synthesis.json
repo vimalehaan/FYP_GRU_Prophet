@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-07-17T09:06:00Z",
+  "phase": 6,
+  "task": 1,
+  "source": "experiments/peak_aware_2026-07-14_164518/phase5_evaluation.json",
+  "evaluation_protocol": {
+    "cohort_evaluated": 99,
+    "skipped_containers": ["c_14674"],
+    "horizon_steps": 96,
+    "peak_definition": "P90 per-container train-fitted",
+    "peak_weight_lambda": 5,
+    "comparison": "peak_aware minus baseline (treatment minus control)"
+  },
+  "tier1_overall": {
+    "baseline": {
+      "day1_mae": 1.745882,
+      "day1_rmse": 2.387813,
+      "day1_mape": 111.940318
+    },
+    "peak_aware": {
+      "day1_mae": 1.740819,
+      "day1_rmse": 2.384394,
+      "day1_mape": 110.174351
+    },
+    "delta": {
+      "day1_mae": -0.005063,
+      "day1_rmse": -0.003419,
+      "day1_mape": -1.765967
+    },
+    "relative_change_pct": {
+      "day1_mae": -0.29,
+      "day1_rmse": -0.14,
+      "day1_mape": -1.58
+    },
+    "classification": "negligible_aggregate_change"
+  },
+  "tier2_peak_subset": {
+    "pooled_peak_steps": 2438,
+    "pooled_total_steps": 9504,
+    "peak_step_fraction": 0.256524,
+    "baseline": {
+      "peak_mae": 2.50122,
+      "peak_rmse": 5.186215
+    },
+    "peak_aware": {
+      "peak_mae": 2.525614,
+      "peak_rmse": 5.204102
+    },
+    "delta": {
+      "peak_mae": 0.024393,
+      "peak_rmse": 0.017887
+    },
+    "relative_change_pct": {
+      "peak_mae": 0.98,
+      "peak_rmse": 0.34
+    },
+    "classification": "no_peak_subset_improvement"
+  },
+  "tier3_non_peak_subset": {
+    "pooled_non_peak_steps": 7066,
+    "baseline": {
+      "non_peak_mae": 1.485266,
+      "non_peak_rmse": 3.490879
+    },
+    "peak_aware": {
+      "non_peak_mae": 1.47004,
+      "non_peak_rmse": 3.450886
+    },
+    "delta": {
+      "non_peak_mae": -0.015227,
+      "non_peak_rmse": -0.039992
+    },
+    "classification": "slight_non_peak_improvement"
+  },
+  "per_container_delta": {
+    "containers": 99,
+    "delta_day1_mae": {
+      "mean": -0.005063,
+      "std": 0.100239,
+      "min": -0.866823,
+      "max": 0.103361
+    },
+    "delta_day1_rmse": {
+      "mean": -0.00342,
+      "std": 0.107074,
+      "min": -0.93925,
+      "max": 0.124271
+    },
+    "containers_improved_mae": 45,
+    "containers_worsened_mae": 54,
+    "containers_unchanged_mae": 0,
+    "classification": "mixed_heterogeneous_outcomes"
+  },
+  "aggregate_dispersion": {
+    "baseline_day1_mae_std": 2.486804,
+    "peak_aware_day1_mae_std": 2.467712
+  },
+  "verification": {
+    "phase5_checks_passed": "8/8",
+    "baseline_rerun_matches_frozen_reference": true
+  },
+  "content_rule": "findings_only_no_causal_claims"
+}
