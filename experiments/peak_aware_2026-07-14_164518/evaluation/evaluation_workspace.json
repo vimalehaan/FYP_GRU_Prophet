@@ -1,0 +1,39 @@
+{
+  "phase": 5,
+  "phase_name": "Evaluation",
+  "status": "complete",
+  "initialized_at": "2026-07-14T11:37:44Z",
+  "locked_at": "2026-07-14T12:07:00Z",
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "design_reference": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "phase5_lock": "experiments/peak_aware_2026-07-14_164518/phase5_evaluation.json",
+  "documentation": "docs/peak-aware-hybrid/phase-05-evaluation.md",
+  "new_modules": {
+    "peak_evaluation": "utils/peak_evaluation.py"
+  },
+  "peak_thresholds": "experiments/peak_aware_2026-07-14_164518/peak/peak_thresholds.pkl",
+  "sanity_check": "experiments/peak_aware_2026-07-14_164518/evaluation/peak_evaluation_sanity.json",
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "treatment_evaluation": "experiments/peak_aware_2026-07-14_164518/evaluation/evaluation_metadata.json",
+  "peak_subset_metadata": "experiments/peak_aware_2026-07-14_164518/evaluation/peak_subset_metadata.json",
+  "comparison_outputs": {
+    "comparison_table": "evaluation/comparison_table.csv",
+    "per_container_delta": "evaluation/per_container_delta.csv",
+    "plots_dir": "evaluation/plots/"
+  },
+  "comparison_generated_at": "2026-07-14T11:51:28Z",
+  "verification_check": "evaluation/verification_check.json",
+  "verification_completed_at": "2026-07-14T11:54:13Z",
+  "next_phase": {
+    "phase": 6,
+    "documentation": "docs/peak-aware-hybrid/phase-06-discussion.md"
+  }
+}

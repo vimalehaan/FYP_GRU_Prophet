@@ -1,0 +1,54 @@
+{
+  "verification_date": "2026-07-14",
+  "purpose": "Confirm peak-aware training sample count N matches frozen baseline before Phase 4 implementation",
+  "data_sources": {
+    "train": "data/train_df.parquet",
+    "selected_containers": "data/selected_containers.npy"
+  },
+  "configuration": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "container_filter": "selected_containers.npy"
+  },
+  "cohort": {
+    "selected_containers": 100,
+    "containers_in_train": 99,
+    "skipped_container": "c_14674",
+    "skip_reason": "missing from frozen train data"
+  },
+  "methods": {
+    "baseline_formula": "sum over containers of max(0, L - input_window - forecast_horizon)",
+    "phase2_task3_loop": "same as baseline_formula",
+    "create_residual_sequences": "utils.sequence_utils.create_residual_sequences on global_train"
+  },
+  "results": {
+    "n_total": 41650,
+    "baseline_formula_n": 41650,
+    "create_residual_sequences_n": 41650,
+    "phase2_documented_n": 41650,
+    "all_match": true
+  },
+  "train_val_split": {
+    "split_rule": "split_idx = int(N * 0.8)",
+    "split_idx": 33320,
+    "n_train": 33320,
+    "n_val": 8330
+  },
+  "tensor_alignment": {
+    "X_all_shape": [41650, 96, 1],
+    "y_all_shape": [41650, 96],
+    "sample_cids_shape": [41650],
+    "W_all_shape": [41650, 96],
+    "W_train_shape": [33320, 96],
+    "note": "W_all has one row per sequence; peak-aware must not filter sequences"
+  },
+  "per_container_formula": "sequences_per_container = len(container_train) - 96 - 96",
+  "implementation_requirements": [
+    "Use same create_residual_sequences() call as baseline on same train_residual_df",
+    "Build W_all with one row per sequence aligned to sample_cids",
+    "assert len(X_all) == len(y_all) == len(W_all) == EXPECTED_N_SEQUENCES",
+    "assert W_all.shape == y_all.shape == (N, 96)",
+    "Do not filter, oversample, or drop sequences for peak weighting"
+  ],
+  "phase4_fairness_recheck": "scripts/verify_peak_aware_fairness.py check #3 (identical X_all, y_all)"
+}

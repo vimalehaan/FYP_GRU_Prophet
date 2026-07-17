@@ -1,0 +1,101 @@
+{
+  "task": 5,
+  "val_period_length_note": "Validation period ~154 steps/container; insufficient for 96+96=192 sliding-window sequences on val data alone.",
+  "evaluation_aligned_check": "Day-1 horizon sanity uses first 96 val timesteps per container, matching baseline evaluation.",
+  "feasibility_criteria": {
+    "min_val_peak_timestep_pct": 2.0,
+    "min_val_day1_container_peak_pct": 50.0
+  },
+  "sanity": [
+    {
+      "cohort": "official_all_containers",
+      "percentile": 85,
+      "train_peak_timestep_pct": 21.660786705793136,
+      "val_peak_timestep_pct": 33.91155792101978,
+      "train_val_timestep_ratio": 1.5655736969124117,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 96.63145258103242,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 98.98989898989899,
+      "val_day1_peak_timestep_pct": 30.7449494949495,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    },
+    {
+      "cohort": "official_all_containers",
+      "percentile": 90,
+      "train_peak_timestep_pct": 17.361271390418413,
+      "val_peak_timestep_pct": 28.29358039292989,
+      "train_val_timestep_ratio": 1.6296951851432353,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 96.19447779111646,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 98.98989898989899,
+      "val_day1_peak_timestep_pct": 25.652356902356903,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    },
+    {
+      "cohort": "official_all_containers",
+      "percentile": 95,
+      "train_peak_timestep_pct": 11.0537769131854,
+      "val_peak_timestep_pct": 19.44937249490768,
+      "train_val_timestep_ratio": 1.759522799099344,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 92.26650660264106,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 97.97979797979798,
+      "val_day1_peak_timestep_pct": 17.466329966329965,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    },
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 85,
+      "train_peak_timestep_pct": 21.660786705793136,
+      "val_peak_timestep_pct": 30.399280326620996,
+      "train_val_timestep_ratio": 1.403424572686031,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 96.63145258103242,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 98.93617021276596,
+      "val_day1_peak_timestep_pct": 27.061170212765955,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    },
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 90,
+      "train_peak_timestep_pct": 17.361271390418413,
+      "val_peak_timestep_pct": 24.48273475884022,
+      "train_val_timestep_ratio": 1.4101925030877693,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 96.19447779111646,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 98.93617021276596,
+      "val_day1_peak_timestep_pct": 21.697695035460992,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    },
+    {
+      "cohort": "reference_excl_near_idle",
+      "percentile": 95,
+      "train_peak_timestep_pct": 11.0537769131854,
+      "val_peak_timestep_pct": 16.15113140959103,
+      "train_val_timestep_ratio": 1.461141430340004,
+      "train_total_sequences": 41650,
+      "val_sliding_sequences": 0,
+      "train_peak_sequence_pct": 92.26650660264106,
+      "val_sliding_peak_sequence_pct": 0.0,
+      "val_day1_containers_with_peak_pct": 97.87234042553192,
+      "val_day1_peak_timestep_pct": 14.095744680851062,
+      "val_sliding_sequences_feasible": 0,
+      "val_peak_evaluation_feasible": 1
+    }
+  ]
+}

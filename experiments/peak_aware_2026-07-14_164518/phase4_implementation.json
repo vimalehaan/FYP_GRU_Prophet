@@ -1,0 +1,107 @@
+{
+  "phase": 4,
+  "phase_name": "Implementation",
+  "status": "complete",
+  "locked_date": "2026-07-14",
+  "experiment_id": "peak_aware_2026-07-14_164518",
+  "documentation": "docs/peak-aware-hybrid/phase-04-implementation.md",
+  "design_reference": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "implementation_workspace": "experiments/peak_aware_implementation_2026-07-14",
+  "experimental_variable": "gru_training_loss_only",
+  "implemented_modules": {
+    "utils/peak_config.py": "complete",
+    "utils/peak_detection.py": "complete",
+    "utils/hybrid_training_peak_aware.py": "complete",
+    "scripts/run_peak_aware_hybrid_experiment.py": "complete",
+    "scripts/verify_peak_aware_fairness.py": "complete"
+  },
+  "locked_design_implemented": {
+    "mechanism": "timestep_weighted_mse",
+    "loss_implementation": "custom_train_step_timestep_weighted_mse",
+    "peak_percentile": 90,
+    "peak_weight_lambda": 5,
+    "non_peak_weight": 1,
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "random_seed": 42,
+    "validation_unweighted": true
+  },
+  "training_run": {
+    "trained_at": "2026-07-14T11:15:18Z",
+    "epochs_max": 100,
+    "epochs_run": 20,
+    "early_stopping_patience": 10,
+    "final_train_loss": 1.6680790185928345,
+    "final_val_loss": 1.7238047122955322,
+    "final_train_mae": 0.7924194931983948,
+    "final_val_mae": 0.8067185878753662,
+    "res_mean": 1.5362158578354976e-05,
+    "res_std": 0.11123930781933586,
+    "n_sequences_total": 41650,
+    "n_sequences_train": 33320,
+    "n_sequences_val": 8330,
+    "n_peak_thresholds": 99,
+    "peak_weight_fraction": 0.16936374549819927,
+    "runtime_note": "~7.4 min on Apple M1 Pro (Prophet + GRU)"
+  },
+  "artifacts": {
+    "model": "models/hybrid_gru_peak_aware.keras",
+    "residual_stats": "models/residual_stats.pkl",
+    "peak_thresholds": "peak/peak_thresholds.pkl",
+    "peak_config": "peak/peak_config.json",
+    "training_metadata": "training/training_metadata.json",
+    "fairness_check": "verification/fairness_check.json",
+    "experiment_metadata": "experiment_metadata.json"
+  },
+  "verification": {
+    "fairness_checks_passed": 8,
+    "fairness_checks_total": 8,
+    "overall_status": "PASS",
+    "verified_at": "2026-07-14T11:27:27Z",
+    "checks": [
+      "frozen_file_integrity",
+      "identical_residual_statistics",
+      "identical_sequences",
+      "identical_architecture",
+      "early_stopping_config",
+      "unweighted_validation",
+      "inference_path",
+      "threshold_artifact"
+    ]
+  },
+  "baseline_integrity": {
+    "production_model_unmodified": true,
+    "production_residual_stats_unmodified": true,
+    "baseline_reference_unmodified": true,
+    "frozen_utils_unmodified": true
+  },
+  "phase_4_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "exit_criteria_met": true,
+  "evaluation_started": false,
+  "next_phase": {
+    "phase": 5,
+    "name": "Evaluation",
+    "documentation": "docs/peak-aware-hybrid/phase-05-evaluation.md",
+    "control_reference": "experiments/baseline_reference_2026-07-14",
+    "treatment_artifacts": "experiments/peak_aware_2026-07-14_164518/models/",
+    "evaluation_modules": [
+      "utils/hybrid_inference.py",
+      "utils/hybrid_evaluation.py"
+    ],
+    "handoff_actions": [
+      "Load peak-aware model and residual_stats from treatment artifacts",
+      "Run evaluate_selected_containers on frozen val split",
+      "Compare Day 1 MAE, RMSE, MAPE against baseline_reference aggregate metrics",
+      "Report peak-subset metrics using saved peak_thresholds.pkl"
+    ]
+  }
+}

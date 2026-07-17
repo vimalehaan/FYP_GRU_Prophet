@@ -1,0 +1,4 @@
+cohort,percentile,total_sequences,peak_sequences,peak_sequence_pct,mean_peak_timesteps_per_sequence,median_peak_timesteps_per_sequence,std_peak_timesteps_per_sequence,max_peak_timesteps_per_sequence,zero_peak_sequences,full_peak_sequences
+reference_excl_near_idle,85,39553,38150,96.45286071852956,16.305564685358885,16.0,8.296183554707644,74,1403,0
+reference_excl_near_idle,90,39553,37968,95.99271863069805,12.031249209920865,11.0,7.268262048139722,62,1585,0
+reference_excl_near_idle,95,39553,36332,91.85649634667409,6.975829899122696,6.0,5.457597812937944,33,3221,0

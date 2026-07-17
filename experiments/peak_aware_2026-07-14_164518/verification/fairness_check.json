@@ -1,0 +1,221 @@
+{
+  "verified_at": "2026-07-14T11:27:27Z",
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "overall_status": "PASS",
+  "checks_passed": 8,
+  "checks_total": 8,
+  "checks": [
+    {
+      "check_id": 1,
+      "name": "frozen_file_integrity",
+      "status": "PASS",
+      "details": {
+        "frozen_files_missing": [],
+        "import_errors": [],
+        "forbidden_write_snippet_hits": [],
+        "baseline_reference_exists": true,
+        "production_model_exists": true
+      }
+    },
+    {
+      "check_id": 2,
+      "name": "identical_residual_statistics",
+      "status": "PASS",
+      "details": {
+        "saved_res_mean": 1.5362158578354976e-05,
+        "expected_res_mean": 1.5362158578354976e-05,
+        "saved_res_std": 0.11123930781933586,
+        "expected_res_std": 0.11123930781933586,
+        "tolerance": 1e-06,
+        "res_mean_match": true,
+        "res_std_match": true
+      }
+    },
+    {
+      "check_id": 3,
+      "name": "identical_sequences",
+      "status": "PASS",
+      "details": {
+        "x_shape": [
+          41650,
+          96,
+          1
+        ],
+        "y_shape": [
+          41650,
+          96
+        ],
+        "n_sequences": 41650,
+        "x_all_reproducible": true,
+        "y_all_reproducible": true,
+        "sample_cids_reproducible": true
+      }
+    },
+    {
+      "check_id": 4,
+      "name": "identical_architecture",
+      "status": "PASS",
+      "details": {
+        "peak_aware_layers": [
+          {
+            "class_name": "GRU",
+            "units": 256,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 128,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 64,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": false
+          },
+          {
+            "class_name": "Dense",
+            "units": 128,
+            "activation": "relu",
+            "rate": null,
+            "return_sequences": null
+          },
+          {
+            "class_name": "Dense",
+            "units": 96,
+            "activation": "linear",
+            "rate": null,
+            "return_sequences": null
+          }
+        ],
+        "reference_layers": [
+          {
+            "class_name": "GRU",
+            "units": 256,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 128,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 64,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": false
+          },
+          {
+            "class_name": "Dense",
+            "units": 128,
+            "activation": "relu",
+            "rate": null,
+            "return_sequences": null
+          },
+          {
+            "class_name": "Dense",
+            "units": 96,
+            "activation": "linear",
+            "rate": null,
+            "return_sequences": null
+          }
+        ],
+        "layer_count_peak_aware": 7,
+        "layer_count_reference": 7
+      }
+    },
+    {
+      "check_id": 5,
+      "name": "early_stopping_config",
+      "status": "PASS",
+      "details": {
+        "expected_monitor": "val_loss",
+        "saved_monitor": "val_loss",
+        "expected_patience": 10,
+        "saved_patience": 10,
+        "expected_restore_best_weights": true,
+        "saved_restore_best_weights": true,
+        "monitor_match": true,
+        "patience_match": true,
+        "restore_match": true
+      }
+    },
+    {
+      "check_id": 6,
+      "name": "unweighted_validation",
+      "status": "PASS",
+      "details": {
+        "validation_data_unweighted_tuple": true,
+        "no_weighted_validation_tuple": true,
+        "no_validation_sample_weight_arg": true
+      }
+    },
+    {
+      "check_id": 7,
+      "name": "inference_path",
+      "status": "PASS",
+      "details": {
+        "demo_container": "c_11461",
+        "run_hybrid_inference_importable": true,
+        "evaluate_selected_containers_importable": true,
+        "day1_prediction_steps": 96,
+        "expected_day1_steps": 96,
+        "evaluated_containers": 1,
+        "failures": [],
+        "skipped": []
+      }
+    },
+    {
+      "check_id": 8,
+      "name": "threshold_artifact",
+      "status": "PASS",
+      "details": {
+        "train_container_count": 99,
+        "saved_threshold_count": 99,
+        "expected_threshold_count": 99,
+        "count_match": true,
+        "keys_match": true,
+        "value_mismatch_count": 0,
+        "value_mismatches": {}
+      }
+    }
+  ]
+}

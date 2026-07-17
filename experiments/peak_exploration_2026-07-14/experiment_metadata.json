@@ -1,0 +1,77 @@
+{
+  "experiment_id": "peak_exploration_2026-07-14",
+  "phase": 2,
+  "phase_name": "Peak Exploration",
+  "status": "complete",
+  "started_at": "2026-07-14",
+  "objective": "Determine an evidence-based peak definition for Peak-Aware Hybrid Prophet + GRU forecasting",
+  "constraints": [
+    "No Peak-Aware learning implementation",
+    "No modification to baseline code or artifacts",
+    "No model training",
+    "Thresholds fit on train data only; validation used for feasibility checks only"
+  ],
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "data_sources": {
+    "train": "data/train_df.parquet",
+    "val": "data/val_df.parquet",
+    "scalers": "data/scalers.pkl",
+    "selected_containers": "data/selected_containers.npy",
+    "container_metadata": "data/container_metadata.parquet"
+  },
+  "cohort": {
+    "selected_containers": 100,
+    "evaluable_containers": 99,
+    "skipped_container": "c_14674",
+    "skip_reason": "missing from frozen train/val data"
+  },
+  "peak_labeling_rules": {
+    "value_space": "real_cpu_percent",
+    "value_derivation": "inverse MinMax transform of cpu_scaled per container",
+    "threshold_scope": "per_container",
+    "threshold_fit_period": "train_only",
+    "candidate_percentiles": [85, 90, 95],
+    "peak_timestep_rule": "cpu_real >= percentile_threshold(container_train)"
+  },
+  "sequence_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "note": "Matches frozen baseline Hybrid GRU configuration"
+  },
+  "outputs": {
+    "per_container_peak_stats": "per_container_peak_stats.csv",
+    "timestep_summary": "timestep_summary.csv",
+    "sequence_peak_stats": "sequence_peak_stats.csv",
+    "sequence_peak_stats_reference": "sequence_peak_stats_reference.csv",
+    "sequence_peak_distribution": "sequence_peak_distribution.csv",
+    "per_container_sequence_stats": "per_container_sequence_stats.csv",
+    "workload_stratification": "workload_stratification.csv",
+    "task4_results": "task4_results.json",
+    "val_sanity_check": "val_sanity_check.csv",
+    "val_day1_horizon_sanity": "val_day1_horizon_sanity.csv",
+    "task5_results": "task5_results.json",
+    "threshold_comparison": "threshold_comparison.csv",
+    "task6_results": "task6_results.json",
+    "peak_definition_decision": "peak_definition_decision.json",
+    "peak_definition_memo": "peak_definition_decision.md",
+    "figures": "figures/"
+  },
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete",
+    "task_7": "complete"
+  },
+  "peak_definition_locked": {
+    "percentile": 90,
+    "rule": "cpu_real >= P90(container_train)",
+    "value_space": "real_cpu_percent",
+    "threshold_scope": "per_container",
+    "threshold_fit_period": "train_only",
+    "locked_date": "2026-07-14",
+    "phase_3_weighting": "timestep_weighted_mse"
+  }
+}

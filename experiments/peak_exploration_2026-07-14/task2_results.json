@@ -1,0 +1,38 @@
+{
+  "task": 2,
+  "name": "peak_timestep_analysis",
+  "containers_analyzed": 99,
+  "total_train_timesteps": 60658,
+  "timestep_summary": [
+    {
+      "percentile": 85,
+      "global_peak_timestep_pct": 21.660786705793136,
+      "mean_container_peak_pct": 21.668807357361846,
+      "median_container_peak_pct": 16.286644951140065,
+      "std_container_peak_pct": 18.550575389773062,
+      "min_container_peak_pct": 14.983713355048861,
+      "max_container_peak_pct": 100.0,
+      "containers_with_zero_peaks": 0
+    },
+    {
+      "percentile": 90,
+      "global_peak_timestep_pct": 17.361271390418413,
+      "mean_container_peak_pct": 17.370494388543246,
+      "median_container_peak_pct": 11.582381729200652,
+      "std_container_peak_pct": 19.632093697324052,
+      "min_container_peak_pct": 10.0,
+      "max_container_peak_pct": 100.0,
+      "containers_with_zero_peaks": 0
+    },
+    {
+      "percentile": 95,
+      "global_peak_timestep_pct": 11.0537769131854,
+      "mean_container_peak_pct": 11.064555729662105,
+      "median_container_peak_pct": 5.728314238952537,
+      "std_container_peak_pct": 18.65639640498316,
+      "min_container_peak_pct": 5.0,
+      "max_container_peak_pct": 100.0,
+      "containers_with_zero_peaks": 0
+    }
+  ]
+}

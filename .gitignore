@@ -1,10 +1,13 @@
 # Jupyter
 .ipynb_checkpoints/
 
+.vscode/
+
 # Python
 __pycache__/
 *.pyc
 .env
+.mplconfig/
 
 # Virtual Environment
 tf_metal_env/
@@ -19,3 +22,10 @@ data/*
 
 experiments/**/hybrid_gru.keras
 experiments/**/residual_stats.pkl
+
+experiments/**/*.pdf
+
+experiments/**/.ipynb_checkpoints/
+
+build/
+dist/

@@ -1,0 +1,115 @@
+{
+  "baseline_version": "hybrid_prophet_gru_v1",
+  "frozen_date": "2026-07-14",
+  "description": "Immutable control model for Peak-Aware Hybrid research",
+  "input_window": 96,
+  "day1_horizon": 96,
+  "forecast_horizon": 192,
+  "prophet": {
+    "daily_seasonality": true,
+    "weekly_seasonality": false,
+    "persisted": false,
+    "note": "Prophet is refit per container at inference; no Prophet artifacts stored"
+  },
+  "gru": {
+    "architecture": "GRU(256)->GRU(128)->GRU(64)->Dense(128,relu)->Dense(96)",
+    "dropout": 0.2,
+    "n_features": 1,
+    "target": "residual_scaled"
+  },
+  "training": {
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "epochs": 100,
+    "batch_size": 64,
+    "early_stopping_patience": 10,
+    "early_stopping_monitor": "val_loss",
+    "shuffle": false,
+    "random_seed": 42,
+    "sequence_val_split": 0.8
+  },
+  "res_mean": 1.5362158578354976e-05,
+  "res_std": 0.11123930781933586,
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "aggregate_metrics": {
+    "day1_mae": {
+      "mean": 1.7458824024279418,
+      "std": 2.486803679655554,
+      "min": 0.003489379959941173,
+      "max": 17.675737610789266
+    },
+    "day1_rmse": {
+      "mean": 2.3878133967258304,
+      "std": 3.219141359494262,
+      "min": 0.0036901197358387063,
+      "max": 22.827999641939517
+    },
+    "day1_mape": {
+      "mean": 111.94031802419256,
+      "std": 615.2990996275377,
+      "min": 4.612660031685286,
+      "max": 5935.5469571825915
+    }
+  },
+  "data_artifacts": [
+    "data/train_df.parquet",
+    "data/val_df.parquet",
+    "data/scalers.pkl",
+    "data/selected_containers.npy",
+    "data/preprocessing_summary.json",
+    "data/container_metadata.parquet"
+  ],
+  "frozen_code_files": [
+    "utils/hybrid_config.py",
+    "utils/hybrid_training.py",
+    "utils/hybrid_inference.py",
+    "utils/hybrid_evaluation.py",
+    "utils/hybrid_artifacts.py",
+    "utils/sequence_utils.py",
+    "notebooks/hybrid_model.ipynb",
+    "notebooks/preprocessing.ipynb"
+  ],
+  "verification_scripts": [
+    "scripts/verify_hybrid_evaluation.py",
+    "scripts/verify_hybrid_inference.py",
+    "scripts/verify_hybrid_train_eval_split.py",
+    "scripts/verify_hybrid_h1_5.py",
+    "scripts/verify_hybrid_input_window_ablation.py"
+  ],
+  "source_model_path": "models/hybrid_gru.keras",
+  "reference_model_path": "experiments/baseline_reference_2026-07-14/models/hybrid_gru.keras",
+  "documentation": "docs/hybrid-prophet-gru.md",
+  "h1_2_ablation": {
+    "experiment_dir": "experiments/hybrid_input_window_ablation_2026-07-13_155559",
+    "recommended_input_window": 96
+  },
+  "environment": {
+    "python_version": "3.11.15",
+    "tensorflow_version": "2.16.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "evaluated_at": "2026-07-14T14:02:28"
+  },
+  "verification": {
+    "verified_at": "2026-07-14",
+    "all_scripts_passed": true,
+    "results": {
+      "verify_hybrid_evaluation": "PASS",
+      "verify_hybrid_inference": "PASS",
+      "verify_hybrid_train_eval_split": "PASS",
+      "verify_hybrid_h1_5": "PASS",
+      "verify_hybrid_input_window_ablation": "PASS"
+    },
+    "log": "verification/verification_notes.md"
+  }
+}

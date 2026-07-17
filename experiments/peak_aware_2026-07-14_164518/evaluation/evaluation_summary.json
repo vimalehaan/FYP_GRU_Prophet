@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-07-14T11:51:28Z",
+  "phase": 5,
+  "task": 4,
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "containers_evaluated": 99,
+  "overall_metrics": {
+    "day1_mae": {
+      "baseline": 1.745882,
+      "peak_aware": 1.740819,
+      "delta_treatment_minus_baseline": -0.00506300000000004
+    },
+    "day1_rmse": {
+      "baseline": 2.387813,
+      "peak_aware": 2.384394,
+      "delta_treatment_minus_baseline": -0.003419000000000061
+    },
+    "day1_mape": {
+      "baseline": 111.940318,
+      "peak_aware": 110.174351,
+      "delta_treatment_minus_baseline": -1.7659670000000034
+    }
+  },
+  "peak_subset_metrics": {
+    "peak_mae": {
+      "baseline": 2.501220270363839,
+      "peak_aware": 2.525613525361348,
+      "delta_treatment_minus_baseline": 0.024393254997509217
+    },
+    "peak_rmse": {
+      "baseline": 5.186215321890583,
+      "peak_aware": 5.204102317874833,
+      "delta_treatment_minus_baseline": 0.017886995984249587
+    },
+    "non_peak_mae": {
+      "baseline": 1.48526625156073,
+      "peak_aware": 1.4700396962602975,
+      "delta_treatment_minus_baseline": -0.015226555300432487
+    },
+    "non_peak_rmse": {
+      "baseline": 3.4908786895911854,
+      "peak_aware": 3.4508864179241363,
+      "delta_treatment_minus_baseline": -0.039992271667049106
+    },
+    "peak_step_fraction": {
+      "baseline": 0.256523569023569,
+      "peak_aware": 0.256523569023569,
+      "delta_treatment_minus_baseline": 0.0
+    }
+  },
+  "per_container_delta_summary": {
+    "delta_day1_mae": {
+      "mean": -0.0050631401587673775,
+      "std": 0.10023881154863667,
+      "min": -0.8668234272247402,
+      "max": 0.10336142961656947,
+      "containers_improved": 45,
+      "containers_worsened": 54
+    },
+    "delta_day1_rmse": {
+      "mean": -0.0034197953412252275,
+      "std": 0.10707374834755784,
+      "min": -0.9392499916354229,
+      "max": 0.124271385835236
+    }
+  },
+  "outputs": {
+    "comparison_table": "evaluation/comparison_table.csv",
+    "per_container_delta": "evaluation/per_container_delta.csv",
+    "plots_dir": "evaluation/plots/"
+  },
+  "plot_outputs": [
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/actual_vs_predicted_samples.png",
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/actual_vs_predicted_samples.pdf",
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/error_distribution.png",
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/error_distribution.pdf",
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/peak_subset_comparison.png",
+    "experiments/peak_aware_2026-07-14_164518/evaluation/plots/peak_subset_comparison.pdf"
+  ],
+  "sample_plot_containers": [
+    "c_10132",
+    "c_12231",
+    "c_16008"
+  ]
+}

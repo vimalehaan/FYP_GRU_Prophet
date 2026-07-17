@@ -1,0 +1,53 @@
+{
+  "n_thresholds": 99,
+  "n_containers_in_train": 99,
+  "thresholds_match_containers": true,
+  "W_all_shape": [
+    41650,
+    96
+  ],
+  "y_all_shape": [
+    41650,
+    96
+  ],
+  "shapes_match": true,
+  "n_sequences": 41650,
+  "expected_n_sequences": 41650,
+  "split_idx": 33320,
+  "n_train": 33320,
+  "expected_n_train": 33320,
+  "n_val": 8330,
+  "expected_n_val": 8330,
+  "cid_alignment": {
+    "n_baseline": 41650,
+    "n_peak_weights": 41650,
+    "cid_arrays_equal": true
+  },
+  "weight_summary": {
+    "n_sequences": 41650,
+    "forecast_horizon": 96,
+    "total_weighted_timesteps": 3998400,
+    "peak_weighted_timesteps": 677184,
+    "non_peak_weighted_timesteps": 3321216,
+    "peak_weight_fraction": 0.16936374549819927,
+    "peak_weight": 5.0,
+    "non_peak_weight": 1.0
+  },
+  "phase2_reference_peak_timestep_pct": 17.36,
+  "binary_weight_verification": {
+    "only_expected_values": true,
+    "allowed_values": [
+      1.0,
+      5.0
+    ],
+    "unique_values_found": [
+      1.0,
+      5.0
+    ],
+    "unexpected_values": [],
+    "peak_weight_count": 677184,
+    "non_peak_weight_count": 3321216,
+    "total_entries": 3998400,
+    "counts_sum_to_total": true
+  }
+}

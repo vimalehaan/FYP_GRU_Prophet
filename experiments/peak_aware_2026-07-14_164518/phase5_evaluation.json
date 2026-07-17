@@ -1,0 +1,133 @@
+{
+  "phase": 5,
+  "phase_name": "Evaluation",
+  "status": "complete",
+  "locked_date": "2026-07-14",
+  "experiment_id": "peak_aware_2026-07-14_164518",
+  "documentation": "docs/peak-aware-hybrid/phase-05-evaluation.md",
+  "design_reference": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "implementation_reference": "experiments/peak_aware_2026-07-14_164518/phase4_implementation.json",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "experimental_variable": "gru_training_loss_only",
+  "evaluation_protocol": {
+    "horizon": "day_1",
+    "steps_per_container": 96,
+    "cohort_selected": 100,
+    "cohort_evaluated": 99,
+    "skipped_containers": [
+      {
+        "container_id": "c_14674",
+        "reason": "missing from frozen train/val data"
+      }
+    ],
+    "peak_definition": "cpu_real >= P90(container_train)",
+    "inference_module": "utils.hybrid_inference.run_hybrid_inference",
+    "evaluation_module": "utils.hybrid_evaluation.evaluate_selected_containers",
+    "peak_metrics_module": "utils.peak_evaluation"
+  },
+  "implemented_modules": {
+    "utils/peak_evaluation.py": "complete",
+    "scripts/run_peak_aware_evaluation.py": "complete",
+    "scripts/run_peak_subset_evaluation.py": "complete",
+    "scripts/build_peak_aware_comparison.py": "complete",
+    "scripts/verify_peak_aware_evaluation.py": "complete",
+    "notebooks/peak_aware_container_comparison.ipynb": "complete"
+  },
+  "results": {
+    "overall_tier1": {
+      "baseline_mae": 1.745882,
+      "peak_aware_mae": 1.740819,
+      "delta_mae": -0.005063,
+      "baseline_rmse": 2.387813,
+      "peak_aware_rmse": 2.384394,
+      "delta_rmse": -0.003419,
+      "baseline_mape": 111.940318,
+      "peak_aware_mape": 110.174351,
+      "delta_mape": -1.765967
+    },
+    "peak_subset_tier2": {
+      "pooled_peak_step_fraction": 0.256524,
+      "baseline_peak_mae": 2.50122,
+      "peak_aware_peak_mae": 2.525614,
+      "delta_peak_mae": 0.024393,
+      "baseline_peak_rmse": 5.186215,
+      "peak_aware_peak_rmse": 5.204102,
+      "delta_peak_rmse": 0.017887,
+      "baseline_non_peak_mae": 1.485266,
+      "peak_aware_non_peak_mae": 1.47004,
+      "delta_non_peak_mae": -0.015227,
+      "baseline_non_peak_rmse": 3.490879,
+      "peak_aware_non_peak_rmse": 3.450886,
+      "delta_non_peak_rmse": -0.039992
+    },
+    "per_container_delta": {
+      "mean_delta_mae": -0.005063,
+      "std_delta_mae": 0.100239,
+      "containers_improved": 45,
+      "containers_worsened": 54
+    }
+  },
+  "contribution_answers": {
+    "tier1_overall": "Marginal overall improvement (MAE −0.005, RMSE −0.003); not a practically significant gain.",
+    "tier2_peak_subset": "No peak-subset improvement; pooled peak MAE +0.024 and peak RMSE +0.018 vs baseline.",
+    "tier3_research_question": "Peak-aware timestep-weighted GRU training (λ=5, P90) did not improve Day-1 accuracy on validation peak timesteps under the locked fair-comparison protocol."
+  },
+  "artifacts": {
+    "treatment_evaluation_df": "evaluation/evaluation_df.csv",
+    "treatment_evaluation_summary": "evaluation/evaluation_summary.csv",
+    "baseline_rerun_evaluation_df": "evaluation/baseline_evaluation_df.csv",
+    "peak_subset_metrics": "evaluation/peak_subset_metrics.csv",
+    "peak_subset_summary": "evaluation/peak_subset_summary.csv",
+    "comparison_table": "evaluation/comparison_table.csv",
+    "per_container_delta": "evaluation/per_container_delta.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.json",
+    "verification_check": "evaluation/verification_check.json",
+    "plots_dir": "evaluation/plots/",
+    "evaluation_workspace": "evaluation/evaluation_workspace.json",
+    "manual_comparison_notebook": "notebooks/peak_aware_container_comparison.ipynb"
+  },
+  "verification": {
+    "evaluation_checks_passed": 8,
+    "evaluation_checks_total": 8,
+    "overall_status": "PASS",
+    "verified_at": "2026-07-14T11:54:13Z",
+    "fairness_checks_reference": "verification/fairness_check.json"
+  },
+  "baseline_integrity": {
+    "frozen_eval_modules_unmodified": true,
+    "baseline_reference_unmodified": true,
+    "production_models_unmodified": true
+  },
+  "phase_5_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "exit_criteria_met": true,
+  "preliminary_interpretation": {
+    "headline": "Near-tie overall; peak-subset objective not achieved.",
+    "notes": [
+      "Overall metrics improved marginally while peak-subset metrics worsened slightly.",
+      "Per-container outcomes are mixed (45 improved / 54 worsened), suggesting high variance relative to mean effect.",
+      "Training optimized weighted sequence loss with unweighted early stopping; evaluation used unweighted Day-1 holdout metrics.",
+      "Peak-aware intervention modified GRU residual learning only; Prophet component unchanged.",
+      "Full causal interpretation deferred to Phase 6 discussion."
+    ]
+  },
+  "next_phase": {
+    "phase": 6,
+    "name": "Discussion and Comparison",
+    "documentation": "docs/peak-aware-hybrid/phase-06-discussion.md",
+    "handoff_actions": [
+      "Interpret Tier 1 vs Tier 2 divergence (overall gain vs peak-subset loss)",
+      "Discuss train/eval objective mismatch and Prophet vs GRU error attribution",
+      "Document limitations (λ not tuned, near-idle P90 artefact, MAPE instability)",
+      "Frame negative peak result as valid controlled-experiment finding for thesis",
+      "Optional: λ sensitivity, workload-stratified analysis, Global GRU comparison"
+    ]
+  }
+}

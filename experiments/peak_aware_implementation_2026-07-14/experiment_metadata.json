@@ -1,0 +1,63 @@
+{
+  "experiment_id": "peak_aware_implementation_2026-07-14",
+  "experiment_type": "peak_aware_hybrid_implementation",
+  "phase": 4,
+  "phase_name": "Implementation",
+  "status": "complete",
+  "completed_at": "2026-07-14",
+  "started_at": "2026-07-14",
+  "objective": "Implement locked Phase 3 design, train Peak-Aware Hybrid GRU, pass fairness verification",
+  "design_reference": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "documentation": "docs/peak-aware-hybrid/phase-04-implementation.md",
+  "phase4_lock_record": "experiments/peak_aware_2026-07-14_164518/phase4_implementation.json",
+  "constraints": [
+    "No modification to frozen baseline code or artifacts",
+    "No Phase 5 evaluation in this phase",
+    "Single experimental variable: GRU training loss weighting",
+    "Outputs saved under experiments/peak_aware_<timestamp>/ only"
+  ],
+  "locked_design": {
+    "mechanism": "timestep_weighted_mse",
+    "peak_percentile": 90,
+    "peak_weight": 5,
+    "non_peak_weight": 1,
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "random_seed": 42,
+    "expected_n_sequences": 41650,
+    "expected_n_train": 33320,
+    "expected_n_val": 8330
+  },
+  "data_sources": {
+    "train": "data/train_df.parquet",
+    "val": "data/val_df.parquet",
+    "scalers": "data/scalers.pkl",
+    "selected_containers": "data/selected_containers.npy"
+  },
+  "new_modules": {
+    "peak_config": "utils/peak_config.py",
+    "peak_detection": "utils/peak_detection.py",
+    "hybrid_training_peak_aware": "utils/hybrid_training_peak_aware.py",
+    "run_experiment": "scripts/run_peak_aware_hybrid_experiment.py",
+    "verify_fairness": "scripts/verify_peak_aware_fairness.py"
+  },
+  "training_run_dir": "experiments/peak_aware_2026-07-14_164518",
+  "sequence_count_verification": "sequence_count_verification.json",
+  "peak_detection_sanity": "peak_detection_sanity.json",
+  "peak_aware_training_smoke": "peak_aware_training_smoke.json",
+  "fairness_verification": "experiments/peak_aware_2026-07-14_164518/verification/fairness_check.json",
+  "next_phase": {
+    "phase": 5,
+    "documentation": "docs/peak-aware-hybrid/phase-05-evaluation.md"
+  },
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "experiment_type": "peak_aware_hybrid",
+  "phase": 4,
+  "timestamp": "2026-07-14_164518",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "design_document": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "implementation_workspace": "experiments/peak_aware_implementation_2026-07-14",
+  "data_artifacts": [
+    "data/train_df.parquet",
+    "data/scalers.pkl",
+    "data/selected_containers.npy"
+  ],
+  "outputs": {
+    "model": "models/hybrid_gru_peak_aware.keras",
+    "residual_stats": "models/residual_stats.pkl",
+    "peak_thresholds": "peak/peak_thresholds.pkl",
+    "peak_config": "peak/peak_config.json",
+    "training_metadata": "training/training_metadata.json"
+  },
+  "status": {
+    "training": "complete",
+    "fairness_verification": "complete",
+    "evaluation": "pending"
+  },
+  "training_summary": {
+    "epochs_run": 20,
+    "res_mean": 1.5362158578354976e-05,
+    "res_std": 0.11123930781933586,
+    "final_val_loss": 1.7238047122955322
+  },
+  "fairness_check": "verification/fairness_check.json",
+  "phase4_lock_record": "phase4_implementation.json",
+  "phase_4_status": "complete"
+}
