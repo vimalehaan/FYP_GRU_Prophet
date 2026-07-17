@@ -1,0 +1,31 @@
+{
+  "phase": 5,
+  "task": 5,
+  "experiment_dir": "experiments/global_gru_evaluation_2026-07-17_092120",
+  "plot_module": "utils.global_plotting",
+  "saved_paths": {
+    "actual_vs_predicted": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_11461.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_11461.pdf",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_13308.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_13308.pdf",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_12237.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_12237.pdf",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_15630.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted/c_15630.pdf"
+    ],
+    "actual_vs_predicted_panel": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted_samples.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/actual_vs_predicted_samples.pdf"
+    ],
+    "error_distribution": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/error_distribution.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120/plots/error_distribution.pdf"
+    ]
+  },
+  "plot_counts": {
+    "actual_vs_predicted": 8,
+    "actual_vs_predicted_panel": 2,
+    "error_distribution": 2
+  }
+}

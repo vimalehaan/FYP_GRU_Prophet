@@ -1,9 +1,14 @@
-# Evaluation Artifacts (Phase 5)
+# Evaluation Artifacts (Phase 5 — Frozen)
 
-Cohort Day 1 evaluation outputs will be added here after Phase 5 completes:
+Official Global GRU v1 cohort Day 1 evaluation under the shared 99-container protocol.
 
-- `evaluation_df.csv`
-- `evaluation_summary.csv`
-- `evaluation_metadata.json`
+| File | Description |
+|------|-------------|
+| `evaluation_df.csv` | Per-container Day 1 MAE, RMSE, MAPE (99 rows) |
+| `evaluation_summary.csv` | Aggregate mean / std / min / max |
+| `evaluation_metadata.json` | Run config, timestamps, cohort counts |
 
-No cohort metrics are recorded at Phase 4 freeze.
+**Source experiment:** `global_gru_evaluation_2026-07-17_092120`  
+**Frozen:** Phase 5 Task 6 (2026-07-17)
+
+These files are **immutable** after freeze. Re-evaluation requires a new timestamped experiment directory.

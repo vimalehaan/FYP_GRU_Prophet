@@ -21,10 +21,10 @@
 | 1 | [Research Planning & Scope](phase-01-research-planning.md) | **Complete** (8/8 tasks) |
 | 2 | [Methodology Audit & Fair Comparison](phase-02-methodology-audit.md) | **Complete** |
 | 3 | [Pipeline & Architecture Design](phase-03-pipeline-design.md) | **Complete** |
-| **0.5** | [**Global GRU Baseline Specification**](phase-03-5-baseline-specification.md) | **Complete** (pending approval gate) |
-| 4 | [Implementation](phase-04-implementation.md) | **In progress** (Task 2/9 complete) |
-| 5 | [Evaluation & Verification](phase-05-evaluation.md) | **Planned** |
-| 6 | [Baseline Freeze & Methodology Comparison](phase-06-baseline-freeze-and-comparison.md) | **Planned** |
+| **0.5** | [**Global GRU Baseline Specification**](phase-03-5-baseline-specification.md) | **Complete** |
+| 4 | [Implementation](phase-04-implementation.md) | **Complete** (9/9 tasks) |
+| 5 | [Evaluation & Verification](phase-05-evaluation.md) | **Complete** (7/7 tasks) |
+| 6 | [Baseline Freeze & Methodology Comparison](phase-06-baseline-freeze-and-comparison.md) | **Complete** (7/7 tasks) |
 
 ---
 
@@ -32,9 +32,9 @@
 
 ### 1.1 Problem
 
-Module 1 investigates two complementary **forecasting methodologies**. The **Hybrid Prophet + GRU** baseline is complete, verified, and frozen (`experiments/baseline_reference_2026-07-14/`). The **Global GRU** methodology — a single shared GRU trained across many containers for direct CPU forecasting — exists as a notebook prototype but has **methodological defects** (validation-target leakage, incompatible evaluation protocol) that prevent fair cross-methodology comparison.
+Module 1 investigates two complementary **forecasting methodologies**. The **Hybrid Prophet + GRU** baseline is complete, verified, and frozen (`experiments/baseline_reference_2026-07-14/`). The **Global GRU** methodology — a single shared GRU trained across many containers for direct CPU forecasting — has been implemented, verified, evaluated, frozen, and compared against Hybrid under the shared 99-container Day-1 protocol (`experiments/global_gru_reference_2026-07-17/`, `experiments/hybrid_vs_global_2026-07-17_095147/`).
 
-Before any Peak-Aware Learning extension on Global GRU, a standard Global GRU baseline must be implemented, verified, evaluated, and frozen under the same research standards applied to Hybrid.
+This study track is **closed**. Future Peak-Aware Global GRU work proceeds as separate experiments against the frozen Global GRU control.
 
 ### 1.2 Proposed Baseline
 
@@ -55,10 +55,10 @@ Implement **Global GRU v1** as a modular, reproducible pipeline that:
 | 1 | Research Planning & Scope | **Complete** (8 tasks — see [Phase 1 log](phase-01-research-planning.md)) |
 | 2 | Methodology Audit & Fair Comparison | **Complete** |
 | 3 | Pipeline & Architecture Design | **Complete** |
-| **0.5** | **Global GRU Baseline Specification** | **Complete** (approval gate before Phase 4) |
-| 4 | Implementation | **Planned** |
-| 5 | Evaluation & Verification | **Planned** |
-| 6 | Baseline Freeze & Methodology Comparison | **Planned** |
+| **0.5** | **Global GRU Baseline Specification** | **Complete** |
+| 4 | Implementation | **Complete** (9/9 tasks) |
+| 5 | Evaluation & Verification | **Complete** (7/7 tasks) |
+| 6 | Baseline Freeze & Methodology Comparison | **Complete** (7/7 tasks) |
 
 ### 1.3.1 Phase 1 Task Summary (Complete)
 
@@ -148,16 +148,53 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 
 ## 3. Forecasting Methodologies — At a Glance
 
-| Dimension | Hybrid Prophet + GRU (frozen) | Global GRU (to implement) |
-|-----------|-------------------------------|---------------------------|
+| Dimension | Hybrid Prophet + GRU (frozen) | Global GRU v1 (frozen) |
+|-----------|-------------------------------|------------------------|
 | Forecasting methodology | Prophet trend/seasonality + GRU residuals | Direct `cpu_scaled` forecasting |
 | Per-container component | Prophet refit at inference | None — shared model only |
 | Model input (GRU) | `(96, 1)` normalized residuals | `(96, 3)` CPU + train stats |
 | Model output (GRU) | 96 residual steps | 96 CPU steps (scaled) |
 | Final prediction | `prophet + gru_residual` → inverse MinMax | `gru_prediction` → inverse MinMax |
 | Code — shared | `sequence_utils.py`, metric functions (read-only) | Same shared utilities |
-| Code — methodology-specific | `utils/hybrid_*.py` (frozen) | `utils/global_*.py` (new, minimal) |
-| Frozen reference | `experiments/baseline_reference_2026-07-14/` | `experiments/global_gru_reference_*/` (planned) |
+| Code — methodology-specific | `utils/hybrid_*.py` (frozen) | `utils/global_*.py` (frozen) |
+| Frozen reference | `experiments/baseline_reference_2026-07-14/` | `experiments/global_gru_reference_2026-07-17/` |
+| Methodology comparison | — | `experiments/hybrid_vs_global_2026-07-17_095147/` |
+
+---
+
+## 4. Global GRU Baseline Reference (Frozen)
+
+| Metric | Mean | Std | Cohort |
+|--------|------|-----|--------|
+| MAE | 2.062666 | 2.470145 | 99 containers |
+| RMSE | 2.755866 | 3.103861 | 99 containers |
+| MAPE | 118.931976 | 659.039987 | 99 containers |
+
+- **Skipped:** `c_14674` (missing from frozen train/val data)
+- **Frozen reference:** `experiments/global_gru_reference_2026-07-17/`
+- **Evaluation run:** `experiments/global_gru_evaluation_2026-07-17_092120/`
+- **Source:** `experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json`
+
+---
+
+## 5. Methodology Comparison (Phase 6 — Complete)
+
+**Experiment:** `experiments/hybrid_vs_global_2026-07-17_095147/`  
+**Executive summary:** `FINAL_COMPARISON_SUMMARY.md` (in comparison experiment directory)
+
+| Methodology | MAE (mean) | RMSE (mean) | MAPE (mean) |
+|-------------|------------|-------------|-------------|
+| Hybrid Prophet + GRU | 1.7459 | 2.3878 | 111.9403 |
+| Global GRU v1 | 2.0627 | 2.7559 | 118.9320 |
+| **Δ (Global − Hybrid)** | **+0.3168** | **+0.3681** | **+6.9917** |
+
+**Per-container MAE:** Global better on 30 containers; Hybrid better on 69.
+
+**Verification:** `scripts/verify_hybrid_vs_global_comparison.py` — **PASS**
+
+**Scope:** Configuration-specific conclusions only. See [Phase 6 documentation](phase-06-baseline-freeze-and-comparison.md).
+
+**Study track status:** **Closed** — Global GRU baseline research complete. Future work (Peak-Aware Global GRU, unseen-container holdout) proceeds as separate experiments against frozen references.
 
 ---
 
@@ -175,6 +212,22 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 - `models/hybrid_gru.keras`
 - `models/residual_stats.pkl`
 - `experiments/baseline_reference_2026-07-14/`
+
+**Global GRU baseline modules (frozen):**
+
+- `utils/global_config.py`
+- `utils/global_training.py`
+- `utils/global_inference.py`
+- `utils/global_evaluation.py`
+- `utils/global_artifacts.py`
+- `utils/global_plotting.py`
+- `utils/methodology_comparison.py`
+- `utils/global_comparison_plotting.py`
+- `notebooks/global_gru_model.ipynb`
+- `models/global_gru.keras`
+- `models/global_gru_metadata.json`
+- `experiments/global_gru_reference_2026-07-17/`
+- `experiments/hybrid_vs_global_2026-07-17_095147/` (methodology comparison — read-only)
 
 **Shared preprocessing (frozen for all methodologies):**
 
@@ -203,4 +256,4 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 
 ---
 
-*Last updated: 2026-07-17 — Phase 1 complete (8 tasks); Phases 2–3 and 0.5 documented; Phases 4–6 planned pending Phase 0.5 approval*
+*Last updated: 2026-07-17 — Phases 1–6 complete (7/7 tasks in Phase 6); Global GRU baseline study track closed*

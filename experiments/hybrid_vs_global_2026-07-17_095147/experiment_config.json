@@ -1,0 +1,23 @@
+{
+  "comparison_type": "forecasting_methodology",
+  "dataset": "Alibaba Cluster Trace",
+  "target": "cpu_util_percent",
+  "resampling": "15min",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "evaluation_period": "preprocessing validation temporal holdout",
+  "metric_unit": "real CPU %",
+  "mape_epsilon": 0.01,
+  "selected_containers": 100,
+  "evaluable_containers": 99,
+  "skipped_container_id": "c_14674",
+  "random_seed": 42,
+  "delta_sign_convention": "global_minus_hybrid",
+  "hybrid_methodology": "hybrid_prophet_gru",
+  "global_methodology": "global_gru_v1",
+  "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
+  "global_gru_frozen_reference": "experiments/global_gru_reference_2026-07-17",
+  "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
+  "global_evaluation_source": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_df.csv",
+  "global_evaluation_run": "experiments/global_gru_evaluation_2026-07-17_092120"
+}

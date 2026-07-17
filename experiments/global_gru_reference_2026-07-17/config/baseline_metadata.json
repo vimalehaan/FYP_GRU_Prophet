@@ -1,9 +1,36 @@
 {
   "baseline_version": "global_gru_v1",
   "frozen_date": "2026-07-17",
-  "freeze_phase": "Phase 4 — Implementation",
-  "description": "Immutable Global GRU v1 control reference for Peak-Aware Global GRU and future studies",
+  "freeze_phase": "Phase 4 — Implementation; Phase 5 — Evaluation; Phase 6 — Methodology comparison (complete)",
+  "methodology_comparison_status": "complete",
+  "methodology_comparison_note": "Phase 6 read-only Hybrid vs Global GRU comparison complete under experiments/hybrid_vs_global_2026-07-17_095147/. This reference evaluation files remain immutable.",
+  "methodology_comparison": {
+    "experiment_identifier": "hybrid_vs_global_2026-07-17_095147",
+    "experiment_dir": "experiments/hybrid_vs_global_2026-07-17_095147/",
+    "comparison_timestamp": "2026-07-17T09:51:47Z",
+    "delta_sign_convention": "global_minus_hybrid",
+    "hybrid_day1_mae_mean": 1.745882,
+    "global_day1_mae_mean": 2.062666,
+    "mean_delta_day1_mae": 0.316784,
+    "hybrid_day1_rmse_mean": 2.387813,
+    "global_day1_rmse_mean": 2.755866,
+    "mean_delta_day1_rmse": 0.368053,
+    "mae_improved_count": 30,
+    "mae_worsened_count": 69,
+    "verification_script": "scripts/verify_hybrid_vs_global_comparison.py",
+    "verification_status": "PASS",
+    "final_comparison_summary": "experiments/hybrid_vs_global_2026-07-17_095147/FINAL_COMPARISON_SUMMARY.md"
+  },
+  "hybrid_control_reference": "experiments/baseline_reference_2026-07-14/",
+  "hybrid_control_evaluation_summary": {
+    "day1_mae_mean": 1.745882,
+    "day1_rmse_mean": 2.387813,
+    "day1_mape_mean": 111.940318,
+    "evaluated_containers": 99
+  },
+  "description": "Immutable Global GRU v1 control reference for methodology comparison and future Peak-Aware Global GRU studies",
   "experiment_identifier": "global_gru_baseline_2026-07-17_074743",
+  "evaluation_experiment_identifier": "global_gru_evaluation_2026-07-17_092120",
   "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
   "input_window": 96,
   "forecast_horizon": 96,
@@ -40,14 +67,54 @@
   },
   "selected_containers": 100,
   "evaluable_containers": 99,
+  "evaluated_containers": 99,
   "skipped_containers": [
     {
       "container_id": "c_14674",
       "reason": "missing from frozen train/val data"
     }
   ],
-  "evaluation_status": "pending_phase_5",
-  "evaluation_note": "Cohort Day 1 metrics (MAE, RMSE, MAPE) will be recorded after Phase 5 multi-container evaluation. No methodology comparison at Phase 4 freeze.",
+  "evaluation_status": "complete_phase_5",
+  "evaluation_frozen_at": "2026-07-17",
+  "evaluation_protocol": {
+    "horizon": "Day 1 — 96 validation timesteps per container",
+    "metric_unit": "real CPU %",
+    "mape_epsilon": 0.01,
+    "demo_container_id": "c_11461",
+    "metrics": [
+      "day1_mae",
+      "day1_rmse",
+      "day1_mape"
+    ]
+  },
+  "evaluation_summary": {
+    "day1_mae": {
+      "mean": 2.062666,
+      "std": 2.470145,
+      "min": 0.002926,
+      "max": 13.624608
+    },
+    "day1_rmse": {
+      "mean": 2.755866,
+      "std": 3.103861,
+      "min": 0.003627,
+      "max": 15.966607
+    },
+    "day1_mape": {
+      "mean": 118.931976,
+      "std": 659.039987,
+      "min": 6.906795,
+      "max": 6419.703938
+    }
+  },
+  "evaluation_note": "Official 99-container Day 1 cohort evaluation frozen at Phase 5 Task 6. Methodology comparison with Hybrid complete at Phase 6 Task 7.",
+  "evaluation_artifacts": {
+    "evaluation_df": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_df.csv",
+    "evaluation_summary": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_summary.csv",
+    "evaluation_metadata": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_metadata.json",
+    "final_evaluation_summary": "experiments/global_gru_evaluation_2026-07-17_092120/FINAL_EVALUATION_SUMMARY.md",
+    "plots_dir": "experiments/global_gru_reference_2026-07-17/plots/"
+  },
   "data_artifacts": [
     "data/train_df.parquet",
     "data/val_df.parquet",
@@ -60,29 +127,50 @@
     "utils/global_training.py",
     "utils/global_inference.py",
     "utils/global_artifacts.py",
+    "utils/global_evaluation.py",
+    "utils/global_plotting.py",
+    "utils/methodology_comparison.py",
+    "utils/global_comparison_plotting.py",
     "utils/sequence_utils.py",
     "notebooks/global_gru_model.ipynb",
     "scripts/run_global_gru_baseline_training.py",
-    "scripts/verify_global_gru_data_split.py"
+    "scripts/run_global_gru_evaluation.py",
+    "scripts/run_global_gru_plotting.py",
+    "scripts/build_hybrid_vs_global_comparison.py",
+    "scripts/verify_hybrid_vs_global_comparison.py",
+    "scripts/run_hybrid_vs_global_comparison_plots.py",
+    "scripts/verify_global_gru_data_split.py",
+    "scripts/verify_global_gru_inference.py",
+    "scripts/verify_global_gru_evaluation.py",
+    "scripts/verify_global_gru_train_eval_split.py",
+    "scripts/verify_global_gru_methodology_parity.py"
   ],
   "source_model_path": "models/global_gru.keras",
   "source_metadata_path": "models/global_gru_metadata.json",
   "reference_model_path": "experiments/global_gru_reference_2026-07-17/models/global_gru.keras",
   "reference_metadata_path": "experiments/global_gru_reference_2026-07-17/models/global_gru_metadata.json",
-  "documentation": "docs/global-gru-baseline/phase-04-implementation.md",
+  "documentation": "docs/global-gru-baseline/phase-06-baseline-freeze-and-comparison.md",
   "environment": {
     "python_version": "3.11.15",
     "tensorflow_version": "2.16.2",
     "platform": "macOS-26.5.1-arm64-arm-64bit",
     "trained_at": "2026-07-17T07:47:43.692613+00:00",
-    "frozen_at": "2026-07-17"
+    "evaluated_at": "2026-07-17T09:21:25Z",
+    "evaluation_frozen_at": "2026-07-17"
   },
   "verification": {
     "verified_at": "2026-07-17",
     "phase_4_scripts_passed": true,
+    "phase_5_scripts_passed": true,
+    "phase_6_comparison_passed": true,
     "results": {
       "verify_global_gru_data_split": "PASS",
-      "verify_hybrid_train_eval_split": "PASS"
+      "verify_hybrid_train_eval_split": "PASS",
+      "verify_global_gru_inference": "PASS",
+      "verify_global_gru_evaluation": "PASS",
+      "verify_global_gru_train_eval_split": "PASS",
+      "verify_global_gru_methodology_parity": "PASS",
+      "verify_hybrid_vs_global_comparison": "PASS"
     },
     "log": "verification/verification_notes.md"
   }

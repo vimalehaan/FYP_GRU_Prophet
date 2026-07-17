@@ -1,0 +1,51 @@
+{
+  "phase": 6,
+  "task": 5,
+  "comparison_dir": "experiments/hybrid_vs_global_2026-07-17_095147",
+  "global_evaluation_dir": "experiments/global_gru_evaluation_2026-07-17_092120",
+  "plot_module": "utils.global_comparison_plotting",
+  "plot_containers": [
+    "c_11461",
+    "c_12237",
+    "c_15179",
+    "c_15640"
+  ],
+  "sample_container_ids": [
+    "c_11461",
+    "c_12237",
+    "c_15640",
+    "c_15179"
+  ],
+  "hybrid_inference_cache": "experiments/hybrid_vs_global_2026-07-17_095147/inference_cache/hybrid_inference_cache.pkl",
+  "global_inference_cache": "experiments/global_gru_evaluation_2026-07-17_092120/evaluation/inference_cache.pkl",
+  "saved_paths": {
+    "side_by_side_demo": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/side_by_side/c_11461.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/side_by_side/c_11461.pdf"
+    ],
+    "side_by_side_samples": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/side_by_side_samples.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/side_by_side_samples.pdf"
+    ],
+    "mae_delta_histogram": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_delta_histogram.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_delta_histogram.pdf"
+    ],
+    "mae_scatter": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_scatter.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_scatter.pdf"
+    ],
+    "mae_distribution_overlay": [
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_distribution_overlay.png",
+      "/Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147/plots/mae_distribution_overlay.pdf"
+    ]
+  },
+  "plot_counts": {
+    "side_by_side_demo": 2,
+    "side_by_side_samples": 2,
+    "mae_delta_histogram": 2,
+    "mae_scatter": 2,
+    "mae_distribution_overlay": 2
+  },
+  "note": "Hybrid inference arrays are visualization-only; locked comparison metrics come from frozen evaluation CSVs."
+}

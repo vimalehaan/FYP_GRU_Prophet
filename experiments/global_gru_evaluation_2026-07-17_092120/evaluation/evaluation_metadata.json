@@ -1,0 +1,60 @@
+{
+  "evaluation_type": "global_gru_baseline_primary",
+  "phase": 5,
+  "task": 2,
+  "model_variant": "global_gru_v1",
+  "baseline_spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+  "frozen_reference_dir": "experiments/global_gru_reference_2026-07-17",
+  "experiment_dir": "experiments/global_gru_evaluation_2026-07-17_092120",
+  "model_path": "models/global_gru.keras",
+  "metadata_path": "models/global_gru_metadata.json",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "mape_epsilon": 0.01,
+  "demo_container_id": "c_11461",
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+  "inference_module": "utils.global_inference.run_global_inference",
+  "metrics_module": "utils.hybrid_evaluation",
+  "training_metadata_snapshot": {
+    "random_seed": 42,
+    "epochs_trained": null,
+    "n_sequences": 41650
+  },
+  "started_at": "2026-07-17T09:21:21Z",
+  "completed_at": "2026-07-17T09:21:25Z",
+  "runtime_seconds": 3.8,
+  "outputs": {
+    "evaluation_df": "evaluation/evaluation_df.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.csv",
+    "inference_cache": "evaluation/inference_cache.pkl"
+  },
+  "aggregate_summary": {
+    "day1_mae": {
+      "mean": 2.062666,
+      "std": 2.470145,
+      "min": 0.002926,
+      "max": 13.624608
+    },
+    "day1_rmse": {
+      "mean": 2.755866,
+      "std": 3.103861,
+      "min": 0.003627,
+      "max": 15.966607
+    },
+    "day1_mape": {
+      "mean": 118.931976,
+      "std": 659.039987,
+      "min": 6.906795,
+      "max": 6419.703938
+    }
+  }
+}
