@@ -16,8 +16,8 @@
   "hybrid_methodology": "hybrid_prophet_gru",
   "global_methodology": "global_gru_v1",
   "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
-  "global_gru_frozen_reference": "experiments/global_gru_reference_2026-07-17",
+  "global_gru_frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748",
   "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
-  "global_evaluation_source": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_df.csv",
-  "global_evaluation_run": "experiments/global_gru_evaluation_2026-07-17_092120"
+  "global_evaluation_source": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+  "global_evaluation_run": "experiments/global_gru_baseline_2026-07-17_121748"
 }

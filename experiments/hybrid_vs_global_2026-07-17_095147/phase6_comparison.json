@@ -4,64 +4,64 @@
   "task": 3,
   "delta_sign_convention": "global_minus_hybrid",
   "evaluated_containers": 99,
-  "started_at": "2026-07-17T09:51:47Z",
-  "completed_at": "2026-07-17T09:51:47Z",
+  "started_at": "2026-07-17T12:24:43Z",
+  "completed_at": "2026-07-17T12:24:43Z",
   "primary_results": {
     "day1_mae": {
       "hybrid_mean": 1.7458824024279418,
-      "global_mean": 2.0626661244392896,
+      "global_mean": 1.9242406355693225,
       "hybrid_std": 2.486803679655554,
-      "global_std": 2.4701449222163845,
-      "mean_delta_global_minus_hybrid": 0.3167837220113479
+      "global_std": 2.3155458660320827,
+      "mean_delta_global_minus_hybrid": 0.17835823314138097
     },
     "day1_rmse": {
       "hybrid_mean": 2.3878133967258304,
-      "global_mean": 2.7558662279602197,
+      "global_mean": 2.610536144884579,
       "hybrid_std": 3.219141359494262,
-      "global_std": 3.103860562798581,
-      "mean_delta_global_minus_hybrid": 0.3680528312343895
+      "global_std": 2.9652717920340987,
+      "mean_delta_global_minus_hybrid": 0.22272274815874885
     },
     "day1_mape": {
       "hybrid_mean": 111.94031802419256,
-      "global_mean": 118.93197641576802,
+      "global_mean": 116.5025742728598,
       "hybrid_std": 615.2990996275377,
-      "global_std": 659.039986903695,
-      "mean_delta_global_minus_hybrid": 6.991658391575445
+      "global_std": 642.9235373218053,
+      "mean_delta_global_minus_hybrid": 4.562256248667232
     }
   },
   "mean_delta_global_minus_hybrid": {
-    "day1_mae": 0.3167837220113479,
-    "day1_rmse": 0.3680528312343895,
-    "day1_mape": 6.991658391575445
+    "day1_mae": 0.17835823314138097,
+    "day1_rmse": 0.22272274815874885,
+    "day1_mape": 4.562256248667232
   },
   "delta_summary": {
     "delta_sign_convention": "global_minus_hybrid",
     "n_containers": 99,
     "day1_mae": {
-      "mean_delta": 0.3167837220113479,
-      "std_delta": 0.9375501536857519,
-      "min_delta": -4.051129374900254,
-      "max_delta": 4.075952536569356,
-      "improved_count": 30,
-      "worsened_count": 69,
+      "mean_delta": 0.17835823314138097,
+      "std_delta": 0.841558517192345,
+      "min_delta": -4.912112759880355,
+      "max_delta": 3.0308367155058384,
+      "improved_count": 32,
+      "worsened_count": 67,
       "tied_count": 0
     },
     "day1_rmse": {
-      "mean_delta": 0.3680528312343895,
-      "std_delta": 1.1388594695130714,
-      "min_delta": -6.8613929604549675,
-      "max_delta": 4.383996553081172,
-      "improved_count": 21,
-      "worsened_count": 78,
+      "mean_delta": 0.22272274815874885,
+      "std_delta": 1.135991001860037,
+      "min_delta": -8.435410880636425,
+      "max_delta": 4.458601595717363,
+      "improved_count": 22,
+      "worsened_count": 77,
       "tied_count": 0
     },
     "day1_mape": {
-      "mean_delta": 6.991658391575445,
-      "std_delta": 77.72061875859602,
-      "min_delta": -334.1769255000031,
-      "max_delta": 484.15698072154373,
-      "improved_count": 26,
-      "worsened_count": 73,
+      "mean_delta": 4.562256248667232,
+      "std_delta": 56.361772251833926,
+      "min_delta": -297.1861028017397,
+      "max_delta": 322.14420800360404,
+      "improved_count": 33,
+      "worsened_count": 66,
       "tied_count": 0
     }
   },
@@ -83,9 +83,9 @@
     "hybrid_methodology": "hybrid_prophet_gru",
     "global_methodology": "global_gru_v1",
     "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
-    "global_gru_frozen_reference": "experiments/global_gru_reference_2026-07-17",
+    "global_gru_frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748",
     "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
-    "global_evaluation_source": "experiments/global_gru_reference_2026-07-17/evaluation/evaluation_df.csv",
-    "global_evaluation_run": "experiments/global_gru_evaluation_2026-07-17_092120"
+    "global_evaluation_source": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+    "global_evaluation_run": "experiments/global_gru_baseline_2026-07-17_121748"
   }
 }

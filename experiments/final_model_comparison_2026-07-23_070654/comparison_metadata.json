@@ -1,0 +1,85 @@
+{
+  "comparison_timestamp": "2026-07-23T07:08:06Z",
+  "started_at": "2026-07-23T07:08:06Z",
+  "completed_at": "2026-07-23T07:08:06Z",
+  "experiment_identifier": "final_model_comparison_2026-07-23_070654",
+  "experiment_dir": "experiments/final_model_comparison_2026-07-23_070654",
+  "comparison_type": "final_four_model_synthesis",
+  "read_only": true,
+  "script": "scripts/build_final_model_comparison.py",
+  "script_version": "final_model_comparison_2026-07-23",
+  "evaluated_containers": 99,
+  "models": {
+    "M1_hybrid_baseline": {
+      "label": "Hybrid Prophet + GRU (Baseline)",
+      "experiment_dir": "experiments/baseline_reference_2026-07-14"
+    },
+    "M2_peak_aware_hybrid": {
+      "label": "Peak-Aware Hybrid Prophet + GRU",
+      "experiment_dir": "experiments/peak_aware_2026-07-14_164518"
+    },
+    "M3_global_baseline": {
+      "label": "Global GRU (Official Baseline)",
+      "experiment_dir": "experiments/global_gru_baseline_2026-07-17_121748"
+    },
+    "M4_peak_aware_global": {
+      "label": "Peak-Aware Global GRU",
+      "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939"
+    }
+  },
+  "best_models": {
+    "overall_mae": {
+      "model_id": "M2_peak_aware_hybrid",
+      "model_label": "Peak-Aware Hybrid Prophet + GRU",
+      "value": 1.740819
+    },
+    "overall_rmse": {
+      "model_id": "M2_peak_aware_hybrid",
+      "model_label": "Peak-Aware Hybrid Prophet + GRU",
+      "value": 2.384394
+    },
+    "peak_mae": {
+      "model_id": "M1_hybrid_baseline",
+      "model_label": "Hybrid Prophet + GRU (Baseline)",
+      "value": 2.501220270363839
+    },
+    "peak_rmse": {
+      "model_id": "M1_hybrid_baseline",
+      "model_label": "Hybrid Prophet + GRU (Baseline)",
+      "value": 5.186215321890583
+    },
+    "non_peak_mae": {
+      "model_id": "M3_global_baseline",
+      "model_label": "Global GRU (Official Baseline)",
+      "value": 1.4062053128681655
+    },
+    "non_peak_rmse": {
+      "model_id": "M3_global_baseline",
+      "model_label": "Global GRU (Official Baseline)",
+      "value": 2.4551932408455106
+    }
+  },
+  "verification_status": "PASS",
+  "plots": [
+    "plots/grouped_comparison.pdf",
+    "plots/grouped_comparison.png",
+    "plots/non_peak_mae.pdf",
+    "plots/non_peak_mae.png",
+    "plots/overall_mae.pdf",
+    "plots/overall_mae.png",
+    "plots/overall_rmse.pdf",
+    "plots/overall_rmse.png",
+    "plots/peak_mae.pdf",
+    "plots/peak_mae.png",
+    "plots/radar_chart.pdf",
+    "plots/radar_chart.png"
+  ],
+  "outputs": {
+    "master_metrics_table": "master_metrics_table.csv",
+    "model_rankings": "model_rankings.csv",
+    "final_comparison_table": "final_comparison_table.csv",
+    "architecture_sensitivity_summary": "architecture_sensitivity_summary.csv",
+    "final_summary": "final_summary.md",
+    "verification": "verification/comparison_consistency.json"
+  }
+}

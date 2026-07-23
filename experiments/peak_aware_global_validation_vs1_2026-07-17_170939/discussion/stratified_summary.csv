@@ -1,0 +1,8 @@
+stratum_type,stratum,n,mean_delta_day1_mae,mean_delta_peak_mae,improved_overall,worsened_overall
+peak_fraction_quartile,"(-0.001, 0.109]",25,0.782795,-1.502479,1,24
+peak_fraction_quartile,"(0.109, 0.188]",26,0.364291,-0.815201,3,23
+peak_fraction_quartile,"(0.188, 0.286]",23,0.088846,-0.740341,6,17
+peak_fraction_quartile,"(0.286, 1.0]",25,-0.255412,-0.817216,13,12
+pattern_type,medium,33,0.038108,-1.001166,11,22
+pattern_type,spiky,31,0.546761,-1.452373,5,26
+pattern_type,stable,35,0.185499,-0.517237,7,28

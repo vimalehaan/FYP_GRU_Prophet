@@ -76,6 +76,15 @@ STAGE2_WORKSPACE_DIR: Path = (
 STAGE2_PLAN_REFERENCE: Path = (
     REPO_ROOT / "docs/peak-aware-global/stage-02-implementation-plan.md"
 )
+STAGE3_PLAN_REFERENCE: Path = (
+    REPO_ROOT / "docs/peak-aware-global/stage-03-evaluation-plan.md"
+)
+PRIMARY_EXPERIMENT_DIR: Path = (
+    REPO_ROOT / "experiments/peak_aware_global_validation_vs1_2026-07-17_170939"
+)
+ARCHIVED_EXPERIMENT_DIR: Path = (
+    REPO_ROOT / "experiments/peak_aware_global_2026-07-17_164737"
+)
 
 # --- Forbidden write targets (fairness static checks) ---
 
@@ -109,6 +118,7 @@ PEAK_SUBDIR: str = "peak"
 TRAINING_SUBDIR: str = "training"
 VERIFICATION_SUBDIR: str = "verification"
 REFERENCE_SUBDIR: str = "reference"
+EVALUATION_SUBDIR: str = "evaluation"
 
 EXPERIMENT_OUTPUT_PREFIX: str = "peak_aware_global"
 

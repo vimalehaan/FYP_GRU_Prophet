@@ -1,0 +1,62 @@
+{
+  "evaluation_type": "global_gru_baseline_primary",
+  "phase": 5,
+  "task": 2,
+  "model_variant": "global_gru_v1",
+  "baseline_spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+  "official_reference_dir": "experiments/global_gru_baseline_2026-07-17_121748",
+  "superseded_reference_dir": "experiments/global_gru_reference_2026-07-17",
+  "promotion_record": "official_baseline_promotion.json",
+  "experiment_dir": "experiments/global_gru_baseline_2026-07-17_121748",
+  "model_path": "experiments/global_gru_baseline_2026-07-17_121748/models/global_gru.keras",
+  "metadata_path": "experiments/global_gru_baseline_2026-07-17_121748/models/global_gru_metadata.json",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "mape_epsilon": 0.01,
+  "demo_container_id": "c_11461",
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+  "inference_module": "utils.global_inference.run_global_inference",
+  "metrics_module": "utils.hybrid_evaluation",
+  "training_metadata_snapshot": {
+    "random_seed": 42,
+    "epochs_trained": null,
+    "n_sequences": 41650
+  },
+  "started_at": "2026-07-17T12:18:14Z",
+  "completed_at": "2026-07-17T12:18:18Z",
+  "runtime_seconds": 3.83,
+  "outputs": {
+    "evaluation_df": "evaluation/evaluation_df.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.csv",
+    "inference_cache": "evaluation/inference_cache.pkl"
+  },
+  "aggregate_summary": {
+    "day1_mae": {
+      "mean": 1.924241,
+      "std": 2.315546,
+      "min": 0.003623,
+      "max": 12.763625
+    },
+    "day1_rmse": {
+      "mean": 2.610536,
+      "std": 2.965272,
+      "min": 0.004478,
+      "max": 14.392589
+    },
+    "day1_mape": {
+      "mean": 116.502574,
+      "std": 642.923537,
+      "min": 5.681648,
+      "max": 6257.691165
+    }
+  }
+}

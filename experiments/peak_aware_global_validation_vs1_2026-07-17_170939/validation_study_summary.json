@@ -1,0 +1,81 @@
+{
+  "study_label": "Validation Study \u2013 Training Dynamics",
+  "completed_at": "2026-07-17T11:41:55Z",
+  "primary_experiment": "experiments/peak_aware_global_2026-07-17_164737",
+  "vs1_experiment": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "promoted_to_official_treatment": true,
+  "promoted_at": "2026-07-17T12:00:00Z",
+  "official_treatment_record": "official_treatment_promotion.json",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "comparison": {
+    "primary_peak_aware_global": {
+      "epochs_run": 4,
+      "best_epoch": null,
+      "stopped_epoch": null,
+      "best_val_loss": null,
+      "final_train_loss": 0.03171752393245697,
+      "final_val_loss": 0.04058956727385521,
+      "early_stopping_patience": 3,
+      "day1_mae": 3.111518,
+      "day1_rmse": 3.891059,
+      "day1_mape": 189.021874,
+      "role": "locked_primary_patience_3"
+    },
+    "vs1_peak_aware_global": {
+      "epochs_run": 29,
+      "best_epoch": 19,
+      "stopped_epoch": 29,
+      "best_val_loss": 0.03316653147339821,
+      "final_train_loss": 0.025613101199269295,
+      "final_val_loss": 0.03623668849468231,
+      "early_stopping_patience": 10,
+      "day1_mae": 2.173731,
+      "day1_rmse": 2.757713,
+      "day1_mape": 163.771437,
+      "role": "validation_patience_10"
+    },
+    "superseded_global_baseline": {
+      "epochs_run": 9,
+      "best_epoch": null,
+      "stopped_epoch": null,
+      "best_val_loss": null,
+      "final_train_loss": 0.017497213557362556,
+      "final_val_loss": 0.029272664338350296,
+      "early_stopping_patience": 3,
+      "day1_mae": 2.062666,
+      "day1_rmse": 2.755866,
+      "day1_mape": 118.931976,
+      "role": "superseded_control_patience_3"
+    },
+    "official_global_baseline": {
+      "epochs_run": 35,
+      "best_epoch": 25,
+      "best_val_loss": 0.028166048228740692,
+      "early_stopping_patience": 10,
+      "day1_mae": 1.924241,
+      "day1_rmse": 2.610536,
+      "day1_mape": 116.502574,
+      "role": "official_control_patience_10",
+      "reference": "experiments/global_gru_baseline_2026-07-17_121748"
+    }
+  },
+  "deltas_vs_primary": {
+    "epochs_run": 25,
+    "best_val_loss": -0.007423035800457001,
+    "day1_mae": -0.9377869999999997,
+    "day1_rmse": -1.133346,
+    "day1_mape": -25.250437000000005
+  },
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17",
+  "deltas_vs_official_baseline": {
+    "day1_mae": 0.24949,
+    "day1_rmse": 0.147177,
+    "day1_mape": 47.268863
+  },
+  "deltas_vs_superseded_baseline": {
+    "day1_mae": 0.11106499999999997,
+    "day1_rmse": 0.00184699999999971,
+    "day1_mape": 44.839460999999986
+  },
+  "phase_b_updated_at": "2026-07-17T12:30:00Z"
+}

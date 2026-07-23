@@ -1,0 +1,103 @@
+{
+  "baseline_version": "global_gru_v1",
+  "promoted_date": "2026-07-17",
+  "promotion_record": "experiments/global_gru_baseline_2026-07-17_121748/official_baseline_promotion.json",
+  "superseded_reference": "experiments/global_gru_reference_2026-07-17",
+  "superseded_reason": "EarlyStopping patience=3 was an implementation oversight; official configuration is patience=10.",
+  "description": "Official Global GRU v1 baseline (corrected EarlyStopping patience=10) for methodology comparison and Peak-Aware Global GRU studies",
+  "experiment_identifier": "global_gru_baseline_2026-07-17_121748",
+  "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "architecture": "GRU(128, return_sequences=True) -> Dropout(0.2) -> GRU(64) -> Dense(64, relu) -> Dense(96)",
+  "features": [
+    "cpu_scaled",
+    "cpu_mean",
+    "cpu_std"
+  ],
+  "target": "cpu_scaled",
+  "training": {
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "epochs_max": 50,
+    "epochs_run": 35,
+    "best_epoch": 25,
+    "best_val_loss": 0.028166048228740692,
+    "batch_size": 256,
+    "early_stopping_patience": 10,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_restore_best_weights": true,
+    "shuffle": false,
+    "random_seed": 42,
+    "sequence_val_split": 0.8,
+    "sequence_source": "global_train only",
+    "n_sequences": 41650,
+    "n_train_sequences": 33320,
+    "n_val_sequences": 8330,
+    "final_train_loss": 0.015440183691680431,
+    "final_val_loss": 0.029460720717906952,
+    "final_train_mae": 0.08593882620334625,
+    "final_val_mae": 0.11186208575963974
+  },
+  "selected_containers": 100,
+  "evaluable_containers": 99,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "evaluation_status": "complete",
+  "evaluation_protocol": {
+    "horizon": "Day 1 — 96 validation timesteps per container",
+    "metric_unit": "real CPU %",
+    "mape_epsilon": 0.01,
+    "demo_container_id": "c_11461",
+    "metrics": [
+      "day1_mae",
+      "day1_rmse",
+      "day1_mape"
+    ]
+  },
+  "evaluation_summary": {
+    "day1_mae": {
+      "mean": 1.924241,
+      "std": 2.315546,
+      "min": 0.003623,
+      "max": 12.763625
+    },
+    "day1_rmse": {
+      "mean": 2.610536,
+      "std": 2.965272,
+      "min": 0.004478,
+      "max": 14.392589
+    },
+    "day1_mape": {
+      "mean": 116.502574,
+      "std": 642.923537,
+      "min": 5.681648,
+      "max": 6257.691165
+    }
+  },
+  "evaluation_artifacts": {
+    "evaluation_df": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+    "evaluation_summary": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_summary.csv",
+    "evaluation_metadata": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_metadata.json",
+    "inference_cache": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/inference_cache.pkl"
+  },
+  "reference_model_path": "experiments/global_gru_baseline_2026-07-17_121748/models/global_gru.keras",
+  "reference_metadata_path": "experiments/global_gru_baseline_2026-07-17_121748/models/global_gru_metadata.json",
+  "source_model_path": "models/global_gru.keras",
+  "source_metadata_path": "models/global_gru_metadata.json",
+  "environment": {
+    "python_version": "3.11.15",
+    "tensorflow_version": "2.16.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "trained_at": "2026-07-17T12:17:48.002833+00:00",
+    "evaluated_at": "2026-07-17T12:18:18Z"
+  }
+}

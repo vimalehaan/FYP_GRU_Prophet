@@ -5,7 +5,8 @@
 **Status:** Complete  
 **Locked date:** 2026-07-17  
 **Design artifact:** `experiments/peak_aware_global_design_2026-07-17/design_lock.json`  
-**Control reference:** `experiments/global_gru_reference_2026-07-17/`  
+**Control reference (official):** `experiments/global_gru_baseline_2026-07-17_121748/`  
+**Superseded control (historical):** `experiments/global_gru_reference_2026-07-17/` (patience=3)  
 **Methodology authority:** `docs/peak-aware-hybrid/` (Phases 1–6 complete)
 
 ---
@@ -21,7 +22,7 @@ The following are **fixed by reference** to the completed Peak-Aware Hybrid rese
 | Non-peak weight | 1 | Same |
 | Training loss | Timestep-weighted MSE | Hybrid Phase 3 |
 | Weight scope | Forecast-horizon targets only (`y_train`) | Hybrid Phase 3 |
-| Early stopping | Unweighted `val_loss`; patience per baseline | Global: patience 3 (frozen baseline) |
+| Early stopping | Unweighted `val_loss`; patience per baseline | Global: **patience 10** (official baseline; superseded reference used patience 3) |
 | Evaluation protocol | 99 containers; Day-1 96 steps; MAE/RMSE/MAPE in real CPU % | Hybrid Phase 5 |
 | Peak evaluation labels | Same P90 train-fitted thresholds on validation actuals | Hybrid Phase 5 |
 | Fairness philosophy | Single controlled variable; parallel modules; frozen control | Hybrid Phase 3 |
@@ -98,13 +99,16 @@ Shared peak constants (P90, λ) may also be imported from `utils/peak_config.py`
 
 ## 5. Frozen Baseline Definition
 
+> **Phase B baseline correction (2026-07-17):** The official Global control was promoted to `experiments/global_gru_baseline_2026-07-17_121748/` (`EarlyStopping` patience=10, MAE 1.924). The Stage 1 lock originally referenced `global_gru_reference_2026-07-17/` (patience=3, MAE 2.063); that directory is preserved as a superseded historical artifact.
+
 | Item | Value |
 |------|-------|
 | **Control identifier** | `global_gru_v1` |
-| **Reference directory** | `experiments/global_gru_reference_2026-07-17/` |
+| **Official reference directory** | `experiments/global_gru_baseline_2026-07-17_121748/` |
 | **Spec document** | `docs/global-gru-baseline/phase-03-5-baseline-specification.md` |
-| **Source model** | `experiments/global_gru_reference_2026-07-17/models/global_gru.keras` |
-| **Control Day-1 MAE (mean)** | 2.063 (99 containers) |
+| **Source model** | `experiments/global_gru_baseline_2026-07-17_121748/models/global_gru.keras` |
+| **Control Day-1 MAE (mean)** | **1.924** (99 containers) |
+| **Superseded reference (historical)** | `experiments/global_gru_reference_2026-07-17/` — patience 3, MAE 2.063 |
 | **Input window** | 96 |
 | **Forecast horizon** | 96 (Day 1) |
 | **Features** | `cpu_scaled`, `cpu_mean`, `cpu_std` |
@@ -114,7 +118,7 @@ Shared peak constants (P90, λ) may also be imported from `utils/peak_config.py`
 | **Sequence counts** | N = 41,650; N_train = 33,320; N_val = 8,330 |
 | **Optimizer / loss** | Adam / MSE (uniform) |
 | **Epochs max / batch** | 50 / 256 |
-| **Early stopping** | `val_loss`, patience 3, restore best weights |
+| **Early stopping** | `val_loss`, patience **10**, restore best weights |
 | **Shuffle** | False |
 | **Random seed** | 42 |
 | **Inference** | `utils/global_inference.run_global_inference` |
@@ -130,7 +134,7 @@ Shared peak constants (P90, λ) may also be imported from `utils/peak_config.py`
 |-----------|------|
 | Everything in frozen `global_gru_v1` specification | **Identical** |
 | **Single approved change** | GRU training loss: uniform MSE → timestep-weighted MSE (λ = 5 on peak timesteps) |
-| Control reference | `experiments/global_gru_reference_2026-07-17/` |
+| Control reference | `experiments/global_gru_baseline_2026-07-17_121748/` |
 | Implementation | Parallel modules only |
 | Outputs | `experiments/peak_aware_global_<timestamp>/` only |
 
@@ -146,7 +150,7 @@ Shared peak constants (P90, λ) may also be imported from `utils/peak_config.py`
 | Model builder | `build_hybrid_gru_model()` | `build_global_gru_model()` (parallel copy in peak-aware module) |
 | Inference | `run_hybrid_inference` | `run_global_inference` (unchanged) |
 | Prediction column | `day1_final_real` | `day1_pred_real` |
-| ES patience | 10 (Hybrid baseline) | **3** (Global baseline) |
+| ES patience | 10 (Hybrid baseline) | **10** (official Global baseline; archived primary run used 3) |
 | Batch size | 64 (Hybrid baseline) | **256** (Global baseline) |
 | Epochs max | 100 (Hybrid baseline) | **50** (Global baseline) |
 
@@ -180,7 +184,7 @@ Reuse `utils/peak_detection.py` for architecture-independent logic:
 | GRU architecture | GRU(128→64) + Dense(64) + Dense(96) |
 | Optimizer, epochs, batch, shuffle, seed | Adam, 50, 256, False, 42 |
 | Sequence-level 80/20 split index | `split_idx = int(len(X_all) * 0.8)` |
-| Early stopping criterion | Unweighted `val_loss`, patience 3 |
+| Early stopping criterion | Unweighted `val_loss`, patience **10** (official control) |
 | Inference pipeline | `run_global_inference` (unchanged) |
 | Primary evaluation protocol | 99-container Day-1 cohort |
 

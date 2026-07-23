@@ -1,0 +1,13 @@
+architecture,baseline_model_id,treatment_model_id,metric,baseline_value,treatment_value,delta_treatment_minus_baseline,percent_change,direction
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,overall_mae,1.745882,1.740819,-0.00506300000000004,-0.2899966893524327,improved
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,overall_rmse,2.387813,2.384394,-0.003419000000000061,-0.1431854169484822,improved
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,peak_mae,2.501220270363839,2.525613525361348,0.024393254997509217,0.975254170395831,worsened
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,peak_rmse,5.186215321890583,5.204102317874833,0.017886995984249587,0.3448949739658912,worsened
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,non_peak_mae,1.48526625156073,1.4700396962602975,-0.015226555300432487,-1.0251734518597118,improved
+hybrid,M1_hybrid_baseline,M2_peak_aware_hybrid,non_peak_rmse,3.4908786895911854,3.4508864179241363,-0.039992271667049106,-1.1456219256857814,improved
+global,M3_global_baseline,M4_peak_aware_global,overall_mae,1.924241,2.173731,0.24949,12.965631643853342,worsened
+global,M3_global_baseline,M4_peak_aware_global,overall_rmse,2.610536,2.757713,0.14717699999999967,5.637807714584272,worsened
+global,M3_global_baseline,M4_peak_aware_global,peak_mae,3.4256506397556943,2.64903844724382,-0.7766121925118741,-22.67050187485725,improved
+global,M3_global_baseline,M4_peak_aware_global,peak_rmse,6.559444379008921,5.316428966799132,-1.2430154122097896,-18.950010708034988,improved
+global,M3_global_baseline,M4_peak_aware_global,non_peak_mae,1.4062053128681655,2.0097350937434495,0.603529780875284,42.919037167075906,worsened
+global,M3_global_baseline,M4_peak_aware_global,non_peak_rmse,2.4551932408455106,3.5017954767561017,1.046602235910591,42.62810024477609,worsened

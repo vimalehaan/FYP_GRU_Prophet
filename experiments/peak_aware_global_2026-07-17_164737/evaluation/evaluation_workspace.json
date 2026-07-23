@@ -1,0 +1,27 @@
+{
+  "stage": 3,
+  "stage_name": "Evaluation + Verification",
+  "status": "superseded",
+  "superseded_by": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "archive_note": "Evaluation workspace superseded by official treatment promotion.",
+  "initialized_at": "2026-07-17T11:26:26Z",
+  "experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "documentation": "docs/peak-aware-global/stage-03-evaluation-plan.md",
+  "new_modules": {
+    "peak_evaluation_global_adapters": "utils/peak_evaluation.py"
+  },
+  "peak_thresholds": "experiments/peak_aware_global_2026-07-17_164737/peak/peak_thresholds.pkl",
+  "sanity_check": "experiments/peak_aware_global_2026-07-17_164737/evaluation/peak_evaluation_sanity.json",
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "pending",
+    "task_4": "pending",
+    "task_5": "pending",
+    "task_6": "pending"
+  },
+  "primary_stage4_artifact": "evaluation/per_container_comparison.csv",
+  "treatment_evaluation": "experiments/peak_aware_global_2026-07-17_164737/evaluation/evaluation_metadata.json"
+}

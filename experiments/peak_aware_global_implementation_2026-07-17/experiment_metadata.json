@@ -8,8 +8,9 @@
   "started_at": "2026-07-17",
   "objective": "Implement locked Stage 1 design, train Peak-Aware Global GRU, pass 10 fairness checks",
   "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
-  "control_reference": "experiments/global_gru_reference_2026-07-17/",
-  "control_baseline_metadata": "experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748/",
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17/",
+  "control_baseline_metadata": "experiments/global_gru_baseline_2026-07-17_121748/config/baseline_metadata.json",
   "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
   "methodology_authority": "docs/peak-aware-hybrid/",
   "documentation": {
@@ -72,9 +73,13 @@
   },
   "peak_detection_sanity": "experiments/peak_aware_global_implementation_2026-07-17/peak_detection_sanity.json",
   "peak_aware_training_smoke": "experiments/peak_aware_global_implementation_2026-07-17/peak_aware_training_smoke.json",
-  "training_run_dir": "experiments/peak_aware_global_2026-07-17_164737",
-  "fairness_verification": "experiments/peak_aware_global_2026-07-17_164737/verification/fairness_check.json",
+  "training_run_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "archived_training_run_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "archived_training_run_label": "Historical \u2013 optimization-limited (EarlyStopping patience=3)",
+  "fairness_verification": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/verification/fairness_check.json",
+  "archived_fairness_verification": "experiments/peak_aware_global_2026-07-17_164737/verification/fairness_check.json",
   "reference_metadata_snapshot": "experiments/peak_aware_global_2026-07-17_164737/reference/reference_metadata.json",
+  "official_treatment_promotion": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/official_treatment_promotion.json",
   "next_stage": {
     "stage": 3,
     "name": "Evaluation + Verification"
@@ -88,5 +93,22 @@
     "task_6": "complete",
     "task_7": "complete"
   },
-  "phase2_lock": "experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json"
+  "phase2_lock": "experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json",
+  "official_treatment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "stage3_evaluation_lock": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/phase3_evaluation.json",
+  "stage3_evaluation_record": "docs/peak-aware-global/03-evaluation-record.md",
+  "stage3_verification": {
+    "report": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/verification/evaluation_verification.json",
+    "status": "PASS",
+    "checks_passed": 10,
+    "checks_total": 10,
+    "verified_at": "2026-07-17T12:03:19Z"
+  },
+  "stage3_status": "complete",
+  "stage3_completed_at": "2026-07-17",
+  "stage4_discussion_lock": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/phase4_discussion.json",
+  "stage4_discussion_record": "docs/peak-aware-global/04-discussion-record.md",
+  "stage4_status": "complete",
+  "stage4_completed_at": "2026-07-17",
+  "study_track_status": "complete"
 }

@@ -1,0 +1,46 @@
+{
+  "stage": 4,
+  "stage_name": "Results, Discussion & Architecture Sensitivity Synthesis",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "experiment_id": "peak_aware_global_validation_vs1_2026-07-17_170939",
+  "documentation": "docs/peak-aware-global/04-discussion-record.md",
+  "stage3_reference": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/phase3_evaluation.json",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "baseline_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "superseded_baseline_reference": "experiments/global_gru_reference_2026-07-17",
+  "hybrid_peak_aware_reference": "experiments/peak_aware_2026-07-14_164518/phase5_evaluation.json",
+  "research_conclusion": {
+    "tier1_overall": "Overall Day-1 accuracy worsened (ΔMAE +0.249); Tier 1 not improved.",
+    "tier2_peak_subset": "Pooled peak-subset MAE improved substantially (Δpeak MAE −0.777); Tier 2 contribution achieved.",
+    "tier3_non_peak": "Non-peak timesteps degraded (Δnon-peak MAE +0.604), explaining overall Tier 1 gap.",
+    "architecture_sensitivity": "Global track achieves peak-subset gains Hybrid did not; both architectures show train/eval objective trade-off.",
+    "scope": "P90 peak definition, lambda=5, timestep-weighted MSE on Global GRU only",
+    "generalization_boundary": "Conclusions apply to this configuration only, not all peak-aware methods or architectures"
+  },
+  "stage_4_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "artifacts": {
+    "results_synthesis": "discussion/results_synthesis.json",
+    "stratified_summary": "discussion/stratified_summary.csv",
+    "discussion_workspace": "discussion/discussion_workspace.json",
+    "evaluation_comparison": "evaluation/comparison_table.csv",
+    "per_container_comparison": "evaluation/per_container_comparison.csv"
+  },
+  "exit_criteria_met": true,
+  "peak_aware_global_track": {
+    "stages_1_through_4": "complete",
+    "primary_experiment_modified": false,
+    "baseline_integrity_preserved": true
+  },
+  "next_steps": {
+    "thesis": "Use 04-discussion-record.md §4.1–§4.8 for Results and Discussion chapters",
+    "cross_architecture": "Cite Hybrid Phase 6 (peak_aware_2026-07-14_164518) alongside this record for architecture sensitivity"
+  }
+}

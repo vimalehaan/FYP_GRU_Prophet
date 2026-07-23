@@ -1,8 +1,8 @@
 # Hybrid vs Global GRU — Final Comparison Summary
 
-**Comparison timestamp:** 2026-07-17T09:51:47Z (build)  
-**Verification timestamp:** 2026-07-17 (Task 4 — all checks PASS)  
-**Plot generation:** Phase 6 Task 5  
+**Comparison timestamp:** 2026-07-17T12:24:43Z (regenerated with corrected Global baseline)  
+**Verification timestamp:** 2026-07-17 (regenerated — all checks PASS)  
+**Plot generation:** Phase 6 Task 5 (regenerated 2026-07-17)  
 **Discussion record:** Phase 6 Task 6 (2026-07-17)
 
 ---
@@ -26,11 +26,12 @@ This comparison evaluates two **frozen forecasting methodologies** under an iden
 | Methodology | Frozen reference | Evaluation source |
 |-------------|------------------|-------------------|
 | Hybrid Prophet + GRU | `experiments/baseline_reference_2026-07-14/` | `evaluation/evaluation_df.csv` |
-| Global GRU v1 | `experiments/global_gru_reference_2026-07-17/` | `evaluation/evaluation_df.csv` |
+| Global GRU v1 | `experiments/global_gru_baseline_2026-07-17_121748/` | `evaluation/evaluation_df.csv` |
+| Superseded Global reference | `experiments/global_gru_reference_2026-07-17/` | Historical (patience=3 oversight) |
 
-**Global GRU evaluation run (inference cache for plots):** `experiments/global_gru_evaluation_2026-07-17_092120/`
+**Global GRU evaluation source (inference cache for plots):** `experiments/global_gru_baseline_2026-07-17_121748/`
 
-Neither frozen reference was modified during comparison build, verification, or plotting.
+Comparison regenerated 2026-07-17 after Global baseline correction (Phase B). Neither Hybrid reference nor Peak-Aware models were modified.
 
 ---
 
@@ -58,8 +59,8 @@ Neither frozen reference was modified during comparison build, verification, or 
 | Forecasting methodology | MAE (mean ± std) | RMSE (mean ± std) | MAPE (mean ± std) | N |
 |------------------------|------------------|-------------------|-------------------|---|
 | Hybrid Prophet + GRU | 1.7459 ± 2.4868 | 2.3878 ± 3.2191 | 111.9403 ± 615.2991 | 99 |
-| Global GRU v1 | 2.0627 ± 2.4701 | 2.7559 ± 3.1039 | 118.9320 ± 659.0400 | 99 |
-| **Δ (Global − Hybrid)** | **+0.3168** | **+0.3681** | **+6.9917** | — |
+| Global GRU v1 | 1.9242 ± 2.3155 | 2.6105 ± 2.9653 | 116.5026 ± 642.9235 | 99 |
+| **Δ (Global − Hybrid)** | **+0.1784** | **+0.2227** | **+4.5623** | — |
 
 **Source:** `comparison_table.csv`, `phase6_comparison.json`
 
@@ -73,14 +74,14 @@ Neither frozen reference was modified during comparison build, verification, or 
 
 | Metric | Global better | Global worse | Tied |
 |--------|---------------|--------------|------|
-| Day-1 MAE | **30** | **69** | 0 |
-| Day-1 RMSE | 21 | 78 | 0 |
-| Day-1 MAPE | 26 | 73 | 0 |
+| Day-1 MAE | **32** | **67** | 0 |
+| Day-1 RMSE | 23 | 76 | 0 |
+| Day-1 MAPE | 28 | 71 | 0 |
 
 | ΔMAE statistic | Value |
 |----------------|-------|
-| Mean ΔMAE (Global − Hybrid) | +0.3168 |
-| Std of ΔMAE | 0.9376 |
+| Mean ΔMAE (Global − Hybrid) | +0.1784 |
+| Std of ΔMAE | 0.8416 |
 | Best Global outcome | `c_12237` — ΔMAE **−4.0511** |
 | Worst Global outcome | `c_15640` — ΔMAE **+4.0760** |
 | Median ΔMAE container | `c_15179` — ΔMAE **+0.0768** |
@@ -95,7 +96,7 @@ Neither frozen reference was modified during comparison build, verification, or 
 
 ### 1. How does Global GRU compare to Hybrid on overall Day-1 accuracy?
 
-**Experimental finding:** On the 99-container cohort, Hybrid Prophet + GRU outperformed Global GRU v1 on both primary accuracy indicators — mean Day-1 MAE (1.746 vs 2.063) and mean Day-1 RMSE (2.388 vs 2.756).
+**Experimental finding:** On the 99-container cohort, Hybrid Prophet + GRU outperformed Global GRU v1 on both primary accuracy indicators — mean Day-1 MAE (1.746 vs 1.924) and mean Day-1 RMSE (2.388 vs 2.611).
 
 **Possible explanation:** Hybrid's explicit Prophet trend/seasonality component may reduce the burden on the GRU residual learner for workloads with strong daily periodicity, whereas Global GRU must model level, variability, and temporal structure jointly from scaled CPU and static context features alone.
 

@@ -27,8 +27,8 @@ These documents record a read-only audit of the repository (July 2026) and compa
 |------|--------|
 | Preprocessing pipeline | Mostly aligned with research design |
 | Hybrid Prophet + GRU | Refactored; modular utils; Day 1 primary eval; input window locked to 96; frozen reference |
-| Global GRU baseline | **Complete** — Phases 1–6; frozen reference `experiments/global_gru_reference_2026-07-17/` |
-| Cross-architecture comparison | **Complete** — Hybrid vs Global GRU (`experiments/hybrid_vs_global_2026-07-17_095147/`); Hybrid lower mean MAE/RMSE on 99-container cohort |
+| Global GRU baseline | **Complete** — Phases 1–6; official reference `experiments/global_gru_baseline_2026-07-17_121748/` (supersedes `global_gru_reference_2026-07-17/`) |
+| Cross-architecture comparison | **Complete** — Hybrid vs Global GRU (`experiments/hybrid_vs_global_2026-07-17_095147/`); Hybrid lower mean MAE/RMSE on 99-container cohort (regenerated with corrected Global baseline, 2026-07-17) |
 | Unseen container evaluation | Not implemented |
 | Reproducibility infrastructure | Incomplete (no requirements.txt, seeds, experiment logs) |
 

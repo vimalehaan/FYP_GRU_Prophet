@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-17T12:30:00Z",
+  "stage": 4,
+  "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "baseline_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "tier1_overall": {
+    "delta_day1_mae": 0.24949,
+    "delta_day1_rmse": 0.1471769999999996
+  },
+  "tier2_peak_subset": {
+    "delta_peak_mae": -0.7766121925118741,
+    "delta_peak_rmse": -1.2430154122097896
+  },
+  "tier3_non_peak": {
+    "delta_non_peak_mae": 0.603529780875284
+  },
+  "per_container_delta": {
+    "improved": 23,
+    "worsened": 76,
+    "mean": 0.24949083610277828,
+    "std": 1.0537112513978748
+  }
+}

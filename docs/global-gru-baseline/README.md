@@ -32,9 +32,13 @@
 
 ### 1.1 Problem
 
-Module 1 investigates two complementary **forecasting methodologies**. The **Hybrid Prophet + GRU** baseline is complete, verified, and frozen (`experiments/baseline_reference_2026-07-14/`). The **Global GRU** methodology — a single shared GRU trained across many containers for direct CPU forecasting — has been implemented, verified, evaluated, frozen, and compared against Hybrid under the shared 99-container Day-1 protocol (`experiments/global_gru_reference_2026-07-17/`, `experiments/hybrid_vs_global_2026-07-17_095147/`).
+Module 1 investigates two complementary **forecasting methodologies**. The **Hybrid Prophet + GRU** baseline is complete, verified, and frozen (`experiments/baseline_reference_2026-07-14/`). The **Global GRU** methodology — a single shared GRU trained across many containers for direct CPU forecasting — has been implemented, verified, evaluated, and compared against Hybrid under the shared 99-container Day-1 protocol.
 
-This study track is **closed**. Future Peak-Aware Global GRU work proceeds as separate experiments against the frozen Global GRU control.
+**Official Global GRU baseline (2026-07-17):** `experiments/global_gru_baseline_2026-07-17_121748/` — EarlyStopping patience=10 (corrected from an implementation oversight in the superseded reference).  
+**Superseded historical reference:** `experiments/global_gru_reference_2026-07-17/` (patience=3 — preserved, not deleted).  
+**Methodology comparison:** `experiments/hybrid_vs_global_2026-07-17_095147/` (regenerated against corrected baseline).
+
+This study track is **closed**. Future Peak-Aware Global GRU work proceeds as separate experiments against the official Global GRU control.
 
 ### 1.2 Proposed Baseline
 
@@ -157,27 +161,27 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 | Final prediction | `prophet + gru_residual` → inverse MinMax | `gru_prediction` → inverse MinMax |
 | Code — shared | `sequence_utils.py`, metric functions (read-only) | Same shared utilities |
 | Code — methodology-specific | `utils/hybrid_*.py` (frozen) | `utils/global_*.py` (frozen) |
-| Frozen reference | `experiments/baseline_reference_2026-07-14/` | `experiments/global_gru_reference_2026-07-17/` |
+| Frozen reference | `experiments/baseline_reference_2026-07-14/` | `experiments/global_gru_baseline_2026-07-17_121748/` (supersedes `global_gru_reference_2026-07-17/`) |
 | Methodology comparison | — | `experiments/hybrid_vs_global_2026-07-17_095147/` |
 
 ---
 
-## 4. Global GRU Baseline Reference (Frozen)
+## 4. Global GRU Baseline Reference (Official)
 
 | Metric | Mean | Std | Cohort |
 |--------|------|-----|--------|
-| MAE | 2.062666 | 2.470145 | 99 containers |
-| RMSE | 2.755866 | 3.103861 | 99 containers |
-| MAPE | 118.931976 | 659.039987 | 99 containers |
+| MAE | 1.924241 | 2.315546 | 99 containers |
+| RMSE | 2.610536 | 2.965272 | 99 containers |
+| MAPE | 116.502574 | 642.923537 | 99 containers |
 
 - **Skipped:** `c_14674` (missing from frozen train/val data)
-- **Frozen reference:** `experiments/global_gru_reference_2026-07-17/`
-- **Evaluation run:** `experiments/global_gru_evaluation_2026-07-17_092120/`
-- **Source:** `experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json`
+- **Official reference:** `experiments/global_gru_baseline_2026-07-17_121748/`
+- **Superseded reference (historical, patience=3):** `experiments/global_gru_reference_2026-07-17/`
+- **Source:** `experiments/global_gru_baseline_2026-07-17_121748/config/baseline_metadata.json`
 
 ---
 
-## 5. Methodology Comparison (Phase 6 — Complete)
+## 5. Methodology Comparison (Phase 6 — Complete, regenerated 2026-07-17)
 
 **Experiment:** `experiments/hybrid_vs_global_2026-07-17_095147/`  
 **Executive summary:** `FINAL_COMPARISON_SUMMARY.md` (in comparison experiment directory)
@@ -185,16 +189,16 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 | Methodology | MAE (mean) | RMSE (mean) | MAPE (mean) |
 |-------------|------------|-------------|-------------|
 | Hybrid Prophet + GRU | 1.7459 | 2.3878 | 111.9403 |
-| Global GRU v1 | 2.0627 | 2.7559 | 118.9320 |
-| **Δ (Global − Hybrid)** | **+0.3168** | **+0.3681** | **+6.9917** |
+| Global GRU v1 | 1.9242 | 2.6105 | 116.5026 |
+| **Δ (Global − Hybrid)** | **+0.1784** | **+0.2227** | **+4.5623** |
 
-**Per-container MAE:** Global better on 30 containers; Hybrid better on 69.
+**Per-container MAE:** Global better on 32 containers; Hybrid better on 67.
 
-**Verification:** `scripts/verify_hybrid_vs_global_comparison.py` — **PASS**
+**Verification:** `scripts/verify_hybrid_vs_global_comparison.py` — **PASS** (regenerated vs corrected Global baseline)
 
 **Scope:** Configuration-specific conclusions only. See [Phase 6 documentation](phase-06-baseline-freeze-and-comparison.md).
 
-**Study track status:** **Closed** — Global GRU baseline research complete. Future work (Peak-Aware Global GRU, unseen-container holdout) proceeds as separate experiments against frozen references.
+**Study track status:** **Closed** — Global GRU baseline research complete. Peak-Aware Global GRU complete (Stages 1–4).
 
 ---
 
@@ -226,8 +230,9 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 - `notebooks/global_gru_model.ipynb`
 - `models/global_gru.keras`
 - `models/global_gru_metadata.json`
-- `experiments/global_gru_reference_2026-07-17/`
-- `experiments/hybrid_vs_global_2026-07-17_095147/` (methodology comparison — read-only)
+- `experiments/global_gru_baseline_2026-07-17_121748/` (official Global GRU baseline)
+- `experiments/global_gru_reference_2026-07-17/` (superseded historical reference)
+- `experiments/hybrid_vs_global_2026-07-17_095147/` (methodology comparison — regenerated with corrected baseline)
 
 **Shared preprocessing (frozen for all methodologies):**
 
@@ -241,6 +246,21 @@ The goal is a maintainable research codebase, not a mirror of the Hybrid impleme
 
 - `utils/peak_*.py`
 - `utils/hybrid_training_peak_aware.py`
+
+---
+
+## Appendix C — Baseline Correction (Phase B, 2026-07-17)
+
+The original Global GRU reference (`experiments/global_gru_reference_2026-07-17/`) used `EarlyStopping(patience=3)`, an implementation oversight. The intended configuration is `patience=10`.
+
+| Item | Path / value |
+|------|----------------|
+| **Official baseline** | `experiments/global_gru_baseline_2026-07-17_121748/` |
+| **Config constant** | `utils.global_config.PRIMARY_GLOBAL_BASELINE_DIR` |
+| **Promotion record** | `official_baseline_promotion.json` |
+| **Superseded reference** | `experiments/global_gru_reference_2026-07-17/` (preserved) |
+
+Downstream comparisons (Hybrid vs Global, Peak-Aware Global vs Global) were regenerated against the corrected baseline without retraining non-Global models.
 
 ---
 

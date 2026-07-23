@@ -97,6 +97,7 @@ def train_global_gru_peak_aware(
     batch_size: int = BATCH_SIZE,
     verbose: int = 0,
     random_seed: int = RANDOM_SEED,
+    early_stopping_patience: int | None = None,
 ) -> tuple[Any, dict[str, Any], dict[str, float], np.ndarray]:
     """
     Train Peak-Aware Global GRU with timestep-weighted MSE.
@@ -223,8 +224,17 @@ def train_global_gru_peak_aware(
 
     early_stop = EarlyStopping(
         monitor=EARLY_STOPPING_MONITOR,
-        patience=EARLY_STOPPING_PATIENCE,
+        patience=(
+            early_stopping_patience
+            if early_stopping_patience is not None
+            else EARLY_STOPPING_PATIENCE
+        ),
         restore_best_weights=EARLY_STOPPING_RESTORE_BEST_WEIGHTS,
+    )
+    patience_used = (
+        early_stopping_patience
+        if early_stopping_patience is not None
+        else EARLY_STOPPING_PATIENCE
     )
 
     history = model.fit(
@@ -242,6 +252,17 @@ def train_global_gru_peak_aware(
     final_epoch = len(history.history.get("loss", []))
     weight_summary = summarize_weight_matrix(W_all)
 
+    val_loss_history = history.history.get("val_loss", [])
+    if val_loss_history:
+        best_epoch_idx = int(np.argmin(val_loss_history))
+        best_epoch = best_epoch_idx + 1
+        stopped_epoch = final_epoch
+        best_val_loss = float(val_loss_history[best_epoch_idx])
+    else:
+        best_epoch = None
+        stopped_epoch = final_epoch if final_epoch else None
+        best_val_loss = None
+
     training_metadata: dict[str, Any] = {
         "model_variant": MODEL_VARIANT,
         "input_window": input_window,
@@ -256,10 +277,13 @@ def train_global_gru_peak_aware(
         "peak_weight": PEAK_WEIGHT,
         "non_peak_weight": NON_PEAK_WEIGHT,
         "early_stopping_monitor": EARLY_STOPPING_MONITOR,
-        "early_stopping_patience": EARLY_STOPPING_PATIENCE,
+        "early_stopping_patience": patience_used,
         "early_stopping_restore_best_weights": EARLY_STOPPING_RESTORE_BEST_WEIGHTS,
         "epochs_max": epochs,
         "epochs_run": final_epoch,
+        "best_epoch": best_epoch,
+        "stopped_epoch": stopped_epoch,
+        "best_val_loss": best_val_loss,
         "batch_size": batch_size,
         "shuffle": SHUFFLE,
         "random_seed": random_seed,
@@ -296,6 +320,10 @@ def train_global_gru_peak_aware(
             "utils.global_training.set_random_seeds",
             "utils.sequence_utils.create_longterm_sequences",
         ],
+        "training_history": {
+            key: [float(value) for value in values]
+            for key, values in history.history.items()
+        },
     }
 
     return model, training_metadata, peak_thresholds, W_all

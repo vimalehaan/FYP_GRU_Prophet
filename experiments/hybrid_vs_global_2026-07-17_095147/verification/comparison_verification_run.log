@@ -1,7 +1,7 @@
 === Hybrid vs Global GRU Comparison Verification ===
 Experiment directory: /Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147
 Hybrid reference  : /Users/lehaan/Desktop/FYP_Long_Term/experiments/baseline_reference_2026-07-14
-Global reference  : /Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_reference_2026-07-17
+Global reference  : /Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_baseline_2026-07-17_121748
 
 Cohort alignment:
   OK  both datasets contain 99 containers

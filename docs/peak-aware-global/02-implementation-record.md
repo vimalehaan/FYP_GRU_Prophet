@@ -4,10 +4,15 @@
 
 **Status:** Complete  
 **Locked date:** 2026-07-17  
-**Training run:** `experiments/peak_aware_global_2026-07-17_164737/`  
-**Lock record:** `experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json`  
+**Official treatment run:** `experiments/peak_aware_global_validation_vs1_2026-07-17_170939/`  
+**Archived primary run:** `experiments/peak_aware_global_2026-07-17_164737/` — *Historical – optimization-limited (EarlyStopping patience=3)*  
+**Stage 2 lock (historical run):** `experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json`  
+**Official promotion record:** `experiments/peak_aware_global_validation_vs1_2026-07-17_170939/official_treatment_promotion.json`  
 **Design authority:** `experiments/peak_aware_global_design_2026-07-17/design_lock.json`  
-**Control reference:** `experiments/global_gru_reference_2026-07-17/`
+**Control reference (official):** `experiments/global_gru_baseline_2026-07-17_121748/`  
+**Superseded control (historical):** `experiments/global_gru_reference_2026-07-17/`
+
+> **Phase B baseline correction (2026-07-17):** After Stage 2, the Global control was retrained and promoted with `EarlyStopping(patience=10)` (MAE 1.924). Stage 3 evaluation and all downstream comparisons use the official baseline. The superseded reference remains immutable for audit traceability; Stage 2 fairness checks were run against it and remain valid historical records.
 
 ---
 
@@ -95,49 +100,50 @@ Everything except GRU training loss is identical to the frozen Global GRU baseli
 | Features `(cpu_scaled, cpu_mean, cpu_std)` | Peak timesteps weighted λ = 5, others 1.0 |
 | `build_global_gru_model()` architecture | Custom `train_step` (2D `sample_weight`) |
 | Optimizer, batch 256, shuffle False, seed 42 | `sample_weight=W_train` on train only |
-| Early stopping on unweighted `val_loss`, patience 3 | — |
+| Early stopping on unweighted `val_loss`, patience 10 (official control) | — |
 | Global inference / evaluation path | — |
 
 ---
 
-## 6. Training Outcome (Primary Run)
+## 6. Training Outcome (Official Treatment — VS-1 Promoted)
 
 | Item | Value |
 |------|-------|
-| Experiment ID | `peak_aware_global_2026-07-17_164737` |
+| Experiment ID | `peak_aware_global_validation_vs1_2026-07-17_170939` |
 | Model | `models/global_gru_peak_aware.keras` |
-| Trained at | 2026-07-17T11:18:01Z |
-| Epochs run | **4** / 50 max (early stopping) |
-| Final train loss (weighted MSE) | **0.0317** |
-| Final val loss (unweighted) | **0.0406** |
-| Final train MAE | 0.118 |
-| Final val MAE | 0.144 |
+| Trained at | 2026-07-17T11:41:51Z |
+| Epochs run | **29** / 50 max (early stopping, patience **10**) |
+| Best epoch | **19** |
+| Best val loss | **0.0332** |
+| Final train loss (weighted MSE) | **0.0256** |
+| Final val loss (unweighted) | **0.0362** |
 | Peak-weight fraction | **16.94%** of forecast timesteps |
 | Sequence counts | 41,650 total; 33,320 train; 8,330 val |
 | Peak thresholds | 99 containers |
 
-**Smoke run (development only):** `experiments/peak_aware_global_2026-07-17_163737/` (2 epochs). Primary locked run is `_164737`.
+**Promotion:** VS-1 promoted to official treatment on 2026-07-17 after validation study showed the patience=3 run was optimization-limited. See `official_treatment_promotion.json`.
+
+### Archived — Historical Primary Run (patience=3)
+
+| Item | Value |
+|------|-------|
+| Experiment ID | `peak_aware_global_2026-07-17_164737` |
+| Archive label | Historical – optimization-limited (EarlyStopping patience=3) |
+| Epochs run | **4** / 50 max |
+| Final val loss | **0.0406** |
+| Fairness | 10/10 PASS (historical record preserved) |
+
+**Smoke run (development only):** `experiments/peak_aware_global_2026-07-17_163737/` (2 epochs).
 
 ---
 
 ## 7. Fairness Verification
 
-**Record:** `verification/fairness_check.json`  
-**Verified at:** 2026-07-17T11:18:24Z  
+**Official treatment record:** `experiments/peak_aware_global_validation_vs1_2026-07-17_170939/verification/fairness_check.json`  
+**Verified at:** 2026-07-17T11:50:36Z  
 **Result:** **10/10 PASS**
 
-| # | Check | Result |
-|---|-------|--------|
-| 1 | Frozen file integrity | PASS |
-| 2 | Identical `X_all`, `y_all`, sample ordering | PASS |
-| 3 | `W_all` only allowed difference | PASS |
-| 4 | Architecture via `build_global_gru_model` | PASS |
-| 5 | Hyperparams match `baseline_metadata.json` | PASS |
-| 6 | Unweighted early stopping | PASS |
-| 7 | Shared Global inference/evaluation path | PASS |
-| 8 | Valid P90 peak threshold artifact | PASS |
-| 9 | Weight matrix aligns with longterm sequences | PASS |
-| 10 | Single behavioural difference (weighted train step only) | PASS |
+**Historical run record:** `experiments/peak_aware_global_2026-07-17_164737/verification/fairness_check.json` (10/10 PASS, 2026-07-17T11:18:24Z)
 
 ---
 
@@ -148,7 +154,8 @@ Everything except GRU training loss is identical to the frozen Global GRU baseli
 | `utils/global_*.py` unmodified | Confirmed |
 | `utils/sequence_utils.py` unmodified | Confirmed |
 | `models/global_gru.keras` unmodified | Confirmed |
-| `experiments/global_gru_reference_2026-07-17/` unmodified | Confirmed |
+| `experiments/global_gru_baseline_2026-07-17_121748/` unmodified by treatment code | Confirmed |
+| `experiments/global_gru_reference_2026-07-17/` (superseded) unmodified | Confirmed |
 | Production paths not written by treatment code | Confirmed (check #1) |
 
 ---
@@ -215,16 +222,15 @@ Everything except GRU training loss is identical to the frozen Global GRU baseli
 
 ---
 
-## 12. Stage 3 Handoff (Pending Approval)
+## 12. Stage 3 Handoff
 
 | Item | Value |
 |------|-------|
 | Evaluation plan | [stage-03-evaluation-plan.md](stage-03-evaluation-plan.md) |
-| Control reference | `experiments/global_gru_reference_2026-07-17/` |
-| Treatment artifacts | `experiments/peak_aware_global_2026-07-17_164737/` |
+| Control reference | `experiments/global_gru_baseline_2026-07-17_121748/` |
+| Superseded control (Stage 2 fairness snapshot) | `experiments/global_gru_reference_2026-07-17/` |
+| Official treatment artifacts | `experiments/peak_aware_global_validation_vs1_2026-07-17_170939/` |
 | Inference | `utils/global_inference.run_global_inference` (unchanged) |
 | Evaluation | `utils/global_evaluation.evaluate_selected_containers` (unchanged) |
 | Peak metrics | Extend `utils/peak_evaluation.py` for Global (`day1_pred_real`) |
 | Delta convention | treatment − control |
-
-**Do not start Stage 3 until explicitly approved.**

@@ -1,0 +1,128 @@
+{
+  "gate_status": "PASS",
+  "checked_at": "2026-07-17T12:24:26Z",
+  "metric_tolerance": 1e-05,
+  "frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748/evaluation",
+  "rerun_containers": 99,
+  "frozen_containers": 99,
+  "per_container_checks": [
+    {
+      "metric": "day1_mae",
+      "matches_within_tolerance": true,
+      "max_abs_delta": 1.7763568394002505e-15,
+      "tolerance": 1e-05
+    },
+    {
+      "metric": "day1_rmse",
+      "matches_within_tolerance": true,
+      "max_abs_delta": 1.7763568394002505e-15,
+      "tolerance": 1e-05
+    },
+    {
+      "metric": "day1_mape",
+      "matches_within_tolerance": true,
+      "max_abs_delta": 2.842170943040401e-14,
+      "tolerance": 1e-05
+    }
+  ],
+  "aggregate_checks": [
+    {
+      "metric": "day1_mae",
+      "stat": "mean",
+      "rerun": 1.9242406355693225,
+      "frozen": 1.924241,
+      "abs_delta": 3.6443067763514136e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mae",
+      "stat": "std",
+      "rerun": 2.3155458660320827,
+      "frozen": 2.315546,
+      "abs_delta": 1.3396791720410306e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mae",
+      "stat": "min",
+      "rerun": 0.0036233984659096072,
+      "frozen": 0.003623,
+      "abs_delta": 3.984659096073137e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mae",
+      "stat": "max",
+      "rerun": 12.763624850908913,
+      "frozen": 12.763625,
+      "abs_delta": 1.4909108614347133e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_rmse",
+      "stat": "mean",
+      "rerun": 2.610536144884579,
+      "frozen": 2.610536,
+      "abs_delta": 1.4488457900085905e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_rmse",
+      "stat": "std",
+      "rerun": 2.9652717920340987,
+      "frozen": 2.965272,
+      "abs_delta": 2.0796590138871807e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_rmse",
+      "stat": "min",
+      "rerun": 0.004478009256565439,
+      "frozen": 0.004478,
+      "abs_delta": 9.256565438632569e-09,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_rmse",
+      "stat": "max",
+      "rerun": 14.392588761303092,
+      "frozen": 14.392589,
+      "abs_delta": 2.3869690757294393e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mape",
+      "stat": "mean",
+      "rerun": 116.5025742728598,
+      "frozen": 116.502574,
+      "abs_delta": 2.7285980763736006e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mape",
+      "stat": "std",
+      "rerun": 642.9235373218053,
+      "frozen": 642.923537,
+      "abs_delta": 3.2180525977310026e-07,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mape",
+      "stat": "min",
+      "rerun": 5.681647926326939,
+      "frozen": 5.681648,
+      "abs_delta": 7.36730614292469e-08,
+      "matches_within_tolerance": true
+    },
+    {
+      "metric": "day1_mape",
+      "stat": "max",
+      "rerun": 6257.691165186196,
+      "frozen": 6257.691165,
+      "abs_delta": 1.8619539332576096e-07,
+      "matches_within_tolerance": true
+    }
+  ],
+  "per_container_pass": true,
+  "aggregate_pass": true
+}

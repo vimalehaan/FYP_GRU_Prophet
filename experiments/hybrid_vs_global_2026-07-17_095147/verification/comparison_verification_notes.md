@@ -1,6 +1,6 @@
 # Hybrid vs Global GRU — Comparison Verification Notes
 
-**Date:** 2026-07-17  
+**Date:** 2026-07-17 (regenerated after Global baseline correction)  
 **Phase:** 6 — Methodology Comparison (Task 4)  
 **Experiment identifier:** `hybrid_vs_global_2026-07-17_095147`  
 **Verification script:** `scripts/verify_hybrid_vs_global_comparison.py`
@@ -40,9 +40,10 @@ All checks          : PASS
 | Methodology | Reference |
 |-------------|-----------|
 | Hybrid Prophet + GRU | `experiments/baseline_reference_2026-07-14/` |
-| Global GRU v1 | `experiments/global_gru_reference_2026-07-17/` |
+| Global GRU v1 (official) | `experiments/global_gru_baseline_2026-07-17_121748/` |
+| Global GRU v1 (superseded) | `experiments/global_gru_reference_2026-07-17/` |
 
-Neither frozen reference was modified during comparison verification.
+Comparison regenerated 2026-07-17 after Global baseline correction (Phase B). Hybrid reference unchanged.
 
 ---
 
@@ -51,20 +52,20 @@ Neither frozen reference was modified during comparison verification.
 | Methodology | MAE (mean) | RMSE (mean) | MAPE (mean) |
 |-------------|------------|-------------|-------------|
 | Hybrid Prophet + GRU | 1.7459 | 2.3878 | 111.9403 |
-| Global GRU v1 | 2.0627 | 2.7559 | 118.9320 |
-| **Δ (Global − Hybrid)** | **+0.3168** | **+0.3681** | **+6.9917** |
+| Global GRU v1 | 1.9242 | 2.6105 | 116.5026 |
+| **Δ (Global − Hybrid)** | **+0.1784** | **+0.2227** | **+4.5623** |
 
 ## Per-Container MAE Outcome
 
 | Outcome | Count |
 |---------|-------|
-| Global better (lower MAE) | 30 |
-| Global worse (higher MAE) | 69 |
+| Global better (lower MAE) | 32 |
+| Global worse (higher MAE) | 67 |
 
 ---
 
 ## Gate Status
 
-Comparison verification **PASS**. Tasks 5–7 may proceed using verified artifacts in this experiment directory.
+Comparison verification **PASS**. Artifacts reflect the corrected Global baseline (`patience=10`).
 
-**Note:** Interpretation and thesis discussion remain Task 6 scope. MAE and RMSE are primary accuracy indicators; MAPE is supporting evidence only.
+**Note:** MAE and RMSE are primary accuracy indicators; MAPE is supporting evidence only.

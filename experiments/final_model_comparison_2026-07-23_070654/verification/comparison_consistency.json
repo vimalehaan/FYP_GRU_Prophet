@@ -1,0 +1,236 @@
+{
+  "verified_at": "2026-07-23T07:08:06Z",
+  "script": "scripts/build_final_model_comparison.py",
+  "script_version": "final_model_comparison_2026-07-23",
+  "read_only": true,
+  "models_retrained": false,
+  "inference_regenerated": false,
+  "source_artifacts_modified": false,
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "overall_mae",
+      "master_value": 1.745882,
+      "source_value": 1.745882,
+      "source_file": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "overall_rmse",
+      "master_value": 2.387813,
+      "source_value": 2.387813,
+      "source_file": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "overall_mape",
+      "master_value": 111.940318,
+      "source_value": 111.940318,
+      "source_file": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "peak_mae",
+      "master_value": 2.501220270363839,
+      "source_value": 2.501220270363839,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "peak_rmse",
+      "master_value": 5.186215321890583,
+      "source_value": 5.186215321890583,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "non_peak_mae",
+      "master_value": 1.48526625156073,
+      "source_value": 1.48526625156073,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M1_hybrid_baseline",
+      "metric": "non_peak_rmse",
+      "master_value": 3.4908786895911854,
+      "source_value": 3.4908786895911854,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "overall_mae",
+      "master_value": 1.740819,
+      "source_value": 1.740819,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "overall_rmse",
+      "master_value": 2.384394,
+      "source_value": 2.384394,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "overall_mape",
+      "master_value": 110.174351,
+      "source_value": 110.174351,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "peak_mae",
+      "master_value": 2.525613525361348,
+      "source_value": 2.525613525361348,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "peak_rmse",
+      "master_value": 5.204102317874833,
+      "source_value": 5.204102317874833,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "non_peak_mae",
+      "master_value": 1.4700396962602975,
+      "source_value": 1.4700396962602975,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M2_peak_aware_hybrid",
+      "metric": "non_peak_rmse",
+      "master_value": 3.4508864179241363,
+      "source_value": 3.4508864179241363,
+      "source_file": "experiments/peak_aware_2026-07-14_164518/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "overall_mae",
+      "master_value": 1.924241,
+      "source_value": 1.924241,
+      "source_file": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "overall_rmse",
+      "master_value": 2.610536,
+      "source_value": 2.610536,
+      "source_file": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "overall_mape",
+      "master_value": 116.502574,
+      "source_value": 116.502574,
+      "source_file": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "peak_mae",
+      "master_value": 3.4256506397556943,
+      "source_value": 3.4256506397556943,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "peak_rmse",
+      "master_value": 6.559444379008921,
+      "source_value": 6.559444379008921,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "non_peak_mae",
+      "master_value": 1.4062053128681655,
+      "source_value": 1.4062053128681655,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M3_global_baseline",
+      "metric": "non_peak_rmse",
+      "master_value": 2.4551932408455106,
+      "source_value": 2.4551932408455106,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "overall_mae",
+      "master_value": 2.173731,
+      "source_value": 2.173731,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "overall_rmse",
+      "master_value": 2.757713,
+      "source_value": 2.757713,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "overall_mape",
+      "master_value": 163.771437,
+      "source_value": 163.771437,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "peak_mae",
+      "master_value": 2.64903844724382,
+      "source_value": 2.64903844724382,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "peak_rmse",
+      "master_value": 5.316428966799132,
+      "source_value": 5.316428966799132,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "non_peak_mae",
+      "master_value": 2.0097350937434495,
+      "source_value": 2.0097350937434495,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    },
+    {
+      "model_id": "M4_peak_aware_global",
+      "metric": "non_peak_rmse",
+      "master_value": 3.5017954767561017,
+      "source_value": 3.5017954767561017,
+      "source_file": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/comparison_table.csv",
+      "status": "PASS"
+    }
+  ]
+}

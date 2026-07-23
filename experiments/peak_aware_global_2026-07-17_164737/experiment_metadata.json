@@ -24,13 +24,22 @@
     "training": "complete",
     "fairness_verification": "complete",
     "stage2_lock": "complete",
-    "evaluation": "pending"
+    "evaluation": "superseded",
+    "evaluation_task_1": "superseded",
+    "evaluation_task_2": "superseded",
+    "archive": "historical"
   },
+  "archive_label": "Historical \u2013 optimization-limited (EarlyStopping patience=3)",
+  "archive_record": "archive_record.json",
+  "superseded_by": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
   "training_summary": {
     "epochs_run": 4,
     "final_val_loss": 0.04058956727385521,
     "peak_weight_fraction": 0.16936374549819927
   },
   "fairness_check": "verification/fairness_check.json",
-  "phase2_implementation": "phase2_implementation.json"
+  "phase2_implementation": "phase2_implementation.json",
+  "evaluation_workspace": "evaluation/evaluation_workspace.json",
+  "peak_evaluation_sanity": "evaluation/peak_evaluation_sanity.json",
+  "treatment_evaluation": "evaluation/evaluation_metadata.json"
 }

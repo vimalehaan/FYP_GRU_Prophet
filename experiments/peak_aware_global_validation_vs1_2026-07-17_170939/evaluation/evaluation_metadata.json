@@ -1,0 +1,62 @@
+{
+  "evaluation_type": "peak_aware_global_treatment_primary",
+  "stage": 3,
+  "task": 2,
+  "model_variant": "global_gru_peak_aware_v1",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "model_path": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/models/global_gru_peak_aware.keras",
+  "metadata_path": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/models/global_gru_peak_aware_metadata.json",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "mape_epsilon": 0.01,
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+  "inference_module": "utils.global_inference.run_global_inference",
+  "fairness_contract": "docs/peak-aware-global/stage-03-evaluation-plan.md#14-evaluation-fairness-contract",
+  "training_metadata_snapshot": {
+    "random_seed": 42,
+    "epochs_run": 29,
+    "n_sequences_total": 41650,
+    "loss": "timestep_weighted_mse"
+  },
+  "started_at": "2026-07-17T11:50:47Z",
+  "completed_at": "2026-07-17T11:50:51Z",
+  "runtime_seconds": 3.77,
+  "outputs": {
+    "evaluation_df": "evaluation/evaluation_df.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.csv",
+    "treatment_inference_cache": "evaluation/treatment_inference_cache.pkl"
+  },
+  "aggregate_summary": {
+    "day1_mae": {
+      "mean": 2.173731,
+      "std": 2.521003,
+      "min": 0.006868,
+      "max": 14.400254
+    },
+    "day1_rmse": {
+      "mean": 2.757713,
+      "std": 2.975206,
+      "min": 0.008077,
+      "max": 16.229259
+    },
+    "day1_mape": {
+      "mean": 163.771437,
+      "std": 709.291314,
+      "min": 5.366703,
+      "max": 6310.284659
+    }
+  },
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17",
+  "phase_b_regenerated_at": "2026-07-17T12:24:35Z"
+}

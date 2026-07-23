@@ -15,6 +15,7 @@ from utils.global_config import (
     INPUT_WINDOW,
     MAPE_EPSILON,
     MODEL_VARIANT,
+    PRIMARY_GLOBAL_BASELINE_DIR,
     RANDOM_SEED,
     REPO_ROOT,
     STALE_SELECTED_CONTAINER_ID,
@@ -32,10 +33,8 @@ EXPECTED_EVALUATED: int = 99
 EVALUATION_DF_FILENAME: str = "evaluation_df.csv"
 EVALUATION_SUMMARY_FILENAME: str = "evaluation_summary.csv"
 
-# Authoritative Phase 5 evaluation run (immutable record).
-GLOBAL_GRU_EVALUATION_RUN_DIR = (
-    REPO_ROOT / "experiments/global_gru_evaluation_2026-07-17_092120"
-)
+# Authoritative Global baseline evaluation (corrected baseline, promoted Phase B).
+GLOBAL_GRU_EVALUATION_RUN_DIR = PRIMARY_GLOBAL_BASELINE_DIR
 
 __all__ = [
     "DELTA_SIGN_CONVENTION",

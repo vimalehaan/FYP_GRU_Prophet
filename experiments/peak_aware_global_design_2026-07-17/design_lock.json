@@ -17,10 +17,20 @@
   },
   "control_reference": {
     "model_variant": "global_gru_v1",
-    "reference_dir": "experiments/global_gru_reference_2026-07-17/",
+    "reference_dir": "experiments/global_gru_baseline_2026-07-17_121748/",
     "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+    "baseline_metadata": "experiments/global_gru_baseline_2026-07-17_121748/config/baseline_metadata.json",
+    "control_day1_mae_mean": 1.924241,
+    "early_stopping_patience": 10,
+    "promotion_record": "experiments/global_gru_baseline_2026-07-17_121748/official_baseline_promotion.json"
+  },
+  "superseded_control_reference": {
+    "reference_dir": "experiments/global_gru_reference_2026-07-17/",
     "baseline_metadata": "experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json",
-    "control_day1_mae_mean": 2.062666
+    "control_day1_mae_mean": 2.062666,
+    "early_stopping_patience": 3,
+    "superseded_reason": "EarlyStopping patience implementation oversight; corrected and promoted in Phase B baseline correction (2026-07-17)",
+    "stage_2_fairness_snapshot": true
   },
   "experimental_variable": "gru_training_loss_only",
   "inherited_methodology": {
@@ -49,7 +59,11 @@
     "model_variant": "global_gru_peak_aware_v1",
     "input_window": 96,
     "forecast_horizon": 96,
-    "features": ["cpu_scaled", "cpu_mean", "cpu_std"],
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
     "target": "cpu_scaled",
     "sequence_builder": "create_longterm_sequences",
     "sequence_source": "global_train_only",
@@ -63,7 +77,9 @@
     "training_hyperparameters": {
       "optimizer": "adam",
       "base_loss": "mse",
-      "metrics": ["mae"],
+      "metrics": [
+        "mae"
+      ],
       "epochs_max": 50,
       "batch_size": 256,
       "shuffle": false,
@@ -91,7 +107,8 @@
   },
   "fairness_contract": {
     "control_model": "global_gru_v1",
-    "control_reference_dir": "experiments/global_gru_reference_2026-07-17/",
+    "control_reference_dir": "experiments/global_gru_baseline_2026-07-17_121748/",
+    "superseded_control_reference_dir": "experiments/global_gru_reference_2026-07-17/",
     "identical_components": [
       "preprocessing",
       "train_val_split",
@@ -113,8 +130,14 @@
       "sample_ordering": "identical_sample_cids_row_order",
       "sequence_count": 41650,
       "only_allowed_difference": "W_all_weight_matrix",
-      "W_all_shape": [41650, 96],
-      "W_all_allowed_values": [1.0, 5.0],
+      "W_all_shape": [
+        41650,
+        96
+      ],
+      "W_all_allowed_values": [
+        1.0,
+        5.0
+      ],
       "gate_rule": "evaluation_must_not_start_until_assertion_passes"
     }
   },
@@ -170,6 +193,7 @@
       "notebooks/global_gru_model.ipynb",
       "models/global_gru.keras",
       "models/global_gru_metadata.json",
+      "experiments/global_gru_baseline_2026-07-17_121748/",
       "experiments/global_gru_reference_2026-07-17/"
     ],
     "experiment_output_pattern": "experiments/peak_aware_global_<timestamp>/",
@@ -229,9 +253,21 @@
   ],
   "fairness_check_count": 10,
   "stage_5_evaluation_preview": {
-    "overall_metrics": ["day1_mae", "day1_rmse", "day1_mape"],
-    "peak_subset_metrics": ["peak_mae", "peak_rmse", "non_peak_mae", "non_peak_rmse"],
-    "optional_stratification": ["pattern_type", "peak_quartiles"],
+    "overall_metrics": [
+      "day1_mae",
+      "day1_rmse",
+      "day1_mape"
+    ],
+    "peak_subset_metrics": [
+      "peak_mae",
+      "peak_rmse",
+      "non_peak_mae",
+      "non_peak_rmse"
+    ],
+    "optional_stratification": [
+      "pattern_type",
+      "peak_quartiles"
+    ],
     "evaluation_horizon": "day1_96_steps_per_container",
     "peak_label_rule": "same_p90_train_fitted_thresholds",
     "delta_convention": "treatment_minus_control",
@@ -269,7 +305,7 @@
     "Validation peak rates exceed train rates under fixed thresholds",
     "Lambda 5 chosen analytically in Hybrid Phase 3, not empirically swept on Global",
     "Stochastic GRU training may vary slightly across hardware despite seed 42",
-    "Global baseline MAE higher than Hybrid — interpret within-architecture only"
+    "Global baseline MAE higher than Hybrid \u2014 interpret within-architecture only"
   ],
   "stage_1_exit_criteria": {
     "inherited_methodology_documented": true,
@@ -283,5 +319,14 @@
     "stage_2_not_started": true
   },
   "locked_for_implementation": true,
-  "awaiting_approval_before_stage_2": true
+  "awaiting_approval_before_stage_2": true,
+  "baseline_correction_phase_b": {
+    "date": "2026-07-17",
+    "action": "Promoted corrected Global baseline (patience=10) as official control",
+    "official_reference_dir": "experiments/global_gru_baseline_2026-07-17_121748/",
+    "superseded_reference_dir": "experiments/global_gru_reference_2026-07-17/",
+    "official_control_day1_mae_mean": 1.924241,
+    "superseded_control_day1_mae_mean": 2.062666,
+    "documentation": "docs/global-gru-baseline/README.md"
+  }
 }

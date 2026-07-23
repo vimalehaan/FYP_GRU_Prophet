@@ -1,0 +1,80 @@
+{
+  "model_variant": "global_gru_v1",
+  "random_seed": 42,
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "features": [
+    "cpu_scaled",
+    "cpu_mean",
+    "cpu_std"
+  ],
+  "target": "cpu_scaled",
+  "n_sequences": 41650,
+  "n_train_sequences": 33320,
+  "n_val_sequences": 8330,
+  "n_unique_containers": 99,
+  "optimizer": "adam",
+  "loss": "mse",
+  "metrics": [
+    "mae"
+  ],
+  "epochs_max": 50,
+  "epochs_run": 35,
+  "best_epoch": 25,
+  "best_val_loss": 0.028166048228740692,
+  "batch_size": 256,
+  "shuffle": false,
+  "early_stopping_monitor": "val_loss",
+  "early_stopping_patience": 10,
+  "sequence_val_split": 0.8,
+  "gru_units": [
+    128,
+    64
+  ],
+  "dense_units": 64,
+  "dropout": 0.2,
+  "final_train_loss": 0.015440183691680431,
+  "final_val_loss": 0.029460720717906952,
+  "final_train_mae": 0.08593882620334625,
+  "final_val_mae": 0.11186208575963974,
+  "saved_at": "2026-07-17T12:17:48.002833+00:00",
+  "environment": {
+    "python_version": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "tensorflow_version": "2.16.2"
+  },
+  "baseline_spec": {
+    "model_variant": "global_gru_v1",
+    "spec_reference": "docs/global-gru-baseline/phase-03-5-baseline-specification.md",
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
+    "target": "cpu_scaled",
+    "architecture": "GRU(128, return_sequences=True) -> Dropout(0.2) -> GRU(64) -> Dense(64, relu) -> Dense(96)",
+    "gru_units": [
+      128,
+      64
+    ],
+    "dense_units": 64,
+    "dropout": 0.2,
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "epochs_max": 50,
+    "batch_size": 256,
+    "shuffle": false,
+    "random_seed": 42,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 10,
+    "early_stopping_restore_best_weights": true,
+    "sequence_val_split": 0.8
+  },
+  "model_path": "/Users/lehaan/Desktop/FYP_Long_Term/models/global_gru.keras",
+  "metadata_path": "/Users/lehaan/Desktop/FYP_Long_Term/models/global_gru_metadata.json"
+}

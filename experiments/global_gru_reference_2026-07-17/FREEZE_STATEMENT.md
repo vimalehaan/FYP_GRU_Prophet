@@ -1,5 +1,7 @@
 # Global GRU Baseline Freeze Statement
 
+> **SUPERSEDED (2026-07-17):** This reference used `EarlyStopping(patience=3)`, an implementation oversight. The official Global GRU baseline is now `experiments/global_gru_baseline_2026-07-17_121748/` (patience=10). This directory is preserved as a historical artifact and must not be used as the active control reference.
+
 **Baseline name:** Global GRU v1 (`global_gru_v1`)  
 **Implementation freeze date:** 2026-07-17  
 **Evaluation freeze date:** 2026-07-17  

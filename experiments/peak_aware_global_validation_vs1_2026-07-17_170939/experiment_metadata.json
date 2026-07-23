@@ -1,0 +1,48 @@
+{
+  "experiment_type": "peak_aware_global",
+  "experiment_role": "official_treatment",
+  "stage": 2,
+  "promoted_from": "VS-1 validation study",
+  "timestamp": "2026-07-17_170939",
+  "smoke_run": false,
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17",
+  "baseline_promotion_record": "experiments/global_gru_baseline_2026-07-17_121748/official_baseline_promotion.json",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "implementation_workspace": "experiments/peak_aware_global_implementation_2026-07-17",
+  "archived_predecessor": "experiments/peak_aware_global_2026-07-17_164737",
+  "official_treatment_promotion": "official_treatment_promotion.json",
+  "data_artifacts": [
+    "data/train_df.parquet",
+    "data/scalers.pkl",
+    "data/selected_containers.npy"
+  ],
+  "outputs": {
+    "model": "models/global_gru_peak_aware.keras",
+    "model_metadata": "models/global_gru_peak_aware_metadata.json",
+    "peak_thresholds": "peak/peak_thresholds.pkl",
+    "peak_config": "peak/peak_config.json",
+    "training_metadata": "training/training_metadata.json",
+    "training_history": "training/training_history.json"
+  },
+  "status": {
+    "training": "complete",
+    "fairness_verification": "complete",
+    "official_promotion": "complete",
+    "evaluation": "in_progress",
+    "evaluation_task_1": "complete",
+    "evaluation_task_2": "complete",
+    "evaluation_task_3": "complete"
+  },
+  "training_summary": {
+    "epochs_run": 29,
+    "best_epoch": 19,
+    "stopped_epoch": 29,
+    "best_val_loss": 0.03316653147339821,
+    "early_stopping_patience": 10,
+    "peak_weight_fraction": 0.16936374549819927
+  },
+  "fairness_check": "verification/fairness_check.json",
+  "peak_subset_metadata": "evaluation/peak_subset_metadata.json"
+}
