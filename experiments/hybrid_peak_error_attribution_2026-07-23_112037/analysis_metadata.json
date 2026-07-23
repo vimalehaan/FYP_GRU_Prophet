@@ -1,0 +1,58 @@
+{
+  "analysis_type": "post_hoc_diagnostic",
+  "not_a_new_experiment": true,
+  "generated_at": "2026-07-23T11:21:04Z",
+  "started_at": "2026-07-23T11:20:37Z",
+  "completed_at": "2026-07-23T11:21:04Z",
+  "script": "scripts/run_hybrid_peak_error_attribution.py",
+  "script_version": "hybrid_peak_error_attribution_2026-07-23",
+  "experiment_dir": "experiments/hybrid_peak_error_attribution_2026-07-23_112037",
+  "locked_sources": {
+    "baseline_inference_cache": "experiments/peak_aware_2026-07-14_164518/evaluation/baseline_inference_cache.pkl",
+    "baseline_peak_subset_csv": "experiments/peak_aware_2026-07-14_164518/evaluation/baseline_peak_subset_per_container.csv",
+    "peak_thresholds": "experiments/peak_aware_2026-07-14_164518/peak/peak_thresholds.pkl",
+    "hybrid_baseline_model": "experiments/baseline_reference_2026-07-14/models"
+  },
+  "diagnostic_inference_note": "Locked inference caches store actual_day1_real and day1_final_real only. Frozen run_hybrid_inference() was invoked read-only to obtain prophet_day1_real for decomposition. No locked experiment files were modified.",
+  "models_retrained": false,
+  "locked_artifacts_modified": false,
+  "evaluation_results_regenerated": false,
+  "containers_analysed": 99,
+  "containers_with_peaks": 98,
+  "runtime_seconds": 24.66,
+  "pooled_metrics": {
+    "prophet_peak_mae": 2.4824374950886954,
+    "hybrid_peak_mae": 2.501220270363839,
+    "mean_residual_correction_at_peaks": 0.07786837533434761,
+    "peak_error_reduction": -0.018782775275143493
+  },
+  "pooled_contribution_ratio": -0.007566263123363112,
+  "reduction_stats_per_container": {
+    "mean": -0.011916157699528123,
+    "median": -0.0035508575730924807,
+    "std": 0.07167690135604432
+  },
+  "contribution_stats_per_container": {
+    "mean": -0.0030456845445552493,
+    "median": -0.002042231774060261,
+    "std": 0.01842042819969936
+  },
+  "verification": {
+    "overall_status": "PASS",
+    "max_hybrid_array_delta": 0.0,
+    "max_hybrid_peak_mae_delta": 4.440892098500626e-16,
+    "pooled_hybrid_peak_mae_delta_vs_locked": 0.0,
+    "locked_pooled_hybrid_peak_mae": 2.501220270363839,
+    "metric_tolerance": 1e-05,
+    "locked_baseline_cache": "experiments/peak_aware_2026-07-14_164518/evaluation/baseline_inference_cache.pkl",
+    "locked_peak_csv": "experiments/peak_aware_2026-07-14_164518/evaluation/baseline_peak_subset_per_container.csv"
+  },
+  "outputs": {
+    "analysis_summary": "analysis_summary.md",
+    "discussion_notes": "discussion_notes.md",
+    "prophet_vs_hybrid_peak_errors": "prophet_vs_hybrid_peak_errors.csv",
+    "peak_error_reduction": "peak_error_reduction.csv",
+    "residual_contribution": "residual_contribution.csv",
+    "plots_dir": "plots/"
+  }
+}
