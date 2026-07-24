@@ -1,0 +1,23 @@
+{
+  "phase": 6,
+  "phase_name": "Discussion and Comparison",
+  "status": "complete",
+  "initialized_at": "2026-07-17T09:06:00Z",
+  "locked_at": "2026-07-17T09:12:00Z",
+  "experiment_dir": "experiments/peak_aware_2026-07-14_164518",
+  "phase5_lock": "experiments/peak_aware_2026-07-14_164518/phase5_evaluation.json",
+  "phase6_lock": "experiments/peak_aware_2026-07-14_164518/phase6_discussion.json",
+  "documentation": "docs/peak-aware-hybrid/phase-06-discussion.md",
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "outputs": {
+    "results_synthesis": "discussion/results_synthesis.json",
+    "stratified_summary": "discussion/stratified_summary.csv"
+  }
+}

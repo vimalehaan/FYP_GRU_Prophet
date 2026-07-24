@@ -1,0 +1,25 @@
+{
+  "study_type": "VS-1-training-dynamics",
+  "study_label": "Validation Study \u2013 Training Dynamics",
+  "question": "Was poor performance primarily caused by premature early stopping?",
+  "single_change": {
+    "early_stopping_patience": {
+      "primary": 3,
+      "validation": 10
+    }
+  },
+  "primary_experiment": "experiments/peak_aware_global_2026-07-17_164737",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "started_at": "2026-07-17T11:39:39Z",
+  "random_seed": 42,
+  "completed_at": "2026-07-17T11:41:55Z",
+  "outputs": {
+    "training_history": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/training/training_history.json",
+    "training_metadata": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/training/training_metadata.json",
+    "evaluation_summary": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_summary.csv",
+    "evaluation_df": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_df.csv",
+    "learning_curves": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/plots/learning_curves.png",
+    "validation_study_summary": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/validation_study_summary.json"
+  },
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17"
+}

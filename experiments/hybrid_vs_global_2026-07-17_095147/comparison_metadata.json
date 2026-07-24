@@ -1,0 +1,125 @@
+{
+  "comparison_timestamp": "2026-07-17T12:24:43Z",
+  "experiment_identifier": "hybrid_vs_global_2026-07-17_095147",
+  "experiment_dir": "experiments/hybrid_vs_global_2026-07-17_095147",
+  "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
+  "global_gru_frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
+  "global_evaluation_source": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+  "global_evaluation_run": "experiments/global_gru_baseline_2026-07-17_121748",
+  "comparison_script": "scripts/build_hybrid_vs_global_comparison.py",
+  "comparison_script_version": "phase_6_task_2_2026-07-17",
+  "verification_script": "scripts/verify_hybrid_vs_global_comparison.py",
+  "delta_sign_convention": "global_minus_hybrid",
+  "protocol_summary": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "evaluated_containers": 99,
+    "skipped_container_id": "c_14674",
+    "mape_epsilon": 0.01,
+    "metric_unit": "real CPU %"
+  },
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "comparison_table": [
+    {
+      "methodology": "hybrid_prophet_gru",
+      "n_containers": 99,
+      "day1_mae_mean": 1.7458824024279418,
+      "day1_mae_std": 2.486803679655554,
+      "day1_mae_min": 0.0034893799599411,
+      "day1_mae_max": 17.675737610789266,
+      "day1_rmse_mean": 2.3878133967258304,
+      "day1_rmse_std": 3.219141359494262,
+      "day1_rmse_min": 0.0036901197358387,
+      "day1_rmse_max": 22.827999641939517,
+      "day1_mape_mean": 111.94031802419256,
+      "day1_mape_std": 615.2990996275377,
+      "day1_mape_min": 4.612660031685286,
+      "day1_mape_max": 5935.5469571825915
+    },
+    {
+      "methodology": "global_gru_v1",
+      "n_containers": 99,
+      "day1_mae_mean": 1.9242406355693225,
+      "day1_mae_std": 2.3155458660320827,
+      "day1_mae_min": 0.0036233984659096,
+      "day1_mae_max": 12.763624850908911,
+      "day1_rmse_mean": 2.610536144884579,
+      "day1_rmse_std": 2.9652717920340987,
+      "day1_rmse_min": 0.0044780092565654,
+      "day1_rmse_max": 14.392588761303092,
+      "day1_mape_mean": 116.5025742728598,
+      "day1_mape_std": 642.9235373218053,
+      "day1_mape_min": 5.681647926326939,
+      "day1_mape_max": 6257.691165186196
+    }
+  ],
+  "delta_summary": {
+    "delta_sign_convention": "global_minus_hybrid",
+    "n_containers": 99,
+    "day1_mae": {
+      "mean_delta": 0.17835823314138097,
+      "std_delta": 0.841558517192345,
+      "min_delta": -4.912112759880355,
+      "max_delta": 3.0308367155058384,
+      "improved_count": 32,
+      "worsened_count": 67,
+      "tied_count": 0
+    },
+    "day1_rmse": {
+      "mean_delta": 0.22272274815874885,
+      "std_delta": 1.135991001860037,
+      "min_delta": -8.435410880636425,
+      "max_delta": 4.458601595717363,
+      "improved_count": 22,
+      "worsened_count": 77,
+      "tied_count": 0
+    },
+    "day1_mape": {
+      "mean_delta": 4.562256248667232,
+      "std_delta": 56.361772251833926,
+      "min_delta": -297.1861028017397,
+      "max_delta": 322.14420800360404,
+      "improved_count": 33,
+      "worsened_count": 66,
+      "tied_count": 0
+    }
+  },
+  "experiment_config": {
+    "comparison_type": "forecasting_methodology",
+    "dataset": "Alibaba Cluster Trace",
+    "target": "cpu_util_percent",
+    "resampling": "15min",
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "evaluation_period": "preprocessing validation temporal holdout",
+    "metric_unit": "real CPU %",
+    "mape_epsilon": 0.01,
+    "selected_containers": 100,
+    "evaluable_containers": 99,
+    "skipped_container_id": "c_14674",
+    "random_seed": 42,
+    "delta_sign_convention": "global_minus_hybrid",
+    "hybrid_methodology": "hybrid_prophet_gru",
+    "global_methodology": "global_gru_v1",
+    "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
+    "global_gru_frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+    "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
+    "global_evaluation_source": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+    "global_evaluation_run": "experiments/global_gru_baseline_2026-07-17_121748"
+  },
+  "outputs": {
+    "comparison_table": "comparison_table.csv",
+    "per_container_delta": "per_container_delta.csv",
+    "experiment_config": "experiment_config.json",
+    "phase6_comparison": "phase6_comparison.json",
+    "comparison_metadata": "comparison_metadata.json"
+  },
+  "per_container_delta_rows": 99
+}

@@ -1,0 +1,282 @@
+{
+  "verified_at": "2026-07-17T11:18:24Z",
+  "experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "overall_status": "PASS",
+  "checks_passed": 10,
+  "checks_total": 10,
+  "checks": [
+    {
+      "check_id": 1,
+      "name": "frozen_file_integrity",
+      "status": "PASS",
+      "details": {
+        "frozen_files_missing": [],
+        "import_errors": [],
+        "forbidden_write_snippet_hits": [],
+        "control_reference_exists": true,
+        "production_model_exists": true
+      }
+    },
+    {
+      "check_id": 2,
+      "name": "identical_X_all_y_all_and_sample_ordering",
+      "status": "PASS",
+      "details": {
+        "x_shape": [
+          41650,
+          96,
+          3
+        ],
+        "y_shape": [
+          41650,
+          96
+        ],
+        "n_sequences": 41650,
+        "expected_n_sequences": 41650,
+        "x_all_reproducible": true,
+        "y_all_reproducible": true,
+        "sample_cids_reproducible": true,
+        "sequence_count_match": true
+      }
+    },
+    {
+      "check_id": 3,
+      "name": "W_all_only_allowed_difference",
+      "status": "PASS",
+      "details": {
+        "W_all_shape": [
+          41650,
+          96
+        ],
+        "expected_shape": [
+          41650,
+          96
+        ],
+        "y_all_shape": [
+          41650,
+          96
+        ],
+        "shape_match": true,
+        "y_shape_match": true,
+        "binary_weight_verification": {
+          "only_expected_values": true,
+          "allowed_values": [
+            1.0,
+            5.0
+          ],
+          "unique_values_found": [
+            1.0,
+            5.0
+          ],
+          "unexpected_values": [],
+          "peak_weight_count": 677184,
+          "non_peak_weight_count": 3321216,
+          "total_entries": 3998400,
+          "counts_sum_to_total": true
+        }
+      }
+    },
+    {
+      "check_id": 4,
+      "name": "identical_architecture_via_build_global_gru_model",
+      "status": "PASS",
+      "details": {
+        "peak_aware_layers": [
+          {
+            "class_name": "GRU",
+            "units": 128,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 64,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": false
+          },
+          {
+            "class_name": "Dense",
+            "units": 64,
+            "activation": "relu",
+            "rate": null,
+            "return_sequences": null
+          },
+          {
+            "class_name": "Dense",
+            "units": 96,
+            "activation": "linear",
+            "rate": null,
+            "return_sequences": null
+          }
+        ],
+        "reference_layers": [
+          {
+            "class_name": "GRU",
+            "units": 128,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": true
+          },
+          {
+            "class_name": "Dropout",
+            "units": null,
+            "activation": null,
+            "rate": 0.2,
+            "return_sequences": null
+          },
+          {
+            "class_name": "GRU",
+            "units": 64,
+            "activation": "tanh",
+            "rate": null,
+            "return_sequences": false
+          },
+          {
+            "class_name": "Dense",
+            "units": 64,
+            "activation": "relu",
+            "rate": null,
+            "return_sequences": null
+          },
+          {
+            "class_name": "Dense",
+            "units": 96,
+            "activation": "linear",
+            "rate": null,
+            "return_sequences": null
+          }
+        ],
+        "layer_count_peak_aware": 5,
+        "layer_count_reference": 5,
+        "architecture_builder": "utils.global_training.build_global_gru_model"
+      }
+    },
+    {
+      "check_id": 5,
+      "name": "global_hyperparams_match_baseline_metadata",
+      "status": "PASS",
+      "details": {
+        "parity_checks": {
+          "optimizer": true,
+          "epochs_max_config": true,
+          "batch_size": true,
+          "shuffle": true,
+          "random_seed": true,
+          "sequence_val_split": true,
+          "n_sequences_total": true,
+          "n_sequences_train": true,
+          "n_sequences_val": true
+        },
+        "baseline_reference": "experiments/global_gru_reference_2026-07-17/config/baseline_metadata.json",
+        "saved_training_metadata": {
+          "optimizer": "adam",
+          "batch_size": 256,
+          "epochs_max": 50,
+          "shuffle": false,
+          "random_seed": 42,
+          "sequence_val_split": 0.8
+        }
+      }
+    },
+    {
+      "check_id": 6,
+      "name": "early_stopping_config_unweighted",
+      "status": "PASS",
+      "details": {
+        "validation_data_unweighted_tuple": true,
+        "no_weighted_validation_tuple": true,
+        "no_validation_sample_weight_arg": true,
+        "validation_unweighted_metadata_flag": true,
+        "expected_monitor": "val_loss",
+        "expected_patience": 3,
+        "expected_restore_best_weights": true
+      }
+    },
+    {
+      "check_id": 7,
+      "name": "shared_global_inference_evaluation_path",
+      "status": "PASS",
+      "details": {
+        "demo_container": "c_11461",
+        "no_peak_aware_inference_fork": true,
+        "no_peak_aware_evaluation_fork": true,
+        "day1_prediction_steps": 96,
+        "expected_day1_steps": 96,
+        "evaluated_containers": 1,
+        "failures": [],
+        "skipped": []
+      }
+    },
+    {
+      "check_id": 8,
+      "name": "valid_peak_threshold_artifact",
+      "status": "PASS",
+      "details": {
+        "train_container_count": 99,
+        "saved_threshold_count": 99,
+        "expected_threshold_count": 99,
+        "count_match": true,
+        "keys_match": true,
+        "value_mismatch_count": 0
+      }
+    },
+    {
+      "check_id": 9,
+      "name": "weight_matrix_aligns_with_longterm_sequences",
+      "status": "PASS",
+      "details": {
+        "n_baseline": 41650,
+        "n_peak_weights": 41650,
+        "cid_arrays_equal": true,
+        "features": [
+          "cpu_scaled",
+          "cpu_mean",
+          "cpu_std"
+        ],
+        "target": "cpu_scaled"
+      }
+    },
+    {
+      "check_id": 10,
+      "name": "single_behavioural_difference_weighted_train_step_only",
+      "status": "PASS",
+      "details": {
+        "shared_requirements": {
+          "uses_create_longterm_sequences": true,
+          "uses_build_global_gru_model": true,
+          "uses_global_train_only": true,
+          "uses_early_stopping_val_loss": true,
+          "uses_same_batch_shuffle": true,
+          "uses_sequence_val_split": true,
+          "baseline_uses_create_longterm_sequences": true,
+          "baseline_uses_build_global_gru_model": true
+        },
+        "allowed_differences": {
+          "install_weighted_train_step": true,
+          "train_sample_weight_W_train": true,
+          "compute_peak_thresholds": true,
+          "build_sequence_weight_matrix": true,
+          "peak_aware_loss_metadata": true
+        },
+        "forbidden_in_peak_module": {
+          "no_prophet_residuals": true,
+          "no_create_residual_sequences": true,
+          "no_duplicate_build_global_layers": true,
+          "no_validation_weights": true
+        },
+        "peak_weight_lambda": 5.0,
+        "interpretation": "Only weighted train_step and W_train sample_weight differ from frozen train_global_gru pipeline"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+=== Hybrid vs Global GRU Comparison Verification ===
+Experiment directory: /Users/lehaan/Desktop/FYP_Long_Term/experiments/hybrid_vs_global_2026-07-17_095147
+Hybrid reference  : /Users/lehaan/Desktop/FYP_Long_Term/experiments/baseline_reference_2026-07-14
+Global reference  : /Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_baseline_2026-07-17_121748
+
+Cohort alignment:
+  OK  both datasets contain 99 containers
+  OK  identical container IDs (99)
+  OK  c_14674 absent from both datasets
+
+Merge integrity:
+  OK  99 delta rows with no duplicate container_id
+
+Delta convention (Global − Hybrid):
+  OK  delta_day1_mae
+  OK  delta_day1_rmse
+  OK  delta_day1_mape
+
+Missing values:
+  OK  no NaN in comparison outputs
+
+Aggregate match vs frozen evaluation_summary.csv:
+  OK  day1_mae means match frozen summaries
+  OK  day1_rmse means match frozen summaries
+  OK  day1_mape means match frozen summaries
+
+Delta summary match:
+  OK  day1_mae delta summary
+  OK  day1_rmse delta summary
+  OK  day1_mape delta summary
+
+Recompute check from frozen evaluation_df.csv:
+  OK  saved artifacts match frozen-source recompute
+
+  OK  comparison_metadata.json provenance fields
+
+Comparison integrity: PASS
+All Hybrid vs Global GRU comparison checks passed.

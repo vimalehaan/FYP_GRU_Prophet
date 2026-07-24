@@ -1,0 +1,25 @@
+{
+  "promotion_status": "official_peak_aware_global_treatment",
+  "promoted_at": "2026-07-17T12:00:00Z",
+  "official_experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "archived_experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "archived_label": "Historical \u2013 optimization-limited (EarlyStopping patience=3)",
+  "training_protocol_amendment": {
+    "field": "early_stopping_patience",
+    "stage1_design_lock_value": 3,
+    "official_treatment_value": 10,
+    "rationale": "VS-1 validation study (Validation Study \u2013 Training Dynamics) showed patience=3 terminated training before weighted objective convergence.",
+    "methodology_unchanged": [
+      "lambda=5",
+      "P90 train-only per-container peaks",
+      "timestep_weighted_mse",
+      "architecture",
+      "optimizer",
+      "dataset",
+      "evaluation_protocol"
+    ]
+  },
+  "vs1_study_reference": "validation_study_summary.json",
+  "stage1_design_lock": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "note": "Stage 1 design lock JSON is not modified; this record documents the approved training-protocol amendment for the official treatment."
+}

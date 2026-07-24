@@ -1,0 +1,53 @@
+{
+  "stage": 3,
+  "stage_name": "Evaluation + Verification",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "initialized_at": "2026-07-17T12:00:00Z",
+  "completed_at": "2026-07-17T12:03:19Z",
+  "phase_b_regenerated_at": "2026-07-17T12:24:35Z",
+  "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "superseded_control_reference": "experiments/global_gru_reference_2026-07-17",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "documentation": "docs/peak-aware-global/03-evaluation-record.md",
+  "evaluation_plan": "docs/peak-aware-global/stage-03-evaluation-plan.md",
+  "official_treatment_promotion": "official_treatment_promotion.json",
+  "archived_predecessor": "experiments/peak_aware_global_2026-07-17_164737",
+  "phase3_lock": {
+    "record": "phase3_evaluation.json",
+    "status": "complete"
+  },
+  "new_modules": {
+    "peak_evaluation_global_adapters": "utils/peak_evaluation.py"
+  },
+  "peak_thresholds": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/peak/peak_thresholds.pkl",
+  "sanity_check": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/peak_evaluation_sanity.json",
+  "sanity_check_regenerated_at": "2026-07-23T06:32:58Z",
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "primary_stage4_artifact": "evaluation/per_container_comparison.csv",
+  "treatment_evaluation": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/evaluation_metadata.json",
+  "peak_subset_metadata": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/peak_subset_metadata.json",
+  "baseline_reproducibility_check": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/baseline_reproducibility_check.json",
+  "comparison_outputs": {
+    "comparison_table": "evaluation/comparison_table.csv",
+    "per_container_comparison": "evaluation/per_container_comparison.csv",
+    "evaluation_summary_json": "evaluation/evaluation_summary.json"
+  },
+  "comparison_generated_at": "2026-07-17T12:24:35Z",
+  "next_stage": {
+    "stage": 4,
+    "name": "Results, Discussion & Architecture Sensitivity Synthesis",
+    "status": "complete",
+    "lock": "phase4_discussion.json"
+  },
+  "evaluation_verification": "verification/evaluation_verification.json",
+  "verification_completed_at": "2026-07-23T06:33:48Z"
+}

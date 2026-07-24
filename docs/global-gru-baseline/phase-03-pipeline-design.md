@@ -328,7 +328,7 @@ experiments/global_gru_reference_YYYY-MM-DD/
 |--------|---------|
 | `verify_global_gru_data_split.py` | No val-period targets in training sequences |
 | `verify_global_gru_inference.py` | Single-container inference matches manual calculation |
-| `verify_global_gru_evaluation.py` | 99 evaluated, 1 skipped; schema correct; MAPE computed |
+| `verify_global_gru_evaluation.py` | 99 evaluated, 1 skipped; schema correct; MAPE computed; no duplicate IDs; no NaN metrics; non-negative MAE/RMSE/MAPE; RMSE ≥ MAE per container |
 | `verify_global_gru_train_eval_split.py` | Loaded model = in-memory model; no retrain in eval |
 | `verify_global_gru_hybrid_parity.py` | Same cohort, period, metrics, MAPE ε as Hybrid |
 

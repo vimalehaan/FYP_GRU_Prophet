@@ -1,0 +1,62 @@
+{
+  "sanity_test": true,
+  "stage": 3,
+  "task": "task_1_peak_evaluation_sanity",
+  "generated_at": "2026-07-17T11:26:26Z",
+  "experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "model_path": "experiments/global_gru_reference_2026-07-17/models/global_gru.keras",
+  "demo_container": "c_11461",
+  "threshold": 19.0,
+  "day1_steps": 96,
+  "peak_steps": 14,
+  "non_peak_steps": 82,
+  "peak_fraction": 0.14583333333333334,
+  "manual_metrics": {
+    "peak_mae": 6.329457941509429,
+    "peak_rmse": 6.797176974956424,
+    "non_peak_mae": 2.0803651809692383,
+    "non_peak_rmse": 2.4661298576114064,
+    "overall_mae": 2.700024541881349,
+    "overall_rmse": 3.4543600446297242,
+    "peak_steps": 14,
+    "non_peak_steps": 82
+  },
+  "module_metrics": {
+    "container_id": "c_11461",
+    "threshold": 19.0,
+    "day1_steps": 96,
+    "peak_steps": 14,
+    "non_peak_steps": 82,
+    "peak_fraction": 0.14583333333333334,
+    "peak_mae": 6.329457941509429,
+    "peak_rmse": 6.797176974956424,
+    "non_peak_mae": 2.0803651809692383,
+    "non_peak_rmse": 2.4661298576114064,
+    "overall_mae": 2.700024541881349,
+    "overall_rmse": 3.4543600446297242
+  },
+  "pooled_summary": {
+    "containers_evaluated": 1,
+    "total_day1_steps": 96,
+    "peak_steps": 14,
+    "non_peak_steps": 82,
+    "peak_step_fraction": 0.14583333333333334,
+    "peak_mae": 6.329457941509429,
+    "peak_rmse": 6.797176974956424,
+    "non_peak_mae": 2.0803651809692383,
+    "non_peak_rmse": 2.4661298576114064
+  },
+  "checks": {
+    "peak_mae_match": true,
+    "peak_rmse_match": true,
+    "non_peak_mae_match": true,
+    "non_peak_rmse_match": true,
+    "overall_mae_match": true,
+    "overall_rmse_match": true,
+    "peak_steps_match": true,
+    "label_rule_match": true,
+    "pooled_peak_mae_match": true,
+    "pooled_non_peak_mae_match": true
+  },
+  "pipeline_status": "PASS"
+}

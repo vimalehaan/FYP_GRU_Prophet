@@ -1,0 +1,34 @@
+{
+  "computed_at": "2026-07-17T12:24:26Z",
+  "stage": 3,
+  "task": 3,
+  "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "control_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "reproducibility_gate": "PASS",
+  "reproducibility_check": "evaluation/baseline_reproducibility_check.json",
+  "containers_treatment": 99,
+  "containers_baseline": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "baseline_runtime_seconds": 3.78,
+  "pooled_peak_step_fraction": 0.25652356902356904,
+  "peak_fraction_feasibility_range": [
+    0.17,
+    0.31
+  ],
+  "outputs": {
+    "baseline_evaluation_df": "evaluation/baseline_evaluation_df.csv",
+    "baseline_evaluation_summary": "evaluation/baseline_evaluation_summary.csv",
+    "baseline_inference_cache": "evaluation/baseline_inference_cache.pkl",
+    "peak_subset_metrics": "evaluation/peak_subset_metrics.csv",
+    "treatment_peak_subset_per_container": "evaluation/treatment_peak_subset_per_container.csv",
+    "baseline_peak_subset_per_container": "evaluation/baseline_peak_subset_per_container.csv",
+    "peak_subset_per_container_comparison": "evaluation/peak_subset_per_container_comparison.csv",
+    "peak_subset_summary": "evaluation/peak_subset_summary.csv"
+  }
+}

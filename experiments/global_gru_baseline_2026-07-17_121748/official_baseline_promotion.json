@@ -1,0 +1,46 @@
+{
+  "promotion_type": "global_gru_baseline_correction",
+  "promoted_at": "2026-07-17T12:30:00+00:00",
+  "phase": "B1",
+  "old_reference": {
+    "experiment_dir": "experiments/global_gru_reference_2026-07-17",
+    "early_stopping_patience": 3,
+    "status": "superseded_historical_artifact",
+    "note": "Preserved as historical record; no longer the official Global GRU baseline."
+  },
+  "new_reference": {
+    "experiment_dir": "experiments/global_gru_baseline_2026-07-17_121748",
+    "primary_global_baseline_dir_constant": "utils.global_config.PRIMARY_GLOBAL_BASELINE_DIR",
+    "early_stopping_patience": 10,
+    "status": "official_global_gru_baseline"
+  },
+  "reason_for_promotion": "EarlyStopping patience=3 was an implementation oversight. The intended and official configuration is patience=10 (monitor='val_loss', restore_best_weights=True). Phase A validated that the corrected baseline improves all aggregate Day-1 metrics versus the superseded reference.",
+  "aggregate_improvements_vs_superseded": {
+    "training": {
+      "epochs_run_delta": 26,
+      "best_val_loss_delta": -0.001107,
+      "final_val_loss_delta": 0.000188
+    },
+    "evaluation": {
+      "day1_mae_delta": -0.138425,
+      "day1_rmse_delta": -0.14533,
+      "day1_mape_delta": -2.429402,
+      "day1_mae_pct_improvement": 6.7,
+      "day1_rmse_pct_improvement": 5.3
+    },
+    "per_container_day1_mae": {
+      "improved": 68,
+      "worsened": 31,
+      "total": 99
+    }
+  },
+  "phase_a_comparison": "experiments/global_gru_baseline_2026-07-17_121748/comparison_vs_previous_baseline.json",
+  "superseded_reference_preserved": true,
+  "downstream_regeneration_required": [
+    "peak_aware_global_vs_global_comparison",
+    "hybrid_vs_global_comparison",
+    "comparison_plots",
+    "evaluation_verification",
+    "documentation"
+  ]
+}

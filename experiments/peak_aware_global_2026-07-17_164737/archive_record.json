@@ -1,0 +1,16 @@
+{
+  "archive_status": "historical",
+  "archive_label": "Historical \u2013 optimization-limited (EarlyStopping patience=3)",
+  "archived_at": "2026-07-17T12:00:00Z",
+  "original_role": "locked_primary_peak_aware_global",
+  "superseded_by": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "supersession_reason": "VS-1 validation study demonstrated the patience=3 run was optimization-limited; official treatment promoted to VS-1 (patience=10).",
+  "vs1_reference": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/validation_study_summary.json",
+  "preserved_artifacts": [
+    "models/global_gru_peak_aware.keras",
+    "training/training_metadata.json",
+    "verification/fairness_check.json",
+    "phase2_implementation.json"
+  ],
+  "note": "Stage 2 implementation lock and fairness PASS for this run remain valid historical records. Do not delete."
+}

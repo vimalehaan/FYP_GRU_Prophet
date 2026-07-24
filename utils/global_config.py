@@ -33,7 +33,7 @@ RANDOM_SEED: int = 42
 SEQUENCE_VAL_SPLIT: float = 0.8
 
 EARLY_STOPPING_MONITOR: str = "val_loss"
-EARLY_STOPPING_PATIENCE: int = 3
+EARLY_STOPPING_PATIENCE: int = 10
 EARLY_STOPPING_RESTORE_BEST_WEIGHTS: bool = True
 
 # --- Model form (Phase 0.5 locked) ---
@@ -62,9 +62,16 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 HYBRID_BASELINE_REFERENCE_DIR = (
     REPO_ROOT / "experiments/baseline_reference_2026-07-14"
 )
-GLOBAL_GRU_REFERENCE_DIR = (
+
+# Official Global GRU baseline (patience=10 correction promoted 2026-07-17).
+PRIMARY_GLOBAL_BASELINE_DIR = (
+    REPO_ROOT / "experiments/global_gru_baseline_2026-07-17_121748"
+)
+# Previous official reference (patience=3 — superseded implementation oversight).
+SUPERSEDED_GLOBAL_BASELINE_DIR = (
     REPO_ROOT / "experiments/global_gru_reference_2026-07-17"
 )
+GLOBAL_GRU_REFERENCE_DIR = PRIMARY_GLOBAL_BASELINE_DIR
 PHASE_0_5_SPEC_PATH = REPO_ROOT / "docs/global-gru-baseline/phase-03-5-baseline-specification.md"
 
 DATA_TRAIN = REPO_ROOT / "data/train_df.parquet"

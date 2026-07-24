@@ -1,0 +1,60 @@
+{
+  "evaluation_type": "peak_aware_global_treatment_primary",
+  "stage": 3,
+  "task": 2,
+  "model_variant": "global_gru_peak_aware_v1",
+  "design_lock_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+  "model_path": "experiments/peak_aware_global_2026-07-17_164737/models/global_gru_peak_aware.keras",
+  "metadata_path": "experiments/peak_aware_global_2026-07-17_164737/models/global_gru_peak_aware_metadata.json",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "mape_epsilon": 0.01,
+  "selected_containers": 100,
+  "evaluated_containers": 99,
+  "skipped_containers": [
+    {
+      "container_id": "c_14674",
+      "reason": "missing from frozen train/val data"
+    }
+  ],
+  "failures": [],
+  "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+  "inference_module": "utils.global_inference.run_global_inference",
+  "fairness_contract": "docs/peak-aware-global/stage-03-evaluation-plan.md#14-evaluation-fairness-contract",
+  "training_metadata_snapshot": {
+    "random_seed": 42,
+    "epochs_run": 4,
+    "n_sequences_total": 41650,
+    "loss": "timestep_weighted_mse"
+  },
+  "started_at": "2026-07-17T11:27:49Z",
+  "completed_at": "2026-07-17T11:27:53Z",
+  "runtime_seconds": 3.78,
+  "outputs": {
+    "evaluation_df": "evaluation/evaluation_df.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.csv",
+    "treatment_inference_cache": "evaluation/treatment_inference_cache.pkl"
+  },
+  "aggregate_summary": {
+    "day1_mae": {
+      "mean": 3.111518,
+      "std": 3.666245,
+      "min": 0.005679,
+      "max": 19.585868
+    },
+    "day1_rmse": {
+      "mean": 3.891059,
+      "std": 4.293566,
+      "min": 0.006435,
+      "max": 21.928664
+    },
+    "day1_mape": {
+      "mean": 189.021874,
+      "std": 793.516071,
+      "min": 5.621423,
+      "max": 7175.934598
+    }
+  }
+}

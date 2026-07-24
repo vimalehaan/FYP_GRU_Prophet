@@ -1,4 +1,4 @@
-"""Peak-subset evaluation metrics for Peak-Aware Hybrid research."""
+"""Peak-subset evaluation metrics for Peak-Aware Hybrid and Global research."""
 
 from __future__ import annotations
 
@@ -8,9 +8,13 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
+from utils.global_inference import GlobalInferenceResult
 from utils.hybrid_evaluation import compute_day1_metrics, summarize_evaluation_metrics
 from utils.hybrid_inference import HybridInferenceResult
 from utils.peak_detection import label_peak_timesteps
+
+GLOBAL_INFERENCE_CACHE_PRED_KEY = "day1_pred_real"
+HYBRID_INFERENCE_CACHE_PRED_KEY = "day1_final_real"
 
 
 def label_day1_peak_timesteps(
@@ -84,6 +88,46 @@ def compute_peak_subset_metrics_from_arrays(
     }
 
 
+def compute_peak_subset_metrics_from_global_arrays(
+    container_id: str,
+    actual_day1_real: np.ndarray,
+    day1_pred_real: np.ndarray,
+    threshold: float,
+) -> dict[str, Any]:
+    """Compute per-container peak metrics from Global Day-1 actual/predicted arrays."""
+    return compute_peak_subset_metrics_from_arrays(
+        container_id=container_id,
+        actual_day1_real=actual_day1_real,
+        day1_final_real=day1_pred_real,
+        threshold=threshold,
+    )
+
+
+def compute_peak_subset_metrics_from_global_result(
+    container_id: str,
+    inference_result: GlobalInferenceResult,
+    threshold: float,
+) -> dict[str, Any]:
+    """
+    Compute per-container peak and non-peak Day-1 metrics for Global GRU inference.
+
+    Parameters
+    ----------
+    container_id:
+        Container identifier (``GlobalInferenceResult`` does not store this).
+    inference_result:
+        Output from frozen ``run_global_inference``.
+    threshold:
+        Train-fitted P90 threshold in real CPU percent for the container.
+    """
+    return compute_peak_subset_metrics_from_global_arrays(
+        container_id=container_id,
+        actual_day1_real=inference_result.actual_day1_real,
+        day1_pred_real=inference_result.day1_pred_real,
+        threshold=threshold,
+    )
+
+
 def compute_peak_subset_metrics(
     inference_result: HybridInferenceResult,
     threshold: float,
@@ -126,6 +170,37 @@ def compute_peak_subset_metrics_from_cache(
                 container_id=container_id,
                 actual_day1_real=arrays["actual_day1_real"],
                 day1_final_real=arrays["day1_final_real"],
+                threshold=thresholds[container_id],
+            )
+        )
+
+    metrics_df = pd.DataFrame(rows)
+    if metrics_df.empty:
+        return metrics_df
+    return metrics_df.sort_values("container_id").reset_index(drop=True)
+
+
+def compute_peak_subset_metrics_from_global_cache(
+    inference_cache: dict[str, dict[str, np.ndarray]],
+    thresholds: dict[str, float],
+) -> pd.DataFrame:
+    """Build per-container peak metrics from a Global inference cache."""
+    rows: list[dict[str, Any]] = []
+    for container_id, arrays in inference_cache.items():
+        if container_id not in thresholds:
+            raise KeyError(
+                f"Missing peak threshold for container {container_id}"
+            )
+        if GLOBAL_INFERENCE_CACHE_PRED_KEY not in arrays:
+            raise KeyError(
+                f"Global cache for {container_id} missing "
+                f"{GLOBAL_INFERENCE_CACHE_PRED_KEY!r}"
+            )
+        rows.append(
+            compute_peak_subset_metrics_from_global_arrays(
+                container_id=container_id,
+                actual_day1_real=arrays["actual_day1_real"],
+                day1_pred_real=arrays[GLOBAL_INFERENCE_CACHE_PRED_KEY],
                 threshold=thresholds[container_id],
             )
         )
@@ -182,6 +257,31 @@ def compute_peak_subset_metrics_batch(
     return metrics_df.sort_values("container_id").reset_index(drop=True)
 
 
+def compute_peak_subset_metrics_batch_global(
+    inference_results: dict[str, GlobalInferenceResult],
+    thresholds: dict[str, float],
+) -> pd.DataFrame:
+    """Build per-container peak-subset metrics for Global inference results."""
+    rows: list[dict[str, Any]] = []
+    for container_id, result in inference_results.items():
+        if container_id not in thresholds:
+            raise KeyError(
+                f"Missing peak threshold for container {container_id}"
+            )
+        rows.append(
+            compute_peak_subset_metrics_from_global_result(
+                container_id=container_id,
+                inference_result=result,
+                threshold=thresholds[container_id],
+            )
+        )
+
+    metrics_df = pd.DataFrame(rows)
+    if metrics_df.empty:
+        return metrics_df
+    return metrics_df.sort_values("container_id").reset_index(drop=True)
+
+
 def summarize_peak_subset_metrics(
     inference_results: dict[str, HybridInferenceResult],
     thresholds: dict[str, float],
@@ -207,6 +307,76 @@ def summarize_peak_subset_metrics(
             )
         actual = np.ravel(result.actual_day1_real)
         predicted = np.ravel(result.day1_final_real)
+        peak_mask = label_day1_peak_timesteps(actual, thresholds[container_id])
+
+        peak_actual_chunks.append(actual[peak_mask])
+        peak_predicted_chunks.append(predicted[peak_mask])
+        non_peak_actual_chunks.append(actual[~peak_mask])
+        non_peak_predicted_chunks.append(predicted[~peak_mask])
+
+        per_container_peak_steps += int(peak_mask.sum())
+        per_container_non_peak_steps += int((~peak_mask).sum())
+        containers_evaluated += 1
+
+    peak_actual = np.concatenate(peak_actual_chunks)
+    peak_predicted = np.concatenate(peak_predicted_chunks)
+    non_peak_actual = np.concatenate(non_peak_actual_chunks)
+    non_peak_predicted = np.concatenate(non_peak_predicted_chunks)
+
+    peak_mae = float(mean_absolute_error(peak_actual, peak_predicted))
+    peak_rmse = float(
+        np.sqrt(mean_squared_error(peak_actual, peak_predicted))
+    )
+    non_peak_mae = float(
+        mean_absolute_error(non_peak_actual, non_peak_predicted)
+    )
+    non_peak_rmse = float(
+        np.sqrt(mean_squared_error(non_peak_actual, non_peak_predicted))
+    )
+
+    total_steps = per_container_peak_steps + per_container_non_peak_steps
+    return {
+        "containers_evaluated": containers_evaluated,
+        "total_day1_steps": total_steps,
+        "peak_steps": per_container_peak_steps,
+        "non_peak_steps": per_container_non_peak_steps,
+        "peak_step_fraction": (
+            float(per_container_peak_steps / total_steps)
+            if total_steps
+            else float("nan")
+        ),
+        "peak_mae": peak_mae,
+        "peak_rmse": peak_rmse,
+        "non_peak_mae": non_peak_mae,
+        "non_peak_rmse": non_peak_rmse,
+    }
+
+
+def summarize_peak_subset_metrics_from_global_cache(
+    inference_cache: dict[str, dict[str, np.ndarray]],
+    thresholds: dict[str, float],
+) -> dict[str, Any]:
+    """
+    Compute cohort-level pooled peak and non-peak Day-1 metrics from a cache.
+
+    Expects each cache entry to contain ``actual_day1_real`` and
+    ``day1_pred_real`` arrays.
+    """
+    peak_actual_chunks: list[np.ndarray] = []
+    peak_predicted_chunks: list[np.ndarray] = []
+    non_peak_actual_chunks: list[np.ndarray] = []
+    non_peak_predicted_chunks: list[np.ndarray] = []
+    per_container_peak_steps = 0
+    per_container_non_peak_steps = 0
+    containers_evaluated = 0
+
+    for container_id, arrays in inference_cache.items():
+        if container_id not in thresholds:
+            raise KeyError(
+                f"Missing peak threshold for container {container_id}"
+            )
+        actual = np.ravel(arrays["actual_day1_real"])
+        predicted = np.ravel(arrays[GLOBAL_INFERENCE_CACHE_PRED_KEY])
         peak_mask = label_day1_peak_timesteps(actual, thresholds[container_id])
 
         peak_actual_chunks.append(actual[peak_mask])

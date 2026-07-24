@@ -1,0 +1,91 @@
+{
+  "comparison_type": "forecasting_methodology",
+  "phase": 6,
+  "task": 3,
+  "delta_sign_convention": "global_minus_hybrid",
+  "evaluated_containers": 99,
+  "started_at": "2026-07-17T12:24:43Z",
+  "completed_at": "2026-07-17T12:24:43Z",
+  "primary_results": {
+    "day1_mae": {
+      "hybrid_mean": 1.7458824024279418,
+      "global_mean": 1.9242406355693225,
+      "hybrid_std": 2.486803679655554,
+      "global_std": 2.3155458660320827,
+      "mean_delta_global_minus_hybrid": 0.17835823314138097
+    },
+    "day1_rmse": {
+      "hybrid_mean": 2.3878133967258304,
+      "global_mean": 2.610536144884579,
+      "hybrid_std": 3.219141359494262,
+      "global_std": 2.9652717920340987,
+      "mean_delta_global_minus_hybrid": 0.22272274815874885
+    },
+    "day1_mape": {
+      "hybrid_mean": 111.94031802419256,
+      "global_mean": 116.5025742728598,
+      "hybrid_std": 615.2990996275377,
+      "global_std": 642.9235373218053,
+      "mean_delta_global_minus_hybrid": 4.562256248667232
+    }
+  },
+  "mean_delta_global_minus_hybrid": {
+    "day1_mae": 0.17835823314138097,
+    "day1_rmse": 0.22272274815874885,
+    "day1_mape": 4.562256248667232
+  },
+  "delta_summary": {
+    "delta_sign_convention": "global_minus_hybrid",
+    "n_containers": 99,
+    "day1_mae": {
+      "mean_delta": 0.17835823314138097,
+      "std_delta": 0.841558517192345,
+      "min_delta": -4.912112759880355,
+      "max_delta": 3.0308367155058384,
+      "improved_count": 32,
+      "worsened_count": 67,
+      "tied_count": 0
+    },
+    "day1_rmse": {
+      "mean_delta": 0.22272274815874885,
+      "std_delta": 1.135991001860037,
+      "min_delta": -8.435410880636425,
+      "max_delta": 4.458601595717363,
+      "improved_count": 22,
+      "worsened_count": 77,
+      "tied_count": 0
+    },
+    "day1_mape": {
+      "mean_delta": 4.562256248667232,
+      "std_delta": 56.361772251833926,
+      "min_delta": -297.1861028017397,
+      "max_delta": 322.14420800360404,
+      "improved_count": 33,
+      "worsened_count": 66,
+      "tied_count": 0
+    }
+  },
+  "experiment_config": {
+    "comparison_type": "forecasting_methodology",
+    "dataset": "Alibaba Cluster Trace",
+    "target": "cpu_util_percent",
+    "resampling": "15min",
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "evaluation_period": "preprocessing validation temporal holdout",
+    "metric_unit": "real CPU %",
+    "mape_epsilon": 0.01,
+    "selected_containers": 100,
+    "evaluable_containers": 99,
+    "skipped_container_id": "c_14674",
+    "random_seed": 42,
+    "delta_sign_convention": "global_minus_hybrid",
+    "hybrid_methodology": "hybrid_prophet_gru",
+    "global_methodology": "global_gru_v1",
+    "hybrid_frozen_reference": "experiments/baseline_reference_2026-07-14",
+    "global_gru_frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+    "hybrid_evaluation_source": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
+    "global_evaluation_source": "experiments/global_gru_baseline_2026-07-17_121748/evaluation/evaluation_df.csv",
+    "global_evaluation_run": "experiments/global_gru_baseline_2026-07-17_121748"
+  }
+}

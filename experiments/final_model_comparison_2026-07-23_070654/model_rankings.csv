@@ -1,0 +1,25 @@
+metric,rank,model_id,model_label,value
+overall_mae,1,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,1.740819
+overall_mae,2,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),1.745882
+overall_mae,3,M3_global_baseline,Global GRU (Official Baseline),1.924241
+overall_mae,4,M4_peak_aware_global,Peak-Aware Global GRU,2.173731
+overall_rmse,1,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,2.384394
+overall_rmse,2,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),2.387813
+overall_rmse,3,M3_global_baseline,Global GRU (Official Baseline),2.610536
+overall_rmse,4,M4_peak_aware_global,Peak-Aware Global GRU,2.757713
+peak_mae,1,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),2.501220270363839
+peak_mae,2,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,2.525613525361348
+peak_mae,3,M4_peak_aware_global,Peak-Aware Global GRU,2.64903844724382
+peak_mae,4,M3_global_baseline,Global GRU (Official Baseline),3.4256506397556943
+peak_rmse,1,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),5.186215321890583
+peak_rmse,2,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,5.204102317874833
+peak_rmse,3,M4_peak_aware_global,Peak-Aware Global GRU,5.316428966799132
+peak_rmse,4,M3_global_baseline,Global GRU (Official Baseline),6.559444379008921
+non_peak_mae,1,M3_global_baseline,Global GRU (Official Baseline),1.4062053128681655
+non_peak_mae,2,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,1.4700396962602975
+non_peak_mae,3,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),1.48526625156073
+non_peak_mae,4,M4_peak_aware_global,Peak-Aware Global GRU,2.0097350937434495
+non_peak_rmse,1,M3_global_baseline,Global GRU (Official Baseline),2.4551932408455106
+non_peak_rmse,2,M2_peak_aware_hybrid,Peak-Aware Hybrid Prophet + GRU,3.4508864179241363
+non_peak_rmse,3,M1_hybrid_baseline,Hybrid Prophet + GRU (Baseline),3.4908786895911854
+non_peak_rmse,4,M4_peak_aware_global,Peak-Aware Global GRU,3.5017954767561017

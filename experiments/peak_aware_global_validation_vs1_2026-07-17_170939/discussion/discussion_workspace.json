@@ -1,0 +1,16 @@
+{
+  "stage": 4,
+  "stage_name": "Results, Discussion & Architecture Sensitivity Synthesis",
+  "tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "results_synthesis": "discussion/results_synthesis.json",
+  "stratified_summary": "discussion/stratified_summary.csv",
+  "documentation": "docs/peak-aware-global/04-discussion-record.md",
+  "locked_at": "2026-07-17T12:30:00Z"
+}

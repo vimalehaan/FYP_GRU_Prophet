@@ -1,0 +1,101 @@
+{
+  "comparison_type": "global_gru_baseline_correction_phase_a",
+  "description": "Corrected baseline (patience=10) vs frozen previous baseline (patience=3)",
+  "created_at": "2026-07-17T12:30:00+00:00",
+  "previous_baseline": {
+    "experiment_dir": "experiments/global_gru_reference_2026-07-17",
+    "early_stopping_patience": 3,
+    "training": {
+      "epochs_run": 9,
+      "best_epoch": null,
+      "best_val_loss": null,
+      "final_val_loss": 0.029272664338350296
+    },
+    "evaluation": {
+      "mae": 2.062666,
+      "rmse": 2.755866,
+      "mape": 118.931976,
+      "evaluated_containers": 99
+    }
+  },
+  "corrected_baseline": {
+    "experiment_dir": "experiments/global_gru_baseline_2026-07-17_121748",
+    "early_stopping_patience": 10,
+    "training": {
+      "epochs_run": 35,
+      "best_epoch": 25,
+      "best_val_loss": 0.028166048228740692,
+      "final_val_loss": 0.029460720717906952
+    },
+    "evaluation": {
+      "mae": 1.924241,
+      "rmse": 2.610536,
+      "mape": 116.502574,
+      "evaluated_containers": 99
+    }
+  },
+  "delta": {
+    "training": {
+      "epochs_run": 26,
+      "best_val_loss": -0.001107,
+      "final_val_loss": 0.000188
+    },
+    "evaluation": {
+      "mae": -0.138425,
+      "rmse": -0.14533,
+      "mape": -2.429402
+    }
+  },
+  "per_container_summary": {
+    "total_compared": 99,
+    "by_metric": {
+      "day1_mae": {
+        "improved": 68,
+        "worsened": 31,
+        "unchanged": 0
+      },
+      "day1_rmse": {
+        "improved": 68,
+        "worsened": 31,
+        "unchanged": 0
+      },
+      "day1_mape": {
+        "improved": 63,
+        "worsened": 36,
+        "unchanged": 0
+      }
+    },
+    "primary_metric_day1_mae": {
+      "improved": 68,
+      "worsened": 31
+    }
+  },
+  "assessment": {
+    "corrected_baseline_better_on_mae": true,
+    "corrected_baseline_better_on_rmse": true,
+    "corrected_baseline_better_on_mape": true,
+    "recommendation": "Adopt corrected baseline (patience=10) as the new official Global GRU baseline. All aggregate metrics improved and a majority of containers show lower Day-1 MAE.",
+    "unexpected_regressions": [
+      {
+        "container_id": "c_14396",
+        "mae_delta": 0.215881
+      },
+      {
+        "container_id": "c_14964",
+        "mae_delta": 0.169053
+      },
+      {
+        "container_id": "c_13166",
+        "mae_delta": 0.137592
+      },
+      {
+        "container_id": "c_12993",
+        "mae_delta": 0.113091
+      },
+      {
+        "container_id": "c_15072",
+        "mae_delta": 0.107497
+      }
+    ]
+  }
+}

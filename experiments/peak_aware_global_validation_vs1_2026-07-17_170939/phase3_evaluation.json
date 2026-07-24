@@ -1,0 +1,166 @@
+{
+  "stage": 3,
+  "stage_name": "Evaluation + Verification",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "evaluation_timestamp": "2026-07-17T12:03:19Z",
+  "experiment_id": "peak_aware_global_validation_vs1_2026-07-17_170939",
+  "documentation": "docs/peak-aware-global/03-evaluation-record.md",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "implementation_reference": "experiments/peak_aware_global_2026-07-17_164737/phase2_implementation.json",
+  "official_treatment_promotion": "official_treatment_promotion.json",
+  "official_treatment_path": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "archived_experiment_path": "experiments/peak_aware_global_2026-07-17_164737",
+  "archived_experiment_label": "Historical \u2013 optimization-limited (EarlyStopping patience=3)",
+  "baseline_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "experimental_variable": "gru_training_loss_only",
+  "methodology_version": {
+    "design_lock": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+    "peak_percentile": 90,
+    "peak_weight_lambda": 5,
+    "training_loss": "timestep_weighted_mse",
+    "training_protocol_amendment": {
+      "field": "early_stopping_patience",
+      "stage1_design_lock_value": 3,
+      "official_treatment_value": 10,
+      "documented_in": "official_treatment_promotion.json"
+    },
+    "evaluation_protocol": "identical_to_frozen_global_gru_baseline"
+  },
+  "evaluation_protocol": {
+    "horizon": "day_1",
+    "steps_per_container": 96,
+    "cohort_selected": 100,
+    "cohort_evaluated": 99,
+    "skipped_containers": [
+      {
+        "container_id": "c_14674",
+        "reason": "missing from frozen train/val data"
+      }
+    ],
+    "peak_definition": "cpu_real >= P90(container_train)",
+    "pooled_peak_step_fraction": 0.256524,
+    "inference_module": "utils.global_inference.run_global_inference",
+    "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+    "peak_metrics_module": "utils.peak_evaluation"
+  },
+  "implemented_modules": {
+    "utils/peak_evaluation.py": "global_adapters_complete",
+    "scripts/run_peak_aware_global_evaluation.py": "complete",
+    "scripts/run_peak_aware_global_peak_subset_evaluation.py": "complete",
+    "scripts/build_peak_aware_global_comparison.py": "complete",
+    "scripts/verify_peak_aware_global_evaluation.py": "complete"
+  },
+  "results": {
+    "overall_tier1": {
+      "baseline_mae": 1.924241,
+      "peak_aware_global_mae": 2.173731,
+      "delta_mae": 0.24949,
+      "baseline_rmse": 2.610536,
+      "peak_aware_global_rmse": 2.757713,
+      "delta_rmse": 0.147177,
+      "baseline_mape": 116.502574,
+      "peak_aware_global_mape": 163.771437,
+      "delta_mape": 47.268863
+    },
+    "peak_subset_tier2": {
+      "pooled_peak_step_fraction": 0.256524,
+      "baseline_peak_mae": 3.425651,
+      "peak_aware_global_peak_mae": 2.649038,
+      "delta_peak_mae": -0.776612,
+      "baseline_peak_rmse": 6.559444,
+      "peak_aware_global_peak_rmse": 5.316429,
+      "delta_peak_rmse": -1.243015
+    },
+    "non_peak_tier3": {
+      "baseline_non_peak_mae": 1.406205,
+      "peak_aware_global_non_peak_mae": 2.009735,
+      "delta_non_peak_mae": 0.60353,
+      "baseline_non_peak_rmse": 2.455193,
+      "peak_aware_global_non_peak_rmse": 3.501795,
+      "delta_non_peak_rmse": 1.046602
+    },
+    "per_container_summary": {
+      "mean_delta_day1_mae": 0.249491,
+      "containers_improved_overall": 23,
+      "containers_worsened_overall": 76,
+      "containers_improved_peak_mae": 89,
+      "containers_worsened_peak_mae": 10
+    }
+  },
+  "stage3_handoff_summary": {
+    "overall": "Treatment MAE +0.249 vs official Global GRU (2.174 vs 1.924); overall Tier 1 not improved",
+    "peak_subset": "Treatment peak MAE \u22120.777 (2.649 vs 3.426); Tier 2 contribution achieved",
+    "non_peak_subset": "Treatment non-peak MAE +0.604 (2.010 vs 1.406); non-peak degradation offsets peak gains",
+    "containers_improved_overall": "23 / 99 (\u0394MAE < 0)",
+    "containers_improved_peak": "89 / 99 (\u0394peak MAE < 0)",
+    "evaluation_verification": "10 / 10 PASS (regenerated vs corrected baseline)"
+  },
+  "contribution_answers": {
+    "tier1_overall": "Peak-Aware Global GRU does not improve overall Day-1 MAE under the fair Global evaluation protocol (\u0394MAE +0.249 vs corrected baseline).",
+    "tier2_peak_subset": "Peak-aware training improves pooled peak-timestep accuracy (peak MAE \u22120.777, peak RMSE \u22121.243).",
+    "tier3_non_peak": "Non-peak timesteps degrade (non-peak MAE +0.604), explaining the overall Tier 1 gap.",
+    "tier4_research_question": "Under P90 + \u03bb=5 on Global GRU, peak-aware training shifts error reduction toward peak timesteps at the cost of non-peak accuracy."
+  },
+  "official_conclusion_summary": "Stage 3 fair paired evaluation confirms that the promoted Peak-Aware Global GRU (VS-1, EarlyStopping patience=10) improves peak-subset Day-1 accuracy relative to the official Global GRU baseline but worsens overall and non-peak metrics. Comparison regenerated against corrected Global baseline (Phase B, 2026-07-17) without retraining. Results verified (10/10), reproducible, and ready for Stage 4 discussion.",
+  "artifacts": {
+    "treatment_evaluation_df": "evaluation/evaluation_df.csv",
+    "treatment_evaluation_summary": "evaluation/evaluation_summary.csv",
+    "baseline_rerun_evaluation_df": "evaluation/baseline_evaluation_df.csv",
+    "baseline_reproducibility_check": "evaluation/baseline_reproducibility_check.json",
+    "peak_subset_summary": "evaluation/peak_subset_summary.csv",
+    "comparison_table": "evaluation/comparison_table.csv",
+    "per_container_comparison": "evaluation/per_container_comparison.csv",
+    "evaluation_summary": "evaluation/evaluation_summary.json",
+    "evaluation_verification": "verification/evaluation_verification.json",
+    "plots_dir": "evaluation/plots/",
+    "evaluation_workspace": "evaluation/evaluation_workspace.json",
+    "fairness_checks_reference": "verification/fairness_check.json"
+  },
+  "verification": {
+    "evaluation_checks_passed": 10,
+    "evaluation_checks_total": 10,
+    "overall_status": "PASS",
+    "verified_at": "2026-07-17T12:24:35Z",
+    "report": "verification/evaluation_verification.json",
+    "warnings": [
+      "Training metadata retains archived patience=3 run as VS-1 lineage reference.",
+      "Tier 1 vs Tier 2 divergence \u2014 interpret jointly in Stage 4."
+    ]
+  },
+  "baseline_integrity": {
+    "frozen_eval_modules_unmodified": true,
+    "baseline_reference_unmodified": true,
+    "control_reproducibility_gate": "PASS"
+  },
+  "stage_3_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "exit_criteria_met": true,
+  "next_stage": {
+    "stage": 4,
+    "name": "Results, Discussion & Architecture Sensitivity Synthesis",
+    "documentation": "docs/peak-aware-global/",
+    "primary_input_artifact": "evaluation/per_container_comparison.csv",
+    "handoff_actions": [
+      "Interpret Tier 1 vs Tier 2 vs Tier 3 divergence",
+      "Compare Peak-Aware outcome on Global vs Hybrid architectures",
+      "Discuss train/eval objective mismatch and MAPE instability",
+      "Document limitations from Stage 1 design lock and Phase 2 exploration",
+      "Synthesize architecture sensitivity (\u0394 Hybrid vs \u0394 Global) in \u00a74.7"
+    ]
+  },
+  "superseded_baseline_reference": "experiments/global_gru_reference_2026-07-17",
+  "baseline_promotion_record": "experiments/global_gru_baseline_2026-07-17_121748/official_baseline_promotion.json",
+  "phase_b_regeneration": {
+    "date": "2026-07-17",
+    "description": "Comparison artifacts regenerated against corrected Global baseline without retraining",
+    "models_retrained": false
+  }
+}

@@ -158,6 +158,14 @@ def train_global_gru(
     )
 
     final_epoch = len(history.history.get("loss", []))
+    val_losses = history.history.get("val_loss", [])
+    if val_losses:
+        best_epoch = int(np.argmin(val_losses)) + 1
+        best_val_loss = float(min(val_losses))
+    else:
+        best_epoch = None
+        best_val_loss = None
+
     training_metadata: dict[str, Any] = {
         "model_variant": MODEL_VARIANT,
         "random_seed": random_seed,
@@ -174,6 +182,8 @@ def train_global_gru(
         "metrics": list(TRAINING_METRICS),
         "epochs_max": epochs,
         "epochs_run": final_epoch,
+        "best_epoch": best_epoch,
+        "best_val_loss": best_val_loss,
         "batch_size": batch_size,
         "shuffle": SHUFFLE,
         "early_stopping_monitor": EARLY_STOPPING_MONITOR,

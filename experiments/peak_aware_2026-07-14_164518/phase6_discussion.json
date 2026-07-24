@@ -1,0 +1,46 @@
+{
+  "phase": 6,
+  "phase_name": "Discussion and Comparison",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "experiment_id": "peak_aware_2026-07-14_164518",
+  "documentation": "docs/peak-aware-hybrid/phase-06-discussion.md",
+  "phase5_reference": "experiments/peak_aware_2026-07-14_164518/phase5_evaluation.json",
+  "phase4_reference": "experiments/peak_aware_2026-07-14_164518/phase4_implementation.json",
+  "design_reference": "experiments/peak_aware_design_2026-07-14/phase3_design.json",
+  "baseline_reference": "experiments/baseline_reference_2026-07-14",
+  "research_conclusion": {
+    "tier1_overall": "Negligible overall improvement; performance comparable to baseline.",
+    "tier2_peak_subset": "No meaningful peak-subset improvement; pooled peak MAE +0.024.",
+    "scope": "P90 peak definition, lambda=5, timestep-weighted GRU residual training only",
+    "generalization_boundary": "Conclusions apply to this configuration only, not all peak-aware methods"
+  },
+  "phase_6_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete"
+  },
+  "artifacts": {
+    "results_synthesis": "discussion/results_synthesis.json",
+    "stratified_summary": "discussion/stratified_summary.csv",
+    "discussion_workspace": "discussion/discussion_workspace.json",
+    "evaluation_comparison": "evaluation/comparison_table.csv",
+    "manual_notebook": "notebooks/peak_aware_container_comparison.ipynb"
+  },
+  "exit_criteria_met": true,
+  "peak_aware_research_track": {
+    "phases_1_through_6": "complete",
+    "primary_experiment_modified": false,
+    "baseline_integrity_preserved": true
+  },
+  "next_steps": {
+    "thesis": "Use phase-06-discussion.md sections 7.7-7.14 for Results and Discussion chapters",
+    "optional_supplementary": [
+      "Appendix A error attribution (exploratory)",
+      "Appendix B lambda sensitivity or Global GRU comparison (separate experiments)"
+    ]
+  }
+}

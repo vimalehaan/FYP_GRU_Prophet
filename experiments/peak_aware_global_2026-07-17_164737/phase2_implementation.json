@@ -1,0 +1,131 @@
+{
+  "stage": 2,
+  "stage_name": "Implementation + Fairness Verification",
+  "status": "complete",
+  "locked_date": "2026-07-17",
+  "experiment_id": "peak_aware_global_2026-07-17_164737",
+  "smoke_experiment_id": "peak_aware_global_2026-07-17_163737",
+  "documentation": "docs/peak-aware-global/02-implementation-record.md",
+  "design_reference": "experiments/peak_aware_global_design_2026-07-17/design_lock.json",
+  "control_reference": "experiments/global_gru_reference_2026-07-17",
+  "peak_definition_reference": "experiments/peak_exploration_2026-07-14/peak_definition_decision.json",
+  "implementation_workspace": "experiments/peak_aware_global_implementation_2026-07-17",
+  "experimental_variable": "gru_training_loss_only",
+  "implemented_modules": {
+    "utils/global_peak_aware_config.py": "complete",
+    "utils/peak_detection.py": "extended_align_with_longterm_sequences",
+    "utils/global_training_peak_aware.py": "complete",
+    "scripts/run_peak_aware_global_peak_detection_sanity.py": "complete",
+    "scripts/run_peak_aware_global_experiment.py": "complete",
+    "scripts/verify_peak_aware_global_fairness.py": "complete"
+  },
+  "architecture_builder_policy": {
+    "module": "utils.global_training.build_global_gru_model",
+    "read_only_reuse": true,
+    "duplicate_architecture": false
+  },
+  "configuration_module_policy": {
+    "module": "utils/global_peak_aware_config.py",
+    "option": "B_separate_from_frozen_global_config"
+  },
+  "locked_design_implemented": {
+    "mechanism": "timestep_weighted_mse",
+    "loss_implementation": "custom_train_step_timestep_weighted_mse",
+    "model_variant": "global_gru_peak_aware_v1",
+    "peak_percentile": 90,
+    "peak_weight_lambda": 5,
+    "non_peak_weight": 1,
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "features": ["cpu_scaled", "cpu_mean", "cpu_std"],
+    "target": "cpu_scaled",
+    "sequence_builder": "create_longterm_sequences",
+    "random_seed": 42,
+    "batch_size": 256,
+    "epochs_max": 50,
+    "early_stopping_patience": 3,
+    "validation_unweighted": true
+  },
+  "training_run": {
+    "trained_at": "2026-07-17T11:18:01Z",
+    "epochs_max": 50,
+    "epochs_run": 4,
+    "early_stopping_patience": 3,
+    "final_train_loss": 0.03171752393245697,
+    "final_val_loss": 0.04058956727385521,
+    "final_train_mae": 0.1181195080280304,
+    "final_val_mae": 0.1443178355693817,
+    "n_sequences_total": 41650,
+    "n_sequences_train": 33320,
+    "n_sequences_val": 8330,
+    "n_peak_thresholds": 99,
+    "peak_weight_fraction": 0.16936374549819927,
+    "runtime_note": "~26 s training on Apple M1 Pro (4 epochs, weighted GRU only)"
+  },
+  "artifacts": {
+    "model": "models/global_gru_peak_aware.keras",
+    "model_metadata": "models/global_gru_peak_aware_metadata.json",
+    "peak_thresholds": "peak/peak_thresholds.pkl",
+    "peak_config": "peak/peak_config.json",
+    "training_metadata": "training/training_metadata.json",
+    "reference_metadata": "reference/reference_metadata.json",
+    "fairness_check": "verification/fairness_check.json",
+    "experiment_metadata": "experiment_metadata.json",
+    "phase2_implementation": "phase2_implementation.json"
+  },
+  "verification": {
+    "fairness_checks_passed": 10,
+    "fairness_checks_total": 10,
+    "overall_status": "PASS",
+    "verified_at": "2026-07-17T11:18:24Z",
+    "checks": [
+      "frozen_file_integrity",
+      "identical_X_all_y_all_and_sample_ordering",
+      "W_all_only_allowed_difference",
+      "identical_architecture_via_build_global_gru_model",
+      "global_hyperparams_match_baseline_metadata",
+      "early_stopping_config_unweighted",
+      "shared_global_inference_evaluation_path",
+      "valid_peak_threshold_artifact",
+      "weight_matrix_aligns_with_longterm_sequences",
+      "single_behavioural_difference_weighted_train_step_only"
+    ]
+  },
+  "baseline_integrity": {
+    "production_model_unmodified": true,
+    "control_reference_unmodified": true,
+    "frozen_global_utils_unmodified": true,
+    "sequence_identity_confirmed": true,
+    "only_W_all_differs": true
+  },
+  "stage_2_tasks": {
+    "task_1": "complete",
+    "task_2": "complete",
+    "task_3": "complete",
+    "task_4": "complete",
+    "task_5": "complete",
+    "task_6": "complete",
+    "task_7": "complete"
+  },
+  "exit_criteria_met": true,
+  "evaluation_started": false,
+  "next_stage": {
+    "stage": 3,
+    "name": "Evaluation + Verification",
+    "documentation": "docs/peak-aware-global/03-evaluation-record.md",
+    "control_reference": "experiments/global_gru_reference_2026-07-17",
+    "treatment_artifacts": "experiments/peak_aware_global_2026-07-17_164737/models/",
+    "evaluation_modules": [
+      "utils/global_inference.py",
+      "utils/global_evaluation.py",
+      "utils/peak_evaluation.py"
+    ],
+    "handoff_actions": [
+      "Run treatment evaluation via Global inference on frozen val split",
+      "Re-run control evaluation for paired timestep arrays",
+      "Compute overall, peak-subset, and per-container metrics",
+      "Build comparison tables and plots",
+      "Run verify_peak_aware_global_evaluation.py"
+    ]
+  }
+}

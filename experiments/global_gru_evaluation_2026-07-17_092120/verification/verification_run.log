@@ -1,0 +1,162 @@
+=== Global GRU Phase 5 Verification Suite ===
+Started: 2026-07-17T09:28:10Z
+Experiment: experiments/global_gru_evaluation_2026-07-17_092120
+
+------------------------------------------------------------------------
+RUN: scripts/verify_global_gru_data_split.py
+------------------------------------------------------------------------
+Global GRU data-split verification
+========================================
+Building sequences from global_train only...
+Building legacy leaky sequences (concat train+val) for contrast...
+  Sequences (global_train only) : 41650
+  Sequences (legacy concat)     : 56869
+  Val-period target leaks (train only) : 0
+  Val-period target leaks (legacy concat): 15120
+  Val-period target leaks (train 80% split): 0
+  OK  Sequence source is global_train only
+  OK  Zero validation-period targets in training sequences
+  OK  Legacy concat path shows expected leakage (contrast check)
+  OK  Notebook has no pd.concat([global_train, global_val])
+
+All Global GRU data-split checks passed.
+EXIT_CODE: 0
+
+------------------------------------------------------------------------
+RUN: scripts/verify_global_gru_inference.py
+------------------------------------------------------------------------
+Importing plotly failed. Interactive plots will not work.
+2026-07-17 14:58:16.475247: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M1 Pro
+2026-07-17 14:58:16.475287: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 16.00 GB
+2026-07-17 14:58:16.475296: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 5.92 GB
+2026-07-17 14:58:16.475314: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2026-07-17 14:58:16.475327: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+2026-07-17 14:58:16.984755: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+=== Global GRU Inference Verification ===
+Container: c_11461
+
+Running manual inline inference...
+Running run_global_inference()...
+Comparing outputs...
+  OK  day1_pred_scaled (96,)
+  OK  day1_pred_real (96,)
+  OK  actual_day1_real (96,)
+
+Day 1 MAE  : 2.7000
+Day 1 RMSE : 3.4544
+Day 1 MAPE : 25.8092
+
+All Global GRU inference checks passed.
+EXIT_CODE: 0
+
+------------------------------------------------------------------------
+RUN: scripts/verify_global_gru_evaluation.py
+------------------------------------------------------------------------
+Importing plotly failed. Interactive plots will not work.
+2026-07-17 14:58:22.010785: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M1 Pro
+2026-07-17 14:58:22.010822: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 16.00 GB
+2026-07-17 14:58:22.010831: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 5.92 GB
+2026-07-17 14:58:22.010849: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2026-07-17 14:58:22.010864: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+2026-07-17 14:58:22.516421: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+=== Global GRU Evaluation Verification ===
+Experiment directory: /Users/lehaan/Desktop/FYP_Long_Term/experiments/global_gru_evaluation_2026-07-17_092120
+
+Saved evaluation_df integrity checks:
+  OK  evaluated count = 99
+  OK  required schema present
+  OK  no duplicate container IDs
+  OK  no NaN metric values
+  OK  MAE, RMSE, MAPE are non-negative
+  OK  RMSE >= MAE for every container
+  OK  c_14674 excluded from evaluation_df
+  OK  saved evaluation_summary.csv matches recomputed summary
+  OK  evaluation_metadata.json cohort counts
+
+Live evaluation rerun checks:
+Selected containers : 100
+Evaluable containers: 99
+Evaluated containers: 99
+Skipped containers  : 1
+Failures            : 0
+  OK  live cohort counts
+Saved evaluation_df integrity checks:
+  OK  evaluated count = 99
+  OK  required schema present
+  OK  no duplicate container IDs
+  OK  no NaN metric values
+  OK  MAE, RMSE, MAPE are non-negative
+  OK  RMSE >= MAE for every container
+  OK  c_14674 excluded from evaluation_df
+  OK  demo container c_11461 metrics recompute
+  OK  saved evaluation_df matches live rerun
+
+Skipped detail:
+  c_14674: missing from frozen train/val data
+
+Aggregate summary (live rerun):
+      day1_mae  day1_rmse  day1_mape
+mean    2.0627     2.7559   118.9320
+std     2.4701     3.1039   659.0400
+min     0.0029     0.0036     6.9068
+max    13.6246    15.9666  6419.7039
+
+Evaluation integrity: PASS
+All Global GRU evaluation checks passed.
+EXIT_CODE: 0
+
+------------------------------------------------------------------------
+RUN: scripts/verify_global_gru_train_eval_split.py
+------------------------------------------------------------------------
+Importing plotly failed. Interactive plots will not work.
+2026-07-17 14:58:30.798310: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M1 Pro
+2026-07-17 14:58:30.798348: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 16.00 GB
+2026-07-17 14:58:30.798356: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 5.92 GB
+2026-07-17 14:58:30.798373: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2026-07-17 14:58:30.798391: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+2026-07-17 14:58:31.300834: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+=== Global GRU Train/Eval Split Verification ===
+Model source: /Users/lehaan/Desktop/FYP_Long_Term/models/global_gru.keras
+
+Loading production Global GRU model...
+  OK  metadata round-trip
+Comparing demo container inference (production vs loaded)...
+  OK  c_11461
+Comparing full multi-container evaluation (production vs loaded)...
+  OK  99 containers — evaluation metrics identical
+
+All Global GRU train/eval split checks passed.
+EXIT_CODE: 0
+
+------------------------------------------------------------------------
+RUN: scripts/verify_global_gru_methodology_parity.py
+------------------------------------------------------------------------
+Importing plotly failed. Interactive plots will not work.
+=== Global GRU Methodology Parity Verification ===
+(Readiness check — not a performance comparison)
+
+Protocol constants:
+  OK  input_window = 96
+  OK  forecast_horizon = 96
+  OK  mape_epsilon = 0.01
+
+Cohort alignment:
+  OK  selected containers = 100
+  OK  evaluated containers = 99 (Global and Hybrid)
+  OK  identical evaluated container IDs (99)
+  OK  c_14674 excluded from both cohorts
+
+Evaluation schema:
+  OK  evaluation_df schema matches Hybrid baseline
+  OK  shared metric functions imported from hybrid_evaluation
+
+Frozen Hybrid baseline integrity:
+  OK  Hybrid baseline metadata present (read-only control)
+  OK  Global GRU evaluation metadata protocol fields
+
+Methodology parity: PASS
+All Global GRU methodology parity checks passed.
+Note: Performance comparison is deferred to Phase 6.
+EXIT_CODE: 0
+
+=== ALL SCRIPTS PASS ===

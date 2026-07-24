@@ -1,0 +1,246 @@
+{
+  "verified_at": "2026-07-23T06:33:48Z",
+  "stage": 3,
+  "task": 5,
+  "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+  "baseline_reference": "experiments/global_gru_baseline_2026-07-17_121748",
+  "overall_status": "PASS",
+  "checks_passed": 10,
+  "checks_total": 10,
+  "checks": [
+    {
+      "check_id": 1,
+      "name": "official_treatment_path",
+      "status": "PASS",
+      "explanation": "Evaluation artifacts use the promoted VS-1 experiment as the active source; archived run is documented as predecessor only.",
+      "details": {
+        "experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+        "promotion_status": "official_peak_aware_global_treatment",
+        "official_experiment_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939",
+        "archived_experiment_dir": "experiments/peak_aware_global_2026-07-17_164737",
+        "archived_predecessor_documented": "experiments/peak_aware_global_2026-07-17_164737",
+        "active_paths_ok": true,
+        "archived_used_as_active_source": []
+      }
+    },
+    {
+      "check_id": 2,
+      "name": "control_reproducibility",
+      "status": "PASS",
+      "explanation": "Control reproducibility gate PASS; re-run matches frozen reference within tolerance.",
+      "details": {
+        "gate_status": "PASS",
+        "per_container_pass": true,
+        "aggregate_pass": true,
+        "metric_tolerance": 1e-05,
+        "frozen_reference": "experiments/global_gru_baseline_2026-07-17_121748/evaluation",
+        "report_path": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/baseline_reproducibility_check.json"
+      }
+    },
+    {
+      "check_id": 3,
+      "name": "cohort_consistency",
+      "status": "PASS",
+      "explanation": "99 evaluable containers, 1 skipped (c_14674), 0 failures; cohort matches baseline.",
+      "details": {
+        "evaluated_containers": 99,
+        "selected_containers_npy_count": 100,
+        "skipped_containers": [
+          {
+            "container_id": "c_14674",
+            "reason": "missing from frozen train/val data"
+          }
+        ],
+        "failures": [],
+        "treatment_matches_baseline_rerun": true,
+        "treatment_matches_frozen_reference": true
+      }
+    },
+    {
+      "check_id": 4,
+      "name": "metric_consistency",
+      "status": "PASS",
+      "explanation": "Cohort metrics are consistent across evaluation_summary.csv, comparison_table.csv, and evaluation_summary.json.",
+      "details": {
+        "treatment_summary": {
+          "day1_mae": 2.173731,
+          "day1_rmse": 2.757713,
+          "day1_mape": 163.771437
+        },
+        "frozen_baseline_summary": {
+          "day1_mae": 1.924241,
+          "day1_rmse": 2.610536,
+          "day1_mape": 116.502574
+        },
+        "mismatch_count": 0,
+        "mismatches": [],
+        "metric_tolerance": 1e-05
+      }
+    },
+    {
+      "check_id": 5,
+      "name": "peak_threshold_consistency",
+      "status": "PASS",
+      "explanation": "99 train-fitted P90 per-container thresholds; no validation-derived thresholds.",
+      "details": {
+        "threshold_count": 99,
+        "evaluated_container_count": 99,
+        "peak_percentile": 90,
+        "threshold_fit_period": "train_only",
+        "mismatch_count": 0,
+        "mismatches_sample": [],
+        "validation_only_threshold_ids": []
+      }
+    },
+    {
+      "check_id": 6,
+      "name": "peak_subset_consistency",
+      "status": "PASS",
+      "explanation": "Pooled peak fraction 25.65% within 17\u201331%; peak metrics reproduce from stored inference caches.",
+      "details": {
+        "pooled_peak_step_fraction": 0.25652356902356904,
+        "feasibility_range": [
+          0.17,
+          0.31
+        ],
+        "within_range": true,
+        "mismatch_count": 0,
+        "mismatches": []
+      }
+    },
+    {
+      "check_id": 7,
+      "name": "per_container_comparison_integrity",
+      "status": "PASS",
+      "explanation": "per_container_comparison.csv has 99 rows, full schema, and correct deltas.",
+      "details": {
+        "row_count": 99,
+        "schema_ok": true,
+        "columns_expected": [
+          "container_id",
+          "baseline_day1_mae",
+          "baseline_day1_rmse",
+          "baseline_day1_mape",
+          "treatment_day1_mae",
+          "treatment_day1_rmse",
+          "treatment_day1_mape",
+          "delta_day1_mae",
+          "delta_day1_rmse",
+          "delta_day1_mape",
+          "baseline_peak_mae",
+          "baseline_peak_rmse",
+          "treatment_peak_mae",
+          "treatment_peak_rmse",
+          "delta_peak_mae",
+          "delta_peak_rmse",
+          "baseline_non_peak_mae",
+          "baseline_non_peak_rmse",
+          "treatment_non_peak_mae",
+          "treatment_non_peak_rmse",
+          "delta_non_peak_mae",
+          "delta_non_peak_rmse"
+        ],
+        "columns_actual": [
+          "container_id",
+          "baseline_day1_mae",
+          "baseline_day1_rmse",
+          "baseline_day1_mape",
+          "treatment_day1_mae",
+          "treatment_day1_rmse",
+          "treatment_day1_mape",
+          "delta_day1_mae",
+          "delta_day1_rmse",
+          "delta_day1_mape",
+          "baseline_peak_mae",
+          "baseline_peak_rmse",
+          "treatment_peak_mae",
+          "treatment_peak_rmse",
+          "delta_peak_mae",
+          "delta_peak_rmse",
+          "baseline_non_peak_mae",
+          "baseline_non_peak_rmse",
+          "treatment_non_peak_mae",
+          "treatment_non_peak_rmse",
+          "delta_non_peak_mae",
+          "delta_non_peak_rmse"
+        ],
+        "delta_checks": {
+          "delta_day1_mae": true,
+          "delta_day1_rmse": true,
+          "delta_day1_mape": true,
+          "delta_peak_mae": true,
+          "delta_peak_rmse": true,
+          "delta_non_peak_mae": true,
+          "delta_non_peak_rmse": true
+        },
+        "delta_mismatch_cells": 0
+      }
+    },
+    {
+      "check_id": 8,
+      "name": "plot_integrity",
+      "status": "PASS",
+      "explanation": "All expected PNG/PDF plots exist and sample containers are present in cache.",
+      "details": {
+        "plots_dir": "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots",
+        "missing_plots": [],
+        "empty_plots": [],
+        "sample_plot_containers": [
+          "c_12174",
+          "c_12237",
+          "c_11087"
+        ],
+        "recorded_plot_outputs": [
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/actual_vs_predicted_samples.png",
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/actual_vs_predicted_samples.pdf",
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/error_distribution.png",
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/error_distribution.pdf",
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/peak_subset_comparison.png",
+          "experiments/peak_aware_global_validation_vs1_2026-07-17_170939/evaluation/plots/peak_subset_comparison.pdf"
+        ],
+        "recorded_outputs_exist": true
+      }
+    },
+    {
+      "check_id": 9,
+      "name": "frozen_evaluation_path",
+      "status": "PASS",
+      "explanation": "Frozen evaluate_selected_containers() and run_global_inference() modules are present and unmodified.",
+      "details": {
+        "missing_files": [],
+        "import_errors": [],
+        "uncommitted_changes": [],
+        "evaluate_selected_containers_callable": true,
+        "run_global_inference_callable": true
+      }
+    },
+    {
+      "check_id": 10,
+      "name": "final_methodology_audit",
+      "status": "PASS",
+      "explanation": "Only timestep-weighted loss (\u03bb=5) differs from the official Global baseline; architecture, data, EarlyStopping patience, inference, and evaluation protocol are unchanged.",
+      "details": {
+        "shared_fields_match": true,
+        "allowed_training_differences": {
+          "baseline_loss": "mse",
+          "treatment_loss": "timestep_weighted_mse",
+          "baseline_early_stopping_patience": 10,
+          "treatment_early_stopping_patience": 10,
+          "peak_weight_lambda": 5.0
+        },
+        "evaluation_protocol": {
+          "evaluation_module": "utils.global_evaluation.evaluate_selected_containers",
+          "inference_module": "utils.global_inference.run_global_inference"
+        },
+        "promotion_amendment_ok": true,
+        "treatment_model_exists": true,
+        "control_reference_model_unmodified": true
+      }
+    }
+  ],
+  "warnings": [
+    "Training metadata retains archived patience=3 run as VS-1 lineage reference; evaluation artifacts use the promoted VS-1 experiment only.",
+    "Treatment improves pooled peak MAE but worsens overall MAE due to non-peak degradation; interpret Tier 1 and Tier 2 jointly in Stage 4."
+  ],
+  "stage_3_lock_recommendation": "READY \u2014 Stage 3 evaluation is internally consistent and may proceed to Task 6 lock record."
+}
