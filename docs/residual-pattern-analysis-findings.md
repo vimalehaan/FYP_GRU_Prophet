@@ -3,8 +3,8 @@
 **Project:** DracaSys FYP — Hybrid Prophet + GRU  
 **Notebook:** `notebooks/residual_pattern_analysis.ipynb`  
 **Run date:** 2026-07-24  
-**Document purpose:** Section-by-section record of insights, numerical results, interpretations, and the Section 13 evaluation audit  
-**Final verdict:** **Conclusion C** — validation residuals contain temporal structure, but the frozen baseline GRU does not exploit it effectively
+**Document purpose:** Section-by-section record of insights, numerical results, interpretations, Section 13 evaluation audit, and Hybrid post-forecast residual diagnostics (Sections 15–16)  
+**Final verdict:** **Conclusion C** — validation residuals contain temporal structure, but the frozen baseline GRU does not exploit it effectively; post-Hybrid errors remain largely structured on Day-1
 
 ---
 
@@ -17,12 +17,13 @@ This notebook asks whether Prophet validation residuals still contain learnable 
 | Does Prophet leave structured residuals? | **Yes** — elevated ACF/PACF, 73.7% of containers reject white noise (Ljung–Box lag 20) |
 | Are residuals centred and reasonably unbiased? | **Mostly yes** — pooled mean ≈ −0.03% CPU, but heavy tails (kurtosis ≈ 58) |
 | Does the frozen GRU track residual dynamics? | **No** — cohort mean Pearson r ≈ 0.02, R² ≈ −0.34; predictions are near-flat |
+| Does Hybrid whiten Prophet errors on Day-1? | **Mostly no** — Ljung–Box rejection drops only 56.6% → 54.5% (same Day-1 window); \|ACF\|₁₋₁₀ unchanged (~0.19) |
 | Is Section 13 evaluation implemented correctly? | **Yes** — audit confirms correct model, scaling, alignment, and reconstruction |
-| Overall conclusion | **Conclusion C** — structure exists; baseline residual learner under-exploits it |
+| Overall conclusion | **Conclusion C** — structure exists; baseline residual learner under-exploits it; Hybrid leaves most temporal dependence intact |
 
 **Thesis-safe one-liner:**
 
-> Prophet validation residuals show statistically significant temporal dependence across the Hybrid training cohort, supporting the decomposition design. A structured audit verified that low GRU residual correlation reflects genuine model behaviour (under-dispersion), not an evaluation bug — motivating improved residual-learning strategies rather than abandoning the diagnostic methodology.
+> Prophet validation residuals show statistically significant temporal dependence across the Hybrid training cohort, supporting the decomposition design. Post-Hybrid Day-1 errors remain largely structured (54.5% still reject white noise; |ACF|₁₋₁₀ ≈ 0.19). A structured audit verified that low GRU residual correlation reflects genuine model behaviour (under-dispersion), not an evaluation bug — motivating improved residual-learning strategies rather than abandoning the diagnostic methodology.
 
 ---
 
@@ -35,8 +36,9 @@ This notebook asks whether Prophet validation residuals still contain learnable 
 | Frozen GRU | `experiments/baseline_reference_2026-07-14/models/hybrid_gru.keras` |
 | Input window / Day-1 horizon | 96 / 96 steps (15-minute resolution = 24 hours) |
 | Prophet config | `daily_seasonality=True`, `weekly_seasonality=False` (matches Hybrid pipeline) |
-| Residual definition (Sections 3–12) | Real CPU %: `Actual − Prophet` (inverse-transformed from scaled space) |
+| Residual definition (Sections 3–12, 14) | Real CPU %: `Actual − Prophet` (inverse-transformed from scaled space); **full validation window** |
 | Residual definition (Section 13) | Scaled space: `cpu_scaled − prophet_yhat` (GRU training space) |
+| Residual definition (Sections 15–16) | Real CPU %: `Actual − Hybrid` (`hybrid_residual_real`); **Day-1 only** (96 steps) |
 
 ---
 
@@ -67,6 +69,7 @@ Final forecast = Prophet + GRU residual correction
 3. **Visual / lag / spectral analysis** — scatter plots, rolling stats, periodogram (Sections 9–11)
 4. **Prophet error mapping** — where large residuals occur (Section 12)
 5. **Frozen GRU residual quality** — Day-1 predicted vs actual residuals (Section 13)
+6. **Hybrid post-forecast residual diagnostics** — repeat ACF/PACF/Ljung–Box on `Actual − Hybrid` (Sections 15–16)
 
 ### Setup confirmation (run output)
 
@@ -546,7 +549,9 @@ Section 13 is **methodologically sound**. Low Pearson r and negative R² are **r
 
 ---
 
-## Section 14 — Overall summary
+## Section 14 — Overall summary (Prophet-only, full validation)
+
+Section 14 prints the headline matrix for **Prophet-only** residuals over the **full validation window** (Sections 5–8). It explicitly notes that Sections 15–16 repeat the same white-noise diagnostics on **Hybrid post-forecast** errors over the **Day-1 window**.
 
 ### Automated summary output (this run)
 
@@ -581,7 +586,7 @@ gru_effective = (avg_pearson > 0.3) and (avg_r2 > 0.0)
 | `has_temporal_structure` | **True** | avg \|ACF\|₁₋₁₀ = 0.201 > 0.05; 73.7% reject > 50% |
 | `gru_effective` | **False** | r = 0.02 ≪ 0.3; R² = −0.34 < 0 |
 
-→ **Conclusion C**
+→ **Conclusion C** (Prophet-only residuals, full validation window)
 
 ### Conclusion definitions
 
@@ -593,6 +598,126 @@ gru_effective = (avg_pearson > 0.3) and (avg_r2 > 0.0)
 
 ---
 
+## Section 15 — Hybrid post-forecast residual diagnostics (Day-1)
+
+### Purpose
+
+After Section 13 showed the GRU barely tracks residual shape, Section 15 asks a complementary question:
+
+> **After the full Hybrid forecast (`Prophet + GRU`), do final errors look more like white noise than Prophet-only errors?**
+
+If the GRU were learning temporal structure effectively, we would expect **lower** |ACF|, **lower** |PACF|, and **fewer** Ljung–Box rejections on `Actual − Hybrid` compared to `Actual − Prophet` on the **same Day-1 window**.
+
+### Method
+
+1. Build per-container residual maps in **real CPU %**:
+   - **Prophet Day-1:** first 96 steps of validation `Actual − Prophet`
+   - **Hybrid Day-1:** `hybrid_residual_real = Actual − Hybrid` from `run_hybrid_inference()` (96 steps)
+2. Run `_residual_diagnostics()` on both maps — pooled distribution, cohort-average ACF/PACF, Ljung–Box at lags 10/20/30.
+3. Print a side-by-side comparison table including mean Day-1 MAE.
+
+**Fair-comparison rule:** Prophet vs Hybrid white-noise metrics in Section 15 always use the **same 96-step Day-1 horizon**. Do **not** compare Section 14’s 73.7% rejection (full ~150-step validation) directly to Section 15’s ~55% (96-step Day-1) without noting the shorter window.
+
+**Technical note:** PACF uses per-series adaptive lags (`nlags < len(series) // 2`) because Day-1 series length is 96; fixed `nlags=50` violates statsmodels constraints.
+
+### Day-1 comparison table (this run)
+
+| Metric | Prophet Day-1 | Hybrid Day-1 | Δ (Hybrid − Prophet) |
+|--------|---------------|--------------|----------------------|
+| Pooled residual mean (CPU %) | 0.0834 | 0.0827 | −0.0007 |
+| Pooled residual variance | 15.6362 | 15.9530 | +0.3168 |
+| Average \|ACF\| lags 1–10 | 0.1889 | 0.1899 | +0.0010 |
+| Average \|PACF\| lags 1–10 | 0.1146 | 0.1135 | −0.0011 |
+| Ljung–Box reject rate, lag 20 (p < 0.05) | **56.6%** | **54.5%** | **−2.1 pp** |
+| Mean Day-1 MAE (CPU %) | 1.7333 | 1.7459 | +0.0126 |
+
+### Ljung–Box rejection rates — Prophet vs Hybrid (Day-1)
+
+| Lag order | Prophet Day-1 | Hybrid Day-1 |
+|-----------|---------------|--------------|
+| 10 | 64.6% | 64.6% |
+| 20 | 56.6% | 54.5% |
+| 30 | 56.6% | 56.6% |
+
+### Findings
+
+1. **Marginal move toward whiteness at lag 20 only** — Hybrid reduces white-noise rejection by **2.1 percentage points** (56.6% → 54.5%). At lags 10 and 30, rates are **unchanged**.
+2. **ACF structure essentially unchanged** — average |ACF| at lags 1–10 **increases** slightly (0.1889 → 0.1899), not decreases. Short-lag serial dependence remains economically large (~0.19).
+3. **PACF flat** — |PACF|₁₋₁₀ drops imperceptibly (0.1146 → 0.1135).
+4. **Pooled variance slightly higher after Hybrid** — 15.64 → 15.95, consistent with GRU corrections that do not reduce error dispersion in a structured way.
+5. **Day-1 MAE not improved in this diagnostic pass** — mean 1.7333% (Prophet Day-1) vs 1.7459% (Hybrid Day-1). Small Hybrid CPU gains reported elsewhere operate at cohort level with different aggregation; here the point is **error dynamics**, not headline MAE.
+
+### Interpretation — what “white noise remaining after Hybrid” means
+
+Two readings are both supported by the numbers:
+
+**A. Hybrid did not whiten errors (primary thesis finding)**  
+Despite the Hybrid pipeline, **54.5% of containers still reject white noise** at lag 20 on Day-1. Average |ACF|₁₋₁₀ remains **0.19** — far above the ~0 expected under white noise. The GRU path did **not** remove the temporal structure that Sections 6–8 identified in Prophet residuals. This is the sense in which **structured (non-white-noise) error mass remains after Hybrid**.
+
+**B. Hybrid made only a token step toward whiteness (secondary, apples-to-apples)**  
+On the **same Day-1 window**, Hybrid residuals are **marginally** closer to white noise than Prophet-only (2.1 pp fewer Ljung–Box rejections at lag 20). That is consistent with Section 13’s near-flat GRU output: a **small bias-level shift**, not dynamic residual modelling. The “increase in white-noise-like behaviour” is **negligible** relative to what a effective sequence learner would need to show (e.g. rejection falling toward ~5% chance level, |ACF|₁₋₁₀ → 0).
+
+**Link to Section 13:** The GRU predicts near-constant corrections (std ~0.002 vs actual ~0.07 in scaled space). Such corrections can nudge mean error or MAE slightly but **cannot decorrelate** a 96-step residual series. Section 15 quantifies that limitation at the **final forecast** level.
+
+### Representative ACF plot
+
+Section 15 plots the ACF of Hybrid post-forecast residuals for `c_10032` (Day-1). Short-lag ACF remains elevated — visually similar to Prophet-only patterns in Section 6, confirming structure survives the Hybrid stack.
+
+---
+
+## Section 16 — Side-by-side summary matrices
+
+### Purpose
+
+Print Section 14’s headline block **twice**:
+
+1. **Prophet-only** — full validation window (Sections 5–8, 14)
+2. **Hybrid post-forecast** — Day-1 window (Section 15)
+
+### Hybrid post-forecast summary (this run)
+
+```
+============================================================
+HYBRID POST-FORECAST RESIDUALS — SUMMARY (Day-1 window)
+============================================================
+Analysed containers              : 99
+Average Hybrid Day-1 MAE (CPU %) : 1.7459
+Pooled residual mean (CPU %)     : 0.0827
+Pooled residual variance         : 15.9530
+Average |ACF| lags 1–10          : 0.1899
+Containers rejecting white noise : 54.5% (Ljung–Box lag 20, p<0.05)
+Average |PACF| lags 1–10         : 0.1135
+============================================================
+
+Hybrid post-forecast residuals still show temporal structure on Day-1;
+the frozen GRU did not fully whiten Prophet errors.
+```
+
+### Side-by-side headline comparison
+
+| Metric | Prophet-only (full val.) | Hybrid (Day-1) | Notes |
+|--------|--------------------------|----------------|-------|
+| Window | ~150–154 steps | 96 steps | **Not directly comparable** for Ljung–Box rates |
+| Pooled variance | 19.78 | 15.95 | Different windows and error definition |
+| Avg \|ACF\|₁₋₁₀ | 0.2010 | 0.1899 | Similar magnitude — structure persists |
+| Ljung–Box reject (lag 20) | 73.7% | 54.5% | Day-1 window + Hybrid stage both affect rate |
+| GRU residual r / R² | 0.0215 / −0.34 | N/A | Section 13 metric; Hybrid summary omits these |
+
+### Section 16 conclusion logic
+
+```python
+hybrid_has_structure = (hybrid_acf_short > 0.05) and (hybrid_reject_rate_20 >= 0.5)
+```
+
+| Condition | This run | Threshold |
+|-----------|----------|-----------|
+| `hybrid_acf_short > 0.05` | **True** (0.1899) | Short-lag ACF elevated |
+| `hybrid_reject_rate_20 >= 0.5` | **True** (54.5%) | Majority still reject white noise |
+
+→ **Hybrid post-forecast residuals still structured** — notebook prints the “did not fully whiten” message, not the “closer to white noise” branch.
+
+---
+
 ## Cross-section synthesis
 
 ### Evidence chain supporting Conclusion C
@@ -600,26 +725,34 @@ gru_effective = (avg_pearson > 0.3) and (avg_r2 > 0.0)
 ```mermaid
 flowchart TD
     A[Prophet fits trend + daily seasonality] --> B[Validation residuals computed]
-    B --> C{Statistical tests}
+    B --> C{Statistical tests — Prophet only}
     C --> D[ACF/PACF elevated at short lags]
     C --> E[73.7% reject Ljung-Box white noise]
     C --> F[Heavy-tailed pooled distribution]
     D --> G[Temporal structure confirmed]
     E --> G
     F --> G
-    G --> H{Frozen GRU Day-1 residuals}
+    G --> H{Frozen GRU Day-1 residuals — Sec 13}
     H --> I[r ≈ 0.02, R² ≈ -0.34]
     H --> J[Near-flat predictions / under-dispersion]
     I --> K[Conclusion C]
     J --> K
     L[Section 13 audit: evaluation correct] --> K
+    G --> M[Hybrid forecast: Actual − Hybrid — Sec 15]
+    M --> N[|ACF|₁₋₁₀ ≈ 0.19 unchanged]
+    M --> O[54.5% still reject white noise]
+    N --> P[GRU did not whiten errors]
+    O --> P
+    P --> K
 ```
 
 ### What is validated vs what is not
 
 | Claim | Status |
 |-------|--------|
-| Prophet residuals are not white noise | **Validated** (Sections 6–8) |
+| Prophet residuals are not white noise | **Validated** (Sections 6–8; full validation) |
+| Hybrid post-forecast residuals are white noise | **Not supported** (Section 15–16; 54.5% reject on Day-1) |
+| Hybrid materially whitens Prophet errors on Day-1 | **Not supported** — only 2.1 pp Ljung–Box improvement at lag 20; ACF unchanged |
 | Residuals have burst/peak error regions | **Validated** (Sections 5, 10, 12) |
 | Frozen GRU learns validation residual dynamics | **Not supported** (Section 13) |
 | Section 13 metrics are computed correctly | **Validated** (audit) |
@@ -628,20 +761,23 @@ flowchart TD
 ### Implications for thesis / next steps
 
 1. **Keep the Hybrid decomposition** — diagnostics justify Prophet + sequence residual learner in principle.
-2. **Improve residual learning** — peak-aware loss weighting, heteroscedastic modelling, or architecture changes; current baseline GRU regresses toward near-zero corrections.
-3. **Do not over-interpret residual r alone** — low r is compatible with modest Hybrid CPU MAE gains via bias correction.
-4. **Report diagnostics and learner metrics separately** — structure in residuals (ACF/Ljung–Box) and GRU tracking ability (Section 13) answer different questions.
+2. **Improve residual learning** — peak-aware loss weighting, heteroscedastic modelling, or architecture changes; current baseline GRU regresses toward near-zero corrections and **does not whiten** final errors (Sections 13, 15).
+3. **Do not over-interpret residual r alone** — low r is compatible with modest Hybrid CPU MAE gains via bias correction; Sections 15–16 show those gains do not translate into decorrelated post-forecast errors.
+4. **Report diagnostics and learner metrics separately** — structure in Prophet residuals (ACF/Ljung–Box), GRU tracking ability (Section 13), and post-Hybrid error structure (Sections 15–16) answer different questions.
+5. **Compare windows fairly** — full-validation Prophet metrics (Section 14) vs Day-1 Hybrid metrics (Section 16) differ in horizon length; use Section 15’s Prophet Day-1 vs Hybrid Day-1 table for apples-to-apples white-noise comparison.
 
 ---
 
 ## Limitations
 
 1. **Training cohort only** — 99 evaluable containers from `selected_containers.npy`; unseen-container behaviour not tested.
-2. **Day-1 horizon only** — Section 13 evaluates a single 96-step forecast; recursive Day-2+ not assessed.
-3. **Single GRU snapshot** — results apply to `baseline_reference_2026-07-14` only.
-4. **Pooled statistics mix heterogeneous containers** — high-MAE outliers (`c_12237`) inflate variance and kurtosis.
-5. **Representative plots use `c_10032`** — single-container visuals may not generalise to all workload types.
-6. **Terminology** — *scaled residual space* (Section 13) vs *real CPU %* (Sections 3–12) must be kept distinct when comparing magnitudes.
+2. **Day-1 horizon only** — Sections 13 and 15–16 evaluate a single 96-step forecast; recursive Day-2+ not assessed.
+3. **Window-length asymmetry in Section 16** — Prophet summary uses full validation (~150 steps); Hybrid summary uses Day-1 (96 steps). Ljung–Box rejection rates are not directly comparable across those two blocks; Section 15 provides the fair Day-1 comparison.
+4. **Single GRU snapshot** — results apply to `baseline_reference_2026-07-14` only.
+5. **Pooled statistics mix heterogeneous containers** — high-MAE outliers (`c_12237`) inflate variance and kurtosis.
+6. **Representative plots use `c_10032`** — single-container visuals may not generalise to all workload types.
+7. **Terminology** — *scaled residual space* (Section 13) vs *real CPU %* (Sections 3–12, 15–16) must be kept distinct when comparing magnitudes.
+8. **PACF lag cap on Day-1** — with 96-step series, PACF is computed at most 47 lags (`nlags < n/2`); long-lag PACF bands are truncated relative to full-validation Sections 6–7.
 
 ---
 
@@ -659,4 +795,4 @@ flowchart TD
 
 ---
 
-*Document compiled from notebook run on 2026-07-24. Section 13 audit performed read-only; no models, artifacts, or training pipelines were modified.*
+*Document compiled from notebook run on 2026-07-24 (Sections 1–14, 13 audit) and updated 2026-07-25 with Sections 15–16 Hybrid post-forecast diagnostics. Section 13 audit performed read-only; no models, artifacts, or training pipelines were modified.*
