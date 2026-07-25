@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "reproduction": {
+    "mae_mean_abs_delta": {
+      "value": 0.0011810622862029607,
+      "threshold": 0.1,
+      "pass": true
+    },
+    "rmse_mean_abs_delta": {
+      "value": 0.002177000465956258,
+      "threshold": 0.15,
+      "pass": true
+    },
+    "rank_corr_day1_mae": {
+      "value": 0.9999803544132192,
+      "threshold": 0.95,
+      "pass": true
+    }
+  },
+  "frozen_eval_path_sanity": {
+    "max_abs_diff": {
+      "day1_mae": 4.440892098500626e-16,
+      "day1_rmse": 4.440892098500626e-16,
+      "day1_mape": 1.4210854715202004e-14
+    },
+    "tolerance": 1e-09,
+    "pass": true,
+    "n_containers": 99
+  }
+}

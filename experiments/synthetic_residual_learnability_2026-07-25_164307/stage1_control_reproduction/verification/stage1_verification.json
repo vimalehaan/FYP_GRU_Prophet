@@ -1,0 +1,13 @@
+{
+  "stage": "stage1_control_reproduction",
+  "timestamp": "2026-07-25_165229",
+  "pre_gru_run_preserved": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307",
+  "synthetic_conditions_trained": [],
+  "b0_b1_c0_c1_trained": false,
+  "gru_training_occurred": true,
+  "gru_training_scope": "control_only",
+  "frozen_baseline_unmodified": true,
+  "reproduction_gate_pass": true,
+  "frozen_eval_path_sanity_pass": true,
+  "recommendation": "READY FOR SYNTHETIC GRU STAGE"
+}

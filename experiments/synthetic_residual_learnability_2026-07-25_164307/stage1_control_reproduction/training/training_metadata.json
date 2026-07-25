@@ -1,0 +1,16 @@
+{
+  "total_sequences": 41650,
+  "train_sequences": 33320,
+  "val_sequences": 8330,
+  "epochs_run": 15,
+  "best_epoch": 5,
+  "final_train_loss": 0.8615936040878296,
+  "final_val_loss": 1.7227940559387207,
+  "best_train_loss": 0.8540391325950623,
+  "best_val_loss": 1.7101833820343018,
+  "res_mean": 1.5362158578354976e-05,
+  "res_std": 0.11123930781933586,
+  "trained_at": "2026-07-25_165229",
+  "model_path": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage1_control_reproduction/models/hybrid_gru_control_reproduction.keras",
+  "frozen_baseline_comparison_model": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/baseline_reference_2026-07-14/models/hybrid_gru.keras"
+}

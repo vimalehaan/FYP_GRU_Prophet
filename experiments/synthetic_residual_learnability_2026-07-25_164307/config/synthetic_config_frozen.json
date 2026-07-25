@@ -1,0 +1,95 @@
+{
+  "frozen_at": "2026-07-25_164307",
+  "protocol_version": "v2_boundary_safe",
+  "pre_amendment_reference_run": "experiments/synthetic_residual_learnability_2026-07-25_163013",
+  "config": {
+    "global_seed": 42,
+    "kappa": 0.1,
+    "prewarm_steps": 200,
+    "cpu_min": 0.0,
+    "cpu_max": 100.0,
+    "b0_rotation": [
+      [
+        0.92,
+        -0.38
+      ],
+      [
+        0.38,
+        0.92
+      ]
+    ],
+    "b0_r_star": 0.7,
+    "b0_init_low": -0.4,
+    "b0_init_high": 0.4,
+    "b1_phi1": 0.55,
+    "b1_phi2": -0.15,
+    "b1_psi": 0.08,
+    "b1_sigma_eta": 0.15,
+    "day1_horizon": 96
+  },
+  "generator_gates": {
+    "kappa": 0.1,
+    "kappa_tolerance_relative": 0.02,
+    "prewarm_steps": 200,
+    "z_train_std_min": 0.05,
+    "b0_late_early_std_ratio_min": 0.5,
+    "b0_late_early_std_ratio_max": 2.0,
+    "b0_roll_std_late_min": 0.05,
+    "b0_acf1_min": 0.3,
+    "b0_rollout_rmse_max": 1e-06,
+    "b1_acf1_min": 0.25,
+    "b1_std_early_late_ratio_min": 0.7,
+    "b1_std_early_late_ratio_max": 1.3,
+    "clip_rate_container_fail_fraction": 0.05,
+    "clip_rate_timestep_max": 0.01,
+    "clip_rate_per_container_max": 0.05,
+    "c_acf1_abs_mean_max": 0.05,
+    "c_ljung_reject_lag20_min": 0.05,
+    "c_ljung_reject_lag20_max": 0.2,
+    "c_std_match_relative_max": 0.02
+  },
+  "amplitude_preservation_gates": {
+    "fraction_alpha_eq_1_min": 0.85,
+    "fraction_alpha_eq_0_max": 0.1,
+    "fraction_alpha_lt_0_25_max": 0.1,
+    "median_alpha_min": 0.95,
+    "mean_kappa_effective_min": 0.08
+  },
+  "b0_retention_gates": {
+    "rho_n_i_mean_min": 0.4,
+    "vr_mean_min": 0.25,
+    "vs_mean_max": 0.75,
+    "rho_n_i_fail_fraction_max": 0.2,
+    "rho_n_i_per_container_min": 0.2,
+    "acf_r_b_lag_1_10_mean_min": 0.1,
+    "ljung_reject_lag20_fraction_min": 0.5
+  },
+  "b1_retention_gates": {
+    "rho_n_i_mean_min": 0.35,
+    "vr_mean_min": 0.2,
+    "vs_mean_max": 0.8,
+    "rho_n_i_fail_fraction_max": 0.25,
+    "rho_n_i_per_container_min": 0.2,
+    "acf_r_b_lag_1_10_mean_min": 0.1,
+    "ljung_reject_lag20_fraction_min": 0.5
+  },
+  "generator_results_pass": {
+    "b0_lc": true,
+    "b1_snar": true,
+    "c0_iid": true,
+    "c1_iid": true
+  },
+  "retention_results_pass": {
+    "b0": true,
+    "b1": true
+  },
+  "permitted_gru_conditions": [
+    "control",
+    "b0_lc",
+    "b1_snar",
+    "c0_iid",
+    "c1_iid"
+  ],
+  "alpha_rule": "\u03b1_c = min(1, min_t \u03b1_t^max) on train; N_eff = \u03b1_c \u00b7 N_target; \u03ba_eff = \u03b1_c \u00b7 0.10",
+  "c_matching": "N_target_C = (\u03c3_eff_B / \u03b1_B) \u00b7 z_iid; \u03b1_C = min(\u03b1_B, \u03b1_strict(N_target_C)); N_eff = \u03b1_C \u00b7 N_target_C"
+}

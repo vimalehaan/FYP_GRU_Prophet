@@ -1,0 +1,55 @@
+{
+  "reproduction_gate_pass": true,
+  "summary": {
+    "csrle_mean_mae": 1.7447013401417388,
+    "csrle_mean_rmse": 2.385636396259874,
+    "frozen_mean_mae": 1.7458824024279418,
+    "frozen_mean_rmse": 2.3878133967258304,
+    "delta_mae_mean": -0.0011810622862029607,
+    "delta_rmse_mean": -0.002177000465956258,
+    "delta_mae_median": 0.0009128078375955084,
+    "delta_mae_std": 0.020261375468521893,
+    "delta_mae_max_abs": 0.17509818458523085,
+    "delta_rmse_max_abs": 0.2147976417727797,
+    "n_improved_mae": 41,
+    "n_worsened_mae": 58,
+    "rank_corr_day1_mae": 0.9999803544132192
+  },
+  "checks": {
+    "mae_mean_abs_delta": {
+      "value": 0.0011810622862029607,
+      "threshold": 0.1,
+      "pass": true
+    },
+    "rmse_mean_abs_delta": {
+      "value": 0.002177000465956258,
+      "threshold": 0.15,
+      "pass": true
+    },
+    "rank_corr_day1_mae": {
+      "value": 0.9999803544132192,
+      "threshold": 0.95,
+      "pass": true
+    }
+  },
+  "extended_metrics_pooled": {
+    "peak_mae_mean": 3.3331025987694525,
+    "peak_rmse_mean": 3.9409703911492233,
+    "non_peak_mae_mean": 1.619841568528495,
+    "non_peak_rmse_mean": 1.8844619774760643,
+    "residual_mae_scaled_mean": 0.09483329413966142,
+    "residual_rmse_scaled_mean": 0.1399317546826927,
+    "residual_pearson_r_mean": 0.01590924793301419,
+    "residual_r2_mean": -0.34140947373862246,
+    "residual_std_ratio_mean": 0.0497743421999954
+  },
+  "new_model_day1": {
+    "mae_mean": 1.7447013401417388,
+    "rmse_mean": 2.385636396259874
+  },
+  "frozen_baseline_day1": {
+    "mae_mean": 1.7458824024279418,
+    "rmse_mean": 2.3878133967258304
+  },
+  "frozen_eval_path_sanity_pass": true
+}

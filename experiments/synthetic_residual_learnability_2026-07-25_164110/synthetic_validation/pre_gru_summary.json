@@ -1,0 +1,97 @@
+{
+  "protocol_version": "v2_boundary_safe",
+  "pre_amendment_reference_run": "experiments/synthetic_residual_learnability_2026-07-25_163013",
+  "experiment_dir": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164110",
+  "n_containers": 99,
+  "generator_pass": {
+    "b0_lc": true,
+    "b1_snar": true,
+    "c0_iid": false,
+    "c1_iid": false
+  },
+  "retention_pass": {
+    "b0": true,
+    "b1": true
+  },
+  "alpha_summary": {
+    "b0_lc": {
+      "mean": 0.9140605714157602,
+      "median": 1.0,
+      "std": 0.2757339980718454,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "fraction_alpha_eq_1": 0.9090909090909091,
+      "fraction_alpha_lt_1": 0.09090909090909091,
+      "fraction_alpha_lt_0_75": 0.09090909090909091,
+      "fraction_alpha_lt_0_50": 0.09090909090909091,
+      "fraction_alpha_lt_0_25": 0.08080808080808081,
+      "fraction_alpha_eq_0": 0.08080808080808081,
+      "n_containers": 99
+    },
+    "b1_snar": {
+      "mean": 0.89613821747262,
+      "median": 1.0,
+      "std": 0.2941406554599517,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "fraction_alpha_eq_1": 0.8686868686868687,
+      "fraction_alpha_lt_1": 0.13131313131313133,
+      "fraction_alpha_lt_0_75": 0.1111111111111111,
+      "fraction_alpha_lt_0_50": 0.10101010101010101,
+      "fraction_alpha_lt_0_25": 0.09090909090909091,
+      "fraction_alpha_eq_0": 0.09090909090909091,
+      "n_containers": 99
+    },
+    "c0_iid": {
+      "mean": 0.9025718325437281,
+      "median": 1.0,
+      "std": 0.2817056601456133,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "fraction_alpha_eq_1": 0.8686868686868687,
+      "fraction_alpha_lt_1": 0.13131313131313133,
+      "fraction_alpha_lt_0_75": 0.10101010101010101,
+      "fraction_alpha_lt_0_50": 0.09090909090909091,
+      "fraction_alpha_lt_0_25": 0.08080808080808081,
+      "fraction_alpha_eq_0": 0.08080808080808081,
+      "n_containers": 99
+    },
+    "c1_iid": {
+      "mean": 0.8941063182614125,
+      "median": 1.0,
+      "std": 0.2952187512588033,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "fraction_alpha_eq_1": 0.8686868686868687,
+      "fraction_alpha_lt_1": 0.13131313131313133,
+      "fraction_alpha_lt_0_75": 0.12121212121212122,
+      "fraction_alpha_lt_0_50": 0.10101010101010101,
+      "fraction_alpha_lt_0_25": 0.09090909090909091,
+      "fraction_alpha_eq_0": 0.09090909090909091,
+      "n_containers": 99
+    }
+  },
+  "permitted_gru_conditions": [
+    "control",
+    "b0_lc",
+    "b1_snar"
+  ],
+  "control_status": {
+    "prophet_day1_mean_mae": 1.733324472664636,
+    "prophet_full_val_mean_mae": 1.8473849192991356,
+    "reference_residual_analysis_full_val_mae": 1.8474,
+    "reference_residual_analysis_scope": "Full validation window (~150-154 steps)",
+    "csrle_day1_scope": "Day-1 only (96 steps)",
+    "mae_discrepancy_explanation": "1.733 (Day-1) vs 1.847 (full val) \u2014 different evaluation horizons, same 99 containers, same Prophet config, same real CPU space.",
+    "hybrid_reproduction_gate": "DEFERRED"
+  },
+  "gru_training_occurred": false
+}

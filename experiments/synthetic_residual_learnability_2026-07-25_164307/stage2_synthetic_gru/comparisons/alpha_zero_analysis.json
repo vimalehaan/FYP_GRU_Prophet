@@ -1,0 +1,15 @@
+{
+  "n_alpha_zero": 8,
+  "alpha_zero_containers": [
+    "c_10306",
+    "c_12060",
+    "c_13308",
+    "c_14106",
+    "c_15035",
+    "c_15446",
+    "c_15555",
+    "c_15794"
+  ],
+  "b0_alpha_zero_mean_pearson_r": -0.037156195942013644,
+  "b0_alpha_positive_mean_pearson_r": 0.09479714165751073
+}

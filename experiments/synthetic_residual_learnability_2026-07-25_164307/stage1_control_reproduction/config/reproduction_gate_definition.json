@@ -1,0 +1,25 @@
+{
+  "purpose": "Methodology reproduction gate (aggregate + rank stability)",
+  "rationale": "Frozen baseline trained via train_hybrid_gru without enforced TF seeds; exact weight replication is not expected. Pre-specified tolerances from utils/csrle/config.py CONTROL_REPRODUCTION_GATES mirror CSRLE design.",
+  "nondeterminism_sources": [
+    "TensorFlow/Keras weight initialization",
+    "GPU/CPU backend floating-point ordering",
+    "Prophet/Stan MCMC (per-container refit at inference only)",
+    "Early stopping epoch selection sensitivity"
+  ],
+  "gates": {
+    "mae_abs_tolerance": 0.1,
+    "rmse_abs_tolerance": 0.15,
+    "rank_corr_min": 0.95,
+    "mae_warn_tolerance": 0.2,
+    "rank_corr_warn_min": 0.9,
+    "frozen_mae_mean": 1.7458824024279418,
+    "frozen_rmse_mean": 2.3878133967258304
+  },
+  "frozen_eval_path_sanity": {
+    "purpose": "Isolate pipeline/evaluation differences from retraining",
+    "method": "Load frozen baseline model; evaluate via CSRLE evaluation path",
+    "expected": "Exact match to frozen evaluation_df.csv (same model)",
+    "tolerance": 1e-09
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "sources": {
+    "baseline_metadata": "experiments/baseline_reference_2026-07-14/config/baseline_metadata.json",
+    "hybrid_config": "utils/hybrid_config.py",
+    "hybrid_training": "utils/hybrid_training.py",
+    "hybrid_inference": "utils/hybrid_inference.py",
+    "hybrid_evaluation": "utils/hybrid_evaluation.py",
+    "sequence_utils": "utils/sequence_utils.py"
+  },
+  "cohort": {
+    "selected_containers": "data/selected_containers.npy",
+    "evaluable_containers": 99,
+    "skipped": "c_14674 (missing from frozen train/val)"
+  },
+  "data": {
+    "train": "data/train_df.parquet",
+    "val": "data/val_df.parquet",
+    "scalers": "data/scalers.pkl",
+    "feature": "cpu_scaled (per-container MinMax on train CPU %)"
+  },
+  "prophet": {
+    "daily_seasonality": true,
+    "weekly_seasonality": false,
+    "fit_scope": "per-container train period only",
+    "target": "cpu_scaled",
+    "persisted": false,
+    "source": "utils/hybrid_training.generate_prophet_residuals"
+  },
+  "residual": {
+    "definition_scaled": "cpu_scaled - prophet_pred",
+    "normalization": "global z-score on train residuals",
+    "res_mean": "mean(train residual)",
+    "res_std": "std(train residual)",
+    "residual_scaled": "(residual - res_mean) / res_std"
+  },
+  "sequences": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "features": [
+      "residual_scaled"
+    ],
+    "target": "residual_scaled",
+    "builder": "utils.sequence_utils.create_residual_sequences",
+    "internal_val_split": "chronological first 80% train / last 20% val",
+    "shuffle": false
+  },
+  "gru": {
+    "architecture": "GRU(256)->Dropout(0.2)->GRU(128)->Dropout(0.2)->GRU(64)->Dense(128,relu)->Dense(96)",
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "epochs": 100,
+    "batch_size": 64,
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "random_seed_in_train_hybrid_gru": null,
+    "random_seed_in_baseline_metadata": 42,
+    "seed_note": "train_hybrid_gru does not set TF/Python seeds; baseline notebook used this path. Exact weight reproduction is not expected."
+  },
+  "inference": {
+    "day1_horizon": 96,
+    "residual_input": "last input_window train residual_scaled values",
+    "final_day1_scaled": "prophet_day1 + gru_residual",
+    "inverse_transform": "per-container MinMaxScaler from scalers.pkl",
+    "evaluation_scope": "Day-1 only (96 steps)"
+  }
+}

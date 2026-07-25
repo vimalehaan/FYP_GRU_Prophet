@@ -1,0 +1,14 @@
+{
+  "stage": "stage2_synthetic_gru",
+  "timestamp": "2026-07-25_223546",
+  "conditions_trained": [
+    "b0_lc",
+    "b1_snar",
+    "c0_iid",
+    "c1_iid"
+  ],
+  "condition_a_reference": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage1_control_reproduction",
+  "frozen_config": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/config/synthetic_config_frozen.json",
+  "n_containers": 99,
+  "methodology_parity": "Stage 1 Condition A reproduction"
+}

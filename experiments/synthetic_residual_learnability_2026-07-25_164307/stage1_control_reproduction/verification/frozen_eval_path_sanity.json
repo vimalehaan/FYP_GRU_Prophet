@@ -1,0 +1,10 @@
+{
+  "max_abs_diff": {
+    "day1_mae": 4.440892098500626e-16,
+    "day1_rmse": 4.440892098500626e-16,
+    "day1_mape": 1.4210854715202004e-14
+  },
+  "tolerance": 1e-09,
+  "pass": true,
+  "n_containers": 99
+}

@@ -1,0 +1,16 @@
+{
+  "condition_id": "b1_snar",
+  "total_sequences": 41650,
+  "train_sequences": 33320,
+  "val_sequences": 8330,
+  "epochs_run": 14,
+  "best_epoch": 4,
+  "final_train_loss": 0.866142988204956,
+  "final_val_loss": 1.6824122667312622,
+  "best_train_loss": 0.8596146106719971,
+  "best_val_loss": 1.6736929416656494,
+  "res_mean": 2.9859638191790663e-05,
+  "res_std": 0.10945063649914948,
+  "model_path": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru/b1_snar/models/hybrid_gru.keras",
+  "stats_path": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru/b1_snar/models/residual_stats.pkl"
+}

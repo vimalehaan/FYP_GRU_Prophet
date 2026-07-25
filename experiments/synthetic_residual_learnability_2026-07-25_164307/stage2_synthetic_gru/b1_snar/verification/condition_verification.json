@@ -1,0 +1,11 @@
+{
+  "condition_id": "b1_snar",
+  "n_containers_evaluated": 99,
+  "expected_containers": 99,
+  "res_mean": 2.9859638191790663e-05,
+  "res_std": 0.10945063649914948,
+  "train_sequences": 33320,
+  "model_path": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru/b1_snar/models/hybrid_gru.keras",
+  "condition_scalers_built_from_train_only": true,
+  "cross_condition_weight_reuse": false
+}

@@ -1,0 +1,25 @@
+{
+  "experiment_dir": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_163013",
+  "n_containers": 99,
+  "generator_pass": {
+    "b0_lc": false,
+    "b1_snar": false,
+    "c0_iid": false,
+    "c1_iid": false
+  },
+  "retention_pass": {
+    "b0": true,
+    "b1": true
+  },
+  "b0_suitable": false,
+  "b1_suitable": false,
+  "permitted_gru_conditions": [
+    "control"
+  ],
+  "control_status": {
+    "prophet_only_mean_mae": 1.733324472664636,
+    "reference_prophet_mae_from_residual_analysis": 1.8474,
+    "note": "Full Hybrid control reproduction gate runs before GRU training on synthetic conditions; not executed in this pre-GRU stage.",
+    "hybrid_reproduction_gate": "DEFERRED"
+  }
+}
