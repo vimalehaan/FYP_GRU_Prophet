@@ -1,0 +1,10 @@
+{
+  "n_containers": 99,
+  "ridge_performance": {
+    "mean_pearson_r": 0.12510372448615548,
+    "median_pearson_r": 0.12622259116448825,
+    "mean_mae": 0.14054970506502443,
+    "mean_remaining_std_ratio": 1.818262414349215,
+    "mean_var_reduction_fraction": -8.07501173279662
+  }
+}

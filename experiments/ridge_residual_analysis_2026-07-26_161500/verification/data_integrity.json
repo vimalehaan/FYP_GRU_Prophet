@@ -1,0 +1,10 @@
+{
+  "dataset_hashes_match_lfhe": {
+    "b0_lc_train_syn_parquet": "be095645154a195bfa62bd7a024c9ccd3d8bae255a40a59562e4aca70f3c4778",
+    "b0_lc_val_syn_parquet": "bb22f59ae70415c814d4c2753f7c5831ba5112deecc2be6c2cbc3c8452ab68cb"
+  },
+  "n_containers_analyzed": 99,
+  "ridge_trained": true,
+  "gru_trained": false,
+  "prior_experiments_modified": false
+}

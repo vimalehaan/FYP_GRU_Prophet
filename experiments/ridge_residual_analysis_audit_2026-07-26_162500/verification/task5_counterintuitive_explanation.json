@@ -1,0 +1,7 @@
+{
+  "scaling_bug_confirmed": true,
+  "cohort_mean_ridge_r_zspace": 0.10490800624207308,
+  "cohort_mean_ridge_r2": 0.058793760832556115,
+  "cohort_mean_var_ratio_remaining_prophet_corrected": 1.0979265398048752,
+  "rra_cohort_mean_var_ratio": 3.306078207435038
+}

@@ -1,0 +1,8 @@
+{
+  "train_containers": 99,
+  "val_containers": 99,
+  "shared_container_ids": 99,
+  "train_val_timestamp_overlap": 0,
+  "val_rows_in_ridge_train": 0,
+  "leakage_detected": false
+}

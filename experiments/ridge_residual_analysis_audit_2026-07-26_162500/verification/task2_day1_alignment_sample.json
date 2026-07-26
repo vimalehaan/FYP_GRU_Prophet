@@ -1,0 +1,11 @@
+{
+  "container_id": "c_10032",
+  "train_len": 614,
+  "val_len": 154,
+  "input_window": 96,
+  "first_block_horizon": 96,
+  "input_matches_train_tail": true,
+  "day1_pearson_r_zspace": 0.046237725924267406,
+  "day1_mae_zspace": 0.4970864891109845,
+  "off_by_one_risk": "none_for_day1_block"
+}

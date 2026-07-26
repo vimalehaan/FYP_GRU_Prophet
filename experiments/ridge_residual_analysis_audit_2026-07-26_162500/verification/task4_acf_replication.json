@@ -1,0 +1,22 @@
+{
+  "rra_reported": {
+    "prophet_mean_acf_1_10": 0.19947253738870088,
+    "rra_remaining_mean_acf_1_10": 0.26603709002621445,
+    "rra_prophet_lb_reject_20": 0.7575757575757576,
+    "rra_remaining_lb_reject_20": 0.9595959595959596
+  },
+  "replicated_from_rra_csv": {
+    "prophet_mean_acf_1_10": 0.19947253738870088,
+    "rra_remaining_mean_acf_1_10": 0.26603709002621445,
+    "rra_prophet_lb_reject_20": 0.7575757575757576,
+    "rra_remaining_lb_reject_20": 0.9595959595959596
+  },
+  "corrected_zspace": {
+    "prophet_z_mean_acf_1_10": 0.1994725373887009,
+    "corrected_remaining_mean_acf_1_10": 0.20083272089391455,
+    "corrected_acf_reduction": -0.001360183505213645,
+    "corrected_prophet_lb_reject_20": 0.7575757575757576,
+    "corrected_remaining_lb_reject_20": 0.7373737373737373
+  },
+  "acf_implementation": "utils.csrle.diagnostics.avg_abs_acf lags 1-10 fft=True"
+}

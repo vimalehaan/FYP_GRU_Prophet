@@ -1,0 +1,72 @@
+{
+  "experiment_name": "ridge_residual_analysis",
+  "protocol_version": "rra_v1.0",
+  "timestamp": "2026-07-26_161500",
+  "condition": "b0_lc",
+  "n_containers": 99,
+  "ridge_training": {
+    "estimator": "sklearn.linear_model.Ridge",
+    "alpha": 1.0,
+    "hyperparameter_tuning": false,
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "internal_val_split": "chronological_80_20",
+    "residual_scaling": "global_train_mean_std"
+  },
+  "cohort_ridge_performance": {
+    "mean_pearson_r": 0.12510372448615548,
+    "median_pearson_r": 0.12622259116448825,
+    "mean_mae": 0.14054970506502443,
+    "mean_remaining_std_ratio": 1.818262414349215,
+    "mean_var_reduction_fraction": -8.07501173279662
+  },
+  "temporal_structure": {
+    "prophet_mean_avg_abs_acf_1_10": 0.1994725373887009,
+    "remaining_mean_avg_abs_acf_1_10": 0.26603709002621445,
+    "mean_acf_reduction": -0.06656455263751357,
+    "mean_pacf_reduction": -0.031197745027035022,
+    "prophet_ljung_reject_fraction_lag_20": 0.7575757575757576,
+    "remaining_ljung_reject_fraction_lag_20": 0.9595959595959596,
+    "acf_bootstrap_ci": {
+      "mean_diff": -0.06656455263751357,
+      "ci_low": -0.09115040721495983,
+      "ci_high": -0.041132589326896375
+    },
+    "pacf_bootstrap_ci": {
+      "mean_diff": -0.031197745027035022,
+      "ci_low": -0.0391531768745039,
+      "ci_high": -0.023043217926314193
+    }
+  },
+  "explicit_answers": {
+    "1_temporal_structure_removed_by_ridge": {
+      "acf_reduction": -0.06656455263751357,
+      "pacf_reduction": -0.031197745027035022,
+      "ljung_reject_reduction_lag_20": -0.202020202020202
+    },
+    "2_ridge_residual_closer_to_white_noise": false,
+    "3_pct_containers_still_reject_white_noise": 95.95959595959596,
+    "4_remaining_has_significant_temporal_dependence": true,
+    "5_nonlinear_learner_justified": true,
+    "6_ridge_gru_future_recommended": true
+  },
+  "justification": {
+    "q1_ridge_removes_most_temporal_dependence": false,
+    "q2_ridge_residual_closer_to_white_noise": false,
+    "q3_remaining_still_rejects_white_noise": true,
+    "q4_remaining_still_significant_acf": true,
+    "q5_nonlinear_learner_justified": true,
+    "q6_ridge_gru_architecture_future_recommended": true,
+    "verdict": "structure_persists_minimal_ridge_gain",
+    "prophet_mean_avg_abs_acf_1_10": 0.1994725373887009,
+    "remaining_mean_avg_abs_acf_1_10": 0.26603709002621445,
+    "prophet_ljung_reject_fraction_lag_20": 0.7575757575757576,
+    "remaining_ljung_reject_fraction_lag_20": 0.9595959595959596
+  },
+  "case_studies": {
+    "best": "c_15179",
+    "median": "c_10032",
+    "worst": "c_12231"
+  },
+  "verdict": "structure_persists_minimal_ridge_gain"
+}

@@ -1,0 +1,94 @@
+{
+  "audit_timestamp": "2026-07-26_162500",
+  "rra_experiment_audited": "experiments/ridge_residual_analysis_2026-07-26_161500",
+  "task5": {
+    "scaling_bug_confirmed": true,
+    "cohort_mean_ridge_r_zspace": 0.10490800624207308,
+    "cohort_mean_ridge_r2": 0.058793760832556115,
+    "cohort_mean_var_ratio_remaining_prophet_corrected": 1.0979265398048752,
+    "rra_cohort_mean_var_ratio": 3.306078207435038
+  },
+  "corrected_summary": {
+    "prophet_z_mean_acf_1_10": 0.1994725373887009,
+    "corrected_remaining_mean_acf_1_10": 0.20083272089391455,
+    "corrected_acf_reduction": -0.001360183505213645,
+    "corrected_prophet_lb_reject_20": 0.7575757575757576,
+    "corrected_remaining_lb_reject_20": 0.7373737373737373
+  },
+  "rra_reported": {
+    "prophet_mean_acf_1_10": 0.19947253738870088,
+    "rra_remaining_mean_acf_1_10": 0.26603709002621445,
+    "rra_prophet_lb_reject_20": 0.7575757575757576,
+    "rra_remaining_lb_reject_20": 0.9595959595959596
+  },
+  "decision": {
+    "q1_ridge_failed_to_remove_linear_dependence_vs_failed_as_predictor": {
+      "failed_as_predictor": true,
+      "failed_to_remove_structure_after_correction": true,
+      "primary_issue": "predictor_failure_and_scaling_bug_in_rra_v1"
+    },
+    "q2_remaining_dependence_likely_linear_or_nonlinear": {
+      "best_ar_order_on_corrected_remaining": 1,
+      "best_ar_forecast_r_cohort_mean": 0.37965417914713473,
+      "verdict": "predominantly_linear"
+    },
+    "q3_ridge_gru_justified_vs_more_linear_modelling": {
+      "ridge_gru_justified_on_current_evidence": false,
+      "additional_linear_modelling_appropriate": true,
+      "note": "RRA v1.0 conclusion partially invalidated by scaling bug; use corrected_zspace metrics for decisions."
+    },
+    "scaling_bug_in_rra_v1": true,
+    "corrected_acf_reduction": -0.001360183505213645,
+    "rra_reported_acf_increase": 0.06656455263751357
+  },
+  "ar_summary": [
+    {
+      "series": "prophet_z",
+      "ar_order": 1,
+      "mean_forecast_r": 0.39286367785389537,
+      "mean_forecast_mae": 0.772728882744703,
+      "mean_ar_resid_acf": 0.09956523698589989,
+      "mean_ar_resid_lb_reject": 0.2727272727272727
+    },
+    {
+      "series": "prophet_z",
+      "ar_order": 2,
+      "mean_forecast_r": 0.3863117976029617,
+      "mean_forecast_mae": 1.2148986115083298,
+      "mean_ar_resid_acf": 0.09473401671300016,
+      "mean_ar_resid_lb_reject": 0.25252525252525254
+    },
+    {
+      "series": "prophet_z",
+      "ar_order": 5,
+      "mean_forecast_r": 0.3478986059471338,
+      "mean_forecast_mae": 188.20803010765897,
+      "mean_ar_resid_acf": 0.09558967523668772,
+      "mean_ar_resid_lb_reject": 0.2222222222222222
+    },
+    {
+      "series": "remaining_corr_z",
+      "ar_order": 1,
+      "mean_forecast_r": 0.37965417914713473,
+      "mean_forecast_mae": 0.6999748305115984,
+      "mean_ar_resid_acf": 0.09207742640041088,
+      "mean_ar_resid_lb_reject": 0.24242424242424243
+    },
+    {
+      "series": "remaining_corr_z",
+      "ar_order": 2,
+      "mean_forecast_r": 0.3770083041687929,
+      "mean_forecast_mae": 0.7324741388634124,
+      "mean_ar_resid_acf": 0.0876848919615833,
+      "mean_ar_resid_lb_reject": 0.24242424242424243
+    },
+    {
+      "series": "remaining_corr_z",
+      "ar_order": 5,
+      "mean_forecast_r": 0.34761842645968266,
+      "mean_forecast_mae": 1.4546692597930577,
+      "mean_ar_resid_acf": 0.08742156234155327,
+      "mean_ar_resid_lb_reject": 0.21212121212121213
+    }
+  ]
+}
