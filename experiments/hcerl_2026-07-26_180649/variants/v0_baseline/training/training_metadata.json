@@ -1,0 +1,41 @@
+{
+  "variant_id": "v0_baseline",
+  "features": [
+    "residual_scaled"
+  ],
+  "n_features": 1,
+  "input_shape": [
+    96,
+    1
+  ],
+  "total_sequences": 41650,
+  "train_sequences": 33320,
+  "val_sequences": 8330,
+  "epochs_run": 12,
+  "best_epoch": 2,
+  "final_train_loss": 0.8592737317085266,
+  "final_val_loss": 1.7206531763076782,
+  "best_train_loss": 0.8509426116943359,
+  "best_val_loss": 1.7119590044021606,
+  "training_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "epochs": 100,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": "chronological_first_80_pct",
+    "shuffle": false,
+    "volatility_window": 12,
+    "peak_percentile": 90
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "experiment": "hcerl",
+  "protocol_version": "hcerl_v1.0",
+  "timestamp": "2026-07-26_180649",
+  "recommended_variant": "v0_baseline",
+  "recommendation_rationale": "V0 \u2014 Residual only (96\u00d71) achieves near-best cohort MAE (1.732) with the fewest context channels among variants within 0.01 pp of the best.",
+  "explicit_answers": {
+    "1_context_improves_forecasting": "No clear improvement",
+    "2_most_contributing_feature": "is_peak_p90",
+    "3_least_contributing_feature": "cpu_std",
+    "4_prophet_vs_statistical": "Prophet level context",
+    "5_peak_features_help": "Yes",
+    "6_practically_meaningful": "No (MAE \u0394=0.00%)",
+    "7_replace_baseline": "Keep baseline \u2014 simpler model preferred"
+  },
+  "cohort_comparison": [
+    {
+      "variant_id": "v0_baseline",
+      "n": 99,
+      "mean_day1_mae": 1.7321362297684995,
+      "mean_day1_rmse": 2.372466589991807,
+      "mean_day1_mape": 112.13583312974463,
+      "mean_peak_mae": 3.309097286527031,
+      "mean_peak_rmse": 3.9218000314123795,
+      "mean_residual_mae_scaled": 0.0943676109149778,
+      "mean_residual_rmse_scaled": 0.1394215654176132,
+      "mean_residual_pearson_r": 0.06245605096968153,
+      "mean_residual_r2": -0.3419317198118578,
+      "mean_residual_std_ratio": 0.043289778164092116,
+      "mean_energy_recovery_ratio": 0.0021002478650091827
+    },
+    {
+      "variant_id": "v1_prophet",
+      "n": 99,
+      "mean_day1_mae": 1.7404476556136361,
+      "mean_day1_rmse": 2.379958262216566,
+      "mean_day1_mape": 112.00951251968344,
+      "mean_peak_mae": 3.317669977598409,
+      "mean_peak_rmse": 3.9261860239376096,
+      "mean_residual_mae_scaled": 0.0945169557721515,
+      "mean_residual_rmse_scaled": 0.13955062205503535,
+      "mean_residual_pearson_r": 0.0585257933833342,
+      "mean_residual_r2": -0.3374801671415752,
+      "mean_residual_std_ratio": 0.06620512372142551,
+      "mean_energy_recovery_ratio": 0.004923495539151364
+    },
+    {
+      "variant_id": "v2_volatility",
+      "n": 99,
+      "mean_day1_mae": 1.74596961453797,
+      "mean_day1_rmse": 2.3867033183264534,
+      "mean_day1_mape": 112.46341262111847,
+      "mean_peak_mae": 3.324980556333979,
+      "mean_peak_rmse": 3.937263742327216,
+      "mean_residual_mae_scaled": 0.09465544336516607,
+      "mean_residual_rmse_scaled": 0.13977098536117216,
+      "mean_residual_pearson_r": 0.04584531152054698,
+      "mean_residual_r2": -0.36895228877370884,
+      "mean_residual_std_ratio": 0.0653768029955445,
+      "mean_energy_recovery_ratio": 0.0048501432148817586
+    },
+    {
+      "variant_id": "v3_cpu_std",
+      "n": 99,
+      "mean_day1_mae": 1.7570917411326423,
+      "mean_day1_rmse": 2.398175641086013,
+      "mean_day1_mape": 111.86981345099763,
+      "mean_peak_mae": 3.33237486836007,
+      "mean_peak_rmse": 3.9471937560115107,
+      "mean_residual_mae_scaled": 0.09502345781031347,
+      "mean_residual_rmse_scaled": 0.14019154405497405,
+      "mean_residual_pearson_r": 0.021572491319288446,
+      "mean_residual_r2": -0.3489961016702401,
+      "mean_residual_std_ratio": 0.07792652321768295,
+      "mean_energy_recovery_ratio": 0.007497951880298594
+    },
+    {
+      "variant_id": "v4_full",
+      "n": 99,
+      "mean_day1_mae": 1.7519295496394247,
+      "mean_day1_rmse": 2.3878440619096284,
+      "mean_day1_mape": 113.53445531833646,
+      "mean_peak_mae": 3.28264365489653,
+      "mean_peak_rmse": 3.8969239852566053,
+      "mean_residual_mae_scaled": 0.0948790823707586,
+      "mean_residual_rmse_scaled": 0.13979695310374116,
+      "mean_residual_pearson_r": 0.04108071551216581,
+      "mean_residual_r2": -0.3523855546799344,
+      "mean_residual_std_ratio": 0.0631948931627141,
+      "mean_energy_recovery_ratio": 0.0071946994363337805
+    }
+  ],
+  "feature_contribution_ranking": [
+    {
+      "transition": "v3_cpu_std -> v4_full",
+      "added_feature": "is_peak_p90",
+      "delta_mae_mean": -0.005162191493217252,
+      "delta_rmse_mean": -0.010331579176384758,
+      "delta_pearson_r_mean": 0.019508224192877368,
+      "delta_std_ratio_mean": -0.014731630054968877,
+      "delta_r2_mean": -0.0033894530096943683,
+      "mae_improved_fraction": 0.4444444444444444,
+      "pearson_improved_fraction": 0.494949494949495,
+      "mae_significant": false,
+      "pearson_significant": false,
+      "rank_by_composite": 1
+    },
+    {
+      "transition": "v0_baseline -> v1_prophet",
+      "added_feature": "prophet_yhat_scaled",
+      "delta_mae_mean": 0.008311425845136791,
+      "delta_rmse_mean": 0.0074916722247589515,
+      "delta_pearson_r_mean": -0.003930257586347321,
+      "delta_std_ratio_mean": 0.022915345557333378,
+      "delta_r2_mean": 0.004451552670282606,
+      "mae_improved_fraction": 0.47474747474747475,
+      "pearson_improved_fraction": 0.5151515151515151,
+      "mae_significant": false,
+      "pearson_significant": false,
+      "rank_by_composite": 2
+    },
+    {
+      "transition": "v1_prophet -> v2_volatility",
+      "added_feature": "res_roll_std_12",
+      "delta_mae_mean": 0.005521958924333599,
+      "delta_rmse_mean": 0.006745056109887408,
+      "delta_pearson_r_mean": -0.012680481862787224,
+      "delta_std_ratio_mean": -0.0008283207258809964,
+      "delta_r2_mean": -0.031472121632133726,
+      "mae_improved_fraction": 0.42424242424242425,
+      "pearson_improved_fraction": 0.48484848484848486,
+      "mae_significant": false,
+      "pearson_significant": false,
+      "rank_by_composite": 3
+    },
+    {
+      "transition": "v2_volatility -> v3_cpu_std",
+      "added_feature": "cpu_std",
+      "delta_mae_mean": 0.01112212659467227,
+      "delta_rmse_mean": 0.01147232275955948,
+      "delta_pearson_r_mean": -0.024272820201258528,
+      "delta_std_ratio_mean": 0.012549720222138456,
+      "delta_r2_mean": 0.01995618710346889,
+      "mae_improved_fraction": 0.36363636363636365,
+      "pearson_improved_fraction": 0.42424242424242425,
+      "mae_significant": false,
+      "pearson_significant": false,
+      "rank_by_composite": 4
+    }
+  ],
+  "case_studies": {
+    "largest_improvement": {
+      "container_id": "c_12441",
+      "v0_mae": 1.8182242218503784,
+      "best_mae": 1.6345372035211525,
+      "delta_mae": -0.18368701832922585,
+      "v0_pearson_r": -0.2198923693699999,
+      "best_pearson_r": 0.0890070191546,
+      "explanation": "Largest MAE gain (\u0394=-0.184 pp): context features likely helped this container's regime-dependent corrections. Pearson r moved -0.220\u21920.089."
+    },
+    "median_improvement": {
+      "container_id": "c_12164",
+      "v0_mae": 0.7554198189848232,
+      "best_mae": 0.7572791591093714,
+      "delta_mae": 0.0018593401245481367,
+      "v0_pearson_r": 0.0025846240584596,
+      "best_pearson_r": -0.0772201345716296,
+      "explanation": "Typical cohort response (\u0394 MAE=0.002): moderate context benefit without outlier behaviour."
+    },
+    "no_improvement": {
+      "container_id": "c_12193",
+      "v0_mae": 0.3199013724235407,
+      "best_mae": 0.3199433824584203,
+      "delta_mae": 4.201003487958044e-05,
+      "v0_pearson_r": -0.0762139853595962,
+      "best_pearson_r": 0.0759878249527004,
+      "explanation": "Near-zero MAE change (\u0394=0.000): context channels did not alter forecasts materially; residual signal may remain weak (V0 MAE=0.320)."
+    },
+    "performance_degradation": {
+      "container_id": "c_12237",
+      "v0_mae": 17.395699461516212,
+      "best_mae": 18.09456157853572,
+      "delta_mae": 0.6988621170195088,
+      "v0_pearson_r": 0.0491257694901103,
+      "best_pearson_r": 0.3956516791414857,
+      "explanation": "Performance degraded (\u0394 MAE=0.699): added complexity may overfit or conflict with Prophet level for this workload (V4 MAE=18.095)."
+    }
+  }
+}

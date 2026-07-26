@@ -1,0 +1,42 @@
+{
+  "variant_id": "v1_prophet",
+  "features": [
+    "residual_scaled",
+    "prophet_yhat_scaled"
+  ],
+  "n_features": 2,
+  "input_shape": [
+    96,
+    2
+  ],
+  "total_sequences": 41650,
+  "train_sequences": 33320,
+  "val_sequences": 8330,
+  "epochs_run": 15,
+  "best_epoch": 5,
+  "final_train_loss": 0.8560380935668945,
+  "final_val_loss": 1.7130732536315918,
+  "best_train_loss": 0.85170578956604,
+  "best_val_loss": 1.7112555503845215,
+  "training_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "epochs": 100,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": "chronological_first_80_pct",
+    "shuffle": false,
+    "volatility_window": 12,
+    "peak_percentile": 90
+  }
+}

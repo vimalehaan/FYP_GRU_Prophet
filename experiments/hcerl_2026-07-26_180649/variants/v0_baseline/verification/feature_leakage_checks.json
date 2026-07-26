@@ -1,0 +1,6 @@
+{
+  "all_features_present": true,
+  "no_nan_in_features": true,
+  "volatility_non_negative": true,
+  "peak_binary": true
+}

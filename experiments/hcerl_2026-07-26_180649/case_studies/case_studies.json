@@ -1,0 +1,40 @@
+{
+  "cases": {
+    "largest_improvement": {
+      "container_id": "c_12441",
+      "v0_mae": 1.8182242218503784,
+      "best_mae": 1.6345372035211525,
+      "delta_mae": -0.18368701832922585,
+      "v0_pearson_r": -0.2198923693699999,
+      "best_pearson_r": 0.0890070191546,
+      "explanation": "Largest MAE gain (\u0394=-0.184 pp): context features likely helped this container's regime-dependent corrections. Pearson r moved -0.220\u21920.089."
+    },
+    "median_improvement": {
+      "container_id": "c_12164",
+      "v0_mae": 0.7554198189848232,
+      "best_mae": 0.7572791591093714,
+      "delta_mae": 0.0018593401245481367,
+      "v0_pearson_r": 0.0025846240584596,
+      "best_pearson_r": -0.0772201345716296,
+      "explanation": "Typical cohort response (\u0394 MAE=0.002): moderate context benefit without outlier behaviour."
+    },
+    "no_improvement": {
+      "container_id": "c_12193",
+      "v0_mae": 0.3199013724235407,
+      "best_mae": 0.3199433824584203,
+      "delta_mae": 4.201003487958044e-05,
+      "v0_pearson_r": -0.0762139853595962,
+      "best_pearson_r": 0.0759878249527004,
+      "explanation": "Near-zero MAE change (\u0394=0.000): context channels did not alter forecasts materially; residual signal may remain weak (V0 MAE=0.320)."
+    },
+    "performance_degradation": {
+      "container_id": "c_12237",
+      "v0_mae": 17.395699461516212,
+      "best_mae": 18.09456157853572,
+      "delta_mae": 0.6988621170195088,
+      "v0_pearson_r": 0.0491257694901103,
+      "best_pearson_r": 0.3956516791414857,
+      "explanation": "Performance degraded (\u0394 MAE=0.699): added complexity may overfit or conflict with Prophet level for this workload (V4 MAE=18.095)."
+    }
+  }
+}

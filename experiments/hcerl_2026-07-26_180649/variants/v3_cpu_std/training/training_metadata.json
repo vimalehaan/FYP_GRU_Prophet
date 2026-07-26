@@ -1,0 +1,44 @@
+{
+  "variant_id": "v3_cpu_std",
+  "features": [
+    "residual_scaled",
+    "prophet_yhat_scaled",
+    "res_roll_std_12",
+    "cpu_std"
+  ],
+  "n_features": 4,
+  "input_shape": [
+    96,
+    4
+  ],
+  "total_sequences": 41650,
+  "train_sequences": 33320,
+  "val_sequences": 8330,
+  "epochs_run": 16,
+  "best_epoch": 6,
+  "final_train_loss": 0.860495924949646,
+  "final_val_loss": 1.7204242944717407,
+  "best_train_loss": 0.8538341522216797,
+  "best_val_loss": 1.7090705633163452,
+  "training_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "epochs": 100,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": "chronological_first_80_pct",
+    "shuffle": false,
+    "volatility_window": 12,
+    "peak_percentile": 90
+  }
+}

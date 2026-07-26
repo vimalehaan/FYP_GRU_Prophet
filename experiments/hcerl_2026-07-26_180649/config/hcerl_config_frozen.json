@@ -1,0 +1,122 @@
+{
+  "experiment_name": "hcerl",
+  "protocol_version": "hcerl_v1.0",
+  "experiment_timestamp": "2026-07-26_180649",
+  "experiment_dir": "experiments/hcerl_2026-07-26_180649",
+  "research_question": "Which contextual information actually improves Hybrid residual learning beyond the baseline residual-only input?",
+  "variants": {
+    "v0_baseline": {
+      "variant_id": "v0_baseline",
+      "label": "V0 \u2014 Residual only (96\u00d71)",
+      "features": [
+        "residual_scaled"
+      ],
+      "n_features": 1,
+      "input_shape": [
+        96,
+        1
+      ]
+    },
+    "v1_prophet": {
+      "variant_id": "v1_prophet",
+      "label": "V1 \u2014 + Prophet forecast (96\u00d72)",
+      "features": [
+        "residual_scaled",
+        "prophet_yhat_scaled"
+      ],
+      "n_features": 2,
+      "input_shape": [
+        96,
+        2
+      ]
+    },
+    "v2_volatility": {
+      "variant_id": "v2_volatility",
+      "label": "V2 \u2014 + Rolling residual std (96\u00d73)",
+      "features": [
+        "residual_scaled",
+        "prophet_yhat_scaled",
+        "res_roll_std_12"
+      ],
+      "n_features": 3,
+      "input_shape": [
+        96,
+        3
+      ]
+    },
+    "v3_cpu_std": {
+      "variant_id": "v3_cpu_std",
+      "label": "V3 \u2014 + Container cpu_std (96\u00d74)",
+      "features": [
+        "residual_scaled",
+        "prophet_yhat_scaled",
+        "res_roll_std_12",
+        "cpu_std"
+      ],
+      "n_features": 4,
+      "input_shape": [
+        96,
+        4
+      ]
+    },
+    "v4_full": {
+      "variant_id": "v4_full",
+      "label": "V4 \u2014 + Peak P90 (96\u00d75)",
+      "features": [
+        "residual_scaled",
+        "prophet_yhat_scaled",
+        "res_roll_std_12",
+        "cpu_std",
+        "is_peak_p90"
+      ],
+      "n_features": 5,
+      "input_shape": [
+        96,
+        5
+      ]
+    }
+  },
+  "variant_order": [
+    "v0_baseline",
+    "v1_prophet",
+    "v2_volatility",
+    "v3_cpu_std",
+    "v4_full"
+  ],
+  "training_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "epochs": 100,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": "chronological_first_80_pct",
+    "shuffle": false,
+    "volatility_window": 12,
+    "peak_percentile": 90
+  },
+  "seed_policy": {
+    "gru_training_seed": null,
+    "bootstrap_seed": 12345,
+    "wilcoxon_seed_note": "Wilcoxon is deterministic given paired inputs",
+    "note": "Matches frozen train_hybrid_gru (no TF seed). Cross-variant fairness relies on identical protocol, not identical initial weights."
+  },
+  "frozen_baseline_ref": "experiments/baseline_reference_2026-07-14",
+  "data_hashes": {
+    "train_df.parquet": "515fd6d7bc3302dbc29bd07daae73380c4f6d7251949e0479ed739c6091a217e",
+    "val_df.parquet": "553156e7831acd341611e7b16cf07b03ea7f723580127078529df478cff4bd1e"
+  },
+  "cohort": {
+    "selected_containers": "data/selected_containers.npy",
+    "expected_evaluable": 99
+  }
+}
