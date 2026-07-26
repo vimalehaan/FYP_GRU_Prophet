@@ -75,6 +75,13 @@ Authoritative: `stage1_control_reproduction/evaluation/reproduction_summary.json
 | [discussion.md](discussion.md) | Interpretation | Complete |
 | [reproducibility.md](reproducibility.md) | Reproduction commands | Complete (v2) |
 
+## Notebooks (read-only visualization)
+
+| Notebook | Purpose |
+|----------|---------|
+| [notebooks/csrle_visualization.ipynb](../../notebooks/csrle_visualization.ipynb) | CSRLE dashboard — α, synthetic data, metric matrices, Stage 1/2 summaries, frozen plots |
+| [notebooks/csrle_ridge_vs_gru_analysis.ipynb](../../notebooks/csrle_ridge_vs_gru_analysis.ipynb) | Why Ridge beats GRU on B0 (diagnostic analysis) |
+
 ## Code (CSRLE-specific)
 
 ```
