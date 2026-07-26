@@ -1,0 +1,73 @@
+{
+  "correlation_mae": {
+    "n": 99,
+    "pearson_r": -0.140424140681668,
+    "pearson_p": 0.16564387056894186,
+    "spearman_r": -0.12979591836734694,
+    "spearman_p": 0.20037791935076762,
+    "pearson_r_vs_delta_pearson": NaN
+  },
+  "subgroup_comparison": {
+    "low": {
+      "n": 33,
+      "mean_delta_mae": 0.026253543808665136,
+      "median_delta_mae": 0.015590661929713368,
+      "fraction_improved": 0.36363636363636365,
+      "bootstrap_improvement": {
+        "n_pairs": 33,
+        "mean_diff": -0.026253543808665136,
+        "median_diff": -0.015590661929713368,
+        "ci_low": -0.0937750696209608,
+        "ci_high": 0.058485475184364456,
+        "fraction_left_better": 0.36363636363636365
+      },
+      "example_containers": [
+        "c_15640",
+        "c_12231",
+        "c_15630"
+      ]
+    },
+    "medium": {
+      "n": 33,
+      "mean_delta_mae": 0.2493219820981626,
+      "median_delta_mae": 0.11315999664957566,
+      "fraction_improved": 0.12121212121212122,
+      "bootstrap_improvement": {
+        "n_pairs": 33,
+        "mean_diff": -0.2493219820981626,
+        "median_diff": -0.11315999664957566,
+        "ci_low": -0.5119740033212694,
+        "ci_high": 0.003033580273820865,
+        "fraction_left_better": 0.12121212121212122
+      },
+      "example_containers": [
+        "c_10034",
+        "c_12193",
+        "c_13269"
+      ]
+    },
+    "high": {
+      "n": 33,
+      "mean_delta_mae": 0.24973569062094578,
+      "median_delta_mae": 0.0834133352630983,
+      "fraction_improved": 0.30303030303030304,
+      "bootstrap_improvement": {
+        "n_pairs": 33,
+        "mean_diff": -0.24973569062094578,
+        "median_diff": -0.0834133352630983,
+        "ci_low": -0.38783483729167567,
+        "ci_high": -0.13332594896333913,
+        "fraction_left_better": 0.30303030303030304
+      },
+      "example_containers": [
+        "c_10312",
+        "c_13403",
+        "c_1494"
+      ]
+    }
+  },
+  "answers": {
+    "high_memory_benefits_more": false,
+    "low_memory_gain_negligible": false
+  }
+}

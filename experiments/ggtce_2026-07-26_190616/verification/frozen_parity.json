@@ -1,0 +1,114 @@
+{
+  "all_passed": false,
+  "checks": [
+    {
+      "check": "same_train_parquet_hash",
+      "passed": true,
+      "detail": "train hash=515fd6d7bc3302db..."
+    },
+    {
+      "check": "same_val_parquet_hash",
+      "passed": true,
+      "detail": "val hash=553156e7831acd34..."
+    },
+    {
+      "check": "same_selected_containers",
+      "passed": false,
+      "detail": "n_frozen=99 n_current=100"
+    },
+    {
+      "check": "scalers_present",
+      "passed": true,
+      "detail": "/Users/lehaan/Desktop/FYP_Long_Term/data/scalers.pkl"
+    },
+    {
+      "check": "g96_sequence_count_expected",
+      "passed": true,
+      "detail": "g96 total=41749"
+    },
+    {
+      "check": "g192_sequence_count_expected",
+      "passed": true,
+      "detail": "g192 total=32245"
+    },
+    {
+      "check": "g288_sequence_count_expected",
+      "passed": true,
+      "detail": "g288 total=22741"
+    },
+    {
+      "check": "only_input_window_differs",
+      "passed": true,
+      "detail": "Architecture, optimizer, loss, batch, epochs frozen per TRAINING_CONFIG"
+    }
+  ],
+  "data_hashes": {
+    "train_df.parquet": "515fd6d7bc3302dbc29bd07daae73380c4f6d7251949e0479ed739c6091a217e",
+    "val_df.parquet": "553156e7831acd341611e7b16cf07b03ea7f723580127078529df478cff4bd1e",
+    "selected_containers.npy": "cc4b59ab135cbbb4453b23e2f9c39cde28958c6d535396c2e4c5fcbc684d9b3f",
+    "scalers.pkl": "582269899726b660acc3fdc415f10d3586154654d4cdbb6c7df23a17043128a9"
+  },
+  "cohort": {
+    "n_selected": 100,
+    "n_frozen_evaluated": 99,
+    "container_ids_match": false
+  },
+  "sequence_counts_by_variant": {
+    "g96": {
+      "total": 41749,
+      "train_80pct": 33399,
+      "val_20pct": 8350,
+      "min_per_container": 409,
+      "mean_per_container": 421.7070707070707
+    },
+    "g192": {
+      "total": 32245,
+      "train_80pct": 25796,
+      "val_20pct": 6449,
+      "min_per_container": 313,
+      "mean_per_container": 325.7070707070707
+    },
+    "g288": {
+      "total": 22741,
+      "train_80pct": 18192,
+      "val_20pct": 4549,
+      "min_per_container": 217,
+      "mean_per_container": 229.7070707070707
+    }
+  },
+  "training_config_frozen": {
+    "forecast_horizon": 96,
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
+    "target": "cpu_scaled",
+    "epochs": 50,
+    "batch_size": 256,
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": 0.8,
+    "shuffle": false,
+    "random_seed": 42,
+    "gru_units": [
+      128,
+      64
+    ],
+    "dense_units": 64,
+    "dropout": 0.2
+  },
+  "g96_replication_gates": {
+    "mean_mae_abs_delta": 0.05,
+    "rank_corr_min": 0.95
+  },
+  "methodology_note": "GGTCE varies only input_window (96/192/288). All other Global GRU components match experiments/global_gru_baseline_2026-07-17_121748."
+}

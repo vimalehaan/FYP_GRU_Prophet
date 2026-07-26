@@ -1,0 +1,495 @@
+{
+  "experiment": "GGTCE",
+  "best_variant": "g96",
+  "cohort_summary": [
+    {
+      "variant_id": "g96",
+      "n": 99,
+      "mean_day1_mae": 1.9242406355693225,
+      "mean_day1_rmse": 2.610536144884579,
+      "mean_day1_mape": 116.5025742728598,
+      "mean_forecast_mae_scaled": 0.10324519119088012,
+      "mean_forecast_rmse_scaled": 0.1508849760921221,
+      "mean_forecast_pearson_r": 0.415500244816224,
+      "mean_forecast_r2": 0.06264650359822685,
+      "mean_forecast_std_ratio": 0.517161189876937
+    },
+    {
+      "variant_id": "g192",
+      "n": 99,
+      "mean_day1_mae": 2.2549448980192537,
+      "mean_day1_rmse": 2.946503231653163,
+      "mean_day1_mape": 121.62159687857879,
+      "mean_forecast_mae_scaled": 0.11555823671169575,
+      "mean_forecast_rmse_scaled": 0.1635510016802713,
+      "mean_forecast_pearson_r": 0.27776181250853965,
+      "mean_forecast_r2": -0.12164389693385527,
+      "mean_forecast_std_ratio": 0.49839210684633684
+    },
+    {
+      "variant_id": "g288",
+      "n": 99,
+      "mean_day1_mae": 2.0993443744119133,
+      "mean_day1_rmse": 2.8426729629768475,
+      "mean_day1_mape": 114.81717159915074,
+      "mean_forecast_mae_scaled": 0.10984430621646665,
+      "mean_forecast_rmse_scaled": 0.15945417338653814,
+      "mean_forecast_pearson_r": 0.3773027670159756,
+      "mean_forecast_r2": -0.0036570079500886136,
+      "mean_forecast_std_ratio": 0.5367331016805814
+    }
+  ],
+  "sequence_reduction": [
+    {
+      "variant_id": "g96",
+      "input_window": 96,
+      "n_sequences": 41650,
+      "n_train_sequences": 33320,
+      "training_seconds": 177.45836287501152,
+      "best_epoch": 25,
+      "epochs_run": 35,
+      "mean_per_container_sequences": 421.7070707070707,
+      "mean_day1_mae": 1.9242406355693225,
+      "mean_forecast_pearson_r": 0.415500244816224
+    },
+    {
+      "variant_id": "g192",
+      "input_window": 192,
+      "n_sequences": 32146,
+      "n_train_sequences": 25716,
+      "training_seconds": 107.39743274997454,
+      "best_epoch": 7,
+      "epochs_run": 17,
+      "mean_per_container_sequences": 325.7070707070707,
+      "mean_day1_mae": 2.2549448980192537,
+      "mean_forecast_pearson_r": 0.27776181250853965
+    },
+    {
+      "variant_id": "g288",
+      "input_window": 288,
+      "n_sequences": 22642,
+      "n_train_sequences": 18113,
+      "training_seconds": 284.7665681250219,
+      "best_epoch": 36,
+      "epochs_run": 46,
+      "mean_per_container_sequences": 229.7070707070707,
+      "mean_day1_mae": 2.0993443744119133,
+      "mean_forecast_pearson_r": 0.3773027670159756
+    }
+  ],
+  "g96_replication": {
+    "passed": true,
+    "mean_mae_ggtce": 1.9242406355693225,
+    "mean_mae_frozen": 1.9242406355693225,
+    "mean_mae_abs_delta": 0.0,
+    "rank_corr_spearman": 0.9999999999999999,
+    "tolerance": {
+      "mean_mae_abs_delta": 0.05,
+      "rank_corr_min": 0.95
+    },
+    "per_container_delta_mae_mean": 0.0,
+    "per_container_delta_mae_max": 0.0
+  },
+  "training_summary": {
+    "g96": {
+      "variant_id": "g96",
+      "input_window": 96,
+      "forecast_horizon": 96,
+      "features": [
+        "cpu_scaled",
+        "cpu_mean",
+        "cpu_std"
+      ],
+      "target": "cpu_scaled",
+      "sequence_counts": {
+        "total": 41749,
+        "train_80pct": 33399,
+        "val_20pct": 8350,
+        "min_per_container": 409,
+        "mean_per_container": 421.7070707070707
+      },
+      "n_sequences": 41650,
+      "n_train_sequences": 33320,
+      "n_val_sequences": 8330,
+      "n_unique_containers": 99,
+      "epochs_run": 35,
+      "best_epoch": 25,
+      "training_seconds": 177.45836287501152,
+      "final_train_loss": 0.015440183691680431,
+      "final_val_loss": 0.029460720717906952,
+      "best_val_loss": 0.028166048228740692,
+      "training_config": {
+        "forecast_horizon": 96,
+        "features": [
+          "cpu_scaled",
+          "cpu_mean",
+          "cpu_std"
+        ],
+        "target": "cpu_scaled",
+        "epochs": 50,
+        "batch_size": 256,
+        "optimizer": "adam",
+        "loss": "mse",
+        "metrics": [
+          "mae"
+        ],
+        "early_stopping": {
+          "monitor": "val_loss",
+          "patience": 10,
+          "restore_best_weights": true
+        },
+        "internal_val_split": 0.8,
+        "shuffle": false,
+        "random_seed": 42,
+        "gru_units": [
+          128,
+          64
+        ],
+        "dense_units": 64,
+        "dropout": 0.2
+      },
+      "random_seed": 42
+    },
+    "g192": {
+      "variant_id": "g192",
+      "input_window": 192,
+      "forecast_horizon": 96,
+      "features": [
+        "cpu_scaled",
+        "cpu_mean",
+        "cpu_std"
+      ],
+      "target": "cpu_scaled",
+      "sequence_counts": {
+        "total": 32245,
+        "train_80pct": 25796,
+        "val_20pct": 6449,
+        "min_per_container": 313,
+        "mean_per_container": 325.7070707070707
+      },
+      "n_sequences": 32146,
+      "n_train_sequences": 25716,
+      "n_val_sequences": 6430,
+      "n_unique_containers": 99,
+      "epochs_run": 17,
+      "best_epoch": 7,
+      "training_seconds": 107.39743274997454,
+      "final_train_loss": 0.015618530102074146,
+      "final_val_loss": 0.030064117163419724,
+      "best_val_loss": 0.029146475717425346,
+      "training_config": {
+        "forecast_horizon": 96,
+        "features": [
+          "cpu_scaled",
+          "cpu_mean",
+          "cpu_std"
+        ],
+        "target": "cpu_scaled",
+        "epochs": 50,
+        "batch_size": 256,
+        "optimizer": "adam",
+        "loss": "mse",
+        "metrics": [
+          "mae"
+        ],
+        "early_stopping": {
+          "monitor": "val_loss",
+          "patience": 10,
+          "restore_best_weights": true
+        },
+        "internal_val_split": 0.8,
+        "shuffle": false,
+        "random_seed": 42,
+        "gru_units": [
+          128,
+          64
+        ],
+        "dense_units": 64,
+        "dropout": 0.2
+      },
+      "random_seed": 42
+    },
+    "g288": {
+      "variant_id": "g288",
+      "input_window": 288,
+      "forecast_horizon": 96,
+      "features": [
+        "cpu_scaled",
+        "cpu_mean",
+        "cpu_std"
+      ],
+      "target": "cpu_scaled",
+      "sequence_counts": {
+        "total": 22741,
+        "train_80pct": 18192,
+        "val_20pct": 4549,
+        "min_per_container": 217,
+        "mean_per_container": 229.7070707070707
+      },
+      "n_sequences": 22642,
+      "n_train_sequences": 18113,
+      "n_val_sequences": 4529,
+      "n_unique_containers": 99,
+      "epochs_run": 46,
+      "best_epoch": 36,
+      "training_seconds": 284.7665681250219,
+      "final_train_loss": 0.01666034571826458,
+      "final_val_loss": 0.026699800044298172,
+      "best_val_loss": 0.024629881605505943,
+      "training_config": {
+        "forecast_horizon": 96,
+        "features": [
+          "cpu_scaled",
+          "cpu_mean",
+          "cpu_std"
+        ],
+        "target": "cpu_scaled",
+        "epochs": 50,
+        "batch_size": 256,
+        "optimizer": "adam",
+        "loss": "mse",
+        "metrics": [
+          "mae"
+        ],
+        "early_stopping": {
+          "monitor": "val_loss",
+          "patience": 10,
+          "restore_best_weights": true
+        },
+        "internal_val_split": 0.8,
+        "shuffle": false,
+        "random_seed": 42,
+        "gru_units": [
+          128,
+          64
+        ],
+        "dense_units": 64,
+        "dropout": 0.2
+      },
+      "random_seed": 42
+    }
+  },
+  "window_transitions": [
+    {
+      "transition": "g96 -> g192",
+      "metrics": {
+        "day1_mae": {
+          "mean_delta": 0.3307042624499312,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "day1_rmse": {
+          "mean_delta": 0.3359670867685845,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "day1_mape": {
+          "mean_delta": 5.119022605718996,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_mae_scaled": {
+          "mean_delta": 0.012313045520815623,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_rmse_scaled": {
+          "mean_delta": 0.012666025588149268,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_pearson_r": {
+          "mean_delta": -0.1377384323076842,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_r2": {
+          "mean_delta": -0.18429040053208215,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_std_ratio": {
+          "mean_delta": -0.018769083030600164,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        }
+      }
+    },
+    {
+      "transition": "g192 -> g288",
+      "metrics": {
+        "day1_mae": {
+          "mean_delta": -0.15560052360734,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "day1_rmse": {
+          "mean_delta": -0.10383026867631659,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "day1_mape": {
+          "mean_delta": -6.804425279428057,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_mae_scaled": {
+          "mean_delta": -0.005713930495229122,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_rmse_scaled": {
+          "mean_delta": -0.004096828293733214,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_pearson_r": {
+          "mean_delta": 0.09954095450743584,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_r2": {
+          "mean_delta": 0.11798688898376668,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_std_ratio": {
+          "mean_delta": 0.03834099483424452,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        }
+      }
+    },
+    {
+      "transition": "g96 -> g288",
+      "metrics": {
+        "day1_mae": {
+          "mean_delta": 0.17510373884259114,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "day1_rmse": {
+          "mean_delta": 0.23213681809226794,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "day1_mape": {
+          "mean_delta": -1.6854026737090586,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_mae_scaled": {
+          "mean_delta": 0.0065991150255865026,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_rmse_scaled": {
+          "mean_delta": 0.008569197294416056,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_pearson_r": {
+          "mean_delta": -0.03819747780024835,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_r2": {
+          "mean_delta": -0.06630351154831549,
+          "significant_bootstrap_95": false,
+          "significant_wilcoxon_005": true
+        },
+        "forecast_std_ratio": {
+          "mean_delta": 0.01957191180364435,
+          "significant_bootstrap_95": true,
+          "significant_wilcoxon_005": true
+        }
+      }
+    }
+  ],
+  "memory_analysis": {
+    "correlation_mae": {
+      "n": 99,
+      "pearson_r": -0.140424140681668,
+      "pearson_p": 0.16564387056894186,
+      "spearman_r": -0.12979591836734694,
+      "spearman_p": 0.20037791935076762,
+      "pearson_r_vs_delta_pearson": NaN
+    },
+    "subgroup_comparison": {
+      "low": {
+        "n": 33,
+        "mean_delta_mae": 0.026253543808665136,
+        "median_delta_mae": 0.015590661929713368,
+        "fraction_improved": 0.36363636363636365,
+        "bootstrap_improvement": {
+          "n_pairs": 33,
+          "mean_diff": -0.026253543808665136,
+          "median_diff": -0.015590661929713368,
+          "ci_low": -0.0937750696209608,
+          "ci_high": 0.058485475184364456,
+          "fraction_left_better": 0.36363636363636365
+        },
+        "example_containers": [
+          "c_15640",
+          "c_12231",
+          "c_15630"
+        ]
+      },
+      "medium": {
+        "n": 33,
+        "mean_delta_mae": 0.2493219820981626,
+        "median_delta_mae": 0.11315999664957566,
+        "fraction_improved": 0.12121212121212122,
+        "bootstrap_improvement": {
+          "n_pairs": 33,
+          "mean_diff": -0.2493219820981626,
+          "median_diff": -0.11315999664957566,
+          "ci_low": -0.5119740033212694,
+          "ci_high": 0.003033580273820865,
+          "fraction_left_better": 0.12121212121212122
+        },
+        "example_containers": [
+          "c_10034",
+          "c_12193",
+          "c_13269"
+        ]
+      },
+      "high": {
+        "n": 33,
+        "mean_delta_mae": 0.24973569062094578,
+        "median_delta_mae": 0.0834133352630983,
+        "fraction_improved": 0.30303030303030304,
+        "bootstrap_improvement": {
+          "n_pairs": 33,
+          "mean_diff": -0.24973569062094578,
+          "median_diff": -0.0834133352630983,
+          "ci_low": -0.38783483729167567,
+          "ci_high": -0.13332594896333913,
+          "fraction_left_better": 0.30303030303030304
+        },
+        "example_containers": [
+          "c_10312",
+          "c_13403",
+          "c_1494"
+        ]
+      }
+    },
+    "answers": {
+      "high_memory_benefits_more": false,
+      "low_memory_gain_negligible": false
+    }
+  },
+  "final_answers": {
+    "1_does_longer_window_improve": "No \u2014 G96 vs G96 MAE 1.924\u21921.924 (+0.00%)",
+    "2_best_input_window": "G96 (G96 \u2014 Input 96 (baseline reproduction)) \u2014 mean Day-1 MAE=1.924",
+    "3_statistically_significant": "Yes (G96\u2192G288 bootstrap/Wilcoxon on MAE; mean \u0394=0.1751)",
+    "4_practically_meaningful": "No (|MAE change|=0.00%, threshold 1%)",
+    "5_high_memory_benefit_more": "No / inconclusive \u2014 memory\u2013\u0394MAE Pearson r=-0.140; low-memory gain negligible: False",
+    "6_diminishing_returns": "Evidence of diminishing returns after 192 (|\u0394| G96\u2192G192=0.3307, G192\u2192G288=0.1556)",
+    "7_context_vs_sequence_tradeoff": "G96 sequences=41650, g96=41650 (0.0% reduction). Accuracy did not improve despite fewer samples.",
+    "8_replace_global_baseline": "Keep G96 baseline",
+    "9_production_recommendation": "Keep frozen G96 Global GRU \u2014 longer windows did not justify complexity/cost",
+    "10_relation_to_tma": "TMA showed 40\u201373% squared-ACF capture at 96\u2013288 lags; GGTCE tests whether exploiting that memory improves forecasts. High-memory subgroup did not consistently gain more than low-memory workloads.",
+    "g96_replication_passed": "True"
+  }
+}

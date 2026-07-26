@@ -1,0 +1,91 @@
+{
+  "experiment_name": "ggtce",
+  "protocol_version": "ggtce_v1.0",
+  "experiment_timestamp": "2026-07-26_190616",
+  "experiment_dir": "experiments/ggtce_2026-07-26_190616",
+  "research_question": "Does increasing the historical input window of the Global GRU improve long-term CPU forecasting because additional temporal memory exists beyond the current 96-step window?",
+  "co_primary_question": "Do workloads with stronger long-range temporal dependence benefit more from longer input windows?",
+  "variants": {
+    "g96": {
+      "variant_id": "g96",
+      "label": "G96 \u2014 Input 96 (baseline reproduction)",
+      "input_window": 96,
+      "forecast_horizon": 96,
+      "input_shape": [
+        96,
+        3
+      ]
+    },
+    "g192": {
+      "variant_id": "g192",
+      "label": "G192 \u2014 Input 192",
+      "input_window": 192,
+      "forecast_horizon": 96,
+      "input_shape": [
+        192,
+        3
+      ]
+    },
+    "g288": {
+      "variant_id": "g288",
+      "label": "G288 \u2014 Input 288",
+      "input_window": 288,
+      "forecast_horizon": 96,
+      "input_shape": [
+        288,
+        3
+      ]
+    }
+  },
+  "variant_order": [
+    "g96",
+    "g192",
+    "g288"
+  ],
+  "training_config": {
+    "forecast_horizon": 96,
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
+    "target": "cpu_scaled",
+    "epochs": 50,
+    "batch_size": 256,
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": 0.8,
+    "shuffle": false,
+    "random_seed": 42,
+    "gru_units": [
+      128,
+      64
+    ],
+    "dense_units": 64,
+    "dropout": 0.2
+  },
+  "seed_policy": {
+    "random_seed": 42,
+    "bootstrap_seed": 12345,
+    "note": "Independent fresh initialization per variant; seed 42 for reproducibility."
+  },
+  "frozen_baseline_ref": "experiments/global_gru_baseline_2026-07-17_121748",
+  "tma_ref": "experiments/temporal_memory_analysis_2026-07-26_170052",
+  "data_hashes": {
+    "train_df.parquet": "515fd6d7bc3302dbc29bd07daae73380c4f6d7251949e0479ed739c6091a217e",
+    "val_df.parquet": "553156e7831acd341611e7b16cf07b03ea7f723580127078529df478cff4bd1e"
+  },
+  "cohort": {
+    "selected_containers": "data/selected_containers.npy",
+    "expected_evaluable": 99
+  },
+  "frozen_note": "Only input_window varies (96, 192, 288). All else frozen."
+}

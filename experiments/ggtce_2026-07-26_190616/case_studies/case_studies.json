@@ -1,0 +1,40 @@
+{
+  "cases": {
+    "largest_improvement": {
+      "container_id": "c_10034",
+      "baseline_mae": 5.603144977655675,
+      "compare_mae": 3.077703162575037,
+      "delta_mae": -2.525441815080638,
+      "memory_score": 0.6420311811492786,
+      "memory_class": "medium",
+      "acf_lag_96": 0.782272177561452,
+      "acf_lag_192": 0.6152337289209355,
+      "acf_lag_288": 0.492697527475436,
+      "explanation": "Longer window (g288) reduced MAE by 2.525 pp vs g96 (5.603\u21923.078). Memory class=medium, score=0.642, ACF@96=0.782, ACF@288=0.493. Extended temporal context likely captured slow cycles missed by G96."
+    },
+    "median_improvement": {
+      "container_id": "c_13873",
+      "baseline_mae": 1.7922796201374795,
+      "compare_mae": 1.862461369898584,
+      "delta_mae": 0.07018174976110436,
+      "memory_score": 0.19034243948917073,
+      "memory_class": "low",
+      "acf_lag_96": 0.02277343249066334,
+      "acf_lag_192": -0.0203019782237826,
+      "acf_lag_288": -0.01133838416128812,
+      "explanation": "Representative cohort shift (\u0394 MAE=0.070). Memory class=low, score=0.190, ACF@96=0.023, ACF@288=-0.011. Typical trade-off between extra history and fewer training sequences."
+    },
+    "largest_degradation": {
+      "container_id": "c_13389",
+      "baseline_mae": 6.026236225672499,
+      "compare_mae": 9.060142436886707,
+      "delta_mae": 3.033906211214208,
+      "memory_score": 0.626479219635441,
+      "memory_class": "medium",
+      "acf_lag_96": 0.7343063437289656,
+      "acf_lag_192": 0.4896965125179326,
+      "acf_lag_288": 0.34465507116715494,
+      "explanation": "Longer window hurt MAE by 3.034 pp (6.026\u21929.060). Memory class=medium, score=0.626, ACF@96=0.734, ACF@288=0.345. Additional context may add noise or amplify overfitting with reduced sequence count."
+    }
+  }
+}

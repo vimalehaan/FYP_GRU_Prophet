@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "mean_mae_ggtce": 1.9242406355693225,
+  "mean_mae_frozen": 1.9242406355693225,
+  "mean_mae_abs_delta": 0.0,
+  "rank_corr_spearman": 0.9999999999999999,
+  "tolerance": {
+    "mean_mae_abs_delta": 0.05,
+    "rank_corr_min": 0.95
+  },
+  "per_container_delta_mae_mean": 0.0,
+  "per_container_delta_mae_max": 0.0
+}

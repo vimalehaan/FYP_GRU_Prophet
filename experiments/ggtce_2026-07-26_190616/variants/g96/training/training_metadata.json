@@ -1,0 +1,59 @@
+{
+  "variant_id": "g96",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "features": [
+    "cpu_scaled",
+    "cpu_mean",
+    "cpu_std"
+  ],
+  "target": "cpu_scaled",
+  "sequence_counts": {
+    "total": 41749,
+    "train_80pct": 33399,
+    "val_20pct": 8350,
+    "min_per_container": 409,
+    "mean_per_container": 421.7070707070707
+  },
+  "n_sequences": 41650,
+  "n_train_sequences": 33320,
+  "n_val_sequences": 8330,
+  "n_unique_containers": 99,
+  "epochs_run": 35,
+  "best_epoch": 25,
+  "training_seconds": 177.45836287501152,
+  "final_train_loss": 0.015440183691680431,
+  "final_val_loss": 0.029460720717906952,
+  "best_val_loss": 0.028166048228740692,
+  "training_config": {
+    "forecast_horizon": 96,
+    "features": [
+      "cpu_scaled",
+      "cpu_mean",
+      "cpu_std"
+    ],
+    "target": "cpu_scaled",
+    "epochs": 50,
+    "batch_size": 256,
+    "optimizer": "adam",
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": 0.8,
+    "shuffle": false,
+    "random_seed": 42,
+    "gru_units": [
+      128,
+      64
+    ],
+    "dense_units": 64,
+    "dropout": 0.2
+  },
+  "random_seed": 42
+}
