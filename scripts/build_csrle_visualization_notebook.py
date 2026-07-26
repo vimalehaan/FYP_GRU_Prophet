@@ -3,8 +3,11 @@
 
 from __future__ import annotations
 
-import json
+import argparse
 from pathlib import Path
+
+import nbformat
+from nbformat import v4 as nbf
 
 REPO = Path(__file__).resolve().parents[1]
 OUT = REPO / "notebooks" / "csrle_visualization.ipynb"
@@ -12,17 +15,11 @@ CSRLE = "experiments/synthetic_residual_learnability_2026-07-25_164307"
 
 
 def md(text: str) -> dict:
-    return {"cell_type": "markdown", "metadata": {}, "source": [ln + "\n" for ln in text.strip().split("\n")]}
+    return nbf.new_markdown_cell(text.strip() + "\n")
 
 
 def code(text: str) -> dict:
-    return {
-        "cell_type": "code",
-        "metadata": {},
-        "execution_count": None,
-        "outputs": [],
-        "source": [ln + "\n" for ln in text.strip().split("\n")],
-    }
+    return nbf.new_code_cell(text.strip() + "\n")
 
 
 cells: list[dict] = []
@@ -52,12 +49,17 @@ import os
 import sys
 from pathlib import Path
 
+%matplotlib inline
+
+REPO_ROOT = Path('..').resolve()
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 import matplotlib.pyplot as plt
 from matplotlib.colors import TwoSlopeNorm
 import numpy as np
 import pandas as pd
 
-REPO_ROOT = Path('..').resolve()
 CSRLE_EXP = REPO_ROOT / 'experiments' / 'synthetic_residual_learnability_2026-07-25_164307'
 STAGE1 = CSRLE_EXP / 'stage1_control_reproduction'
 STAGE2 = CSRLE_EXP / 'stage2_synthetic_gru'
@@ -335,12 +337,9 @@ cells.append(md("""
 Precomputed PNGs from `stage2_synthetic_gru/plots/` — same style as hybrid exploratory figures.
 """))
 cells.append(code("""
-from IPython.display import Image, display
+from utils.notebook_display import show_png_gallery
 
-PLOT_DIR = STAGE2 / 'plots'
-for name in sorted(PLOT_DIR.glob('*.png')):
-    print(name.name)
-    display(Image(filename=str(name), width=700))
+show_png_gallery(STAGE2 / 'plots')
 """))
 
 cells.append(md("""
@@ -363,16 +362,27 @@ print('Stage 1 reproduction gate:', json.loads((STAGE1/'verification'/'reproduct
 print('='*60)
 """))
 
-nb = {
-    "nbformat": 4,
-    "nbformat_minor": 5,
-    "metadata": {
-        "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
-        "language_info": {"name": "python", "version": "3.11.0"},
-    },
-    "cells": cells,
-}
+nb = nbf.new_notebook(cells=cells)
+nb.metadata["kernelspec"] = {"display_name": "Python 3", "language": "python", "name": "python3"}
+nb.metadata["language_info"] = {"name": "python", "version": "3.11.0"}
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
-OUT.write_text(json.dumps(nb, indent=1))
+nbformat.write(nb, OUT)
 print("Wrote", OUT)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+        help="Run the notebook after generation (embeds plots/tables in .ipynb)",
+    )
+    args = parser.parse_args()
+    if args.execute:
+        import subprocess
+        import sys
+
+        subprocess.run(
+            [sys.executable, str(REPO / "scripts" / "execute_notebook.py"), str(OUT)],
+            check=True,
+        )

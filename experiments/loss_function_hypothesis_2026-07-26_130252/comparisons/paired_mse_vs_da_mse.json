@@ -1,0 +1,26 @@
+{
+  "residual_pearson_r": {
+    "n_pairs": 99,
+    "mean_diff": -0.02591343909976617,
+    "median_diff": -0.016954432821011,
+    "ci_low": -0.05543762110357588,
+    "ci_high": 0.002549479913611364,
+    "fraction_left_better": 0.43434343434343436
+  },
+  "residual_std_ratio": {
+    "n_pairs": 99,
+    "mean_diff": 0.7261087477692177,
+    "median_diff": 0.4703968926103097,
+    "ci_low": 0.5286264450558952,
+    "ci_high": 0.9879876780660838,
+    "fraction_left_better": 1.0
+  },
+  "residual_mae_scaled": {
+    "n_pairs": 99,
+    "mean_diff": 0.01142345967185389,
+    "median_diff": 0.012569006755374174,
+    "ci_low": 0.009756980180525404,
+    "ci_high": 0.013057006354046694,
+    "fraction_left_better": 0.898989898989899
+  }
+}

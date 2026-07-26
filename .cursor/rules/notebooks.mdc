@@ -1,0 +1,23 @@
+---
+description: Finalize Jupyter visualization notebooks with embedded plots and table outputs
+globs: notebooks/**/*.ipynb, scripts/build_*notebook*.py, scripts/execute_notebook.py
+alwaysApply: false
+---
+
+# Notebook finalization
+
+When creating or updating a visualization notebook:
+
+1. **Embed plots in the saved `.ipynb`**
+   - Add `%matplotlib inline` in the first plotting/setup code cell.
+   - Use `plt.show()` for live figures.
+   - For pre-exported PNG galleries, use `from utils.notebook_display import show_png_gallery` — **not** `IPython.display.Image(filename=...)`.
+
+2. **Execute before handing off**
+   - Regenerate from builder if applicable: `python scripts/build_*_visualization_notebook.py`
+   - Run: `tf_metal_env/bin/python scripts/execute_notebook.py notebooks/<name>.ipynb`
+   - Confirm outputs include `image/png` base64 data and HTML tables, not empty `"outputs": []` on plot cells.
+
+3. **Keep notebooks read-only over experiment artifacts** unless the notebook is explicitly for training.
+
+4. **Optional disk export** stays behind `SAVE_FIGS = True`; embedded notebook outputs are required regardless.

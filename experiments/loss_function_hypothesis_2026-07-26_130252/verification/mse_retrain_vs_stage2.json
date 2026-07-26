@@ -1,0 +1,5 @@
+{
+  "note": "LFHE MSE retrain may differ from Stage 2 due to non-deterministic GRU init",
+  "stage2_std_ratio": 0.07300256933212737,
+  "lfhe_mse_retrain_std_ratio": 0.1006756879667845
+}

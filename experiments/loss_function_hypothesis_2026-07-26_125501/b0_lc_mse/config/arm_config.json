@@ -1,0 +1,6 @@
+{
+  "arm_id": "b0_lc_mse",
+  "loss_kind": "mse",
+  "lambda_disp": 1.0,
+  "epsilon": 1e-06
+}

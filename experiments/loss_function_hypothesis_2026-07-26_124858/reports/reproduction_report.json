@@ -1,0 +1,41 @@
+{
+  "pass": false,
+  "checks": {
+    "residual_pearson_r": {
+      "lfhe_value": 0.07686044293070521,
+      "stage2_reference": 0.08413424568987238,
+      "abs_delta": 0.0072738027591671695,
+      "tolerance": 0.015,
+      "pass": true
+    },
+    "residual_std_ratio": {
+      "lfhe_value": 0.04759224983934638,
+      "stage2_reference": 0.07300256933212737,
+      "abs_delta": 0.02541031949278099,
+      "tolerance": 0.015,
+      "pass": false
+    },
+    "residual_mae_scaled": {
+      "lfhe_value": 0.09366668288622788,
+      "stage2_reference": 0.09361179775556543,
+      "abs_delta": 5.488513066245759e-05,
+      "tolerance": 0.005,
+      "pass": true
+    },
+    "residual_rmse_scaled": {
+      "lfhe_value": 0.13790143413979306,
+      "stage2_reference": 0.13782317656302445,
+      "abs_delta": 7.825757676860334e-05,
+      "pass": true,
+      "informational": true
+    },
+    "residual_r2": {
+      "lfhe_value": -0.32693333693717264,
+      "stage2_reference": -0.3322466102901338,
+      "abs_delta": 0.0053132733529611675,
+      "pass": true,
+      "informational": true
+    }
+  },
+  "n_containers": 99
+}

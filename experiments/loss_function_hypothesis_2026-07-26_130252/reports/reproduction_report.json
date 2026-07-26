@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "method": "evaluate_frozen_stage2_b0_weights_via_lfhe_pipeline",
+  "model_source": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru/b0_lc/models",
+  "cohort_gate": {
+    "pass": true,
+    "checks": {
+      "residual_pearson_r": {
+        "lfhe_value": 0.08413424568987238,
+        "stage2_reference": 0.08413424568987238,
+        "abs_delta": 0.0,
+        "tolerance": 0.015,
+        "pass": true
+      },
+      "residual_std_ratio": {
+        "lfhe_value": 0.07300256933212737,
+        "stage2_reference": 0.07300256933212737,
+        "abs_delta": 0.0,
+        "tolerance": 0.015,
+        "pass": true
+      },
+      "residual_mae_scaled": {
+        "lfhe_value": 0.09361179775556543,
+        "stage2_reference": 0.09361179775556543,
+        "abs_delta": 0.0,
+        "tolerance": 0.005,
+        "pass": true
+      },
+      "residual_rmse_scaled": {
+        "lfhe_value": 0.13782317656302445,
+        "stage2_reference": 0.13782317656302445,
+        "abs_delta": 0.0,
+        "pass": true,
+        "informational": true
+      },
+      "residual_r2": {
+        "lfhe_value": -0.3322466102901338,
+        "stage2_reference": -0.3322466102901338,
+        "abs_delta": 0.0,
+        "pass": true,
+        "informational": true
+      }
+    },
+    "n_containers": 99
+  },
+  "per_container_gate": {
+    "pass": true,
+    "max_abs_diff": {
+      "residual_pearson_r": 9.71445146547012e-17,
+      "residual_std_ratio": 9.8879238130678e-17,
+      "residual_mae_scaled": 9.367506770274758e-17,
+      "residual_rmse_scaled": 9.71445146547012e-17
+    },
+    "tolerance": 1e-06,
+    "n_containers": 99
+  }
+}

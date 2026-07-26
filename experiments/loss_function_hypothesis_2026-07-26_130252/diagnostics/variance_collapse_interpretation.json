@@ -1,0 +1,25 @@
+{
+  "full_trajectory_std_ratio_mse": 0.1006756879667845,
+  "full_trajectory_std_ratio_da_mse": 0.8267844357360025,
+  "absolute_std_ratio_improvement": 0.726108747769218,
+  "relative_std_ratio_improvement_pct": 721.2354466440596,
+  "remaining_gap_to_ridge_reference": -0.6067844357360025,
+  "ridge_reference_std_ratio": 0.22,
+  "mse_horizon_band_means": {
+    "h01_12": 0.19432230913755547,
+    "h13_24": 0.15074080121190483,
+    "h25_48": 0.07331546895170647,
+    "h49_72": 0.10496383236038169,
+    "h73_96": 0.18117393929553097
+  },
+  "da_horizon_band_means": {
+    "h01_12": 2.4307895781044433,
+    "h13_24": 1.9953575958554355,
+    "h25_48": 0.8257917756732236,
+    "h49_72": 1.0199861732243425,
+    "h73_96": 1.794599059947737
+  },
+  "mse_monotonic_decrease_across_bands": false,
+  "mse_approximately_flat_across_bands": false,
+  "interpretation_note": "Progressive horizon collapse if band means decrease toward longer horizons; approximately flat if band std < 0.02."
+}

@@ -1,0 +1,74 @@
+{
+  "experiment_timestamp": "2026-07-26_125501",
+  "protocol_version": "lfhe_v1.1",
+  "experiment_name": "loss_function_hypothesis",
+  "csrle_experiment_dir": "experiments/synthetic_residual_learnability_2026-07-25_164307",
+  "primary_condition": "b0_lc",
+  "loss_control": "mse",
+  "loss_treatment": "da_mse",
+  "loss_formulation": {
+    "control": "MSE = mean((y_hat - y)^2)",
+    "treatment": "DA-MSE = MSE + lambda * max(0, log(sigma_y) - log(sigma_y_hat))^2",
+    "sigma_scope": "per_sequence_over_96_steps",
+    "std_ddof": 0,
+    "penalty_direction": "one_sided_under_dispersion_only"
+  },
+  "lambda_disp": 1.0,
+  "lambda_disp_tunable": false,
+  "epsilon": 1e-06,
+  "optimizer": "adam",
+  "batch_size": 64,
+  "max_epochs": 100,
+  "early_stopping_patience": 10,
+  "architecture": "GRU(256)->Dropout(0.2)->GRU(128)->Dropout(0.2)->GRU(64)->Dense(128,relu)->Dense(96)",
+  "sequence_configuration": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "internal_val_split": "chronological_80_20",
+    "shuffle": false,
+    "features": [
+      "residual_scaled"
+    ],
+    "target": "residual_scaled"
+  },
+  "training_seed_note": "None for GRU init \u2014 CSRLE Stage 2 parity (train_control_hybrid)",
+  "gru_training_seed": null,
+  "bootstrap_seed": 12345,
+  "seeds": {
+    "gru_training_seed": null,
+    "bootstrap_seed": 12345
+  },
+  "reproduction_tolerances": {
+    "residual_pearson_r": 0.015,
+    "residual_std_ratio": 0.015,
+    "residual_mae_scaled": 0.005
+  },
+  "success_thresholds": {
+    "mean_std_ratio_da_mse": 0.12,
+    "mean_pearson_r_da_mse": 0.1,
+    "mae_increase_max": 0.01
+  },
+  "diagnostic_protocol": {
+    "horizon_variance_bands": [
+      "1-12",
+      "13-24",
+      "25-48",
+      "49-72",
+      "73-96"
+    ],
+    "energy_recovery": "sum(pred^2)/sum(actual^2)",
+    "descriptive_only": true
+  },
+  "dataset_hashes": {
+    "b0_lc_train_syn_parquet": "be095645154a195bfa62bd7a024c9ccd3d8bae255a40a59562e4aca70f3c4778",
+    "b0_lc_val_syn_parquet": "bb22f59ae70415c814d4c2753f7c5831ba5112deecc2be6c2cbc3c8452ab68cb"
+  },
+  "stage2_b0_training_reference": {
+    "best_epoch": 2,
+    "best_val_loss": 1.7045472860336304,
+    "res_mean": 2.104351548466554e-05,
+    "res_std": 0.11042643193055178
+  },
+  "evaluation_protocol": "CSRLE Stage 2 extended_metrics + cpu + baselines",
+  "peak_thresholds_path": "experiments/peak_aware_2026-07-14_164518/peak/peak_thresholds.pkl"
+}

@@ -1,0 +1,172 @@
+{
+  "protocol_version": "lfhe_v1.1",
+  "experiment_timestamp": "2026-07-26_130252",
+  "reproduction_gate": {
+    "pass": true,
+    "method": "evaluate_frozen_stage2_b0_weights_via_lfhe_pipeline",
+    "model_source": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru/b0_lc/models",
+    "cohort_gate": {
+      "pass": true,
+      "checks": {
+        "residual_pearson_r": {
+          "lfhe_value": 0.08413424568987238,
+          "stage2_reference": 0.08413424568987238,
+          "abs_delta": 0.0,
+          "tolerance": 0.015,
+          "pass": true
+        },
+        "residual_std_ratio": {
+          "lfhe_value": 0.07300256933212737,
+          "stage2_reference": 0.07300256933212737,
+          "abs_delta": 0.0,
+          "tolerance": 0.015,
+          "pass": true
+        },
+        "residual_mae_scaled": {
+          "lfhe_value": 0.09361179775556543,
+          "stage2_reference": 0.09361179775556543,
+          "abs_delta": 0.0,
+          "tolerance": 0.005,
+          "pass": true
+        },
+        "residual_rmse_scaled": {
+          "lfhe_value": 0.13782317656302445,
+          "stage2_reference": 0.13782317656302445,
+          "abs_delta": 0.0,
+          "pass": true,
+          "informational": true
+        },
+        "residual_r2": {
+          "lfhe_value": -0.3322466102901338,
+          "stage2_reference": -0.3322466102901338,
+          "abs_delta": 0.0,
+          "pass": true,
+          "informational": true
+        }
+      },
+      "n_containers": 99
+    },
+    "per_container_gate": {
+      "pass": true,
+      "max_abs_diff": {
+        "residual_pearson_r": 9.71445146547012e-17,
+        "residual_std_ratio": 9.8879238130678e-17,
+        "residual_mae_scaled": 9.367506770274758e-17,
+        "residual_rmse_scaled": 9.71445146547012e-17
+      },
+      "tolerance": 1e-06,
+      "n_containers": 99
+    }
+  },
+  "cohort_metrics": {
+    "mse": {
+      "pearson_r": 0.11333092010954778,
+      "std_ratio": 0.1006756879667845,
+      "mae": 0.09323075522620063,
+      "energy_recovery": 0.010991733924072171
+    },
+    "da_mse": {
+      "pearson_r": 0.0874174810097816,
+      "std_ratio": 0.8267844357360025,
+      "mae": 0.10465421489805454,
+      "energy_recovery": 0.8232302717602633
+    }
+  },
+  "paired_bootstrap_primary": {
+    "residual_pearson_r": {
+      "n_pairs": 99,
+      "mean_diff": -0.02591343909976617,
+      "median_diff": -0.016954432821011,
+      "ci_low": -0.05543762110357588,
+      "ci_high": 0.002549479913611364,
+      "fraction_left_better": 0.43434343434343436
+    },
+    "residual_std_ratio": {
+      "n_pairs": 99,
+      "mean_diff": 0.7261087477692177,
+      "median_diff": 0.4703968926103097,
+      "ci_low": 0.5286264450558952,
+      "ci_high": 0.9879876780660838,
+      "fraction_left_better": 1.0
+    },
+    "residual_mae_scaled": {
+      "n_pairs": 99,
+      "mean_diff": 0.01142345967185389,
+      "median_diff": 0.012569006755374174,
+      "ci_low": 0.009756980180525404,
+      "ci_high": 0.013057006354046694,
+      "fraction_left_better": 0.898989898989899
+    }
+  },
+  "hypothesis_verdict": {
+    "verdict": "inconclusive_I1",
+    "S1_dispersion": true,
+    "S2_correlation": false,
+    "S3_mae_guardrail": false,
+    "cohort_mean_std_ratio_da_mse": 0.8267844357360025,
+    "cohort_mean_std_ratio_mse": 0.1006756879667845,
+    "cohort_mean_pearson_r_da_mse": 0.0874174810097816,
+    "cohort_mean_mae_delta": 0.011423459671853917,
+    "paired_bootstrap": {
+      "residual_pearson_r": {
+        "n_pairs": 99,
+        "mean_diff": -0.02591343909976617,
+        "median_diff": -0.016954432821011,
+        "ci_low": -0.05543762110357588,
+        "ci_high": 0.002549479913611364,
+        "fraction_left_better": 0.43434343434343436
+      },
+      "residual_std_ratio": {
+        "n_pairs": 99,
+        "mean_diff": 0.7261087477692177,
+        "median_diff": 0.4703968926103097,
+        "ci_low": 0.5286264450558952,
+        "ci_high": 0.9879876780660838,
+        "fraction_left_better": 1.0
+      },
+      "residual_mae_scaled": {
+        "n_pairs": 99,
+        "mean_diff": 0.01142345967185389,
+        "median_diff": 0.012569006755374174,
+        "ci_low": 0.009756980180525404,
+        "ci_high": 0.013057006354046694,
+        "fraction_left_better": 0.898989898989899
+      }
+    }
+  },
+  "diagnostic_interpretation": {
+    "full_trajectory_std_ratio_mse": 0.1006756879667845,
+    "full_trajectory_std_ratio_da_mse": 0.8267844357360025,
+    "absolute_std_ratio_improvement": 0.726108747769218,
+    "relative_std_ratio_improvement_pct": 721.2354466440596,
+    "remaining_gap_to_ridge_reference": -0.6067844357360025,
+    "ridge_reference_std_ratio": 0.22,
+    "mse_horizon_band_means": {
+      "h01_12": 0.19432230913755547,
+      "h13_24": 0.15074080121190483,
+      "h25_48": 0.07331546895170647,
+      "h49_72": 0.10496383236038169,
+      "h73_96": 0.18117393929553097
+    },
+    "da_horizon_band_means": {
+      "h01_12": 2.4307895781044433,
+      "h13_24": 1.9953575958554355,
+      "h25_48": 0.8257917756732236,
+      "h49_72": 1.0199861732243425,
+      "h73_96": 1.794599059947737
+    },
+    "mse_monotonic_decrease_across_bands": false,
+    "mse_approximately_flat_across_bands": false,
+    "interpretation_note": "Progressive horizon collapse if band means decrease toward longer horizons; approximately flat if band std < 0.02."
+  },
+  "explicit_answers": {
+    "Q1_da_mse_reduce_variance_collapse": true,
+    "Q2_prediction_variance_increased": true,
+    "Q3_energy_recovery_improved": true,
+    "Q4_pearson_correlation_improved": false,
+    "Q5_cpu_forecasting_improved": false,
+    "Q6_hypothesis_supported": false,
+    "Q7_variance_collapse_explanation": "Partial/inconclusive: inconclusive_I1",
+    "Q8_thesis_conclusion": "inconclusive_I1"
+  }
+}

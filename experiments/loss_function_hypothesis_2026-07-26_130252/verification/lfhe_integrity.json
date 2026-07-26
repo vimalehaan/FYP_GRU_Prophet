@@ -1,0 +1,6 @@
+{
+  "csrle_artifacts_modified": false,
+  "only_loss_changed": true,
+  "lambda_frozen": 1.0,
+  "n_containers": 99
+}
