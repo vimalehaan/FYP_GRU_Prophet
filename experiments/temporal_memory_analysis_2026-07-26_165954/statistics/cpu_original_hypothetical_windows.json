@@ -1,0 +1,20 @@
+{
+  "windows": {
+    "96": {
+      "mean_abs_acf_within_window": 0.19375944841850942,
+      "median_abs_acf_within_window": 0.128121014669928
+    },
+    "192": {
+      "mean_abs_acf_within_window": 0.17143601986228127,
+      "median_abs_acf_within_window": 0.11347240171985563
+    },
+    "288": {
+      "mean_abs_acf_within_window": 0.15516997223390597,
+      "median_abs_acf_within_window": 0.1076342424393253
+    },
+    "384": {
+      "mean_abs_acf_within_window": 0.1430454298967964,
+      "median_abs_acf_within_window": 0.09810464054919381
+    }
+  }
+}

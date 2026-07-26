@@ -1,0 +1,14 @@
+{
+  "n_containers_expected": 99,
+  "n_containers_analyzed": 99,
+  "all_containers_in_cache": true,
+  "cpu_full_timeline_steps": {
+    "c_10032": 768,
+    "c_10034": 767,
+    "c_10089": 768
+  },
+  "effective_max_lag_cpu": 672,
+  "hybrid_series_length": 96,
+  "no_model_training": true,
+  "no_prophet_fit": true
+}

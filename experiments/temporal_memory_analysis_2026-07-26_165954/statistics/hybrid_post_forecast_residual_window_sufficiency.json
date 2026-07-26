@@ -1,0 +1,725 @@
+{
+  "per_container": [
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10032"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10034"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10089"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10132"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1016"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10306"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10312"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10382"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10393"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10641"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10695"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10733"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10878"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10898"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11013"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11087"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11203"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11307"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11327"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11461"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11735"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11752"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1181"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1186"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11996"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12060"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12158"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12164"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12174"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12189"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12193"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12231"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12237"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12441"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12517"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12624"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12767"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12858"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1286"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12971"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12974"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12993"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12999"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13020"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13044"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13083"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13166"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13170"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13229"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13269"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13308"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13389"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13403"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13441"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13607"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13615"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13658"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13690"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1379"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1387"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13873"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14106"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14135"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14296"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14363"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14388"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14396"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14413"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14416"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14417"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14435"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14471"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14820"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14855"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14886"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1494"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14964"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15030"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15035"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15072"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15179"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15235"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15282"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15420"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15446"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15486"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15527"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15555"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15570"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15604"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15616"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15630"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15640"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15642"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15647"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15794"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15856"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_16008"
+    },
+    {
+      "pct_capture_within_96": 1.0,
+      "pct_capture_within_192": 1.0,
+      "pct_capture_within_288": 1.0,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_16048"
+    }
+  ],
+  "cohort": {
+    "windows": {
+      "96": {
+        "mean_pct": 1.0,
+        "median_pct": 1.0,
+        "q25_pct": 1.0,
+        "q75_pct": 1.0
+      },
+      "192": {
+        "mean_pct": 1.0,
+        "median_pct": 1.0,
+        "q25_pct": 1.0,
+        "q75_pct": 1.0
+      },
+      "288": {
+        "mean_pct": 1.0,
+        "median_pct": 1.0,
+        "q25_pct": 1.0,
+        "q75_pct": 1.0
+      },
+      "672": {
+        "mean_pct": 1.0,
+        "median_pct": 1.0,
+        "q25_pct": 1.0,
+        "q75_pct": 1.0
+      }
+    }
+  }
+}

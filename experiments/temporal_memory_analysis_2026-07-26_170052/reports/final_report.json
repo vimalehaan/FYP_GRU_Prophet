@@ -1,0 +1,28 @@
+{
+  "experiment_name": "temporal_memory_analysis",
+  "protocol_version": "tma_v1.0",
+  "timestamp": "2026-07-26_170052",
+  "verdict": "Evidence indicates non-trivial temporal dependence beyond 96 lags; future work may investigate longer input windows (without claiming forecast improvement).",
+  "explicit_answers": {
+    "q1_temporal_memory_magnitude": "Cohort integrated autocorrelation time (CPU) median = 0.24 steps; mean cumulative squared-ACF capture within 96 lags = 40.0%; lag-96 mean ACF = 0.329.",
+    "q2_dependence_beyond_one_day": "At lag 192 (2 days), mean ACF = 0.2533, 51.5% of containers have |ACF|\u22650.1; paired beyond-vs-within mean |ACF| difference = -0.0965 (Wilcoxon p = 5.697e-18).",
+    "q3_daily_cycles_after_prophet": "After Prophet-equivalent decomposition, lag-96 mean ACF = 0.0420; mean daily-cycle PSD fraction = 0.0072.",
+    "q4_hybrid_long_range_dependence": "Hybrid day-1 post-forecast residual decorrelation lag (|ACF|<0.1) median = 3.0 steps (96-step series); within-96 capture = 100.0% when defined.",
+    "q5_was_96_step_window_sufficient": "On full timeline CPU, mean cumulative squared-ACF capture: 96 lags = 40.0%, 672 lags = 100.0%; gap beyond 96 lags = 60.0 percentage points.",
+    "q6_longer_window_information": "Available mean |ACF| within window \u2014 96: 0.1938, 384: 0.1430; increment 96\u2192384 = -0.0507 (information proxy only, not forecast gain).",
+    "q7_future_work_recommendation": "Evidence indicates non-trivial temporal dependence beyond 96 lags; future work may investigate longer input windows (without claiming forecast improvement)."
+  },
+  "key_metrics": {
+    "cpu_mean_capture_96": 0.39979470754659535,
+    "cpu_mean_capture_672": 1.0,
+    "cpu_lag192_mean_acf": 0.25331098194042395,
+    "cpu_paired_beyond_minus_within": -0.0965329774217737,
+    "cpu_integrated_autocorr_median": 0.23546818542018144
+  },
+  "limitations": [
+    "Prophet residuals use read-only Fourier daily+trend OLS (train-fitted), not Prophet.fit().",
+    "Hybrid post-forecast residual limited to frozen validation day-1 (96 steps) from baseline inference cache.",
+    "Long-lag ACF/PACF at 672 lags applies to CPU and Prophet-equivalent residuals on full train+val timeline (~768 steps).",
+    "Hypothetical window analysis quantifies available autocorrelation only; it does not estimate forecast accuracy gains."
+  ]
+}

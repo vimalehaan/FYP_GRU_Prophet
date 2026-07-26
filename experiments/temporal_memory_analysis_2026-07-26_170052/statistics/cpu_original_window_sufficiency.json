@@ -1,0 +1,725 @@
+{
+  "per_container": [
+    {
+      "pct_capture_within_96": 0.5812570090963932,
+      "pct_capture_within_192": 0.6960769417456308,
+      "pct_capture_within_288": 0.7264167518712555,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10032"
+    },
+    {
+      "pct_capture_within_96": 0.3579688188507214,
+      "pct_capture_within_192": 0.62477361920558,
+      "pct_capture_within_288": 0.8041631061872595,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10034"
+    },
+    {
+      "pct_capture_within_96": 0.33104611870371903,
+      "pct_capture_within_192": 0.5825199953776877,
+      "pct_capture_within_288": 0.7592975127526042,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10089"
+    },
+    {
+      "pct_capture_within_96": 0.3129913303463254,
+      "pct_capture_within_192": 0.4884036096472592,
+      "pct_capture_within_288": 0.6384503781189467,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10132"
+    },
+    {
+      "pct_capture_within_96": 0.429337259599224,
+      "pct_capture_within_192": 0.5590274352667287,
+      "pct_capture_within_288": 0.7067653248229775,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1016"
+    },
+    {
+      "pct_capture_within_96": 0.319576264209345,
+      "pct_capture_within_192": 0.5105813435262612,
+      "pct_capture_within_288": 0.6731750180697393,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10306"
+    },
+    {
+      "pct_capture_within_96": 0.276990485192368,
+      "pct_capture_within_192": 0.9035618474105709,
+      "pct_capture_within_288": 0.9304094182393928,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10312"
+    },
+    {
+      "pct_capture_within_96": 0.3375584860269252,
+      "pct_capture_within_192": 0.5616811986356686,
+      "pct_capture_within_288": 0.7402517283252898,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10382"
+    },
+    {
+      "pct_capture_within_96": 0.33953007516827394,
+      "pct_capture_within_192": 0.5787270278365219,
+      "pct_capture_within_288": 0.7558479553097353,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10393"
+    },
+    {
+      "pct_capture_within_96": 0.42136399698313803,
+      "pct_capture_within_192": 0.6383811096877076,
+      "pct_capture_within_288": 0.7269432110077901,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10641"
+    },
+    {
+      "pct_capture_within_96": 0.46272165572214363,
+      "pct_capture_within_192": 0.6023899785048029,
+      "pct_capture_within_288": 0.7007117504313508,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10695"
+    },
+    {
+      "pct_capture_within_96": 0.6436606214520697,
+      "pct_capture_within_192": 0.7360420545618493,
+      "pct_capture_within_288": 0.8391462830868149,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10733"
+    },
+    {
+      "pct_capture_within_96": 0.3726013286946398,
+      "pct_capture_within_192": 0.5014180638516267,
+      "pct_capture_within_288": 0.6101116597513744,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10878"
+    },
+    {
+      "pct_capture_within_96": 0.34578747446322194,
+      "pct_capture_within_192": 0.5513450696448582,
+      "pct_capture_within_288": 0.6581551796219219,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_10898"
+    },
+    {
+      "pct_capture_within_96": 0.3430184782232098,
+      "pct_capture_within_192": 0.5948292801489847,
+      "pct_capture_within_288": 0.7599705098218859,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11013"
+    },
+    {
+      "pct_capture_within_96": 0.387037388776796,
+      "pct_capture_within_192": 0.5587462725658555,
+      "pct_capture_within_288": 0.6792414172858067,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11087"
+    },
+    {
+      "pct_capture_within_96": 0.340710667189173,
+      "pct_capture_within_192": 0.5723960941375311,
+      "pct_capture_within_288": 0.7374757089496041,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11203"
+    },
+    {
+      "pct_capture_within_96": 0.413970361579117,
+      "pct_capture_within_192": 0.6413111262436293,
+      "pct_capture_within_288": 0.7457170210897248,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11307"
+    },
+    {
+      "pct_capture_within_96": 0.3472597867575637,
+      "pct_capture_within_192": 0.5910141839796144,
+      "pct_capture_within_288": 0.7467555631424531,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11327"
+    },
+    {
+      "pct_capture_within_96": 0.3392392942573688,
+      "pct_capture_within_192": 0.5891319488689107,
+      "pct_capture_within_288": 0.7550882410154303,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11461"
+    },
+    {
+      "pct_capture_within_96": 0.37863222369796556,
+      "pct_capture_within_192": 0.5764714733623948,
+      "pct_capture_within_288": 0.750987678759426,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11735"
+    },
+    {
+      "pct_capture_within_96": 0.4085054789595319,
+      "pct_capture_within_192": 0.6199852458701701,
+      "pct_capture_within_288": 0.7349823775442139,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11752"
+    },
+    {
+      "pct_capture_within_96": 0.3328301499019386,
+      "pct_capture_within_192": 0.5891649727583642,
+      "pct_capture_within_288": 0.7722929808000641,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1181"
+    },
+    {
+      "pct_capture_within_96": 0.3333205289572798,
+      "pct_capture_within_192": 0.5773206216075943,
+      "pct_capture_within_288": 0.7467639536306616,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1186"
+    },
+    {
+      "pct_capture_within_96": 0.34347069027181526,
+      "pct_capture_within_192": 0.5883760796271679,
+      "pct_capture_within_288": 0.747170684024102,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_11996"
+    },
+    {
+      "pct_capture_within_96": 0.4796595947465445,
+      "pct_capture_within_192": 0.6668396190457058,
+      "pct_capture_within_288": 0.7351414532781948,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12060"
+    },
+    {
+      "pct_capture_within_96": 0.332866976805529,
+      "pct_capture_within_192": 0.5806563149742717,
+      "pct_capture_within_288": 0.755045227896343,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12158"
+    },
+    {
+      "pct_capture_within_96": 0.33846882041004894,
+      "pct_capture_within_192": 0.5230616083964976,
+      "pct_capture_within_288": 0.6526887957120682,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12164"
+    },
+    {
+      "pct_capture_within_96": 0.3564853536251543,
+      "pct_capture_within_192": 0.5853667478032595,
+      "pct_capture_within_288": 0.7344955572834098,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12174"
+    },
+    {
+      "pct_capture_within_96": 0.41293371446271815,
+      "pct_capture_within_192": 0.6500691719916171,
+      "pct_capture_within_288": 0.818118088690037,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12189"
+    },
+    {
+      "pct_capture_within_96": 0.3595538037749356,
+      "pct_capture_within_192": 0.4996026971709142,
+      "pct_capture_within_288": 0.6364023710529588,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12193"
+    },
+    {
+      "pct_capture_within_96": 0.5360036586892822,
+      "pct_capture_within_192": 0.7219811665474589,
+      "pct_capture_within_288": 0.7483336018491304,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12231"
+    },
+    {
+      "pct_capture_within_96": 0.41030657241778684,
+      "pct_capture_within_192": 0.6259874596341692,
+      "pct_capture_within_288": 0.7794455650632115,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12237"
+    },
+    {
+      "pct_capture_within_96": 0.3405266447368488,
+      "pct_capture_within_192": 0.5737225900672913,
+      "pct_capture_within_288": 0.7599517538379458,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12441"
+    },
+    {
+      "pct_capture_within_96": 0.33251019137749305,
+      "pct_capture_within_192": 0.5801970560979623,
+      "pct_capture_within_288": 0.7562093121263018,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12517"
+    },
+    {
+      "pct_capture_within_96": 0.32789545302851375,
+      "pct_capture_within_192": 0.47816356255466685,
+      "pct_capture_within_288": 0.6597655645195595,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12624"
+    },
+    {
+      "pct_capture_within_96": 0.3715662492800765,
+      "pct_capture_within_192": 0.5443177644781731,
+      "pct_capture_within_288": 0.6718784870335336,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12767"
+    },
+    {
+      "pct_capture_within_96": 0.315005041621319,
+      "pct_capture_within_192": 0.5309929194382875,
+      "pct_capture_within_288": 0.6418998619218996,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12858"
+    },
+    {
+      "pct_capture_within_96": 0.4248462189285764,
+      "pct_capture_within_192": 0.6295579885292987,
+      "pct_capture_within_288": 0.7057441314724755,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1286"
+    },
+    {
+      "pct_capture_within_96": 0.3076417433816151,
+      "pct_capture_within_192": 0.5530840134581578,
+      "pct_capture_within_288": 0.7115285322255401,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12971"
+    },
+    {
+      "pct_capture_within_96": 0.36187282200429394,
+      "pct_capture_within_192": 0.5538534707926356,
+      "pct_capture_within_288": 0.7596649882717392,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12974"
+    },
+    {
+      "pct_capture_within_96": 0.42006384909394007,
+      "pct_capture_within_192": 0.5507216680041265,
+      "pct_capture_within_288": 0.6748345097966992,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12993"
+    },
+    {
+      "pct_capture_within_96": 0.3330317763795968,
+      "pct_capture_within_192": 0.5771751073221316,
+      "pct_capture_within_288": 0.7447764874789167,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_12999"
+    },
+    {
+      "pct_capture_within_96": 0.3366086990023186,
+      "pct_capture_within_192": 0.5803238632144946,
+      "pct_capture_within_288": 0.7467029957206482,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13020"
+    },
+    {
+      "pct_capture_within_96": 0.31098094106850527,
+      "pct_capture_within_192": 0.48566143721722155,
+      "pct_capture_within_288": 0.6126990655966436,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13044"
+    },
+    {
+      "pct_capture_within_96": 0.3477230773370793,
+      "pct_capture_within_192": 0.5889991163410842,
+      "pct_capture_within_288": 0.7294219573554276,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13083"
+    },
+    {
+      "pct_capture_within_96": 0.34496348430169405,
+      "pct_capture_within_192": 0.5889304587874296,
+      "pct_capture_within_288": 0.7498749793991213,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13166"
+    },
+    {
+      "pct_capture_within_96": 0.33820385914170625,
+      "pct_capture_within_192": 0.5838397358681681,
+      "pct_capture_within_288": 0.7532981875331327,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13170"
+    },
+    {
+      "pct_capture_within_96": 0.3278152430122278,
+      "pct_capture_within_192": 0.5861193128761336,
+      "pct_capture_within_288": 0.7777030394603941,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13229"
+    },
+    {
+      "pct_capture_within_96": 0.376638543485237,
+      "pct_capture_within_192": 0.5852120714121937,
+      "pct_capture_within_288": 0.6897321236971157,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13269"
+    },
+    {
+      "pct_capture_within_96": 0.3143437511455343,
+      "pct_capture_within_192": 0.6809311720138806,
+      "pct_capture_within_288": 0.7085338124869158,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13308"
+    },
+    {
+      "pct_capture_within_96": 0.3735207803645591,
+      "pct_capture_within_192": 0.5939420267029087,
+      "pct_capture_within_288": 0.7147491666595579,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13389"
+    },
+    {
+      "pct_capture_within_96": 0.3207411477085215,
+      "pct_capture_within_192": 0.5285814823572594,
+      "pct_capture_within_288": 0.7048929658875703,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13403"
+    },
+    {
+      "pct_capture_within_96": 0.3368428844775659,
+      "pct_capture_within_192": 0.576701820773651,
+      "pct_capture_within_288": 0.7424654749022233,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13441"
+    },
+    {
+      "pct_capture_within_96": 0.7409663796831696,
+      "pct_capture_within_192": 0.7681386807940906,
+      "pct_capture_within_288": 0.8442399931473692,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13607"
+    },
+    {
+      "pct_capture_within_96": 0.5506652352996239,
+      "pct_capture_within_192": 0.6798267744063252,
+      "pct_capture_within_288": 0.7296099667661192,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13615"
+    },
+    {
+      "pct_capture_within_96": 0.3920384213500099,
+      "pct_capture_within_192": 0.6205714000543222,
+      "pct_capture_within_288": 0.768018553116022,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13658"
+    },
+    {
+      "pct_capture_within_96": 0.3411768613753133,
+      "pct_capture_within_192": 0.5560557140437806,
+      "pct_capture_within_288": 0.7079216778007495,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13690"
+    },
+    {
+      "pct_capture_within_96": 0.3055564073742987,
+      "pct_capture_within_192": 0.476436528633276,
+      "pct_capture_within_288": 0.7216610023602401,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1379"
+    },
+    {
+      "pct_capture_within_96": 0.3698965950385178,
+      "pct_capture_within_192": 0.6067915822524406,
+      "pct_capture_within_288": 0.785694190836628,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1387"
+    },
+    {
+      "pct_capture_within_96": 0.8096575605108293,
+      "pct_capture_within_192": 0.8270537929025777,
+      "pct_capture_within_288": 0.8500138782852392,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_13873"
+    },
+    {
+      "pct_capture_within_96": 0.3083434074538353,
+      "pct_capture_within_192": 0.3092391840827332,
+      "pct_capture_within_288": 0.30970170288905724,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14106"
+    },
+    {
+      "pct_capture_within_96": 0.33174389450283526,
+      "pct_capture_within_192": 0.585235425449752,
+      "pct_capture_within_288": 0.7647875728339331,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14135"
+    },
+    {
+      "pct_capture_within_96": 0.7862494544968386,
+      "pct_capture_within_192": 0.8411655787986104,
+      "pct_capture_within_288": 0.8746157551737194,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14296"
+    },
+    {
+      "pct_capture_within_96": 0.3429684138503499,
+      "pct_capture_within_192": 0.5873924124073274,
+      "pct_capture_within_288": 0.7389497283611732,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14363"
+    },
+    {
+      "pct_capture_within_96": 0.3512955424892929,
+      "pct_capture_within_192": 0.5810718973094094,
+      "pct_capture_within_288": 0.7300602021028985,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14388"
+    },
+    {
+      "pct_capture_within_96": 0.3670526884290647,
+      "pct_capture_within_192": 0.5896624736303071,
+      "pct_capture_within_288": 0.7173220868466338,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14396"
+    },
+    {
+      "pct_capture_within_96": 0.5061079209247664,
+      "pct_capture_within_192": 0.6779061240424744,
+      "pct_capture_within_288": 0.7235742321176484,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14413"
+    },
+    {
+      "pct_capture_within_96": 0.4794792240306779,
+      "pct_capture_within_192": 0.6067846150593694,
+      "pct_capture_within_288": 0.7140811302881144,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14416"
+    },
+    {
+      "pct_capture_within_96": 0.5626524594915664,
+      "pct_capture_within_192": 0.6842490287368568,
+      "pct_capture_within_288": 0.764195241610309,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14417"
+    },
+    {
+      "pct_capture_within_96": 0.2722337106625831,
+      "pct_capture_within_192": 0.335960754725106,
+      "pct_capture_within_288": 0.8632637326803999,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14435"
+    },
+    {
+      "pct_capture_within_96": 0.34036439831787996,
+      "pct_capture_within_192": 0.5820673792710334,
+      "pct_capture_within_288": 0.749453751374166,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14471"
+    },
+    {
+      "pct_capture_within_96": 0.32841829459578104,
+      "pct_capture_within_192": 0.5780332652548723,
+      "pct_capture_within_288": 0.7578422545198968,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14820"
+    },
+    {
+      "pct_capture_within_96": 0.35170145687470317,
+      "pct_capture_within_192": 0.5800219259563237,
+      "pct_capture_within_288": 0.7250033717729061,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14855"
+    },
+    {
+      "pct_capture_within_96": 0.33240409409236954,
+      "pct_capture_within_192": 0.5758663577610904,
+      "pct_capture_within_288": 0.7452573930453471,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14886"
+    },
+    {
+      "pct_capture_within_96": 0.25946438581914777,
+      "pct_capture_within_192": 0.5001327599213345,
+      "pct_capture_within_288": 0.7193662948036145,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_1494"
+    },
+    {
+      "pct_capture_within_96": 0.5154109065693885,
+      "pct_capture_within_192": 0.6605954803838937,
+      "pct_capture_within_288": 0.6999823047187299,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_14964"
+    },
+    {
+      "pct_capture_within_96": 0.3447947663181183,
+      "pct_capture_within_192": 0.5815234156404805,
+      "pct_capture_within_288": 0.741819569101538,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15030"
+    },
+    {
+      "pct_capture_within_96": 0.9880884185175342,
+      "pct_capture_within_192": 0.9895147050220342,
+      "pct_capture_within_288": 0.990262620184253,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15035"
+    },
+    {
+      "pct_capture_within_96": 0.3244852263812284,
+      "pct_capture_within_192": 0.5762294693063905,
+      "pct_capture_within_288": 0.7508361021060758,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15072"
+    },
+    {
+      "pct_capture_within_96": 0.3506559025785115,
+      "pct_capture_within_192": 0.5831182985673464,
+      "pct_capture_within_288": 0.7257034558094793,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15179"
+    },
+    {
+      "pct_capture_within_96": 0.3329567610152757,
+      "pct_capture_within_192": 0.572627650362632,
+      "pct_capture_within_288": 0.7512161940280839,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15235"
+    },
+    {
+      "pct_capture_within_96": 0.33638139052459454,
+      "pct_capture_within_192": 0.49570530990023026,
+      "pct_capture_within_288": 0.6603758835114248,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15282"
+    },
+    {
+      "pct_capture_within_96": 0.3306777643730584,
+      "pct_capture_within_192": 0.5538995436858898,
+      "pct_capture_within_288": 0.7025894317777781,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15420"
+    },
+    {
+      "pct_capture_within_96": 0.19152600113411591,
+      "pct_capture_within_192": 0.5613124395803253,
+      "pct_capture_within_288": 0.6579701184720104,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15446"
+    },
+    {
+      "pct_capture_within_96": 0.4705734935039176,
+      "pct_capture_within_192": 0.6307250276463874,
+      "pct_capture_within_288": 0.6961194265659222,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15486"
+    },
+    {
+      "pct_capture_within_96": 0.5308202621375672,
+      "pct_capture_within_192": 0.5628322941672377,
+      "pct_capture_within_288": 0.7300208644032757,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15527"
+    },
+    {
+      "pct_capture_within_96": 0.5206480738824025,
+      "pct_capture_within_192": 0.762102158015621,
+      "pct_capture_within_288": 0.9170473025183568,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15555"
+    },
+    {
+      "pct_capture_within_96": 0.510355878130608,
+      "pct_capture_within_192": 0.6795627132174193,
+      "pct_capture_within_288": 0.7317175288248863,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15570"
+    },
+    {
+      "pct_capture_within_96": 0.485920261033099,
+      "pct_capture_within_192": 0.5909215475858491,
+      "pct_capture_within_288": 0.6875408704270325,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15604"
+    },
+    {
+      "pct_capture_within_96": 0.33207378110009844,
+      "pct_capture_within_192": 0.5694559016315647,
+      "pct_capture_within_288": 0.73768856878198,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15616"
+    },
+    {
+      "pct_capture_within_96": 0.49588892332580065,
+      "pct_capture_within_192": 0.6343638467567112,
+      "pct_capture_within_288": 0.738528151037363,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15630"
+    },
+    {
+      "pct_capture_within_96": 0.6890752882523742,
+      "pct_capture_within_192": 0.7348229285726678,
+      "pct_capture_within_288": 0.7595548504820263,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15640"
+    },
+    {
+      "pct_capture_within_96": 0.3473331712561863,
+      "pct_capture_within_192": 0.47022335580736263,
+      "pct_capture_within_288": 0.6428554741960989,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15642"
+    },
+    {
+      "pct_capture_within_96": 0.3604554868871392,
+      "pct_capture_within_192": 0.5924274288073068,
+      "pct_capture_within_288": 0.7223044638526983,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15647"
+    },
+    {
+      "pct_capture_within_96": 0.2815489175532361,
+      "pct_capture_within_192": 0.6332966207437837,
+      "pct_capture_within_288": 0.7861856335387418,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15794"
+    },
+    {
+      "pct_capture_within_96": 0.44634134796638897,
+      "pct_capture_within_192": 0.5743360539970443,
+      "pct_capture_within_288": 0.7027463523613305,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_15856"
+    },
+    {
+      "pct_capture_within_96": 0.6444824852767485,
+      "pct_capture_within_192": 0.7326777164744981,
+      "pct_capture_within_288": 0.7986350588274695,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_16008"
+    },
+    {
+      "pct_capture_within_96": 0.3287378638426083,
+      "pct_capture_within_192": 0.5707647619148661,
+      "pct_capture_within_288": 0.7435223831295669,
+      "pct_capture_within_672": 1.0,
+      "container_id": "c_16048"
+    }
+  ],
+  "cohort": {
+    "windows": {
+      "96": {
+        "mean_pct": 0.39979470754659535,
+        "median_pct": 0.3473331712561863,
+        "q25_pct": 0.3326701706397158,
+        "q75_pct": 0.4231051079558572
+      },
+      "192": {
+        "mean_pct": 0.598999720618434,
+        "median_pct": 0.5831182985673464,
+        "q25_pct": 0.561496819107997,
+        "q75_pct": 0.6277727240817339
+      },
+      "288": {
+        "mean_pct": 0.7343651090227964,
+        "median_pct": 0.73768856878198,
+        "q25_pct": 0.7062547281477265,
+        "q75_pct": 0.7570257833230993
+      },
+      "672": {
+        "mean_pct": 1.0,
+        "median_pct": 1.0,
+        "q25_pct": 1.0,
+        "q75_pct": 1.0
+      }
+    }
+  }
+}

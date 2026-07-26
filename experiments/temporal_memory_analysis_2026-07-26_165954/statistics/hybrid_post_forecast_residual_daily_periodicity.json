@@ -1,0 +1,88 @@
+{
+  "lags": {
+    "96": {
+      "lag": 96,
+      "days": 1.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "192": {
+      "lag": 192,
+      "days": 2.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "288": {
+      "lag": 288,
+      "days": 3.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "384": {
+      "lag": 384,
+      "days": 4.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "480": {
+      "lag": 480,
+      "days": 5.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "576": {
+      "lag": 576,
+      "days": 6.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    },
+    "672": {
+      "lag": 672,
+      "days": 7.0,
+      "mean_acf": NaN,
+      "median_acf": NaN,
+      "bootstrap_ci_lo": NaN,
+      "bootstrap_ci_hi": NaN,
+      "n_containers": 0,
+      "pct_abs_acf_ge_0.1": NaN,
+      "pct_abs_acf_ge_0.2": NaN,
+      "pct_abs_acf_ge_0.3": NaN
+    }
+  }
+}

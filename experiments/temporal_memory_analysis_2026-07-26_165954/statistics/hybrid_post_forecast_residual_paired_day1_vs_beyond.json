@@ -1,0 +1,11 @@
+{
+  "n_pairs": 0,
+  "mean_within": NaN,
+  "mean_beyond": NaN,
+  "mean_difference_beyond_minus_within": NaN,
+  "wilcoxon_statistic": NaN,
+  "wilcoxon_pvalue": NaN,
+  "cohens_dz": NaN,
+  "bootstrap_ci_difference_lo": NaN,
+  "bootstrap_ci_difference_hi": NaN
+}

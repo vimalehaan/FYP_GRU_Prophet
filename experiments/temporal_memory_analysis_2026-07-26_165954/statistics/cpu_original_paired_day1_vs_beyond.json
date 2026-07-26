@@ -1,0 +1,11 @@
+{
+  "n_pairs": 99,
+  "mean_within": 0.19375944841850942,
+  "mean_beyond": 0.09722647099673576,
+  "mean_difference_beyond_minus_within": -0.0965329774217737,
+  "wilcoxon_statistic": 0.0,
+  "wilcoxon_pvalue": 5.697220948724935e-18,
+  "cohens_dz": -1.130971633017246,
+  "bootstrap_ci_difference_lo": -0.11294201405602669,
+  "bootstrap_ci_difference_hi": -0.08002200200996681
+}
