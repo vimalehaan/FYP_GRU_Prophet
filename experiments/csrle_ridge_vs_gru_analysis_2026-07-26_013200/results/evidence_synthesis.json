@@ -1,0 +1,16 @@
+{
+  "cohort_mean_gru_r": 0.08413424568987238,
+  "cohort_mean_ridge_r": 0.15847824059072665,
+  "fraction_ridge_beats_gru_r": 0.6262626262626263,
+  "cohort_mean_gru_std_ratio": 0.07300256933212737,
+  "cohort_mean_ridge_std_ratio": 0.21958113841514448,
+  "b0_ar1_r2_pooled": 0.20145034135286366,
+  "b0_ar2_r2_pooled": 0.213307478906688,
+  "b0_acf_lags_1_10_mean_abs": 0.2586125268960964,
+  "gru_mean_amplitude_ratio": 0.07300256933212737,
+  "ridge_mean_amplitude_ratio": 0.21958113841514448,
+  "gru_mean_abs_bias": 0.015484616715489398,
+  "ridge_mean_abs_bias": 0.017955362610584412,
+  "mean_spectral_corr_gru": 0.31808782741469827,
+  "mean_spectral_corr_ridge": 0.31721649994650397
+}

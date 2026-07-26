@@ -1,0 +1,1409 @@
+Importing plotly failed. Interactive plots will not work.
+2026-07-26 01:34:56.082072: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M1 Pro
+2026-07-26 01:34:56.082154: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 16.00 GB
+2026-07-26 01:34:56.082185: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 5.92 GB
+2026-07-26 01:34:56.082212: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2026-07-26 01:34:56.082417: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+01:34:56 - cmdstanpy - INFO - Chain [1] start processing
+01:34:56 - cmdstanpy - INFO - Chain [1] done processing
+01:34:56 - cmdstanpy - INFO - Chain [1] start processing
+01:34:56 - cmdstanpy - INFO - Chain [1] done processing
+01:34:56 - cmdstanpy - INFO - Chain [1] start processing
+01:34:56 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:57 - cmdstanpy - INFO - Chain [1] start processing
+01:34:57 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:58 - cmdstanpy - INFO - Chain [1] done processing
+01:34:58 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:34:59 - cmdstanpy - INFO - Chain [1] start processing
+01:34:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:00 - cmdstanpy - INFO - Chain [1] start processing
+01:35:00 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:01 - cmdstanpy - INFO - Chain [1] done processing
+01:35:01 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:02 - cmdstanpy - INFO - Chain [1] start processing
+01:35:02 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:03 - cmdstanpy - INFO - Chain [1] start processing
+01:35:03 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:04 - cmdstanpy - INFO - Chain [1] done processing
+01:35:04 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:05 - cmdstanpy - INFO - Chain [1] done processing
+01:35:05 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:06 - cmdstanpy - INFO - Chain [1] start processing
+01:35:06 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:07 - cmdstanpy - INFO - Chain [1] start processing
+01:35:07 - cmdstanpy - INFO - Chain [1] done processing
+01:35:08 - cmdstanpy - INFO - Chain [1] start processing
+01:35:08 - cmdstanpy - INFO - Chain [1] done processing
+01:35:08 - cmdstanpy - INFO - Chain [1] start processing
+01:35:08 - cmdstanpy - INFO - Chain [1] done processing
+2026-07-26 01:35:08.636246: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 220ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 227ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:08 - cmdstanpy - INFO - Chain [1] start processing
+01:35:08 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 121ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 33ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 40ms/step
+01:35:09 - cmdstanpy - INFO - Chain [1] start processing
+01:35:09 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:09 - cmdstanpy - INFO - Chain [1] start processing
+01:35:09 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 21ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 32ms/step
+01:35:09 - cmdstanpy - INFO - Chain [1] start processing
+01:35:09 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:10 - cmdstanpy - INFO - Chain [1] start processing
+01:35:10 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:10 - cmdstanpy - INFO - Chain [1] start processing
+01:35:10 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:10 - cmdstanpy - INFO - Chain [1] start processing
+01:35:10 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:10 - cmdstanpy - INFO - Chain [1] start processing
+01:35:10 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:11 - cmdstanpy - INFO - Chain [1] start processing
+01:35:11 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:11 - cmdstanpy - INFO - Chain [1] start processing
+01:35:11 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:11 - cmdstanpy - INFO - Chain [1] start processing
+01:35:11 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:11 - cmdstanpy - INFO - Chain [1] start processing
+01:35:11 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:12 - cmdstanpy - INFO - Chain [1] start processing
+01:35:12 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:12 - cmdstanpy - INFO - Chain [1] start processing
+01:35:12 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:12 - cmdstanpy - INFO - Chain [1] start processing
+01:35:12 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:12 - cmdstanpy - INFO - Chain [1] start processing
+01:35:12 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:12 - cmdstanpy - INFO - Chain [1] start processing
+01:35:13 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:13 - cmdstanpy - INFO - Chain [1] start processing
+01:35:13 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 21ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:13 - cmdstanpy - INFO - Chain [1] start processing
+01:35:13 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:13 - cmdstanpy - INFO - Chain [1] start processing
+01:35:13 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:13 - cmdstanpy - INFO - Chain [1] start processing
+01:35:13 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:14 - cmdstanpy - INFO - Chain [1] start processing
+01:35:14 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:14 - cmdstanpy - INFO - Chain [1] start processing
+01:35:14 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:14 - cmdstanpy - INFO - Chain [1] start processing
+01:35:14 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:14 - cmdstanpy - INFO - Chain [1] start processing
+01:35:15 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:15 - cmdstanpy - INFO - Chain [1] start processing
+01:35:15 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:15 - cmdstanpy - INFO - Chain [1] start processing
+01:35:15 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:15 - cmdstanpy - INFO - Chain [1] start processing
+01:35:15 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:15 - cmdstanpy - INFO - Chain [1] start processing
+01:35:15 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:16 - cmdstanpy - INFO - Chain [1] start processing
+01:35:16 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:16 - cmdstanpy - INFO - Chain [1] start processing
+01:35:16 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:16 - cmdstanpy - INFO - Chain [1] start processing
+01:35:16 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 23ms/step
+01:35:16 - cmdstanpy - INFO - Chain [1] start processing
+01:35:16 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:17 - cmdstanpy - INFO - Chain [1] start processing
+01:35:17 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:17 - cmdstanpy - INFO - Chain [1] start processing
+01:35:17 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:17 - cmdstanpy - INFO - Chain [1] start processing
+01:35:17 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:17 - cmdstanpy - INFO - Chain [1] start processing
+01:35:17 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:18 - cmdstanpy - INFO - Chain [1] start processing
+01:35:18 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:18 - cmdstanpy - INFO - Chain [1] start processing
+01:35:18 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:18 - cmdstanpy - INFO - Chain [1] start processing
+01:35:18 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:18 - cmdstanpy - INFO - Chain [1] start processing
+01:35:18 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:19 - cmdstanpy - INFO - Chain [1] start processing
+01:35:19 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:19 - cmdstanpy - INFO - Chain [1] start processing
+01:35:19 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:19 - cmdstanpy - INFO - Chain [1] start processing
+01:35:19 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:19 - cmdstanpy - INFO - Chain [1] start processing
+01:35:19 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:20 - cmdstanpy - INFO - Chain [1] start processing
+01:35:20 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:20 - cmdstanpy - INFO - Chain [1] start processing
+01:35:20 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:20 - cmdstanpy - INFO - Chain [1] start processing
+01:35:20 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 22ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 29ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step
+01:35:20 - cmdstanpy - INFO - Chain [1] start processing
+01:35:20 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:21 - cmdstanpy - INFO - Chain [1] start processing
+01:35:21 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:21 - cmdstanpy - INFO - Chain [1] start processing
+01:35:21 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:21 - cmdstanpy - INFO - Chain [1] start processing
+01:35:21 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:21 - cmdstanpy - INFO - Chain [1] start processing
+01:35:21 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:21 - cmdstanpy - INFO - Chain [1] start processing
+01:35:22 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:22 - cmdstanpy - INFO - Chain [1] start processing
+01:35:22 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:22 - cmdstanpy - INFO - Chain [1] start processing
+01:35:22 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:22 - cmdstanpy - INFO - Chain [1] start processing
+01:35:22 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:22 - cmdstanpy - INFO - Chain [1] start processing
+01:35:22 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:23 - cmdstanpy - INFO - Chain [1] start processing
+01:35:23 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 21ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:23 - cmdstanpy - INFO - Chain [1] start processing
+01:35:23 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:23 - cmdstanpy - INFO - Chain [1] start processing
+01:35:23 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:23 - cmdstanpy - INFO - Chain [1] start processing
+01:35:23 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:24 - cmdstanpy - INFO - Chain [1] start processing
+01:35:24 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:24 - cmdstanpy - INFO - Chain [1] start processing
+01:35:24 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:24 - cmdstanpy - INFO - Chain [1] start processing
+01:35:24 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:24 - cmdstanpy - INFO - Chain [1] start processing
+01:35:24 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 32ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 39ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:25 - cmdstanpy - INFO - Chain [1] start processing
+01:35:25 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:25 - cmdstanpy - INFO - Chain [1] start processing
+01:35:25 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:25 - cmdstanpy - INFO - Chain [1] start processing
+01:35:25 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:26 - cmdstanpy - INFO - Chain [1] start processing
+01:35:26 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:26 - cmdstanpy - INFO - Chain [1] start processing
+01:35:26 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:26 - cmdstanpy - INFO - Chain [1] start processing
+01:35:26 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 33ms/step
+01:35:26 - cmdstanpy - INFO - Chain [1] start processing
+01:35:26 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:27 - cmdstanpy - INFO - Chain [1] start processing
+01:35:27 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:27 - cmdstanpy - INFO - Chain [1] start processing
+01:35:27 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:27 - cmdstanpy - INFO - Chain [1] start processing
+01:35:27 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:27 - cmdstanpy - INFO - Chain [1] start processing
+01:35:27 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:28 - cmdstanpy - INFO - Chain [1] start processing
+01:35:28 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:28 - cmdstanpy - INFO - Chain [1] start processing
+01:35:28 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:28 - cmdstanpy - INFO - Chain [1] start processing
+01:35:28 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:28 - cmdstanpy - INFO - Chain [1] start processing
+01:35:28 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:29 - cmdstanpy - INFO - Chain [1] start processing
+01:35:29 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:29 - cmdstanpy - INFO - Chain [1] start processing
+01:35:29 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:29 - cmdstanpy - INFO - Chain [1] start processing
+01:35:29 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:29 - cmdstanpy - INFO - Chain [1] start processing
+01:35:29 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:30 - cmdstanpy - INFO - Chain [1] start processing
+01:35:30 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:30 - cmdstanpy - INFO - Chain [1] start processing
+01:35:30 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:30 - cmdstanpy - INFO - Chain [1] start processing
+01:35:30 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:30 - cmdstanpy - INFO - Chain [1] start processing
+01:35:30 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:31 - cmdstanpy - INFO - Chain [1] start processing
+01:35:31 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:31 - cmdstanpy - INFO - Chain [1] start processing
+01:35:31 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:31 - cmdstanpy - INFO - Chain [1] start processing
+01:35:31 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:31 - cmdstanpy - INFO - Chain [1] start processing
+01:35:31 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:32 - cmdstanpy - INFO - Chain [1] start processing
+01:35:32 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 24ms/step
+01:35:32 - cmdstanpy - INFO - Chain [1] start processing
+01:35:32 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 20ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:32 - cmdstanpy - INFO - Chain [1] start processing
+01:35:32 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+01:35:32 - cmdstanpy - INFO - Chain [1] start processing
+01:35:32 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:33 - cmdstanpy - INFO - Chain [1] done processing
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:33 - cmdstanpy - INFO - Chain [1] done processing
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:33 - cmdstanpy - INFO - Chain [1] done processing
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:33 - cmdstanpy - INFO - Chain [1] done processing
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:33 - cmdstanpy - INFO - Chain [1] done processing
+01:35:33 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:34 - cmdstanpy - INFO - Chain [1] done processing
+01:35:34 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:35 - cmdstanpy - INFO - Chain [1] start processing
+01:35:35 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:36 - cmdstanpy - INFO - Chain [1] start processing
+01:35:36 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:37 - cmdstanpy - INFO - Chain [1] done processing
+01:35:37 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:38 - cmdstanpy - INFO - Chain [1] start processing
+01:35:38 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:39 - cmdstanpy - INFO - Chain [1] done processing
+01:35:39 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:40 - cmdstanpy - INFO - Chain [1] start processing
+01:35:40 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:41 - cmdstanpy - INFO - Chain [1] start processing
+01:35:41 - cmdstanpy - INFO - Chain [1] done processing
+01:35:42 - cmdstanpy - INFO - Chain [1] start processing
+01:35:42 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:43 - cmdstanpy - INFO - Chain [1] start processing
+01:35:43 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:44 - cmdstanpy - INFO - Chain [1] done processing
+01:35:44 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:45 - cmdstanpy - INFO - Chain [1] done processing
+01:35:45 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:46 - cmdstanpy - INFO - Chain [1] start processing
+01:35:46 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:47 - cmdstanpy - INFO - Chain [1] done processing
+01:35:47 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:48 - cmdstanpy - INFO - Chain [1] start processing
+01:35:48 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:49 - cmdstanpy - INFO - Chain [1] start processing
+01:35:49 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:50 - cmdstanpy - INFO - Chain [1] done processing
+01:35:50 - cmdstanpy - INFO - Chain [1] start processing
+01:35:51 - cmdstanpy - INFO - Chain [1] done processing
+01:35:51 - cmdstanpy - INFO - Chain [1] start processing
+01:35:51 - cmdstanpy - INFO - Chain [1] done processing
+01:35:51 - cmdstanpy - INFO - Chain [1] start processing
+01:35:51 - cmdstanpy - INFO - Chain [1] done processing
+01:35:51 - cmdstanpy - INFO - Chain [1] start processing
+01:35:51 - cmdstanpy - INFO - Chain [1] done processing
+01:35:51 - cmdstanpy - INFO - Chain [1] start processing
+01:35:51 - cmdstanpy - INFO - Chain [1] done processing
+01:35:52 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:53 - cmdstanpy - INFO - Chain [1] start processing
+01:35:53 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:54 - cmdstanpy - INFO - Chain [1] done processing
+01:35:54 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:55 - cmdstanpy - INFO - Chain [1] done processing
+01:35:55 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:56 - cmdstanpy - INFO - Chain [1] done processing
+01:35:56 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:57 - cmdstanpy - INFO - Chain [1] done processing
+01:35:57 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:58 - cmdstanpy - INFO - Chain [1] done processing
+01:35:58 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:35:59 - cmdstanpy - INFO - Chain [1] start processing
+01:35:59 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:00 - cmdstanpy - INFO - Chain [1] done processing
+01:36:00 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:01 - cmdstanpy - INFO - Chain [1] start processing
+01:36:01 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:03 - cmdstanpy - INFO - Chain [1] done processing
+01:36:03 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:04 - cmdstanpy - INFO - Chain [1] done processing
+01:36:04 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:05 - cmdstanpy - INFO - Chain [1] start processing
+01:36:05 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:06 - cmdstanpy - INFO - Chain [1] done processing
+01:36:06 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:07 - cmdstanpy - INFO - Chain [1] done processing
+01:36:07 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:08 - cmdstanpy - INFO - Chain [1] start processing
+01:36:08 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:09 - cmdstanpy - INFO - Chain [1] done processing
+01:36:09 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+01:36:10 - cmdstanpy - INFO - Chain [1] start processing
+01:36:10 - cmdstanpy - INFO - Chain [1] done processing
+{
+  "cohort_mean_gru_r": 0.08413424568987238,
+  "cohort_mean_ridge_r": 0.15847824059072665,
+  "fraction_ridge_beats_gru_r": 0.6262626262626263,
+  "cohort_mean_gru_std_ratio": 0.07300256933212737,
+  "cohort_mean_ridge_std_ratio": 0.21958113841514448,
+  "b0_ar1_r2_pooled": 0.20145034135286366,
+  "b0_ar2_r2_pooled": 0.213307478906688,
+  "b0_acf_lags_1_10_mean_abs": 0.2586125268960964,
+  "gru_mean_amplitude_ratio": 0.07300256933212737,
+  "ridge_mean_amplitude_ratio": 0.21958113841514448,
+  "gru_mean_abs_bias": 0.015484616715489398,
+  "ridge_mean_abs_bias": 0.017955362610584412,
+  "mean_spectral_corr_gru": 0.31808782741469827,
+  "mean_spectral_corr_ridge": 0.31721649994650397
+}

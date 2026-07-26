@@ -1,0 +1,12 @@
+{
+  "analysis_id": "csrle_ridge_vs_gru_analysis_2026-07-26_013200",
+  "repo_root": "/Users/lehaan/Desktop/FYP_Long_Term",
+  "csrle_experiment": "experiments/synthetic_residual_learnability_2026-07-25_164307",
+  "stage2_dir": "experiments/synthetic_residual_learnability_2026-07-25_164307/stage2_synthetic_gru",
+  "stage1_dir": "experiments/synthetic_residual_learnability_2026-07-25_164307/stage1_control_reproduction",
+  "b0_condition": "b0_lc",
+  "control_condition": "control",
+  "c0_condition": "c0_iid",
+  "ridge_alpha": 1.0,
+  "note": "Read-only paths to frozen CSRLE artifacts. No upstream files are modified."
+}
