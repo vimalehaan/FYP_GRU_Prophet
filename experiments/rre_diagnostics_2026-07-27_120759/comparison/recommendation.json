@@ -1,0 +1,51 @@
+{
+  "scoring_weights": {
+    "temporal_dependence": "Rank mean |ACF| lags 1\u201396 (higher better)",
+    "learnability_proxy": "0.5 temporal + 0.3 ADF stationarity + 0.2 non-sparsity",
+    "stability": "0.4 ADF + 0.3 inverse |skew| + 0.3 inverse excess kurtosis",
+    "balance": "0.4 temporal rank + 0.35 stability rank + 0.25 learnability rank"
+  },
+  "rankings": {
+    "temporal_structure": {
+      "R0": 1.0,
+      "R1": 4.0,
+      "R2": 2.0,
+      "R3": 3.0
+    },
+    "learnability_proxy": {
+      "R0": 3.0,
+      "R1": 4.0,
+      "R2": 2.0,
+      "R3": 1.0
+    },
+    "stability": {
+      "R0": 2.0,
+      "R1": 1.0,
+      "R2": 4.0,
+      "R3": 3.0
+    },
+    "balance": {
+      "R0": 4.0,
+      "R1": 3.0,
+      "R2": 2.0,
+      "R3": 1.0
+    },
+    "composite_mean_rank": {
+      "R0": 2.5,
+      "R1": 3.0,
+      "R2": 2.5,
+      "R3": 2.0
+    }
+  },
+  "answers": {
+    "q1_most_temporal_structure": "R0",
+    "q2_most_learnable_proxy": "R3",
+    "q3_best_balance": "R3",
+    "q4_primary_candidate": "R3",
+    "q5_level_baseline_remains": false
+  },
+  "primary_recommendation": "R3",
+  "primary_recommendation_name": "Robust scaling (median/MAD)",
+  "rationale": "Representation R3 (Robust scaling (median/MAD)) achieved the lowest mean rank across temporal structure, learnability proxy, statistical stability, and their balance. This recommendation is derived solely from diagnostic statistics \u2014 velocity (R1) was not assumed a priori.",
+  "note_if_r0_wins": "If R0 is selected, the original level residual should remain both the RRE baseline and the primary candidate; alternative representations did not demonstrably improve temporal learnability proxies."
+}

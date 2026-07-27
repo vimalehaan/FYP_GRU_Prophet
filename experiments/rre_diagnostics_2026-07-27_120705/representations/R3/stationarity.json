@@ -1,0 +1,7 @@
+{
+  "adf_reject_unit_root_frac": 1.0,
+  "kpss_stationary_frac": 1.0,
+  "adf_p_value_median": 1.5618221405831085e-24,
+  "kpss_p_value_median": 0.1,
+  "n_containers_tested": 99
+}

@@ -1,0 +1,68 @@
+{
+  "experiment_name": "residual_scaling_experiment",
+  "protocol_version": "rre_v1.0",
+  "experiment_timestamp": "2026-07-27_123404",
+  "experiment_dir": "experiments/rre_2026-07-27_123404",
+  "research_question": "Can a more optimisation-friendly scaling of the SAME Prophet residual improve Hybrid GRU learning without changing the underlying temporal information?",
+  "stage0_reference": "experiments/rre_diagnostics_2026-07-27_120759",
+  "distinction": "NOT a temporal representation experiment. Stage 0 showed R3 preserves identical temporal structure to R0. Only numerical conditioning differs.",
+  "variants": {
+    "R0": {
+      "variant_id": "R0",
+      "label": "R0 \u2014 Global z-score (frozen Hybrid baseline)",
+      "scaling_method": "global_zscore",
+      "formula": "(r - global_mean) / global_std",
+      "inverse": "pred * global_std + global_mean"
+    },
+    "R3": {
+      "variant_id": "R3",
+      "label": "R3 \u2014 Robust median/MAD scaling",
+      "scaling_method": "median_mad",
+      "formula": "(r - global_median) / global_mad",
+      "inverse": "pred * global_mad + global_median"
+    }
+  },
+  "variant_order": [
+    "R0",
+    "R3"
+  ],
+  "training_config": {
+    "input_window": 96,
+    "forecast_horizon": 96,
+    "epochs": 100,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "loss": "mse",
+    "metrics": [
+      "mae"
+    ],
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "internal_val_split": "chronological_first_80_pct",
+    "shuffle": false,
+    "features": [
+      "residual_scaled"
+    ],
+    "target": "residual_scaled",
+    "n_features": 1
+  },
+  "seed_policy": {
+    "gru_training_seed": null,
+    "bootstrap_seed": 12345,
+    "note": "Matches frozen Hybrid train_hybrid_gru (no TF seed)."
+  },
+  "frozen_baseline_ref": "experiments/baseline_reference_2026-07-14",
+  "data_hashes": {
+    "train_df.parquet": "515fd6d7bc3302dbc29bd07daae73380c4f6d7251949e0479ed739c6091a217e",
+    "val_df.parquet": "553156e7831acd341611e7b16cf07b03ea7f723580127078529df478cff4bd1e"
+  },
+  "cohort": {
+    "selected_containers": "data/selected_containers.npy",
+    "expected_evaluable": 99
+  },
+  "only_change": "residual scaling method (R0 global z-score vs R3 median/MAD)"
+}

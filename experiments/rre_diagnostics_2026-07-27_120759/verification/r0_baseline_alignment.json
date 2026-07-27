@@ -1,0 +1,10 @@
+{
+  "raw_level_mean": 1.5362158578354976e-05,
+  "raw_level_std": 0.11123930781933586,
+  "baseline_mean": 1.5362158578354976e-05,
+  "baseline_std": 0.11123930781933586,
+  "mean_abs_diff": 0.0,
+  "std_abs_diff": 0.0,
+  "aligned_with_baseline_reference": true,
+  "note": "R0 z-scored distribution has mean\u22480, std\u22481 by construction"
+}

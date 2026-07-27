@@ -1,0 +1,18 @@
+{
+  "variant_id": "R3",
+  "best_epoch": 4,
+  "epochs_run": 14,
+  "best_train_loss": 6.246339797973633,
+  "best_val_loss": 12.547916412353516,
+  "final_train_loss": 6.265512943267822,
+  "final_val_loss": 12.625555992126465,
+  "generalisation_gap": 6.301576614379883,
+  "convergence_speed": 4,
+  "early_stopped": true,
+  "scaling_stats": {
+    "variant_id": "R3",
+    "method": "median_mad",
+    "center": -0.008894860363733603,
+    "divisor": 0.04106336360208885
+  }
+}

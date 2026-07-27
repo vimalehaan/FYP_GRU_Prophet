@@ -1,0 +1,6 @@
+{
+  "temporal_structure": "Weak temporal dependence \u2014 signal may appear near white noise",
+  "periodic_content": "Limited daily-cycle energy in spectrum",
+  "stationarity_note": "Mostly stationary under ADF \u2014 favourable for sequence models",
+  "overall": "Down-weights extreme tails; temporal shape largely preserved but outlier-driven dynamics may be suppressed. Observed lag-1 |ACF|=0.361, mean |ACF| (1\u201396)=0.035, integrated \u03c4 median=0.5."
+}

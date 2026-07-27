@@ -1,0 +1,18 @@
+{
+  "variant_id": "R0",
+  "best_epoch": 5,
+  "epochs_run": 15,
+  "best_train_loss": 0.855334997177124,
+  "best_val_loss": 1.7108484506607056,
+  "final_train_loss": 0.856025755405426,
+  "final_val_loss": 1.7220401763916016,
+  "generalisation_gap": 0.8555134534835815,
+  "convergence_speed": 5,
+  "early_stopped": true,
+  "scaling_stats": {
+    "variant_id": "R0",
+    "method": "global_zscore",
+    "center": 1.5362158578354976e-05,
+    "divisor": 0.11123839087708347
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "temporal_structure": "Weak temporal dependence \u2014 signal may appear near white noise",
+  "periodic_content": "Limited daily-cycle energy in spectrum",
+  "stationarity_note": "Mostly stationary under ADF \u2014 favourable for sequence models",
+  "overall": "Amplifies short-lag dynamics; differencing removes slow drift and can sharpen local temporal structure at the cost of level memory. Observed lag-1 |ACF|=0.337, mean |ACF| (1\u201396)=0.012, integrated \u03c4 median=0.0."
+}

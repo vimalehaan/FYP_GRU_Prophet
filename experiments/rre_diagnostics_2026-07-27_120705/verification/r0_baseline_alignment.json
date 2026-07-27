@@ -1,0 +1,9 @@
+{
+  "r0_mean": 1.9620809825549275e-18,
+  "r0_std": 0.9999917570302228,
+  "baseline_mean": 1.5362158578354976e-05,
+  "baseline_std": 0.11123930781933586,
+  "mean_abs_diff": 1.5362158578353014e-05,
+  "std_abs_diff": 0.8887524492108869,
+  "aligned_with_baseline_reference": false
+}
