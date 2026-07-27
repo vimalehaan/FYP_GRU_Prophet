@@ -1,0 +1,5 @@
+,day1_mae,day1_mae,day1_mae,day1_mae,day1_mae,day1_rmse,day1_rmse,day1_rmse,day1_rmse,day1_rmse,day1_mape,day1_mape,day1_mape,day1_mape,day1_mape,day1_pearson_r,day1_pearson_r,day1_pearson_r,day1_pearson_r,day1_pearson_r,day1_r2,day1_r2,day1_r2,day1_r2,day1_r2
+,mean,std,min,max,count,mean,std,min,max,count,mean,std,min,max,count,mean,std,min,max,count,mean,std,min,max,count
+split,,,,,,,,,,,,,,,,,,,,,,,,,
+known,1.6878,2.1839,0.0013,18.1367,435,2.3211,2.8682,0.0016,24.6809,435,150.9146,1383.2996,4.6099,27396.2723,435,0.4703,0.4007,-0.3393,0.9913,420,0.0824,1.4023,-24.8103,0.9793,435
+unseen,1.9696,2.0978,0.0042,11.4704,49,2.7389,2.8157,0.0045,13.2702,49,39.9902,78.8174,3.9769,514.7206,49,0.5232,0.3639,-0.1963,0.993,48,-0.0948,1.5455,-7.9033,0.9757,49

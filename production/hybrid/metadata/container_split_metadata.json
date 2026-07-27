@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-07-26T18:37:13.864503+00:00",
+  "random_seed": 42,
+  "train_fraction": 0.9,
+  "unseen_fraction": 0.1,
+  "n_total_containers": 484,
+  "n_train_containers": 435,
+  "n_unseen_containers": 49,
+  "immutable": true,
+  "note": "Container split is fixed after first creation. Unseen containers never participate in production GRU training."
+}

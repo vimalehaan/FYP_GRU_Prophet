@@ -1,0 +1,23 @@
+{
+  "model_type": "hybrid_prophet_gru",
+  "input_window": 96,
+  "forecast_horizon": 96,
+  "optimizer": "adam",
+  "loss": "mse",
+  "batch_size": 64,
+  "early_stopping_patience": 10,
+  "prophet": {
+    "daily_seasonality": true,
+    "weekly_seasonality": false,
+    "fitted_during_training": true,
+    "n_train_containers": 435,
+    "note": "Per-container Prophet models are refit at inference on historical data."
+  },
+  "residual_normalization": "global",
+  "artifact_paths": {
+    "model": "production/hybrid/models/model.keras",
+    "scalers": "production/hybrid/metadata/scalers.pkl",
+    "residual_stats": "production/hybrid/metadata/residual_stats.pkl",
+    "production_config": "production/hybrid/config/production_config.json"
+  }
+}

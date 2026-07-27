@@ -1,0 +1,9 @@
+{
+  "completed_at": "2026-07-26T18:59:22.050765+00:00",
+  "n_known_evaluated": 435,
+  "n_unseen_evaluated": 49,
+  "known_failures": [],
+  "unseen_failures": [],
+  "mean_day1_mae_known": 1.6877807177329356,
+  "mean_day1_mae_unseen": 1.9696165208844403
+}
