@@ -1,0 +1,13 @@
+# Local / generated — see repo root .gitignore
+.venv/
+.pytest_cache/
+.env
+
+# Demo frontend
+demo/node_modules/
+demo/dist/
+demo/*.tsbuildinfo
+
+# Binary model files (copy from production — see artifacts/README.md)
+artifacts/**/*.keras
+artifacts/**/*.pkl

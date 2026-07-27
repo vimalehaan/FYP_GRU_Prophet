@@ -31,3 +31,17 @@ build/
 dist/
 
 production/hybrid/predictions/
+
+# Forecast service — local env, build output, and binary artifacts
+forecast_service/.venv/
+forecast_service/.env
+forecast_service/.pytest_cache/
+
+# Demo frontend (npm)
+forecast_service/demo/node_modules/
+forecast_service/demo/dist/
+forecast_service/demo/*.tsbuildinfo
+
+# Frozen model bundle — copy from production/hybrid/ locally (see artifacts/README.md)
+forecast_service/artifacts/**/*.keras
+forecast_service/artifacts/**/*.pkl

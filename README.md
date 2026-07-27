@@ -63,6 +63,33 @@ See [`production/docs/README.md`](production/docs/README.md) for full production
 
 ---
 
+## Forecast Service (REST API)
+
+The **deployment integration layer** — exposes the frozen Hybrid model as a REST API for other project modules. Completely separate from research and from the `production/` training pipeline.
+
+```
+forecast_service/
+├── app/                    # FastAPI application (inference only)
+├── artifacts/hybrid_v1/    # Frozen model bundle (copied from production)
+├── docs/                   # Integration & API documentation
+├── examples/               # curl, Python, Java, JavaScript clients
+└── tests/
+```
+
+### Quick start
+
+```bash
+cd forecast_service
+pip install -r requirements.txt
+python examples/generate_sample_request.py
+python run.py
+# → http://localhost:8000/docs
+```
+
+See [`forecast_service/README.md`](forecast_service/README.md) and [`forecast_service/docs/api/integration.md`](forecast_service/docs/api/integration.md).
+
+---
+
 ## Repository tree
 
 ```
@@ -72,19 +99,14 @@ FYP_Long_Term/
 ├── notebooks/                # ← RESEARCH notebooks
 ├── utils/                    # ← RESEARCH utilities (Hybrid baseline)
 ├── docs/                     # ← RESEARCH docs
-│
-└── production/               # ← PRODUCTION (isolated)
-    ├── hybrid/               #     Model artifacts
-    │   ├── config/
-    │   ├── models/
-    │   ├── metadata/
-    │   ├── cache/
-    │   ├── metrics/
-    │   ├── predictions/
-    │   └── logs/
-    ├── utils/
-    ├── scripts/
-    ├── notebooks/
+├── production/               # ← PRODUCTION training & CLI (isolated)
+│   ├── hybrid/               #     Model artifacts
+│   ├── utils/
+│   ├── scripts/
+│   └── docs/
+└── forecast_service/         # ← DEPLOYMENT REST API (inference only)
+    ├── app/
+    ├── artifacts/hybrid_v1/
     └── docs/
 ```
 
