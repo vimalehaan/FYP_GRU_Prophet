@@ -1,0 +1,6 @@
+origin_index,decision,rationale,cohort_diagnostic_confidence,n_recommend,n_investigate,n_stable,trigger_reason
+200,recommend_retraining,Diagnostic and trigger policies support offline candidate retraining.,0.1111111111111111,22,0,77,fraction
+296,do_not_retrain,Global trigger policy not satisfied.,0.10707070707070705,23,3,73,cooldown_active
+392,do_not_retrain,Global trigger policy not satisfied.,0.08282828282828283,19,4,76,not_triggered
+488,do_not_retrain,Global trigger policy not satisfied.,0.0787878787878788,20,5,74,not_triggered
+584,do_not_retrain,Global trigger policy not satisfied.,0.025252525252525252,13,11,75,not_triggered

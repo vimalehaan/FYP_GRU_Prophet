@@ -1,0 +1,82 @@
+{
+  "experiment_dir": "/Users/lehaan/Desktop/FYP_Long_Term/experiments/adaptive_forecast_model_lifecycle_2026-07-30_071206",
+  "config": {
+    "experiment_name": "adaptive_forecast_model_lifecycle",
+    "random_seed": 42,
+    "baseline_reference_dir": "experiments/baseline_reference_2026-07-14",
+    "baseline_evaluation_csv": "experiments/baseline_reference_2026-07-14/evaluation/evaluation_df.csv",
+    "baseline_model_path": "experiments/baseline_reference_2026-07-14/models/hybrid_gru.keras",
+    "baseline_residual_stats_path": "experiments/baseline_reference_2026-07-14/models/residual_stats.pkl",
+    "train_df_path": "data/train_df.parquet",
+    "val_df_path": "data/val_df.parquet",
+    "min_history_steps": 200,
+    "forecast_horizon": 96,
+    "input_window": 96,
+    "walk_forward_stride": 96,
+    "monitoring_lag_steps": 96,
+    "train_cutoff_buffer_steps": 96,
+    "eval_warmup_origins": 1,
+    "relative_threshold": 0.25,
+    "absolute_threshold": 0.5,
+    "diagnostic_relative_threshold": 0.15,
+    "diagnostic_absolute_threshold": 0.3,
+    "rolling_window_origins": 3,
+    "persistence_required": 2,
+    "page_hinkley_mode": "confirmatory",
+    "page_hinkley_delta": 0.005,
+    "page_hinkley_lambda": 50.0,
+    "drifted_container_fraction": 0.2,
+    "cohort_median_degradation": 0.15,
+    "cooldown_origins": 2,
+    "max_retrain_events": 3,
+    "candidate_improvement_margin": 0.01,
+    "max_containers": null,
+    "max_origins_per_container": null,
+    "skip_candidate_retraining": false,
+    "candidate_training_verbose": 0
+  },
+  "framework_evaluation": {
+    "confirmed_drift_events": 0,
+    "false_alarm_events": 4,
+    "detection_delay_origins": [],
+    "recommendation_precision": null,
+    "deployment_success_rate": 0.0,
+    "prevented_bad_deployments": 0,
+    "diagnostic_distribution": {
+      "STABLE": 375,
+      "GRU_STALE": 82,
+      "INVESTIGATE": 23,
+      "REGIME_CHANGE": 15
+    },
+    "retraining_frequency": 1,
+    "decision_latency_origins": [],
+    "recommendation_quality": [
+      {
+        "trigger_origin_index": 200,
+        "n_eval_origins": 396,
+        "incumbent_cohort_mae": 1.6624619421620432,
+        "candidate_cohort_mae": 1.659677085005431,
+        "delta_mae": -0.0027848571566122526,
+        "deployment_recommendation": "keep_current_model",
+        "recommendation_correct": null,
+        "details": {
+          "incumbent_cohort_mae": 1.6624619421620432,
+          "candidate_cohort_mae": 1.659677085005431,
+          "delta_mae": -0.0027848571566122526,
+          "n_eval_origins": 396
+        },
+        "candidate_version": "hybrid_v2"
+      }
+    ],
+    "secondary_candidate_delta_mae": [
+      -0.0027848571566122526
+    ]
+  },
+  "research_answers": {
+    "Can concept drift be reliably detected?": "The framework recorded 0 confirmed drift events with 4 deferred/no-retrain decisions for comparison.",
+    "Are per-container baselines superior to global thresholds?": "AFMLF uses per-container frozen Hybrid baselines because cohort MAE spans orders of magnitude; a single global threshold would mis-classify low- and high-error containers.",
+    "Does the diagnostic layer distinguish GRU drift from workload drift?": "Diagnostic distribution: {'STABLE': 375, 'GRU_STALE': 82, 'INVESTIGATE': 23, 'REGIME_CHANGE': 15}. GRU_STALE vs REGIME_CHANGE classes drive retraining confidence separately from INVESTIGATE.",
+    "Is offline retraining appropriate?": "Yes. The frozen global GRU and residual statistics require batch retraining; online weight updates were intentionally excluded.",
+    "How does AFMLF extend the production forecasting pipeline?": "AFMLF adds monitoring, drift detection, diagnostic reasoning, candidate versioning, and human-in-the-loop deployment recommendations without modifying Hybrid architecture."
+  }
+}

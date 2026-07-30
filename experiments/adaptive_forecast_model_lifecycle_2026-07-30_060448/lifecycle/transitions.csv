@@ -1,0 +1,5 @@
+from_state,to_state,origin_index,container_id,reason,metadata
+stable,warning,200,c_10032,threshold_breach,{}
+candidate_retraining,candidate_retraining,200,,global_retrain,{}
+stable,warning,200,c_10032,threshold_breach,{}
+warning,drift_suspected,296,c_10032,rolling_persistence,{}

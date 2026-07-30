@@ -8,6 +8,7 @@ __pycache__/
 *.pyc
 .env
 .mplconfig/
+.pytest_cache/
 
 # Virtual Environment
 tf_metal_env/
@@ -20,12 +21,22 @@ data/*
 # macOS
 .DS_Store
 
+# Experiment model binaries (regenerate via training scripts)
 experiments/**/hybrid_gru.keras
+experiments/**/model.keras
 experiments/**/residual_stats.pkl
 
 experiments/**/*.pdf
 
 experiments/**/.ipynb_checkpoints/
+
+# AFMLF lifecycle experiments — plots and version bundles are regeneratable
+experiments/adaptive_forecast_model_lifecycle_*/plots/
+experiments/adaptive_forecast_model_lifecycle_*/versions/
+
+# Notebook-generated AFMLF artifacts (demo candidates, scan cache, optional PNG copies)
+notebooks/outputs/afmlf_case_study/
+notebooks/outputs/afmlf_official_live/
 
 build/
 dist/

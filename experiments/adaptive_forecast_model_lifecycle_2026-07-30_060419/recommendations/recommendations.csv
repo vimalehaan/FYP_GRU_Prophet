@@ -1,0 +1,2 @@
+trigger_origin_index,n_eval_origins,incumbent_cohort_mae,candidate_cohort_mae,delta_mae,deployment_recommendation,recommendation_correct,details,candidate_version
+200,3,1.1171955687328308,1.1271508267866748,0.009955258053844007,keep_current_model,True,"{'incumbent_cohort_mae': 1.1171955687328308, 'candidate_cohort_mae': 1.1271508267866748, 'delta_mae': 0.009955258053844007, 'n_eval_origins': 3}",hybrid_v2

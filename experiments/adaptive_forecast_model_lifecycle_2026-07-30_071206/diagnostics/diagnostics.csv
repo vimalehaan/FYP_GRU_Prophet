@@ -1,0 +1,496 @@
+container_id,origin_index,diagnostic_class,confidence,recommended_action,interpretation,delta_hybrid,delta_prophet
+c_10032,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.6724826076238049,0.0
+c_10034,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.7518744328959563,0.0
+c_10089,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.251854125846838,0.0
+c_10132,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.25857721455268756,0.0
+c_1016,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1512949577336662,0.0
+c_10306,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.009147456229942896,0.0
+c_10312,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.45702418690926194,0.0
+c_10382,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08261719496025688,0.0
+c_10393,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.3745279932321504,0.0
+c_10641,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.7554207456682787,0.0
+c_10695,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.05719489263448374,0.0
+c_10733,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1107470840473308,0.0
+c_10878,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.004685824413018291,0.0
+c_10898,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04574306090583258,0.0
+c_11013,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.8567686800037602,0.0
+c_11087,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,4.305248553672172,0.0
+c_11203,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.8765053770737607,0.0
+c_11307,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.0760008360433273,0.0
+c_11327,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01407627491402308,0.0
+c_11461,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5017666489906183,0.0
+c_11735,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.5127082033506323,0.0
+c_11752,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.15540836806616976,0.0
+c_1181,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2775893159089584,0.0
+c_1186,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.32583217650255836,0.0
+c_11996,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.9756759416249425,0.0
+c_12060,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08474606033216678,0.0
+c_12158,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09089985014711344,0.0
+c_12164,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07967783130023331,0.0
+c_12174,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.004230141119829778,0.0
+c_12189,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12551779376248384,0.0
+c_12193,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12387568499893864,0.0
+c_12231,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-7.549622350270252,0.0
+c_12237,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-8.565770050252974,0.0
+c_12441,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.9067008195328812,0.0
+c_12517,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,2.077428699253412,0.0
+c_12624,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.00901642852590917,0.0
+c_12767,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1920538057147141,0.0
+c_12858,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.14725946845638793,0.0
+c_1286,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.18077772943949438,0.0
+c_12971,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04170171488761465,0.0
+c_12974,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0003544367532285486,0.0
+c_12993,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.012494657726972669,0.0
+c_12999,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.14078057973344293,0.0
+c_13020,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.007542620858862259,0.0
+c_13044,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1060201248106748,0.0
+c_13083,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11043435684969993,0.0
+c_13166,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.2413217619194887,0.0
+c_13170,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,2.2272847916954075,0.0
+c_13229,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5415814264684611,0.0
+c_13269,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09731968932772783,0.0
+c_13308,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.002469540226510428,0.0
+c_13389,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-4.521121600778567,0.0
+c_13403,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.10644536499914925,0.0
+c_13441,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3111575967399717,0.0
+c_13607,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.4104981005364032,0.0
+c_13615,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-3.284767831847505,0.0
+c_13658,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.7186285605464888,0.0
+c_13690,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.8458329209976736,0.0
+c_1379,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04717724678697177,0.0
+c_1387,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.06578807078508248,0.0
+c_13873,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.1805463159151879,0.0
+c_14106,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.003545062779809075,0.0
+c_14135,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.31710653910490083,0.0
+c_14296,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.728410226555944,0.0
+c_14363,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04649963474520363,0.0
+c_14388,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5732762000739043,0.0
+c_14396,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.169652171852235,0.0
+c_14413,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.10402638759327953,0.0
+c_14416,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.12225044541701272,0.0
+c_14417,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.9978387521568488,0.0
+c_14435,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1965003919510655,0.0
+c_14471,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.5116805047360902,0.0
+c_14820,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.17493165811945266,0.0
+c_14855,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.06604970553610301,0.0
+c_14886,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.29741249285902893,0.0
+c_1494,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.013247595499665699,0.0
+c_14964,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.290306399161317,0.0
+c_15030,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.8307172823339055,0.0
+c_15035,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.015160247920547328,0.0
+c_15072,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.533666885597593,0.0
+c_15179,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.9366309744628194,0.0
+c_15235,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.7814260380596414,0.0
+c_15282,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.006139633487499352,0.0
+c_15420,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.10929280646843598,0.0
+c_15446,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.009777761248997346,0.0
+c_15486,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.11653407011082861,0.0
+c_15527,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,5.927956659501204,0.0
+c_15555,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1295271541397296,0.0
+c_15570,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.006426778220477547,0.0
+c_15604,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.2631096717508821,0.0
+c_15616,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.39159610364702135,0.0
+c_15630,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08680602663680115,0.0
+c_15640,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,20.61778850619777,0.0
+c_15642,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.24303742261198674,0.0
+c_15647,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.03982159819391362,0.0
+c_15794,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01878266570161193,0.0
+c_15856,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.13295753036690855,0.0
+c_16008,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-9.977198803625454,0.0
+c_16048,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.22660188100984868,0.0
+c_10032,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.804330982883309,0.13213791663013597
+c_10034,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.6049499831180474,0.13003136894253753
+c_10089,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1742954184097384,-0.08224590963386436
+c_10132,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.16176161091367036,-0.09657575899237547
+c_1016,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.15954027599768783,0.010339793974770028
+c_10306,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0018679600632082183,-0.007575349598136716
+c_10312,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4471310420455814,-0.018763857566961306
+c_10382,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08107571662671609,-0.002543278300303875
+c_10393,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.8207637780868606,-0.5552083500867688
+c_10641,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3017068715687319,-0.44638271475829516
+c_10695,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07364313701036151,-0.01663831573743202
+c_10733,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0318595970671538,0.0781611090040546
+c_10878,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.037301011136975704,-0.03956748558045198
+c_10898,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07216686799663363,-0.025896733142631745
+c_11013,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.0046588119031488,-0.8560002036932586
+c_11087,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,2.4684104573005925,-1.8785720135923611
+c_11203,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.9587958001133596,-0.9128134379586332
+c_11307,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.9131006010812248,0.11225380391336026
+c_11327,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09623315213532713,0.09910492496737155
+c_11461,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5017041138160325,-0.005112368408949797
+c_11735,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.4998012512304013,0.017988574642397448
+c_11752,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.10367933016843811,-0.05150474237074576
+c_1181,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.8984537813829796,0.629591316689293
+c_1186,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.23735600389061973,0.10041452049278143
+c_11996,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.5554927817441706,-0.4163360045110216
+c_12060,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0672196755145292,-0.017014639271797666
+c_12158,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.03456335428248858,-0.13842866735787407
+c_12164,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.053701516532964066,0.1332436800982505
+c_12174,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.001633589098391175,-0.0076741848119844525
+c_12189,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.16396266624389166,0.043458151596299066
+c_12193,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.07016490966758632,-0.05296337855169542
+c_12231,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-7.59200296273961,-0.04394063624307232
+c_12237,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-11.958078312658328,-3.307394198762352
+c_12441,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.6986768758687825,-0.1903018429779615
+c_12517,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.0212433342490277,-1.0553020124606745
+c_12624,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01477117941077477,-0.025752607062684618
+c_12767,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11886653293493621,-0.07284187165857059
+c_12858,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12628811478254715,-0.01851978248846803
+c_1286,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.14892221866914895,-0.027691584672147607
+c_12971,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.050790701716288966,-0.008231964963884786
+c_12974,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.023626629540451582,-0.02567866122353113
+c_12993,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.6764110529703329,-0.6550351230447387
+c_12999,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.17797977101747198,0.03898578078866288
+c_13020,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.053208498322956155,-0.04170785447659042
+c_13044,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.10435080582814837,0.0023614311448875713
+c_13083,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.15369681220590048,0.04256406256879852
+c_13166,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.7811819959891115,-0.4653166989965736
+c_13170,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.7770527580718736,-1.4323669066863736
+c_13229,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5763721649106179,-0.026952833772524887
+c_13269,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09137787273665332,-0.008343265281438361
+c_13308,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.002469540226510428,0.0
+c_13389,296,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-1.484977478583045,3.0526987914818626
+c_13403,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04073708472783183,0.06784536121971302
+c_13441,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3800203774217604,0.06395277058706084
+c_13607,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.3226606247514017,0.09043370185382604
+c_13615,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-3.032591959719694,0.27183780322580353
+c_13658,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.6998313828162444,0.018388553304188537
+c_13690,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.7923914289299789,-0.052924699760113825
+c_1379,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.010092980435182586,-0.03530342336058817
+c_1387,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08591863879160455,0.15181488633688744
+c_13873,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.2507663475147113,-0.07094340595827509
+c_14106,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.005246908706097035,-0.0017986842473044088
+c_14135,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.3262057368367317,-0.015266495390693358
+c_14296,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.9788925701141795,-0.25945019376879075
+c_14363,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.002901510675267227,0.0442000206681154
+c_14388,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.40050697132599866,-0.16130296134340383
+c_14396,296,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.396617367065482,0.7922351972904018
+c_14413,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0801705769337544,0.024944871970124183
+c_14416,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1263732883707806,-0.004654281078180111
+c_14417,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.6964553088447805,-0.3105718916261031
+c_14435,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4064170908899488,0.20813889109931105
+c_14471,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4929593731536819,-0.9818416344169427
+c_14820,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.07805211697157022,-0.08918725665138849
+c_14855,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.16006260629049085,0.09397464957966972
+c_14886,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2691616976317166,-0.023548765702518182
+c_1494,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.07136664265996001,0.05798821572879198
+c_14964,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.0689918281788637,0.219042892301623
+c_15030,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.6404299466471963,0.1931676373917901
+c_15035,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.015160247920547328,0.0
+c_15072,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2590117703895207,-0.27045064060085
+c_15179,296,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.43746553349904604,0.5080448624334817
+c_15235,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.48401215680025733,-0.29392860516707864
+c_15282,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.006386916595610359,0.012134929787990856
+c_15420,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04280912753335864,-0.06995429847233092
+c_15446,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.007455986204664228,-0.016896689393179926
+c_15486,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.16527401241276996,-0.04802844229707148
+c_15527,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,2.1969024282227227,-3.2707416390802457
+c_15555,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12337464391477515,-0.004578180725430814
+c_15570,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.045675368375360126,-0.049168743277966054
+c_15604,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.31158123882470534,-0.04823584023389371
+c_15616,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.42560419071447864,-0.03778811404829119
+c_15630,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.40973746435505354,-0.31780877818726483
+c_15640,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,21.38921727824533,0.6694627736785996
+c_15642,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.19742959276601763,-0.04001507081439748
+c_15647,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2402314383702231,0.1965222695208253
+c_15794,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01878266570161193,0.0
+c_15856,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1433461205741383,-0.01082976302083416
+c_16008,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-9.972834504784558,0.012178678028196277
+c_16048,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.3624366579210023,-0.1346380578138313
+c_10032,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.66477073430605,-0.011394884524871252
+c_10034,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.6487988952208,0.08660434612046342
+c_10089,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.13000764139136367,-0.12714311299231285
+c_10132,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12655499358776823,-0.1335325842029471
+c_1016,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12463714409537685,-0.023763503784161866
+c_10306,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.004911033858706448,-0.012902079154229085
+c_10312,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.37917595781519475,-0.08727760132343798
+c_10382,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.05054973853465339,-0.03230857343440774
+c_10393,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.6054204833345276,-0.7688901455892896
+c_10641,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.24290453314773852,-0.5111452072695392
+c_10695,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0800711111708664,-0.023582219526444126
+c_10733,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.13671520978467955,-0.026275994540955416
+c_10878,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.027222758916409573,-0.02896120994297996
+c_10898,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.06691697796998586,-0.023212361890419086
+c_11013,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.6265892004628251,-1.2227034283835203
+c_11087,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,2.6050129167385396,-1.7319053118634393
+c_11203,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5117489501888812,-1.351638415665714
+c_11307,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.9968245648390677,0.04252099602456805
+c_11327,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.041067440407495215,0.04532159591931939
+c_11461,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3464762142480615,-0.1605999196541077
+c_11735,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.302244519484625,0.21842079806047965
+c_11752,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08030950755546273,-0.07423212455185246
+c_1181,392,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,1.202601518153041,0.9373034599594776
+c_1186,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.21080180402104431,0.13176020113742215
+c_11996,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.9727384457165564,-0.994523593710051
+c_12060,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04202393521632328,-0.0426161466791099
+c_12158,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.276062145082149,0.16887735439131246
+c_12164,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.00033076474876203577,0.08231357185577515
+c_12174,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.019317730729663918,-0.026216332070185144
+c_12189,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1317204373018066,0.012061380852689818
+c_12193,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.05411945510356925,-0.06877448841517442
+c_12231,392,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-6.759404512978911,0.7890960787697394
+c_12237,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-11.821386209450282,-3.1957307844332083
+c_12441,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.26814032420935807,-0.6197096817830658
+c_12517,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5958299731358063,-1.4820131428979038
+c_12624,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.003749960025741017,-0.007322252143581398
+c_12767,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09155755094077456,-0.10021405678286643
+c_12858,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11920370652361695,-0.02687410439917981
+c_1286,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.12252133707576457,-0.054082990672778886
+c_12971,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08539281339413718,-0.042409935003636656
+c_12974,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.03868332365862992,-0.03991951593522203
+c_12993,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.8189391280682825,-0.7947698388241635
+c_12999,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.21403273948313672,0.07701567763503903
+c_13020,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0968817640080456,-0.08383550574869625
+c_13044,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07198061216975954,0.03436252180101784
+c_13083,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.182024980105836,0.07492294506370678
+c_13166,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5690734385666094,-0.6673690149880478
+c_13170,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4180805212881067,-1.7825507529658857
+c_13229,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5325939200870528,0.01497869412234265
+c_13269,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08896315045451775,-0.00938024273793725
+c_13308,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.002469540226510428,0.0
+c_13389,392,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.6032995076939853,3.971291138974574
+c_13403,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.017418555994082208,0.0907809750013841
+c_13441,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.35864646833980085,0.04210090316104531
+c_13607,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.3443913753746148,0.06789079631315453
+c_13615,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-3.0566341026769206,0.2549072509730135
+c_13658,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.6721216889415996,0.047012753489620196
+c_13690,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.5996098717384033,-0.24433203197823605
+c_1379,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0030731725107176477,-0.04261730948580028
+c_1387,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1385152134256809,0.20467867223944525
+c_13873,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.285238640901275,-0.10559024839344894
+c_14106,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.005824227881544753,-0.002414096255426585
+c_14135,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.4978386732826523,-0.19340806421619305
+c_14296,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-3.0618267721867016,-0.3424771081961331
+c_14363,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.006981896567673895,0.03962866497915796
+c_14388,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.25701151265583744,-0.30442847766345504
+c_14396,392,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.25912498314923704,0.940823011457925
+c_14413,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08078658985104792,0.02348582475386518
+c_14416,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.12174048968511209,6.103234140206193e-05
+c_14417,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.6008910574184123,-0.4117125106474484
+c_14435,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3389752067098767,0.14606026597626187
+c_14471,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.10402776681985126,-1.3612594687373
+c_14820,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.17309126157047272,0.0057167403668190175
+c_14855,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.24801304751406794,0.18191719825154662
+c_14886,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2572831589574096,-0.036896871426546296
+c_1494,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.06563177588361069,0.05223926321319028
+c_14964,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.1076375084186603,0.1897608893863203
+c_15030,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.6961832190900923,0.14384423325175644
+c_15035,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.015160247920547328,0.0
+c_15072,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11714941755653197,-0.41368944817710473
+c_15179,392,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.4702278002619311,0.4848105287155622
+c_15235,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.49558809223520006,-0.2792040041834385
+c_15282,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.017640622309100296,0.022737312159065937
+c_15420,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.03404507087099051,-0.14468487829776566
+c_15446,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.006086365527469495,-0.0028159905658030338
+c_15486,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.2038666326044979,-0.08664495827824781
+c_15527,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.9790133046441376,-4.314801681195713
+c_15555,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.021341301942829016,-0.10650561764855371
+c_15570,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.06767982291647956,-0.06785206118659093
+c_15604,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.36216820832122426,-0.09869420817359087
+c_15616,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.47012921878570796,-0.08050263072724956
+c_15630,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5401703937824404,-0.4450381590592595
+c_15640,392,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,15.437721465770725,-5.2613355020904535
+c_15642,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.14418023208200675,-0.09102170497845541
+c_15647,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1061829075184808,0.06642379528895415
+c_15794,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01878266570161193,0.0
+c_15856,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.11815003958721543,0.015664408133158336
+c_16008,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-9.92445192079719,0.058506157665292546
+c_16048,392,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.27567646507761,-0.04646525209601915
+c_10032,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.49777616875373154,-0.17929166590418233
+c_10034,488,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-2.095928111603027,0.6332591398773878
+c_10089,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08890019866175192,-0.171304246759447
+c_10132,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.023287005659452187,-0.23663539792964872
+c_1016,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08643568706572546,-0.0604801258083964
+c_10306,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.014659815454603597,-0.022891083307064464
+c_10312,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3054272697412366,-0.1717114279830425
+c_10382,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.018805835630841927,-0.06406983397891375
+c_10393,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.23971369592327751,-1.1377442773919342
+c_10641,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.011751026654608698,-0.747570400533168
+c_10695,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.11159218406991855,-0.0552532377513294
+c_10733,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.15118870357278968,0.24684567190735462
+c_10878,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.011802124989549467,-0.0157682499472383
+c_10898,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08664671309568339,-0.045660227041831924
+c_11013,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04268320577660445,-1.8866477393535548
+c_11087,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.831105720757332,-2.52995107685269
+c_11203,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1235264967725469,-1.9921791219001241
+c_11307,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.9224185965582223,0.11236411957561399
+c_11327,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.05966720199577291,0.06113174365765839
+c_11461,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3795978708024843,-0.13725635635945443
+c_11735,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.2128638492876886,0.2929229623983507
+c_11752,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.02664347035387926,-0.1288824017747816
+c_1181,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,1.2307334043784612,0.966748903755267
+c_1186,488,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,0.25359255930686797,0.5921865867331279
+c_11996,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3698901629552589,-1.5998592930492597
+c_12060,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.010621238917779718,-0.07278229592104732
+c_12158,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.6048419523827171,0.48273694921408117
+c_12164,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.01739754149866357,0.1022299705070373
+c_12174,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.038885598651965614,-0.048226283561172645
+c_12189,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1508411715200304,0.03148734530786301
+c_12193,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.021027517790271844,-0.10214410762204634
+c_12231,488,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-4.652130306539349,2.937573830307405
+c_12237,488,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-4.2991635005974835,4.322377066058394
+c_12441,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.15497444608518673,-1.057235509376684
+c_12517,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.2033109787743722,-2.286010666665749
+c_12624,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.007083761178411363,-0.0025600016093217937
+c_12767,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.016214665728441213,-0.17549123204571326
+c_12858,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.07280165430919744,-0.0719658978731903
+c_1286,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.10366564300836267,-0.07107170181877426
+c_12971,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1296163152331925,-0.08501929561141397
+c_12974,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.025941602616660342,-0.026987308887225114
+c_12993,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5493170811094856,-0.5276888328471516
+c_12999,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.5496207852035122,0.4039013085431944
+c_13020,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.05360161839514177,-0.040984186073834805
+c_13044,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.042064635904144054,0.06428115845825982
+c_13083,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.24639052148817353,0.13872924237409567
+c_13166,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.8441239513143757,-0.39822423124147477
+c_13170,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.587831040997304,-2.7777147089466077
+c_13229,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5726949971515489,-0.022648231413262887
+c_13269,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.08424314227351859,-0.013647195958919278
+c_13308,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0016086943534880276,0.0008680555555555555
+c_13389,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,4.093603598606179,8.669185427236213
+c_13403,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04100260722334009,0.1497821672100188
+c_13441,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4003445855261051,0.07679166783389713
+c_13607,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.3490086959231924,0.0580300686371894
+c_13615,488,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-1.8315071507104954,1.4787240259421075
+c_13658,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.6127241892674973,0.10617072258012361
+c_13690,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.410017012988767,-0.438107117052726
+c_1379,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01571146082615682,-0.06097156810701687
+c_1387,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1556376036995007,0.21878962446564454
+c_13873,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.3466683033130715,-0.16867313324166705
+c_14106,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.007116706718996115,-0.003778574726412902
+c_14135,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5982696697946877,-0.30707542397801224
+c_14296,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-3.2348075485218484,-0.5215972753441339
+c_14363,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.02114761732199255,0.025093915158181268
+c_14388,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3695874248826446,-0.19133844978224057
+c_14396,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,1.3702573137582803,2.569449937578675
+c_14413,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0790293269796482,0.026000202207464795
+c_14416,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08782828007521978,0.03390726943009684
+c_14417,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.799389834872213,-1.2172017272962683
+c_14435,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3085733713355351,0.11425525456322927
+c_14471,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.40927272977041906,-1.878216201314464
+c_14820,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.21122528325452006,0.04698456323363409
+c_14855,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.29232960038651756,0.22518932838485506
+c_14886,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.39519325995391785,0.09318798697075503
+c_1494,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09300575049356052,0.07968122785276743
+c_14964,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.1934157542305457,0.10552563405533943
+c_15030,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.5841122742283025,0.2528400866487728
+c_15035,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.013868286198125376,0.0013020833333333333
+c_15072,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1672243094330239,-0.6987438465668516
+c_15179,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.6504744203101387,1.6019394024158806
+c_15235,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2814850233682913,-0.4829109447150681
+c_15282,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04018796217769982,0.043852650319438746
+c_15420,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.014237118398438886,-0.12278716114253907
+c_15446,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0011953313143491934,-0.007096018714666363
+c_15486,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.20704060014457437,-0.08863309703803113
+c_15527,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5383821457515445,-5.515900203542235
+c_15555,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.009436521808380505,-0.13899352508407103
+c_15570,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0827475198273625,0.08257806385087041
+c_15604,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.4205857895318204,-0.15700434493176524
+c_15616,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.4599057727268429,-0.07575201984363639
+c_15630,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.7409220184434486,-0.6485029450777329
+c_15640,488,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,10.624028856290455,-10.099985471570722
+c_15642,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1070431182268457,-0.12802139750178643
+c_15647,488,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.5960612311376703,0.5507853283380251
+c_15794,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.010680813849760077,0.008101851851851851
+c_15856,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.08900065273364804,0.04411467333327934
+c_16008,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-9.830065742684802,0.15228785513914045
+c_16048,488,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.12550778204246882,0.10166399359920897
+c_10032,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.19022159012394624,-0.4886510506084363
+c_10034,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-1.1641650507613548,1.5157205946286898
+c_10089,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11751340672595623,-0.14825809299538573
+c_10132,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.024887143530931688,-0.23507118920197356
+c_1016,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.03769820555505704,-0.10876239914809704
+c_10306,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.016398277970775865,-0.026094023462273963
+c_10312,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.18010330181847556,-0.2993546079472926
+c_10382,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.017174320079849092,-0.09936045530900484
+c_10393,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.17058111317230007,-1.2068743846488967
+c_10641,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.05742344711290304,-0.7070229589633186
+c_10695,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07967227055386439,-0.025373311972188395
+c_10733,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09203883958683323,0.1933100422184706
+c_10878,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0021039546143505894,-0.002727235056227517
+c_10898,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.06540948648006628,-0.026895921266014367
+c_11013,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.34303955075683135,-1.5120016971637495
+c_11087,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,1.392851136917714,-2.937498965832626
+c_11203,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.2352906415837872,-2.1124278178249125
+c_11307,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.7176307425724624,0.3473482650484654
+c_11327,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.02072724071312826,-0.011565032167073719
+c_11461,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2832739017139829,-0.22893442398259234
+c_11735,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.8897282457368052,0.6175634495222404
+c_11752,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.004820597132850213,-0.15041055448859442
+c_1181,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.4951617980551193,0.2205196873139661
+c_1186,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.37910053944044164,0.7120118733825017
+c_11996,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.005580996784081416,-1.9738157178361517
+c_12060,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0033886742865672503,-0.08526292349861558
+c_12158,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.660800191250619,0.5438871192309351
+c_12164,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07309714838257186,0.013463754984136656
+c_12174,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04644325110589764,-0.05521468282986042
+c_12189,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.09211168532003622,-0.02927212915373928
+c_12193,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0155469628523911,-0.10784211669485988
+c_12231,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-2.2896374901699463,5.3200912976111185
+c_12237,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,2.0546107494288677,10.337176491647751
+c_12441,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5072724592474993,-1.4346225116628568
+c_12517,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.1613238782764378,-2.2516554690354633
+c_12624,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.01963888751690701,0.013773438971619367
+c_12767,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0074967441522872935,-0.18419664024973947
+c_12858,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04888595780543803,-0.09644538017852744
+c_1286,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.041709937242565,-0.1334805838476964
+c_12971,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.16245055222989613,-0.11685931405322769
+c_12974,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.012443957423908802,-0.011985623501345244
+c_12993,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.019173226249709963,0.04293817829728663
+c_12999,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.4759700398974789,0.3243704176624296
+c_13020,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.04240128595180104,-0.0259527630632993
+c_13044,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.01975377484692542,0.08506489951304147
+c_13083,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.21433774112356063,0.1064603186256391
+c_13166,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.8200751480885182,-0.42410947062315607
+c_13170,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.3239049996738186,-2.529734745796576
+c_13229,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.4300470745375361,0.11822998335384027
+c_13269,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04761138821564859,-0.04717954919406575
+c_13308,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.0001132966261444884,0.0028776147245127485
+c_13389,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,4.215355324182913,8.702685778878275
+c_13403,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.041318428840111054,0.14763744150741442
+c_13441,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.22684538030359824,-0.09975661420346826
+c_13607,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.9934203315849204,0.4065259296630722
+c_13615,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.18178746506594834,3.1179257611081104
+c_13658,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-0.4015259476298436,0.3137499716673292
+c_13690,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.14979985264988782,-0.7023594427633595
+c_1379,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.00735088909928866,-0.055233428270940355
+c_1387,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.07254106875723415,0.1335274975797599
+c_13873,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.9121967335226664,0.26628458305378266
+c_14106,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.00739041834232677,-0.004060361826740893
+c_14135,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5529985750993447,-0.26580170873565745
+c_14296,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-2.1686756111619037,0.5430868655650398
+c_14363,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.05533589278396517,-0.010640245692486894
+c_14388,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.4476572801694124,-0.11743353267896017
+c_14396,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,1.443218866828007,2.6180934399882005
+c_14413,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07472050953866466,0.031170316280330734
+c_14416,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.06140529736216033,0.06101274083551406
+c_14417,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.3180292109510603,-1.700819387051977
+c_14435,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.10703456193396954,-0.08654852162766569
+c_14471,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.3060077786301729,-1.8005907526013756
+c_14820,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.27815619374487444,0.11411512338361263
+c_14855,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.2224758713677013,0.1480923511460882
+c_14886,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.44595307649993243,0.14111830888887122
+c_1494,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.04677063852214636,0.03430974367139994
+c_14964,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-1.003020002910816,0.2876515608710637
+c_15030,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-2.0525520047970245,0.7838099344903793
+c_15035,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.007657711125614782,0.007841527907176548
+c_15072,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.2723348234346654,-0.8059263033411441
+c_15179,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.835248593093838,1.7709551648386885
+c_15235,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.24456023712078645,-0.5172319196500126
+c_15282,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.027140554510943216,0.02854965313639002
+c_15420,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.00966778067609586,-0.11755938369199304
+c_15446,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.010333030373843838,0.002232619879714043
+c_15486,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.15057341886185616,-0.03322928539674819
+c_15527,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.24734375339154013,-5.225210519394237
+c_15555,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.05421496147776783,-0.1841205869623037
+c_15570,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.11377494747546646,0.11512070948643638
+c_15604,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.33296738135295645,-0.07009396019277259
+c_15616,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.32574713288310364,0.056547037318322
+c_15630,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.5456466232797651,-0.45359620399523315
+c_15640,584,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,3.2455450281847265,-17.422106658335213
+c_15642,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.055288326042368885,-0.18060251843723968
+c_15647,584,REGIME_CHANGE,0.75,recommend_retraining,Both Hybrid and Prophet errors increased; underlying workload regime likely changed.,0.5567426152368857,0.5062733328524511
+c_15794,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.0011120548623940497,0.018392613895383565
+c_15856,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.033370117162611956,0.09875636402598442
+c_16008,584,INVESTIGATE,0.35,needs_investigation,Prophet degraded while Hybrid remained stable; investigate data or decomposition before GRU retrain.,-7.151146326392387,2.8591060174531444
+c_16048,584,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-0.07567667772804043,0.14539458356981783

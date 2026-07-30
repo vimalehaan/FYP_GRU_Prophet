@@ -1,0 +1,7 @@
+container_id,origin_index,diagnostic_class,confidence,recommended_action,interpretation,delta_hybrid,delta_prophet
+c_10032,200,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.6724826076238049,0.0
+c_10034,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.7518744328959563,0.0
+c_10089,200,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.251854125846838,0.0
+c_10032,296,GRU_STALE,0.85,recommend_retraining,Hybrid error increased while Prophet remained stable; GRU/residual path likely stale.,0.804330982883309,0.13213791663013597
+c_10034,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,-2.6049499831180474,0.13003136894253753
+c_10089,296,STABLE,0.9,no_action,No significant diagnostic degradation detected.,0.1742954184097384,-0.08224590963386436
