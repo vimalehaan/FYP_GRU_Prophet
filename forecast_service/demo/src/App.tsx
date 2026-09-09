@@ -8,7 +8,9 @@ import {
 } from "./api";
 import { ForecastChart } from "./components/ForecastChart";
 import { MetricsPanel } from "./components/MetricsPanel";
+import { SignalAnalysisPanel } from "./components/SignalAnalysisPanel";
 import { computeValidationMetrics } from "./metrics";
+import { analyzeSignal } from "./signalAnalysis";
 import type {
   ChartPoint,
   ForecastRequest,
@@ -116,6 +118,28 @@ export default function App() {
     () => (request ? buildChartData(request, response, useValidation ? validation : null) : []),
     [request, response, validation, useValidation],
   );
+
+  /** Prefer live JSON parse so metrics update when the request / container changes. */
+  const activeRequest = useMemo((): ForecastRequest | null => {
+    try {
+      const parsed = JSON.parse(requestJson) as ForecastRequest;
+      if (
+        parsed &&
+        typeof parsed.container_id === "string" &&
+        Array.isArray(parsed.historical_cpu)
+      ) {
+        return parsed;
+      }
+    } catch {
+      /* fall through */
+    }
+    return request;
+  }, [requestJson, request]);
+
+  const signalAnalysis = useMemo(() => {
+    if (!activeRequest?.historical_cpu?.length) return null;
+    return analyzeSignal(activeRequest.historical_cpu, activeRequest.container_id);
+  }, [activeRequest]);
 
   async function handleRunForecast() {
     setError(null);
@@ -338,6 +362,8 @@ export default function App() {
               </div>
             )}
           </section>
+
+          <SignalAnalysisPanel analysis={signalAnalysis} />
 
           <MetricsPanel metrics={metrics} enabled={useValidation} />
         </main>

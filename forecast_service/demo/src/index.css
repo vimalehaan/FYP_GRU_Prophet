@@ -304,3 +304,83 @@ button.primary:not(:disabled):hover {
   font-size: 0.7rem;
   color: #64748b;
 }
+
+.signal-panel .subtitle {
+  margin: -0.35rem 0 0.9rem;
+}
+
+.signal-panel .subtitle strong {
+  color: #e2e8f0;
+}
+
+.signal-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.metric-value.badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.metric-value.badge.high {
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+.metric-value.badge.moderate {
+  background: #713f12;
+  color: #fde68a;
+}
+
+.metric-value.badge.low {
+  background: #450a0a;
+  color: #fecaca;
+}
+
+.insight {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+}
+
+.insight strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+}
+
+.insight p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+}
+
+.insight-high {
+  border-color: #166534;
+  background: rgba(20, 83, 45, 0.25);
+}
+
+.insight-moderate {
+  border-color: #a16207;
+  background: rgba(113, 63, 18, 0.25);
+}
+
+.insight-low {
+  border-color: #991b1b;
+  background: rgba(69, 10, 10, 0.3);
+}
+
+.signal-panel.muted p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
